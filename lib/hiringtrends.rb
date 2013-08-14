@@ -135,4 +135,34 @@ class HiringTrends
     end
   end
 
+  # Publish analysis
+  def publish
+    initialize_dictionary if @software_terms.empty?
+    counts_container = {}
+
+    submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+    submission_keys.each do |submission_key|
+      month = @redis.hget(submission_key, "month")
+      terms = JSON.parse(@redis.hget(submission_key, "terms"))
+      counts_container[month] = terms
+    end
+
+    # columns are months
+    columns = counts_container.keys.reverse
+
+    # rows are term and count hash (comment :count and :percentage)
+    datasets = []
+
+    @software_terms.keys.each do |t|
+      counts = []
+      columns.each do |m|
+        counts << counts_container[m][t]
+      end
+      datasets << { :name => t, :data => counts}
+      puts datasets.inspect
+    end
+
+    puts datasets.to_json
+  end
+
 end
