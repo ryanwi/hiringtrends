@@ -159,7 +159,6 @@ class HiringTrends
         counts << counts_container[m][t]
       end
       datasets << { :name => t, :data => counts}
-      puts datasets.inspect
     end
 
     puts datasets.to_json
