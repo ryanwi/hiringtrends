@@ -19,6 +19,7 @@ class HiringTrends
     open("https://gist.github.com/ryanwi/6135845/raw/06e8ab0f2e1815c3bb841c49aa93ad82ccb1cc60/software-terms.dic") {|f|
       f.each_line {|line| @software_terms[line.chomp] = {:count => 0, :percentage => 0}}
     }
+    self
   end
 
   # Remove data from redis
@@ -27,6 +28,7 @@ class HiringTrends
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     @redis.del(submission_keys) unless submission_keys.empty?
     @redis.del(SUBMISSIONS_KEY)
+    self
   end
 
   # Find and load all hiring submissions from HN Search API
@@ -46,6 +48,7 @@ class HiringTrends
         @redis.hmset(submission_key, "sigid", sigid, "month", "#{match[:month]}#{match[:year]}", "num_comments", num_comments)
       end
     end
+    self
   end
 
   # Find and load all comments for the hiring submissions
@@ -64,6 +67,23 @@ class HiringTrends
       puts "#{month}: #{comments.count} comments found..."
       @redis.hset(submission_key, "comments", comments.to_json)
     end
+    self
+  end
+
+  # Process all submissions, counting comments counts for each term in the technology dictionary
+  def analyze_submissions
+    initialize_dictionary if @software_terms.empty?
+    submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+    submission_keys.each do |submission_key|
+      # create a fresh dictionary of each term with initial count of 0
+      terms = @software_terms.clone
+      raw_comments = @redis.hget(submission_key, "comments")
+      comments = JSON.parse raw_comments
+      term_data = analyze_submission(terms, comments)
+      # store the counts
+      @redis.hmset(submission_key, "terms", term_data.to_json)
+    end
+    self
   end
 
   # Find comments for individual submission
@@ -90,29 +110,25 @@ class HiringTrends
     comments
   end
 
-  # Process submission
+  # Calculate term frequency across all comments for individual submission
   #
   # Arguments:
-  #  submission_key: (String)
-  def analyze_submission(submission_key)
-    raw_comments = @redis.hget(submission_key, "comments")
-    comments = JSON.parse raw_comments
-
-    # create a fresh dictionary of each term with initial count of 0
-    terms = @software_terms.clone
-
+  #  terms: (Hash)
+  #  comments: (Array)
+  def analyze_submission(terms, comments)
+    # accumulate mentions of term as comments are searched
     comments.each do |comment|
       # extract comment text
       comment_text = comment["item"]["text"]
 
-      # the terms/phrases contained in the comment
-      # todo, handle phrases, with or without .
-      comment_words = comment_text.split(/[ ,\/]/)
+      # build the terms contained in the comment and lower case for searching
+      # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
+      comment_words = comment_text.split(/[ ,\.\/]/).map(&:downcase)
 
       # identify if each term is in the comment
       terms.keys.each do |term|
         # increment count as its found
-        terms[term][:count] += 1 if comment_has_term?(term, comment_words)
+        terms[term][:count] += 1 if comment_words.include?( term.downcase )
       end
     end
 
@@ -120,63 +136,31 @@ class HiringTrends
     terms.keys.each do |term|
       terms[term][:percentage] = terms[term][:count]/comments.count.to_f
     end
-
-    # store the counts
-    @redis.hmset(submission_key, "terms", terms.to_json)
-  end
-
-  # Search, case-insensitive, the comment words array for a given word
-  #
-  # Arguments:
-  #  word: (String)
-  #  comment_words: (Array)
-  def comment_has_term?(word, comment_words)
-
-    # improve efficency with scan, binary search, directly lookup/contains
-
-    downword = word.downcase
-    comment_words.each do |c|
-      return true if (c.downcase == downword)
-    end
-    false
-  end
-
-  # Process all submissions, counting comments counts for each term in the technology dictionary
-  def analyze_submissions
-    initialize_dictionary if @software_terms.empty?
-    submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-    submission_keys.each do |submission_key|
-      analyze_submission(submission_key)
-    end
+    
+    terms
   end
 
   # Publish analysis
   def publish
     initialize_dictionary if @software_terms.empty?
-    counts_container = {}
+
+    # initialize the data structure to publish, will look like
+    # data = { 
+    # month1 => {num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
+    # month2 => {num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
+    # }
+    data = {}
 
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     submission_keys.each do |submission_key|
       month = @redis.hget(submission_key, "month")
-      terms = JSON.parse(@redis.hget(submission_key, "terms"))
-      counts_container[month] = terms
+      data[month] = {}
+      data[month][:num_comments] = @redis.hget(submission_key, "num_comments")
+      data[month][:terms] = JSON.parse(@redis.hget(submission_key, "terms"))
     end
 
-    # columns are months
-    columns = counts_container.keys.reverse
-
-    # rows are term and count hash (comment :count and :percentage)
-    datasets = []
-
-    @software_terms.keys.each do |t|
-      counts = []
-      columns.each do |m|
-        counts << counts_container[m][t]
-      end
-      datasets << { :name => t, :data => counts}
-    end
-
-    puts datasets.to_json
+    puts data.inspect
+    self
   end
 
 end
