@@ -2,18 +2,28 @@
 
 A Ruby library for analyizing software technology trends from Hacker News whoishiring posts.
 
+## Description
+
+## Warnings/Disclaimer
+
+This is a personal development project, in particular for exploring redis.  You are welcome to use, modify, etc. and I welcome any feedback or questions.
+
+## Requirements
+
+  * Ruby (developed and tested on 2.0.0-p247)
+  * Redis 
+
 ## Installation
 
+Install via RubyGems:
+
     gem install hiringtrends
-
-
-NOTE: redis is required to run this analysis, this assumes redis is already installed and configured
 
 ## Usage
 
 With a command line
 
-    [terminal window 1]
+    [terminal window 1 - start redis server]
     $ redis-server
 
     [terminal window 2]

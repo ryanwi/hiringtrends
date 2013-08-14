@@ -3,6 +3,7 @@ require "json"
 require "faraday"
 require "open-uri"
 
+
 class HiringTrends
   SUBMISSIONS_KEY = "hn_submissions"
   SUBMISSION_KEY_PREFIX = "submission:"
@@ -66,6 +67,10 @@ class HiringTrends
   end
 
   # Find comments for individual submission
+  #
+  # Arguments:
+  #  sigid: (String)
+  #  num_comments: (Integer)
   def get_comments_for_submission(sigid, num_comments)
     puts "== get_comments_for_submission #{sigid} =="
 
@@ -86,6 +91,9 @@ class HiringTrends
   end
 
   # Process submission
+  #
+  # Arguments:
+  #  submission_key: (String)
   def analyze_submission(submission_key)
     raw_comments = @redis.hget(submission_key, "comments")
     comments = JSON.parse raw_comments
@@ -118,7 +126,14 @@ class HiringTrends
   end
 
   # Search, case-insensitive, the comment words array for a given word
+  #
+  # Arguments:
+  #  word: (String)
+  #  comment_words: (Array)
   def comment_has_term?(word, comment_words)
+
+    # improve efficency with scan, binary search, directly lookup/contains
+
     downword = word.downcase
     comment_words.each do |c|
       return true if (c.downcase == downword)
