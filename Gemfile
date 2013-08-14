@@ -5,6 +5,6 @@ ruby '2.0.0'
 gem 'faraday'
 gem 'redis'
 
-group :test do
+group :test, :development do
   gem 'rspec'
 end
