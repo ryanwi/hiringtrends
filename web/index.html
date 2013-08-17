@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News (HN) Tech Hiring Trends</title>
+  <meta name="description" content="See what the top technologies are in job postings on Hacker News">  
+  <link rel="canonical" href="http://www.ryan-williams.net/hacker-news-hiring-trends/" />
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="page-header">
+    <h1>
+      Hacker News Tech Hiring Trends
+    </h1>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ryan-williams.net/hacker-news-hiring-trends/" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+  </div>
+
+  <div>
+    Show: 
+    <select id="topfilter">
+    <option value="5">Top 5</option>
+    <option value="10" selected>Top 10</option>
+    <option value="20">Top 20</option>
+    <option value="50">Top 50</option>
+    <option value="-1">All</option>
+    </select>
+  </div>
+
+
+
+  <div id="chart" style="width:100%; height:400px;"></div>
+
+
+  <h2>About</h2>
+  <p>
+    This chart represents trends in languagues, frameworks and technologies used to develop modern software applications. Using the <a href="https://www.hnsearch.com/api">HN Search API</a> and a <a href="https://gist.github.com/ryanwi/6135845">dictionary of software terms</a>, all of the the comments (job postings) in the "whoishiring" threads from April 2011 to August 2013 were processed to count the number of times each term was mentioned per month.
+  </p>
+
+  <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
+    Produced by <a href="http://www.ryan-williams.net">Ryan Williams</a> • 
+    <a href="http://twitter.com/ryanwi">Follow @ryanwi</a> • 
+    Email: ryan at ryan-williams.net • 
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+
+  </footer>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="data.js"></script>
+<script>
+var categories;
+var series;
+
+var highChartConverter = (function ( $ ) {
+
+  return  {
+
+    convertCategories: function () {
+      // initialize  xaxis categories (months)
+      var months = [];
+      $.map(data, function ( datapoint, i ) {
+        months.push(datapoint["month"]);
+      });
+      return months;
+    },
+
+    convertSeries: function () {
+      // initialize series data
+      var series = [];
+      $.map(Object.keys(data[0]["terms"]), function ( term, i ) {
+        var term_data = { "name": term, "data": [], "total_mentions": 0 }
+        // build data
+        $.map(data, function ( datapoint, i ) {
+          term_data["data"].push( datapoint["terms"][term]["percentage"] );
+          term_data["total_mentions"] += datapoint["terms"][term]["count"];
+        });
+        series.push(term_data);
+      });
+      return series;
+    }
+
+  }
+
+}) ( jQuery );
+
+var chartBuilder = (function ( $ ) {
+
+  return {
+
+    render: function( numTerms ) {
+      $('#chart').highcharts({
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: ''
+        },
+        xAxis: {
+          categories: categories,
+          labels: {
+            step: 3
+          }          
+        },
+        yAxis: {
+          title: {
+            text: 'Percent of Comments'
+          },
+          min: 0
+        },
+        tooltip: {
+          valueSuffix: '%'
+        },        
+        series: series.slice(0, numTerms)
+      });
+    }
+
+  }
+
+}) ( jQuery );
+
+$(function () { 
+  // go oldest to newest
+  data.reverse();
+
+  // transform raw data in to format consumable by highcharts
+  categories = highChartConverter.convertCategories();
+  series = highChartConverter.convertSeries();
+
+  // sort by top overall
+  series.sort( function( a,b ){return b.total_mentions - a.total_mentions} );
+
+  $("#topfilter").on( "change", function ( e ) {
+    chartBuilder.render( parseInt( $(this).val() ) );
+  });
+
+  chartBuilder.render( 10 );
+});
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<a href="https://github.com/ryanwi/hiringtrends"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+</body>
+</html>
