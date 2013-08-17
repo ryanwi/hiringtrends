@@ -22,8 +22,8 @@
   <div>
     Show: 
     <select id="topfilter">
-    <option value="5">Top 5</option>
-    <option value="10" selected>Top 10</option>
+    <option value="5" selected>Top 5</option>
+    <option value="10">Top 10</option>
     <option value="20">Top 20</option>
     <option value="50">Top 50</option>
     <option value="-1">All</option>
@@ -33,6 +33,35 @@
 
   <div id="chart" style="width:100%; height:400px;"></div>
 
+  <div class="row" style="margin-top:30px;">
+    <div class="col-md-6">
+      <h4>Rising</h4>
+      <table id="rising" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h4>Falling</h4>
+      <table id="falling" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
   <h2>About</h2>
   <p>
@@ -40,7 +69,6 @@
   </p>
 
   <p>
-
   </p>
 
   <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
@@ -80,9 +108,16 @@ var highChartConverter = (function ( $ ) {
         var term_data = { "name": term, "data": [], "total_mentions": 0 }
         // build data
         $.map(data, function ( datapoint, i ) {
-          term_data["data"].push( datapoint["terms"][term]["percentage"] );
+          term_data["data"].push( datapoint["terms"][term]["count"] );
           term_data["total_mentions"] += datapoint["terms"][term]["count"];
         });
+        var first = term_data["data"][term_data["data"].length-13];
+        var last = term_data["data"][term_data["data"].length-1]
+        if (first == 0 || last == 0) {
+          term_data["change"] = 0;
+        } else {
+          term_data["change"] = (last - first) / first;
+        }
         series.push(term_data);
       });
       return series;
@@ -112,7 +147,7 @@ var chartBuilder = (function ( $ ) {
         },
         yAxis: {
           title: {
-            text: 'Percent of Comments'
+            text: 'Number of Comments mentioned'
           },
           min: 0
         },
@@ -127,6 +162,29 @@ var chartBuilder = (function ( $ ) {
 
 }) ( jQuery );
 
+var tableBuilder = (function ( $ ) {
+
+  return {
+
+    renderRising: function() {
+      var rising = series.slice().sort(function( a,b ){ return b.change - a.change }).slice(0, 10);
+      $.each(rising, function ( i, val ) {
+        $('#rising tbody').append('<tr><td>' + val["name"] +'</td><td>' + (val["change"]*100).toFixed(2) +'%</td></tr>');
+      });
+    },
+
+    renderFalling: function( falling ) {
+      var falling = series.slice().sort(function( a,b ){ return a.change - b.change }).slice(0, 10);
+      $.each(falling, function ( i, val ) {
+        $('#falling tbody').append('<tr><td>' + val["name"] +'</td><td>' + (val["change"]*100).toFixed(2) +'%</td></tr>');
+      });
+    }
+
+  }
+
+}) ( jQuery );
+
+
 $(function () { 
   // go oldest to newest
   data.reverse();
@@ -136,13 +194,15 @@ $(function () {
   series = highChartConverter.convertSeries();
 
   // sort by top overall
-  series.sort( function( a,b ){return b.total_mentions - a.total_mentions} );
+  series.sort(function( a,b ){ return b.total_mentions - a.total_mentions });
 
   $("#topfilter").on( "change", function ( e ) {
     chartBuilder.render( parseInt( $(this).val() ) );
   });
 
-  chartBuilder.render( 10 );
+  chartBuilder.render( 5 );
+  tableBuilder.renderRising();
+  tableBuilder.renderFalling();
 });
 </script>
 
