@@ -34,4 +34,4 @@ With a command line
     > hn.get_submissions
     > hn.get_comments_for_submissions
     > hn.analyze_submissions
-    > hn.publish
+    > hn.publish("data.js")

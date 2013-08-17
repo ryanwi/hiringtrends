@@ -122,9 +122,9 @@ class HiringTrends
       # extract comment text
       comment_text = comment["item"]["text"]
 
-      # build the terms contained in the comment and lower case for searching
+      # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
       # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
-      comment_words = comment_text.split(/[ ,\.\/]/).map(&:downcase)
+      comment_words = comment_text.split(/[[:space:][:punct:]]/).map(&:downcase)
 
       # identify if each term is in the comment
       terms.keys.each do |term|
@@ -135,32 +135,34 @@ class HiringTrends
 
     # calculate percentage of comments
     terms.keys.each do |term|
-      terms[term][:percentage] = terms[term][:count]/comments.count.to_f
+      terms[term][:percentage] = ((terms[term][:count]/comments.count.to_f) * 100).round(2)
     end
     
     terms
   end
 
   # Publish analysis
-  def publish
+  def publish(filename)
     initialize_dictionary if @software_terms.empty?
 
     # initialize the data structure to publish, will look like
-    # data = { 
-    # month1 => {num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
-    # month2 => {num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
-    # }
-    data = {}
+    # data = [ 
+    # { :month => month1, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
+    # { :month => month2, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
+    # ]
+    data = []
 
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     submission_keys.each do |submission_key|
       month = @redis.hget(submission_key, "month")
-      data[month] = {}
-      data[month][:num_comments] = @redis.hget(submission_key, "num_comments")
-      data[month][:terms] = JSON.parse(@redis.hget(submission_key, "terms"))
+      datapoint = { :month => month }
+      datapoint[:num_comments] = @redis.hget(submission_key, "num_comments")
+      datapoint[:terms] = JSON.parse(@redis.hget(submission_key, "terms"))
+      data << datapoint
     end
 
-    puts data.inspect
+    File.open(filename, "wb") { |f| f.write(JSON.pretty_generate(data)) }    
+
     self
   end
 
