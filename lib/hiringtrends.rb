@@ -8,18 +8,10 @@ class HiringTrends
   SUBMISSIONS_KEY = "hn_submissions"
   SUBMISSION_KEY_PREFIX = "submission:"
 
-  def initialize
+  def initialize(dictionary_url)
     @redis = Redis.new
     @software_terms = {}
-  end
-
-  # Initialize hash of technology terms from dictionary with 0 counts
-  def initialize_dictionary
-    puts "== initialize_dictionary =="
-    open("https://gist.github.com/ryanwi/6135845/raw/06e8ab0f2e1815c3bb841c49aa93ad82ccb1cc60/software-terms.dic") {|f|
-      f.each_line {|line| @software_terms[line.chomp] = {:count => 0, :percentage => 0}}
-    }
-    self
+    @dictionary_url = dictionary_url
   end
 
   # Remove data from redis
@@ -28,6 +20,15 @@ class HiringTrends
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     @redis.del(submission_keys) unless submission_keys.empty?
     @redis.del(SUBMISSIONS_KEY)
+    self
+  end
+
+  # Initialize hash of technology terms from dictionary with 0 counts
+  def initialize_dictionary
+    puts "== initialize_dictionary =="
+    open(@dictionary_url) {|f|
+      f.each_line {|line| @software_terms[line.chomp] = {:count => 0, :percentage => 0}}
+    }
     self
   end
 
@@ -75,8 +76,8 @@ class HiringTrends
     initialize_dictionary if @software_terms.empty?
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     submission_keys.each do |submission_key|
-      # create a fresh dictionary of each term with initial count of 0
-      terms = @software_terms.clone
+      # create a fresh dictionary (need a deep copy) of each term with initial count of 0
+      terms = Marshal.load(Marshal.dump(@software_terms))
       raw_comments = @redis.hget(submission_key, "comments")
       comments = JSON.parse raw_comments
       term_data = analyze_submission(terms, comments)
