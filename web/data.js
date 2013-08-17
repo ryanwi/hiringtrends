@@ -24,24 +24,24 @@ var data = [
         "percentage": 0.0
       },
       "Agile": {
-        "count": 25,
-        "percentage": 6.44
+        "count": 24,
+        "percentage": 6.19
       },
       "Android": {
         "count": 40,
         "percentage": 10.31
       },
       "angular": {
-        "count": 20,
-        "percentage": 5.15
+        "count": 18,
+        "percentage": 4.64
       },
       "Apache": {
-        "count": 7,
-        "percentage": 1.8
+        "count": 6,
+        "percentage": 1.55
       },
       "api": {
-        "count": 27,
-        "percentage": 6.96
+        "count": 25,
+        "percentage": 6.44
       },
       "Apollo": {
         "count": 0,
@@ -72,8 +72,8 @@ var data = [
         "percentage": 0.0
       },
       "AWS": {
-        "count": 23,
-        "percentage": 5.93
+        "count": 21,
+        "percentage": 5.41
       },
       "Backbone": {
         "count": 40,
@@ -88,16 +88,16 @@ var data = [
         "percentage": 0.26
       },
       "C": {
-        "count": 38,
-        "percentage": 9.79
+        "count": 13,
+        "percentage": 3.35
       },
       "C++": {
-        "count": 17,
-        "percentage": 4.38
+        "count": 16,
+        "percentage": 4.12
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 2.32
       },
       "Celery": {
         "count": 2,
@@ -124,16 +124,16 @@ var data = [
         "percentage": 0.0
       },
       "CoffeeScript": {
-        "count": 16,
-        "percentage": 4.12
+        "count": 15,
+        "percentage": 3.87
       },
       "Couch": {
         "count": 1,
         "percentage": 0.26
       },
       "CSS": {
-        "count": 37,
-        "percentage": 9.54
+        "count": 30,
+        "percentage": 7.73
       },
       "d3": {
         "count": 12,
@@ -144,8 +144,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 20,
-        "percentage": 5.15
+        "count": 19,
+        "percentage": 4.9
       },
       "Docker": {
         "count": 3,
@@ -156,12 +156,16 @@ var data = [
         "percentage": 0.0
       },
       "EC2": {
-        "count": 7,
-        "percentage": 1.8
+        "count": 4,
+        "percentage": 1.03
+      },
+      "EDI": {
+        "count": 1,
+        "percentage": 0.26
       },
       "Elasticsearch": {
-        "count": 9,
-        "percentage": 2.32
+        "count": 8,
+        "percentage": 2.06
       },
       "Ember": {
         "count": 13,
@@ -172,8 +176,8 @@ var data = [
         "percentage": 0.77
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.26
       },
       "Factor": {
         "count": 0,
@@ -194,10 +198,6 @@ var data = [
       "Git": {
         "count": 19,
         "percentage": 4.9
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 1,
@@ -224,28 +224,28 @@ var data = [
         "percentage": 2.32
       },
       "HTML5": {
-        "count": 23,
-        "percentage": 5.93
+        "count": 17,
+        "percentage": 4.38
       },
       "iOS": {
-        "count": 44,
-        "percentage": 11.34
+        "count": 38,
+        "percentage": 9.79
       },
       "JBoss": {
         "count": 0,
         "percentage": 0.0
       },
       "Java": {
-        "count": 52,
-        "percentage": 13.4
+        "count": 48,
+        "percentage": 12.37
       },
       "JavaScript": {
-        "count": 86,
-        "percentage": 22.16
+        "count": 80,
+        "percentage": 20.62
       },
       "jQuery": {
-        "count": 32,
-        "percentage": 8.25
+        "count": 30,
+        "percentage": 7.73
       },
       "JSON API": {
         "count": 0,
@@ -260,8 +260,8 @@ var data = [
         "percentage": 0.26
       },
       "Kafka": {
-        "count": 4,
-        "percentage": 1.03
+        "count": 3,
+        "percentage": 0.77
       },
       "LAMP": {
         "count": 6,
@@ -272,12 +272,12 @@ var data = [
         "percentage": 3.87
       },
       "linux": {
-        "count": 30,
-        "percentage": 7.73
+        "count": 29,
+        "percentage": 7.47
       },
       "Lisp": {
-        "count": 1,
-        "percentage": 0.26
+        "count": 0,
+        "percentage": 0.0
       },
       "Lua": {
         "count": 1,
@@ -304,16 +304,16 @@ var data = [
         "percentage": 0.0
       },
       "Mongo": {
-        "count": 10,
-        "percentage": 2.58
+        "count": 9,
+        "percentage": 2.32
       },
       "MSMQ": {
         "count": 0,
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 36,
-        "percentage": 9.28
+        "count": 34,
+        "percentage": 8.76
       },
       "neo4j": {
         "count": 1,
@@ -328,8 +328,8 @@ var data = [
         "percentage": 0.77
       },
       "node": {
-        "count": 39,
-        "percentage": 10.05
+        "count": 37,
+        "percentage": 9.54
       },
       "NServiceBus": {
         "count": 1,
@@ -340,8 +340,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 2.32
       },
       "Objective-J": {
         "count": 0,
@@ -352,16 +352,16 @@ var data = [
         "percentage": 0.0
       },
       "Perl": {
-        "count": 6,
-        "percentage": 1.55
+        "count": 5,
+        "percentage": 1.29
       },
       "PHP": {
-        "count": 36,
-        "percentage": 9.28
+        "count": 31,
+        "percentage": 7.99
       },
       "Postgres": {
-        "count": 16,
-        "percentage": 4.12
+        "count": 15,
+        "percentage": 3.87
       },
       "PowerBuilder": {
         "count": 0,
@@ -372,24 +372,24 @@ var data = [
         "percentage": 2.84
       },
       "Python": {
-        "count": 75,
-        "percentage": 19.33
+        "count": 66,
+        "percentage": 17.01
       },
       "R": {
-        "count": 10,
-        "percentage": 2.58
+        "count": 3,
+        "percentage": 0.77
       },
       "RabbitMQ": {
-        "count": 6,
-        "percentage": 1.55
+        "count": 5,
+        "percentage": 1.29
       },
       "Rails": {
-        "count": 39,
-        "percentage": 10.05
+        "count": 38,
+        "percentage": 9.79
       },
       "Redis": {
-        "count": 22,
-        "percentage": 5.67
+        "count": 20,
+        "percentage": 5.15
       },
       "Resque": {
         "count": 1,
@@ -404,16 +404,16 @@ var data = [
         "percentage": 2.58
       },
       "Ruby": {
-        "count": 50,
-        "percentage": 12.89
+        "count": 46,
+        "percentage": 11.86
       },
       "Sass": {
-        "count": 11,
-        "percentage": 2.84
+        "count": 10,
+        "percentage": 2.58
       },
       "S3": {
-        "count": 6,
-        "percentage": 1.55
+        "count": 5,
+        "percentage": 1.29
       },
       "Scala": {
         "count": 11,
@@ -428,8 +428,8 @@ var data = [
         "percentage": 0.0
       },
       "Shell": {
-        "count": 5,
-        "percentage": 1.29
+        "count": 4,
+        "percentage": 1.03
       },
       "Sinatra": {
         "count": 1,
@@ -440,12 +440,12 @@ var data = [
         "percentage": 0.0
       },
       "Solr": {
-        "count": 8,
-        "percentage": 2.06
+        "count": 5,
+        "percentage": 1.29
       },
       "SQL": {
-        "count": 25,
-        "percentage": 6.44
+        "count": 20,
+        "percentage": 5.15
       },
       "SQL Server": {
         "count": 0,
@@ -468,8 +468,8 @@ var data = [
         "percentage": 1.8
       },
       "Storm": {
-        "count": 3,
-        "percentage": 0.77
+        "count": 2,
+        "percentage": 0.52
       },
       "TDD": {
         "count": 3,
@@ -519,13 +519,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 5,
+        "percentage": 1.29
+      },
       "WPF": {
         "count": 1,
         "percentage": 0.26
       },
       "XML": {
-        "count": 3,
-        "percentage": 0.77
+        "count": 2,
+        "percentage": 0.52
       },
       "XML Schema": {
         "count": 0,
@@ -566,24 +570,24 @@ var data = [
         "percentage": 0.0
       },
       "Agile": {
-        "count": 24,
-        "percentage": 6.47
+        "count": 23,
+        "percentage": 6.2
       },
       "Android": {
-        "count": 38,
-        "percentage": 10.24
+        "count": 37,
+        "percentage": 9.97
       },
       "angular": {
-        "count": 13,
-        "percentage": 3.5
+        "count": 11,
+        "percentage": 2.96
       },
       "Apache": {
         "count": 2,
         "percentage": 0.54
       },
       "api": {
-        "count": 20,
-        "percentage": 5.39
+        "count": 19,
+        "percentage": 5.12
       },
       "Apollo": {
         "count": 0,
@@ -618,28 +622,28 @@ var data = [
         "percentage": 4.58
       },
       "Backbone": {
-        "count": 35,
-        "percentage": 9.43
+        "count": 33,
+        "percentage": 8.89
       },
       "Bash": {
-        "count": 1,
-        "percentage": 0.27
+        "count": 0,
+        "percentage": 0.0
       },
       "BigData": {
         "count": 0,
         "percentage": 0.0
       },
       "C": {
-        "count": 34,
-        "percentage": 9.16
+        "count": 15,
+        "percentage": 4.04
       },
       "C++": {
-        "count": 19,
-        "percentage": 5.12
+        "count": 17,
+        "percentage": 4.58
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 1.62
       },
       "Celery": {
         "count": 1,
@@ -666,16 +670,16 @@ var data = [
         "percentage": 0.0
       },
       "CoffeeScript": {
-        "count": 9,
-        "percentage": 2.43
+        "count": 8,
+        "percentage": 2.16
       },
       "Couch": {
         "count": 0,
         "percentage": 0.0
       },
       "CSS": {
-        "count": 33,
-        "percentage": 8.89
+        "count": 27,
+        "percentage": 7.28
       },
       "d3": {
         "count": 7,
@@ -686,8 +690,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 22,
-        "percentage": 5.93
+        "count": 20,
+        "percentage": 5.39
       },
       "Docker": {
         "count": 0,
@@ -698,8 +702,12 @@ var data = [
         "percentage": 0.54
       },
       "EC2": {
-        "count": 9,
-        "percentage": 2.43
+        "count": 8,
+        "percentage": 2.16
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 2,
@@ -710,8 +718,8 @@ var data = [
         "percentage": 2.16
       },
       "Erlang": {
-        "count": 4,
-        "percentage": 1.08
+        "count": 3,
+        "percentage": 0.81
       },
       "F#": {
         "count": 0,
@@ -737,10 +745,6 @@ var data = [
         "count": 16,
         "percentage": 4.31
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -750,8 +754,8 @@ var data = [
         "percentage": 0.27
       },
       "Hadoop": {
-        "count": 14,
-        "percentage": 3.77
+        "count": 13,
+        "percentage": 3.5
       },
       "Haskell": {
         "count": 5,
@@ -766,36 +770,36 @@ var data = [
         "percentage": 1.35
       },
       "HTML5": {
-        "count": 18,
-        "percentage": 4.85
+        "count": 17,
+        "percentage": 4.58
       },
       "iOS": {
-        "count": 38,
-        "percentage": 10.24
+        "count": 33,
+        "percentage": 8.89
       },
       "JBoss": {
         "count": 0,
         "percentage": 0.0
       },
       "Java": {
-        "count": 37,
-        "percentage": 9.97
+        "count": 35,
+        "percentage": 9.43
       },
       "JavaScript": {
-        "count": 76,
-        "percentage": 20.49
+        "count": 73,
+        "percentage": 19.68
       },
       "jQuery": {
-        "count": 24,
-        "percentage": 6.47
+        "count": 22,
+        "percentage": 5.93
       },
       "JSON API": {
         "count": 0,
         "percentage": 0.0
       },
       "JUnit": {
-        "count": 1,
-        "percentage": 0.27
+        "count": 0,
+        "percentage": 0.0
       },
       "Kestrel": {
         "count": 0,
@@ -806,20 +810,20 @@ var data = [
         "percentage": 0.81
       },
       "LAMP": {
-        "count": 8,
-        "percentage": 2.16
+        "count": 7,
+        "percentage": 1.89
       },
       "less": {
         "count": 12,
         "percentage": 3.23
       },
       "linux": {
-        "count": 25,
-        "percentage": 6.74
+        "count": 24,
+        "percentage": 6.47
       },
       "Lisp": {
-        "count": 1,
-        "percentage": 0.27
+        "count": 0,
+        "percentage": 0.0
       },
       "Lua": {
         "count": 0,
@@ -846,16 +850,16 @@ var data = [
         "percentage": 0.0
       },
       "Mongo": {
-        "count": 8,
-        "percentage": 2.16
+        "count": 6,
+        "percentage": 1.62
       },
       "MSMQ": {
         "count": 0,
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 26,
-        "percentage": 7.01
+        "count": 24,
+        "percentage": 6.47
       },
       "neo4j": {
         "count": 0,
@@ -882,8 +886,8 @@ var data = [
         "percentage": 0.27
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 1.62
       },
       "Objective-J": {
         "count": 0,
@@ -894,12 +898,12 @@ var data = [
         "percentage": 0.0
       },
       "Perl": {
-        "count": 13,
-        "percentage": 3.5
+        "count": 10,
+        "percentage": 2.7
       },
       "PHP": {
-        "count": 29,
-        "percentage": 7.82
+        "count": 27,
+        "percentage": 7.28
       },
       "Postgres": {
         "count": 11,
@@ -914,24 +918,24 @@ var data = [
         "percentage": 1.08
       },
       "Python": {
-        "count": 59,
-        "percentage": 15.9
+        "count": 51,
+        "percentage": 13.75
       },
       "R": {
-        "count": 4,
-        "percentage": 1.08
-      },
-      "RabbitMQ": {
         "count": 2,
         "percentage": 0.54
       },
+      "RabbitMQ": {
+        "count": 1,
+        "percentage": 0.27
+      },
       "Rails": {
-        "count": 48,
-        "percentage": 12.94
+        "count": 45,
+        "percentage": 12.13
       },
       "Redis": {
-        "count": 20,
-        "percentage": 5.39
+        "count": 19,
+        "percentage": 5.12
       },
       "Resque": {
         "count": 0,
@@ -946,24 +950,24 @@ var data = [
         "percentage": 3.23
       },
       "Ruby": {
-        "count": 50,
-        "percentage": 13.48
+        "count": 48,
+        "percentage": 12.94
       },
       "Sass": {
         "count": 9,
         "percentage": 2.43
       },
       "S3": {
-        "count": 4,
-        "percentage": 1.08
+        "count": 3,
+        "percentage": 0.81
       },
       "Scala": {
         "count": 6,
         "percentage": 1.62
       },
       "Scrum": {
-        "count": 4,
-        "percentage": 1.08
+        "count": 3,
+        "percentage": 0.81
       },
       "SharePoint": {
         "count": 2,
@@ -982,12 +986,12 @@ var data = [
         "percentage": 0.27
       },
       "Solr": {
-        "count": 8,
-        "percentage": 2.16
+        "count": 6,
+        "percentage": 1.62
       },
       "SQL": {
-        "count": 11,
-        "percentage": 2.96
+        "count": 10,
+        "percentage": 2.7
       },
       "SQL Server": {
         "count": 0,
@@ -1010,12 +1014,12 @@ var data = [
         "percentage": 0.27
       },
       "Storm": {
-        "count": 4,
-        "percentage": 1.08
+        "count": 3,
+        "percentage": 0.81
       },
       "TDD": {
-        "count": 4,
-        "percentage": 1.08
+        "count": 3,
+        "percentage": 0.81
       },
       "Thrift": {
         "count": 1,
@@ -1060,6 +1064,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 5,
+        "percentage": 1.35
       },
       "WPF": {
         "count": 0,
@@ -1124,8 +1132,8 @@ var data = [
         "percentage": 0.0
       },
       "api": {
-        "count": 18,
-        "percentage": 4.95
+        "count": 17,
+        "percentage": 4.67
       },
       "Apollo": {
         "count": 0,
@@ -1172,16 +1180,16 @@ var data = [
         "percentage": 0.27
       },
       "C": {
-        "count": 32,
-        "percentage": 8.79
+        "count": 12,
+        "percentage": 3.3
       },
       "C++": {
         "count": 15,
         "percentage": 4.12
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 16,
+        "percentage": 4.4
       },
       "Celery": {
         "count": 1,
@@ -1243,6 +1251,10 @@ var data = [
         "count": 3,
         "percentage": 0.82
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 4,
         "percentage": 1.1
@@ -1256,8 +1268,8 @@ var data = [
         "percentage": 1.65
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.27
       },
       "Factor": {
         "count": 0,
@@ -1279,21 +1291,17 @@ var data = [
         "count": 16,
         "percentage": 4.4
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
       },
       "Groovy": {
-        "count": 1,
-        "percentage": 0.27
+        "count": 0,
+        "percentage": 0.0
       },
       "Hadoop": {
-        "count": 12,
-        "percentage": 3.3
+        "count": 11,
+        "percentage": 3.02
       },
       "Haskell": {
         "count": 6,
@@ -1312,8 +1320,8 @@ var data = [
         "percentage": 4.95
       },
       "iOS": {
-        "count": 45,
-        "percentage": 12.36
+        "count": 44,
+        "percentage": 12.09
       },
       "JBoss": {
         "count": 0,
@@ -1324,12 +1332,12 @@ var data = [
         "percentage": 11.81
       },
       "JavaScript": {
-        "count": 76,
-        "percentage": 20.88
+        "count": 75,
+        "percentage": 20.6
       },
       "jQuery": {
-        "count": 29,
-        "percentage": 7.97
+        "count": 28,
+        "percentage": 7.69
       },
       "JSON API": {
         "count": 0,
@@ -1424,8 +1432,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 1.92
       },
       "Objective-J": {
         "count": 0,
@@ -1440,8 +1448,8 @@ var data = [
         "percentage": 1.92
       },
       "PHP": {
-        "count": 26,
-        "percentage": 7.14
+        "count": 22,
+        "percentage": 6.04
       },
       "Postgres": {
         "count": 8,
@@ -1460,16 +1468,16 @@ var data = [
         "percentage": 14.56
       },
       "R": {
-        "count": 7,
-        "percentage": 1.92
+        "count": 2,
+        "percentage": 0.55
       },
       "RabbitMQ": {
         "count": 3,
         "percentage": 0.82
       },
       "Rails": {
-        "count": 45,
-        "percentage": 12.36
+        "count": 44,
+        "percentage": 12.09
       },
       "Redis": {
         "count": 18,
@@ -1496,12 +1504,12 @@ var data = [
         "percentage": 1.37
       },
       "S3": {
-        "count": 2,
-        "percentage": 0.55
+        "count": 1,
+        "percentage": 0.27
       },
       "Scala": {
-        "count": 11,
-        "percentage": 3.02
+        "count": 10,
+        "percentage": 2.75
       },
       "Scrum": {
         "count": 3,
@@ -1516,8 +1524,8 @@ var data = [
         "percentage": 0.55
       },
       "Sinatra": {
-        "count": 4,
-        "percentage": 1.1
+        "count": 3,
+        "percentage": 0.82
       },
       "SOAP": {
         "count": 2,
@@ -1603,6 +1611,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 0.82
+      },
       "WPF": {
         "count": 2,
         "percentage": 0.55
@@ -1666,8 +1678,8 @@ var data = [
         "percentage": 0.23
       },
       "api": {
-        "count": 23,
-        "percentage": 5.2
+        "count": 20,
+        "percentage": 4.52
       },
       "Apollo": {
         "count": 0,
@@ -1714,16 +1726,16 @@ var data = [
         "percentage": 0.23
       },
       "C": {
-        "count": 35,
-        "percentage": 7.92
+        "count": 19,
+        "percentage": 4.3
       },
       "C++": {
         "count": 17,
         "percentage": 3.85
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 2.04
       },
       "Celery": {
         "count": 2,
@@ -1734,8 +1746,8 @@ var data = [
         "percentage": 2.94
       },
       "clojure": {
-        "count": 8,
-        "percentage": 1.81
+        "count": 7,
+        "percentage": 1.58
       },
       "CloudFront": {
         "count": 0,
@@ -1782,8 +1794,12 @@ var data = [
         "percentage": 0.0
       },
       "EC2": {
-        "count": 11,
-        "percentage": 2.49
+        "count": 10,
+        "percentage": 2.26
+      },
+      "EDI": {
+        "count": 1,
+        "percentage": 0.23
       },
       "Elasticsearch": {
         "count": 7,
@@ -1798,8 +1814,8 @@ var data = [
         "percentage": 1.81
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.23
       },
       "Factor": {
         "count": 0,
@@ -1818,12 +1834,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 26,
-        "percentage": 5.88
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 25,
+        "percentage": 5.66
       },
       "golang": {
         "count": 0,
@@ -1834,8 +1846,8 @@ var data = [
         "percentage": 0.23
       },
       "Hadoop": {
-        "count": 11,
-        "percentage": 2.49
+        "count": 10,
+        "percentage": 2.26
       },
       "Haskell": {
         "count": 7,
@@ -1850,20 +1862,20 @@ var data = [
         "percentage": 1.13
       },
       "HTML5": {
-        "count": 25,
-        "percentage": 5.66
+        "count": 24,
+        "percentage": 5.43
       },
       "iOS": {
-        "count": 49,
-        "percentage": 11.09
+        "count": 48,
+        "percentage": 10.86
       },
       "JBoss": {
         "count": 0,
         "percentage": 0.0
       },
       "Java": {
-        "count": 46,
-        "percentage": 10.41
+        "count": 44,
+        "percentage": 9.95
       },
       "JavaScript": {
         "count": 85,
@@ -1966,8 +1978,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.13
       },
       "Objective-J": {
         "count": 0,
@@ -1982,8 +1994,8 @@ var data = [
         "percentage": 1.36
       },
       "PHP": {
-        "count": 36,
-        "percentage": 8.14
+        "count": 33,
+        "percentage": 7.47
       },
       "Postgres": {
         "count": 8,
@@ -1998,12 +2010,12 @@ var data = [
         "percentage": 2.26
       },
       "Python": {
-        "count": 65,
-        "percentage": 14.71
+        "count": 63,
+        "percentage": 14.25
       },
       "R": {
-        "count": 7,
-        "percentage": 1.58
+        "count": 4,
+        "percentage": 0.9
       },
       "RabbitMQ": {
         "count": 6,
@@ -2026,12 +2038,12 @@ var data = [
         "percentage": 1.36
       },
       "REST": {
-        "count": 12,
-        "percentage": 2.71
+        "count": 11,
+        "percentage": 2.49
       },
       "Ruby": {
-        "count": 52,
-        "percentage": 11.76
+        "count": 51,
+        "percentage": 11.54
       },
       "Sass": {
         "count": 8,
@@ -2070,8 +2082,8 @@ var data = [
         "percentage": 0.45
       },
       "SQL": {
-        "count": 22,
-        "percentage": 4.98
+        "count": 21,
+        "percentage": 4.75
       },
       "SQL Server": {
         "count": 0,
@@ -2145,6 +2157,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.23
+      },
       "WPF": {
         "count": 1,
         "percentage": 0.23
@@ -2192,8 +2208,8 @@ var data = [
         "percentage": 0.24
       },
       "Agile": {
-        "count": 25,
-        "percentage": 5.95
+        "count": 24,
+        "percentage": 5.71
       },
       "Android": {
         "count": 49,
@@ -2208,8 +2224,8 @@ var data = [
         "percentage": 1.19
       },
       "api": {
-        "count": 21,
-        "percentage": 5.0
+        "count": 19,
+        "percentage": 4.52
       },
       "Apollo": {
         "count": 0,
@@ -2256,16 +2272,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 44,
-        "percentage": 10.48
+        "count": 22,
+        "percentage": 5.24
       },
       "C++": {
         "count": 18,
         "percentage": 4.29
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 2.38
       },
       "Celery": {
         "count": 7,
@@ -2276,8 +2292,8 @@ var data = [
         "percentage": 4.29
       },
       "clojure": {
-        "count": 7,
-        "percentage": 1.67
+        "count": 6,
+        "percentage": 1.43
       },
       "CloudFront": {
         "count": 0,
@@ -2304,8 +2320,8 @@ var data = [
         "percentage": 9.29
       },
       "d3": {
-        "count": 7,
-        "percentage": 1.67
+        "count": 6,
+        "percentage": 1.43
       },
       "Delphi": {
         "count": 0,
@@ -2326,6 +2342,10 @@ var data = [
       "EC2": {
         "count": 5,
         "percentage": 1.19
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 5,
@@ -2363,10 +2383,6 @@ var data = [
         "count": 20,
         "percentage": 4.76
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -2396,8 +2412,8 @@ var data = [
         "percentage": 3.81
       },
       "iOS": {
-        "count": 50,
-        "percentage": 11.9
+        "count": 49,
+        "percentage": 11.67
       },
       "JBoss": {
         "count": 2,
@@ -2440,8 +2456,8 @@ var data = [
         "percentage": 3.57
       },
       "linux": {
-        "count": 27,
-        "percentage": 6.43
+        "count": 25,
+        "percentage": 5.95
       },
       "Lisp": {
         "count": 0,
@@ -2508,8 +2524,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 2.14
       },
       "Objective-J": {
         "count": 0,
@@ -2524,8 +2540,8 @@ var data = [
         "percentage": 0.71
       },
       "PHP": {
-        "count": 35,
-        "percentage": 8.33
+        "count": 31,
+        "percentage": 7.38
       },
       "Postgres": {
         "count": 9,
@@ -2540,12 +2556,12 @@ var data = [
         "percentage": 2.14
       },
       "Python": {
-        "count": 66,
-        "percentage": 15.71
+        "count": 64,
+        "percentage": 15.24
       },
       "R": {
-        "count": 8,
-        "percentage": 1.9
+        "count": 4,
+        "percentage": 0.95
       },
       "RabbitMQ": {
         "count": 10,
@@ -2576,8 +2592,8 @@ var data = [
         "percentage": 12.14
       },
       "Sass": {
-        "count": 8,
-        "percentage": 1.9
+        "count": 6,
+        "percentage": 1.43
       },
       "S3": {
         "count": 3,
@@ -2612,8 +2628,8 @@ var data = [
         "percentage": 1.19
       },
       "SQL": {
-        "count": 25,
-        "percentage": 5.95
+        "count": 22,
+        "percentage": 5.24
       },
       "SQL Server": {
         "count": 0,
@@ -2687,6 +2703,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 0.71
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
@@ -2734,8 +2754,8 @@ var data = [
         "percentage": 0.0
       },
       "Agile": {
-        "count": 14,
-        "percentage": 3.87
+        "count": 13,
+        "percentage": 3.59
       },
       "Android": {
         "count": 40,
@@ -2798,16 +2818,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 44,
-        "percentage": 12.15
+        "count": 25,
+        "percentage": 6.91
       },
       "C++": {
         "count": 18,
         "percentage": 4.97
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.21
       },
       "Celery": {
         "count": 3,
@@ -2846,8 +2866,8 @@ var data = [
         "percentage": 10.5
       },
       "d3": {
-        "count": 5,
-        "percentage": 1.38
+        "count": 4,
+        "percentage": 1.1
       },
       "Delphi": {
         "count": 0,
@@ -2869,6 +2889,10 @@ var data = [
         "count": 3,
         "percentage": 0.83
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 5,
         "percentage": 1.38
@@ -2886,8 +2910,8 @@ var data = [
         "percentage": 0.0
       },
       "Factor": {
-        "count": 1,
-        "percentage": 0.28
+        "count": 0,
+        "percentage": 0.0
       },
       "Fortran": {
         "count": 0,
@@ -2904,10 +2928,6 @@ var data = [
       "Git": {
         "count": 10,
         "percentage": 2.76
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -2930,16 +2950,16 @@ var data = [
         "percentage": 0.0
       },
       "Heroku": {
-        "count": 8,
-        "percentage": 2.21
+        "count": 7,
+        "percentage": 1.93
       },
       "HTML5": {
         "count": 8,
         "percentage": 2.21
       },
       "iOS": {
-        "count": 40,
-        "percentage": 11.05
+        "count": 39,
+        "percentage": 10.77
       },
       "JBoss": {
         "count": 1,
@@ -2950,8 +2970,8 @@ var data = [
         "percentage": 9.94
       },
       "JavaScript": {
-        "count": 66,
-        "percentage": 18.23
+        "count": 65,
+        "percentage": 17.96
       },
       "jQuery": {
         "count": 23,
@@ -2974,12 +2994,12 @@ var data = [
         "percentage": 0.0
       },
       "LAMP": {
-        "count": 4,
-        "percentage": 1.1
+        "count": 3,
+        "percentage": 0.83
       },
       "less": {
-        "count": 11,
-        "percentage": 3.04
+        "count": 10,
+        "percentage": 2.76
       },
       "linux": {
         "count": 24,
@@ -3050,8 +3070,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 2.49
       },
       "Objective-J": {
         "count": 0,
@@ -3066,8 +3086,8 @@ var data = [
         "percentage": 1.38
       },
       "PHP": {
-        "count": 23,
-        "percentage": 6.35
+        "count": 22,
+        "percentage": 6.08
       },
       "Postgres": {
         "count": 7,
@@ -3086,16 +3106,16 @@ var data = [
         "percentage": 12.15
       },
       "R": {
-        "count": 4,
-        "percentage": 1.1
+        "count": 2,
+        "percentage": 0.55
       },
       "RabbitMQ": {
         "count": 4,
         "percentage": 1.1
       },
       "Rails": {
-        "count": 39,
-        "percentage": 10.77
+        "count": 38,
+        "percentage": 10.5
       },
       "Redis": {
         "count": 13,
@@ -3114,12 +3134,12 @@ var data = [
         "percentage": 2.49
       },
       "Ruby": {
-        "count": 47,
-        "percentage": 12.98
+        "count": 46,
+        "percentage": 12.71
       },
       "Sass": {
-        "count": 5,
-        "percentage": 1.38
+        "count": 4,
+        "percentage": 1.1
       },
       "S3": {
         "count": 1,
@@ -3229,6 +3249,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 0.83
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
@@ -3292,8 +3316,8 @@ var data = [
         "percentage": 0.0
       },
       "api": {
-        "count": 12,
-        "percentage": 4.67
+        "count": 10,
+        "percentage": 3.89
       },
       "Apollo": {
         "count": 0,
@@ -3324,8 +3348,8 @@ var data = [
         "percentage": 0.0
       },
       "AWS": {
-        "count": 11,
-        "percentage": 4.28
+        "count": 10,
+        "percentage": 3.89
       },
       "Backbone": {
         "count": 12,
@@ -3340,16 +3364,16 @@ var data = [
         "percentage": 0.39
       },
       "C": {
-        "count": 29,
-        "percentage": 11.28
+        "count": 18,
+        "percentage": 7.0
       },
       "C++": {
         "count": 12,
         "percentage": 4.67
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.95
       },
       "Celery": {
         "count": 4,
@@ -3388,8 +3412,8 @@ var data = [
         "percentage": 5.45
       },
       "d3": {
-        "count": 6,
-        "percentage": 2.33
+        "count": 5,
+        "percentage": 1.95
       },
       "Delphi": {
         "count": 0,
@@ -3411,6 +3435,10 @@ var data = [
         "count": 2,
         "percentage": 0.78
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 6,
         "percentage": 2.33
@@ -3424,8 +3452,8 @@ var data = [
         "percentage": 1.95
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.78
       },
       "Factor": {
         "count": 0,
@@ -3446,10 +3474,6 @@ var data = [
       "Git": {
         "count": 14,
         "percentage": 5.45
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -3532,8 +3556,8 @@ var data = [
         "percentage": 0.0
       },
       "Lua": {
-        "count": 3,
-        "percentage": 1.17
+        "count": 2,
+        "percentage": 0.78
       },
       "Lucene": {
         "count": 2,
@@ -3592,8 +3616,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.95
       },
       "Objective-J": {
         "count": 0,
@@ -3608,8 +3632,8 @@ var data = [
         "percentage": 0.78
       },
       "PHP": {
-        "count": 20,
-        "percentage": 7.78
+        "count": 16,
+        "percentage": 6.23
       },
       "Postgres": {
         "count": 4,
@@ -3628,8 +3652,8 @@ var data = [
         "percentage": 15.95
       },
       "R": {
-        "count": 4,
-        "percentage": 1.56
+        "count": 3,
+        "percentage": 1.17
       },
       "RabbitMQ": {
         "count": 6,
@@ -3771,6 +3795,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.39
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
@@ -3882,16 +3910,16 @@ var data = [
         "percentage": 0.39
       },
       "C": {
-        "count": 30,
-        "percentage": 11.67
+        "count": 16,
+        "percentage": 6.23
       },
       "C++": {
         "count": 10,
         "percentage": 3.89
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 3.11
       },
       "Celery": {
         "count": 4,
@@ -3953,6 +3981,10 @@ var data = [
         "count": 3,
         "percentage": 1.17
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 5,
         "percentage": 1.95
@@ -3966,8 +3998,8 @@ var data = [
         "percentage": 1.17
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.39
       },
       "Factor": {
         "count": 0,
@@ -3988,10 +4020,6 @@ var data = [
       "Git": {
         "count": 10,
         "percentage": 3.89
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -4034,8 +4062,8 @@ var data = [
         "percentage": 12.84
       },
       "JavaScript": {
-        "count": 54,
-        "percentage": 21.01
+        "count": 53,
+        "percentage": 20.62
       },
       "jQuery": {
         "count": 16,
@@ -4066,8 +4094,8 @@ var data = [
         "percentage": 2.72
       },
       "linux": {
-        "count": 17,
-        "percentage": 6.61
+        "count": 16,
+        "percentage": 6.23
       },
       "Lisp": {
         "count": 0,
@@ -4134,8 +4162,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.33
       },
       "Objective-J": {
         "count": 0,
@@ -4150,8 +4178,8 @@ var data = [
         "percentage": 2.33
       },
       "PHP": {
-        "count": 28,
-        "percentage": 10.89
+        "count": 27,
+        "percentage": 10.51
       },
       "Postgres": {
         "count": 2,
@@ -4170,16 +4198,16 @@ var data = [
         "percentage": 19.07
       },
       "R": {
-        "count": 4,
-        "percentage": 1.56
+        "count": 2,
+        "percentage": 0.78
       },
       "RabbitMQ": {
         "count": 4,
         "percentage": 1.56
       },
       "Rails": {
-        "count": 36,
-        "percentage": 14.01
+        "count": 35,
+        "percentage": 13.62
       },
       "Redis": {
         "count": 14,
@@ -4198,8 +4226,8 @@ var data = [
         "percentage": 3.11
       },
       "Ruby": {
-        "count": 36,
-        "percentage": 14.01
+        "count": 35,
+        "percentage": 13.62
       },
       "Sass": {
         "count": 7,
@@ -4266,8 +4294,8 @@ var data = [
         "percentage": 0.39
       },
       "TDD": {
-        "count": 5,
-        "percentage": 1.95
+        "count": 4,
+        "percentage": 1.56
       },
       "Thrift": {
         "count": 1,
@@ -4312,6 +4340,10 @@ var data = [
       "WinRT": {
         "count": 1,
         "percentage": 0.39
+      },
+      "WordPress": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WPF": {
         "count": 1,
@@ -4360,8 +4392,8 @@ var data = [
         "percentage": 0.0
       },
       "Agile": {
-        "count": 11,
-        "percentage": 3.85
+        "count": 10,
+        "percentage": 3.5
       },
       "Android": {
         "count": 16,
@@ -4376,8 +4408,8 @@ var data = [
         "percentage": 0.35
       },
       "api": {
-        "count": 10,
-        "percentage": 3.5
+        "count": 9,
+        "percentage": 3.15
       },
       "Apollo": {
         "count": 0,
@@ -4424,16 +4456,16 @@ var data = [
         "percentage": 0.35
       },
       "C": {
-        "count": 30,
-        "percentage": 10.49
+        "count": 14,
+        "percentage": 4.9
       },
       "C++": {
         "count": 11,
         "percentage": 3.85
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 11,
+        "percentage": 3.85
       },
       "Celery": {
         "count": 2,
@@ -4495,6 +4527,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 4,
         "percentage": 1.4
@@ -4512,8 +4548,8 @@ var data = [
         "percentage": 0.0
       },
       "Factor": {
-        "count": 2,
-        "percentage": 0.7
+        "count": 1,
+        "percentage": 0.35
       },
       "Fortran": {
         "count": 0,
@@ -4528,12 +4564,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 12,
-        "percentage": 4.2
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 11,
+        "percentage": 3.85
       },
       "golang": {
         "count": 0,
@@ -4544,8 +4576,8 @@ var data = [
         "percentage": 0.0
       },
       "Hadoop": {
-        "count": 10,
-        "percentage": 3.5
+        "count": 9,
+        "percentage": 3.15
       },
       "Haskell": {
         "count": 2,
@@ -4572,12 +4604,12 @@ var data = [
         "percentage": 0.0
       },
       "Java": {
-        "count": 25,
-        "percentage": 8.74
+        "count": 23,
+        "percentage": 8.04
       },
       "JavaScript": {
-        "count": 51,
-        "percentage": 17.83
+        "count": 49,
+        "percentage": 17.13
       },
       "jQuery": {
         "count": 19,
@@ -4676,8 +4708,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.4
       },
       "Objective-J": {
         "count": 0,
@@ -4692,8 +4724,8 @@ var data = [
         "percentage": 0.7
       },
       "PHP": {
-        "count": 22,
-        "percentage": 7.69
+        "count": 19,
+        "percentage": 6.64
       },
       "Postgres": {
         "count": 11,
@@ -4708,12 +4740,12 @@ var data = [
         "percentage": 1.4
       },
       "Python": {
-        "count": 50,
-        "percentage": 17.48
+        "count": 49,
+        "percentage": 17.13
       },
       "R": {
-        "count": 7,
-        "percentage": 2.45
+        "count": 4,
+        "percentage": 1.4
       },
       "RabbitMQ": {
         "count": 5,
@@ -4780,8 +4812,8 @@ var data = [
         "percentage": 1.4
       },
       "SQL": {
-        "count": 6,
-        "percentage": 2.1
+        "count": 5,
+        "percentage": 1.75
       },
       "SQL Server": {
         "count": 0,
@@ -4808,8 +4840,8 @@ var data = [
         "percentage": 0.7
       },
       "TDD": {
-        "count": 4,
-        "percentage": 1.4
+        "count": 3,
+        "percentage": 1.05
       },
       "Thrift": {
         "count": 1,
@@ -4854,6 +4886,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 3,
+        "percentage": 1.05
       },
       "WPF": {
         "count": 1,
@@ -4902,8 +4938,8 @@ var data = [
         "percentage": 0.0
       },
       "Agile": {
-        "count": 12,
-        "percentage": 4.56
+        "count": 11,
+        "percentage": 4.18
       },
       "Android": {
         "count": 21,
@@ -4918,8 +4954,8 @@ var data = [
         "percentage": 0.38
       },
       "api": {
-        "count": 19,
-        "percentage": 7.22
+        "count": 18,
+        "percentage": 6.84
       },
       "Apollo": {
         "count": 0,
@@ -4966,16 +5002,16 @@ var data = [
         "percentage": 0.38
       },
       "C": {
-        "count": 28,
-        "percentage": 10.65
+        "count": 15,
+        "percentage": 5.7
       },
       "C++": {
         "count": 13,
         "percentage": 4.94
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 3.8
       },
       "Celery": {
         "count": 2,
@@ -5022,8 +5058,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 16,
-        "percentage": 6.08
+        "count": 15,
+        "percentage": 5.7
       },
       "Docker": {
         "count": 0,
@@ -5036,6 +5072,10 @@ var data = [
       "EC2": {
         "count": 3,
         "percentage": 1.14
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 1,
@@ -5070,12 +5110,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 13,
-        "percentage": 4.94
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 12,
+        "percentage": 4.56
       },
       "golang": {
         "count": 0,
@@ -5118,8 +5154,8 @@ var data = [
         "percentage": 9.13
       },
       "JavaScript": {
-        "count": 45,
-        "percentage": 17.11
+        "count": 44,
+        "percentage": 16.73
       },
       "jQuery": {
         "count": 18,
@@ -5146,12 +5182,12 @@ var data = [
         "percentage": 1.14
       },
       "less": {
-        "count": 9,
-        "percentage": 3.42
+        "count": 8,
+        "percentage": 3.04
       },
       "linux": {
-        "count": 17,
-        "percentage": 6.46
+        "count": 16,
+        "percentage": 6.08
       },
       "Lisp": {
         "count": 0,
@@ -5218,8 +5254,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.9
       },
       "Objective-J": {
         "count": 0,
@@ -5234,8 +5270,8 @@ var data = [
         "percentage": 1.52
       },
       "PHP": {
-        "count": 24,
-        "percentage": 9.13
+        "count": 23,
+        "percentage": 8.75
       },
       "Postgres": {
         "count": 6,
@@ -5254,8 +5290,8 @@ var data = [
         "percentage": 18.63
       },
       "R": {
-        "count": 4,
-        "percentage": 1.52
+        "count": 2,
+        "percentage": 0.76
       },
       "RabbitMQ": {
         "count": 6,
@@ -5322,8 +5358,8 @@ var data = [
         "percentage": 1.52
       },
       "SQL": {
-        "count": 10,
-        "percentage": 3.8
+        "count": 8,
+        "percentage": 3.04
       },
       "SQL Server": {
         "count": 0,
@@ -5397,6 +5433,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 2,
+        "percentage": 0.76
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
@@ -5448,8 +5488,8 @@ var data = [
         "percentage": 4.75
       },
       "Android": {
-        "count": 34,
-        "percentage": 11.53
+        "count": 33,
+        "percentage": 11.19
       },
       "angular": {
         "count": 0,
@@ -5492,8 +5532,8 @@ var data = [
         "percentage": 0.0
       },
       "AWS": {
-        "count": 14,
-        "percentage": 4.75
+        "count": 13,
+        "percentage": 4.41
       },
       "Backbone": {
         "count": 22,
@@ -5508,16 +5548,16 @@ var data = [
         "percentage": 0.68
       },
       "C": {
-        "count": 33,
-        "percentage": 11.19
+        "count": 21,
+        "percentage": 7.12
       },
       "C++": {
         "count": 19,
         "percentage": 6.44
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.36
       },
       "Celery": {
         "count": 0,
@@ -5564,8 +5604,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 17,
-        "percentage": 5.76
+        "count": 16,
+        "percentage": 5.42
       },
       "Docker": {
         "count": 0,
@@ -5578,6 +5618,10 @@ var data = [
       "EC2": {
         "count": 6,
         "percentage": 2.03
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 4,
@@ -5612,12 +5656,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 20,
-        "percentage": 6.78
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 19,
+        "percentage": 6.44
       },
       "golang": {
         "count": 0,
@@ -5644,12 +5684,12 @@ var data = [
         "percentage": 1.02
       },
       "HTML5": {
-        "count": 18,
-        "percentage": 6.1
+        "count": 17,
+        "percentage": 5.76
       },
       "iOS": {
-        "count": 43,
-        "percentage": 14.58
+        "count": 42,
+        "percentage": 14.24
       },
       "JBoss": {
         "count": 0,
@@ -5688,8 +5728,8 @@ var data = [
         "percentage": 1.36
       },
       "less": {
-        "count": 9,
-        "percentage": 3.05
+        "count": 8,
+        "percentage": 2.71
       },
       "linux": {
         "count": 15,
@@ -5760,8 +5800,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.71
       },
       "Objective-J": {
         "count": 0,
@@ -5776,8 +5816,8 @@ var data = [
         "percentage": 3.73
       },
       "PHP": {
-        "count": 26,
-        "percentage": 8.81
+        "count": 23,
+        "percentage": 7.8
       },
       "Postgres": {
         "count": 4,
@@ -5792,12 +5832,12 @@ var data = [
         "percentage": 1.69
       },
       "Python": {
-        "count": 56,
-        "percentage": 18.98
+        "count": 55,
+        "percentage": 18.64
       },
       "R": {
-        "count": 6,
-        "percentage": 2.03
+        "count": 4,
+        "percentage": 1.36
       },
       "RabbitMQ": {
         "count": 2,
@@ -5824,8 +5864,8 @@ var data = [
         "percentage": 3.05
       },
       "Ruby": {
-        "count": 41,
-        "percentage": 13.9
+        "count": 39,
+        "percentage": 13.22
       },
       "Sass": {
         "count": 3,
@@ -5836,8 +5876,8 @@ var data = [
         "percentage": 0.0
       },
       "Scala": {
-        "count": 11,
-        "percentage": 3.73
+        "count": 10,
+        "percentage": 3.39
       },
       "Scrum": {
         "count": 2,
@@ -5938,6 +5978,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 4,
+        "percentage": 1.36
       },
       "WPF": {
         "count": 0,
@@ -6050,16 +6094,16 @@ var data = [
         "percentage": 0.33
       },
       "C": {
-        "count": 34,
-        "percentage": 11.3
+        "count": 21,
+        "percentage": 6.98
       },
       "C++": {
         "count": 21,
         "percentage": 6.98
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 3.32
       },
       "Celery": {
         "count": 2,
@@ -6106,8 +6150,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 14,
-        "percentage": 4.65
+        "count": 12,
+        "percentage": 3.99
       },
       "Docker": {
         "count": 0,
@@ -6120,6 +6164,10 @@ var data = [
       "EC2": {
         "count": 6,
         "percentage": 1.99
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 1,
@@ -6156,10 +6204,6 @@ var data = [
       "Git": {
         "count": 7,
         "percentage": 2.33
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -6302,8 +6346,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.33
       },
       "Objective-J": {
         "count": 0,
@@ -6318,8 +6362,8 @@ var data = [
         "percentage": 1.99
       },
       "PHP": {
-        "count": 22,
-        "percentage": 7.31
+        "count": 19,
+        "percentage": 6.31
       },
       "Postgres": {
         "count": 3,
@@ -6338,16 +6382,16 @@ var data = [
         "percentage": 14.62
       },
       "R": {
-        "count": 7,
-        "percentage": 2.33
+        "count": 5,
+        "percentage": 1.66
       },
       "RabbitMQ": {
         "count": 2,
         "percentage": 0.66
       },
       "Rails": {
-        "count": 25,
-        "percentage": 8.31
+        "count": 24,
+        "percentage": 7.97
       },
       "Redis": {
         "count": 9,
@@ -6378,8 +6422,8 @@ var data = [
         "percentage": 0.33
       },
       "Scala": {
-        "count": 10,
-        "percentage": 3.32
+        "count": 9,
+        "percentage": 2.99
       },
       "Scrum": {
         "count": 2,
@@ -6480,6 +6524,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.33
       },
       "WPF": {
         "count": 1,
@@ -6592,16 +6640,16 @@ var data = [
         "percentage": 0.34
       },
       "C": {
-        "count": 34,
-        "percentage": 11.64
+        "count": 17,
+        "percentage": 5.82
       },
       "C++": {
         "count": 13,
         "percentage": 4.45
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.05
       },
       "Celery": {
         "count": 2,
@@ -6648,8 +6696,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 18,
-        "percentage": 6.16
+        "count": 16,
+        "percentage": 5.48
       },
       "Docker": {
         "count": 0,
@@ -6662,6 +6710,10 @@ var data = [
       "EC2": {
         "count": 6,
         "percentage": 2.05
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 4,
@@ -6676,8 +6728,8 @@ var data = [
         "percentage": 1.71
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.34
       },
       "Factor": {
         "count": 0,
@@ -6696,12 +6748,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 18,
-        "percentage": 6.16
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 17,
+        "percentage": 5.82
       },
       "golang": {
         "count": 0,
@@ -6740,8 +6788,8 @@ var data = [
         "percentage": 0.0
       },
       "Java": {
-        "count": 26,
-        "percentage": 8.9
+        "count": 25,
+        "percentage": 8.56
       },
       "JavaScript": {
         "count": 55,
@@ -6832,8 +6880,8 @@ var data = [
         "percentage": 1.37
       },
       "node": {
-        "count": 15,
-        "percentage": 5.14
+        "count": 14,
+        "percentage": 4.79
       },
       "NServiceBus": {
         "count": 0,
@@ -6844,8 +6892,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 3.42
       },
       "Objective-J": {
         "count": 0,
@@ -6860,8 +6908,8 @@ var data = [
         "percentage": 2.05
       },
       "PHP": {
-        "count": 28,
-        "percentage": 9.59
+        "count": 24,
+        "percentage": 8.22
       },
       "Postgres": {
         "count": 4,
@@ -6880,8 +6928,8 @@ var data = [
         "percentage": 18.49
       },
       "R": {
-        "count": 4,
-        "percentage": 1.37
+        "count": 2,
+        "percentage": 0.68
       },
       "RabbitMQ": {
         "count": 4,
@@ -7023,6 +7071,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 1.03
+      },
       "WPF": {
         "count": 2,
         "percentage": 0.68
@@ -7086,8 +7138,8 @@ var data = [
         "percentage": 2.01
       },
       "api": {
-        "count": 13,
-        "percentage": 5.22
+        "count": 12,
+        "percentage": 4.82
       },
       "Apollo": {
         "count": 0,
@@ -7134,16 +7186,16 @@ var data = [
         "percentage": 0.8
       },
       "C": {
-        "count": 19,
-        "percentage": 7.63
+        "count": 10,
+        "percentage": 4.02
       },
       "C++": {
         "count": 8,
         "percentage": 3.21
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.61
       },
       "Celery": {
         "count": 3,
@@ -7205,6 +7257,10 @@ var data = [
         "count": 6,
         "percentage": 2.41
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 3,
         "percentage": 1.2
@@ -7240,10 +7296,6 @@ var data = [
       "Git": {
         "count": 12,
         "percentage": 4.82
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -7282,12 +7334,12 @@ var data = [
         "percentage": 0.0
       },
       "Java": {
-        "count": 26,
-        "percentage": 10.44
+        "count": 25,
+        "percentage": 10.04
       },
       "JavaScript": {
-        "count": 44,
-        "percentage": 17.67
+        "count": 43,
+        "percentage": 17.27
       },
       "jQuery": {
         "count": 21,
@@ -7386,8 +7438,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.61
       },
       "Objective-J": {
         "count": 0,
@@ -7402,8 +7454,8 @@ var data = [
         "percentage": 1.2
       },
       "PHP": {
-        "count": 19,
-        "percentage": 7.63
+        "count": 18,
+        "percentage": 7.23
       },
       "Postgres": {
         "count": 3,
@@ -7422,8 +7474,8 @@ var data = [
         "percentage": 15.66
       },
       "R": {
-        "count": 5,
-        "percentage": 2.01
+        "count": 1,
+        "percentage": 0.4
       },
       "RabbitMQ": {
         "count": 3,
@@ -7438,16 +7490,16 @@ var data = [
         "percentage": 5.22
       },
       "Resque": {
-        "count": 1,
-        "percentage": 0.4
+        "count": 0,
+        "percentage": 0.0
       },
       "Riak": {
         "count": 0,
         "percentage": 0.0
       },
       "REST": {
-        "count": 8,
-        "percentage": 3.21
+        "count": 7,
+        "percentage": 2.81
       },
       "Ruby": {
         "count": 37,
@@ -7466,8 +7518,8 @@ var data = [
         "percentage": 3.21
       },
       "Scrum": {
-        "count": 1,
-        "percentage": 0.4
+        "count": 0,
+        "percentage": 0.0
       },
       "SharePoint": {
         "count": 0,
@@ -7564,6 +7616,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.4
       },
       "WPF": {
         "count": 0,
@@ -7676,16 +7732,16 @@ var data = [
         "percentage": 0.39
       },
       "C": {
-        "count": 33,
-        "percentage": 12.94
+        "count": 20,
+        "percentage": 7.84
       },
       "C++": {
         "count": 16,
         "percentage": 6.27
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.57
       },
       "Celery": {
         "count": 1,
@@ -7732,8 +7788,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 22,
-        "percentage": 8.63
+        "count": 21,
+        "percentage": 8.24
       },
       "Docker": {
         "count": 0,
@@ -7746,6 +7802,10 @@ var data = [
       "EC2": {
         "count": 6,
         "percentage": 2.35
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 0,
@@ -7760,8 +7820,8 @@ var data = [
         "percentage": 0.39
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.39
       },
       "Factor": {
         "count": 1,
@@ -7782,10 +7842,6 @@ var data = [
       "Git": {
         "count": 17,
         "percentage": 6.67
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -7812,8 +7868,8 @@ var data = [
         "percentage": 0.0
       },
       "HTML5": {
-        "count": 17,
-        "percentage": 6.67
+        "count": 16,
+        "percentage": 6.27
       },
       "iOS": {
         "count": 20,
@@ -7824,8 +7880,8 @@ var data = [
         "percentage": 0.39
       },
       "Java": {
-        "count": 24,
-        "percentage": 9.41
+        "count": 23,
+        "percentage": 9.02
       },
       "JavaScript": {
         "count": 38,
@@ -7856,8 +7912,8 @@ var data = [
         "percentage": 1.57
       },
       "less": {
-        "count": 9,
-        "percentage": 3.53
+        "count": 8,
+        "percentage": 3.14
       },
       "linux": {
         "count": 25,
@@ -7928,8 +7984,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.96
       },
       "Objective-J": {
         "count": 0,
@@ -7944,8 +8000,8 @@ var data = [
         "percentage": 2.75
       },
       "PHP": {
-        "count": 27,
-        "percentage": 10.59
+        "count": 24,
+        "percentage": 9.41
       },
       "Postgres": {
         "count": 4,
@@ -7964,8 +8020,8 @@ var data = [
         "percentage": 21.57
       },
       "R": {
-        "count": 8,
-        "percentage": 3.14
+        "count": 7,
+        "percentage": 2.75
       },
       "RabbitMQ": {
         "count": 4,
@@ -7992,8 +8048,8 @@ var data = [
         "percentage": 3.53
       },
       "Ruby": {
-        "count": 45,
-        "percentage": 17.65
+        "count": 44,
+        "percentage": 17.25
       },
       "Sass": {
         "count": 9,
@@ -8016,8 +8072,8 @@ var data = [
         "percentage": 0.0
       },
       "Shell": {
-        "count": 3,
-        "percentage": 1.18
+        "count": 2,
+        "percentage": 0.78
       },
       "Sinatra": {
         "count": 1,
@@ -8107,13 +8163,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 2,
+        "percentage": 0.78
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
       },
       "XML": {
-        "count": 2,
-        "percentage": 0.78
+        "count": 1,
+        "percentage": 0.39
       },
       "XML Schema": {
         "count": 0,
@@ -8206,8 +8266,8 @@ var data = [
         "percentage": 4.81
       },
       "Backbone": {
-        "count": 11,
-        "percentage": 4.07
+        "count": 12,
+        "percentage": 4.44
       },
       "Bash": {
         "count": 2,
@@ -8218,16 +8278,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 32,
-        "percentage": 11.85
+        "count": 15,
+        "percentage": 5.56
       },
       "C++": {
         "count": 9,
         "percentage": 3.33
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 3.7
       },
       "Celery": {
         "count": 1,
@@ -8289,13 +8349,17 @@ var data = [
         "count": 8,
         "percentage": 2.96
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 1,
         "percentage": 0.37
       },
       "Ember": {
-        "count": 1,
-        "percentage": 0.37
+        "count": 2,
+        "percentage": 0.74
       },
       "Erlang": {
         "count": 1,
@@ -8322,12 +8386,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 6,
-        "percentage": 2.22
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.85
       },
       "golang": {
         "count": 1,
@@ -8338,8 +8398,8 @@ var data = [
         "percentage": 0.37
       },
       "Hadoop": {
-        "count": 13,
-        "percentage": 4.81
+        "count": 12,
+        "percentage": 4.44
       },
       "Haskell": {
         "count": 0,
@@ -8354,20 +8414,20 @@ var data = [
         "percentage": 0.37
       },
       "HTML5": {
-        "count": 14,
-        "percentage": 5.19
+        "count": 13,
+        "percentage": 4.81
       },
       "iOS": {
-        "count": 33,
-        "percentage": 12.22
+        "count": 32,
+        "percentage": 11.85
       },
       "JBoss": {
         "count": 0,
         "percentage": 0.0
       },
       "Java": {
-        "count": 28,
-        "percentage": 10.37
+        "count": 27,
+        "percentage": 10.0
       },
       "JavaScript": {
         "count": 41,
@@ -8398,12 +8458,12 @@ var data = [
         "percentage": 1.48
       },
       "less": {
-        "count": 7,
-        "percentage": 2.59
+        "count": 6,
+        "percentage": 2.22
       },
       "linux": {
-        "count": 21,
-        "percentage": 7.78
+        "count": 20,
+        "percentage": 7.41
       },
       "Lisp": {
         "count": 0,
@@ -8470,8 +8530,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 2.59
       },
       "Objective-J": {
         "count": 0,
@@ -8486,8 +8546,8 @@ var data = [
         "percentage": 2.96
       },
       "PHP": {
-        "count": 30,
-        "percentage": 11.11
+        "count": 29,
+        "percentage": 10.74
       },
       "Postgres": {
         "count": 5,
@@ -8502,12 +8562,12 @@ var data = [
         "percentage": 1.11
       },
       "Python": {
-        "count": 53,
-        "percentage": 19.63
+        "count": 51,
+        "percentage": 18.89
       },
       "R": {
-        "count": 3,
-        "percentage": 1.11
+        "count": 2,
+        "percentage": 0.74
       },
       "RabbitMQ": {
         "count": 2,
@@ -8550,8 +8610,8 @@ var data = [
         "percentage": 1.48
       },
       "Scrum": {
-        "count": 3,
-        "percentage": 1.11
+        "count": 2,
+        "percentage": 0.74
       },
       "SharePoint": {
         "count": 0,
@@ -8648,6 +8708,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 3,
+        "percentage": 1.11
       },
       "WPF": {
         "count": 0,
@@ -8760,24 +8824,24 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 18,
-        "percentage": 8.07
+        "count": 10,
+        "percentage": 4.48
       },
       "C++": {
         "count": 12,
         "percentage": 5.38
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.79
       },
       "Celery": {
         "count": 1,
         "percentage": 0.45
       },
       "Chef": {
-        "count": 8,
-        "percentage": 3.59
+        "count": 7,
+        "percentage": 3.14
       },
       "clojure": {
         "count": 2,
@@ -8831,6 +8895,10 @@ var data = [
         "count": 9,
         "percentage": 4.04
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 1,
         "percentage": 0.45
@@ -8866,10 +8934,6 @@ var data = [
       "Git": {
         "count": 15,
         "percentage": 6.73
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -8908,12 +8972,12 @@ var data = [
         "percentage": 0.0
       },
       "Java": {
-        "count": 30,
-        "percentage": 13.45
+        "count": 28,
+        "percentage": 12.56
       },
       "JavaScript": {
-        "count": 51,
-        "percentage": 22.87
+        "count": 50,
+        "percentage": 22.42
       },
       "jQuery": {
         "count": 22,
@@ -8940,8 +9004,8 @@ var data = [
         "percentage": 1.79
       },
       "less": {
-        "count": 6,
-        "percentage": 2.69
+        "count": 5,
+        "percentage": 2.24
       },
       "linux": {
         "count": 14,
@@ -9012,8 +9076,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.9
       },
       "Objective-J": {
         "count": 0,
@@ -9028,8 +9092,8 @@ var data = [
         "percentage": 0.9
       },
       "PHP": {
-        "count": 20,
-        "percentage": 8.97
+        "count": 19,
+        "percentage": 8.52
       },
       "Postgres": {
         "count": 3,
@@ -9048,8 +9112,8 @@ var data = [
         "percentage": 14.35
       },
       "R": {
-        "count": 3,
-        "percentage": 1.35
+        "count": 2,
+        "percentage": 0.9
       },
       "RabbitMQ": {
         "count": 2,
@@ -9076,8 +9140,8 @@ var data = [
         "percentage": 2.24
       },
       "Ruby": {
-        "count": 33,
-        "percentage": 14.8
+        "count": 32,
+        "percentage": 14.35
       },
       "Sass": {
         "count": 1,
@@ -9191,13 +9255,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
       },
       "XML": {
-        "count": 5,
-        "percentage": 2.24
+        "count": 4,
+        "percentage": 1.79
       },
       "XML Schema": {
         "count": 0,
@@ -9302,16 +9370,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 27,
-        "percentage": 9.09
+        "count": 13,
+        "percentage": 4.38
       },
       "C++": {
         "count": 10,
         "percentage": 3.37
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.01
       },
       "Celery": {
         "count": 1,
@@ -9346,8 +9414,8 @@ var data = [
         "percentage": 0.0
       },
       "CSS": {
-        "count": 20,
-        "percentage": 6.73
+        "count": 19,
+        "percentage": 6.4
       },
       "d3": {
         "count": 1,
@@ -9372,6 +9440,10 @@ var data = [
       "EC2": {
         "count": 12,
         "percentage": 4.04
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 0,
@@ -9409,10 +9481,6 @@ var data = [
         "count": 20,
         "percentage": 6.73
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -9438,8 +9506,8 @@ var data = [
         "percentage": 1.35
       },
       "HTML5": {
-        "count": 12,
-        "percentage": 4.04
+        "count": 11,
+        "percentage": 3.7
       },
       "iOS": {
         "count": 33,
@@ -9450,8 +9518,8 @@ var data = [
         "percentage": 0.34
       },
       "Java": {
-        "count": 27,
-        "percentage": 9.09
+        "count": 26,
+        "percentage": 8.75
       },
       "JavaScript": {
         "count": 48,
@@ -9526,8 +9594,8 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 24,
-        "percentage": 8.08
+        "count": 23,
+        "percentage": 7.74
       },
       "neo4j": {
         "count": 0,
@@ -9554,8 +9622,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.69
       },
       "Objective-J": {
         "count": 0,
@@ -9570,8 +9638,8 @@ var data = [
         "percentage": 3.7
       },
       "PHP": {
-        "count": 30,
-        "percentage": 10.1
+        "count": 26,
+        "percentage": 8.75
       },
       "Postgres": {
         "count": 5,
@@ -9590,16 +9658,16 @@ var data = [
         "percentage": 17.51
       },
       "R": {
-        "count": 4,
-        "percentage": 1.35
+        "count": 2,
+        "percentage": 0.67
       },
       "RabbitMQ": {
         "count": 2,
         "percentage": 0.67
       },
       "Rails": {
-        "count": 43,
-        "percentage": 14.48
+        "count": 42,
+        "percentage": 14.14
       },
       "Redis": {
         "count": 16,
@@ -9618,8 +9686,8 @@ var data = [
         "percentage": 2.02
       },
       "Ruby": {
-        "count": 58,
-        "percentage": 19.53
+        "count": 57,
+        "percentage": 19.19
       },
       "Sass": {
         "count": 4,
@@ -9658,8 +9726,8 @@ var data = [
         "percentage": 1.01
       },
       "SQL": {
-        "count": 11,
-        "percentage": 3.7
+        "count": 10,
+        "percentage": 3.37
       },
       "SQL Server": {
         "count": 0,
@@ -9733,13 +9801,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.34
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
       },
       "XML": {
-        "count": 3,
-        "percentage": 1.01
+        "count": 1,
+        "percentage": 0.34
       },
       "XML Schema": {
         "count": 0,
@@ -9792,8 +9864,8 @@ var data = [
         "percentage": 0.0
       },
       "Apache": {
-        "count": 5,
-        "percentage": 2.17
+        "count": 4,
+        "percentage": 1.74
       },
       "api": {
         "count": 10,
@@ -9844,16 +9916,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 22,
-        "percentage": 9.57
+        "count": 13,
+        "percentage": 5.65
       },
       "C++": {
         "count": 14,
         "percentage": 6.09
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.61
       },
       "Celery": {
         "count": 1,
@@ -9915,6 +9987,10 @@ var data = [
         "count": 8,
         "percentage": 3.48
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 0,
         "percentage": 0.0
@@ -9928,8 +10004,8 @@ var data = [
         "percentage": 1.74
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.43
       },
       "Factor": {
         "count": 0,
@@ -9950,10 +10026,6 @@ var data = [
       "Git": {
         "count": 9,
         "percentage": 3.91
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -10068,8 +10140,8 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 18,
-        "percentage": 7.83
+        "count": 17,
+        "percentage": 7.39
       },
       "neo4j": {
         "count": 0,
@@ -10096,8 +10168,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 3.48
       },
       "Objective-J": {
         "count": 0,
@@ -10112,8 +10184,8 @@ var data = [
         "percentage": 2.17
       },
       "PHP": {
-        "count": 29,
-        "percentage": 12.61
+        "count": 26,
+        "percentage": 11.3
       },
       "Postgres": {
         "count": 2,
@@ -10128,8 +10200,8 @@ var data = [
         "percentage": 0.43
       },
       "Python": {
-        "count": 39,
-        "percentage": 16.96
+        "count": 38,
+        "percentage": 16.52
       },
       "R": {
         "count": 1,
@@ -10144,8 +10216,8 @@ var data = [
         "percentage": 15.65
       },
       "Redis": {
-        "count": 15,
-        "percentage": 6.52
+        "count": 14,
+        "percentage": 6.09
       },
       "Resque": {
         "count": 0,
@@ -10160,8 +10232,8 @@ var data = [
         "percentage": 3.04
       },
       "Ruby": {
-        "count": 33,
-        "percentage": 14.35
+        "count": 32,
+        "percentage": 13.91
       },
       "Sass": {
         "count": 4,
@@ -10275,13 +10347,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 1.3
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
       },
       "XML": {
-        "count": 4,
-        "percentage": 1.74
+        "count": 3,
+        "percentage": 1.3
       },
       "XML Schema": {
         "count": 0,
@@ -10386,16 +10462,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 10,
-        "percentage": 4.46
+        "count": 6,
+        "percentage": 2.68
       },
       "C++": {
         "count": 10,
         "percentage": 4.46
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.45
       },
       "Celery": {
         "count": 1,
@@ -10457,6 +10533,10 @@ var data = [
         "count": 2,
         "percentage": 0.89
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 1,
         "percentage": 0.45
@@ -10490,12 +10570,8 @@ var data = [
         "percentage": 0.0
       },
       "Git": {
-        "count": 4,
-        "percentage": 1.79
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.34
       },
       "golang": {
         "count": 0,
@@ -10610,8 +10686,8 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 13,
-        "percentage": 5.8
+        "count": 12,
+        "percentage": 5.36
       },
       "neo4j": {
         "count": 0,
@@ -10638,8 +10714,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.34
       },
       "Objective-J": {
         "count": 0,
@@ -10654,8 +10730,8 @@ var data = [
         "percentage": 1.34
       },
       "PHP": {
-        "count": 12,
-        "percentage": 5.36
+        "count": 10,
+        "percentage": 4.46
       },
       "Postgres": {
         "count": 2,
@@ -10710,8 +10786,8 @@ var data = [
         "percentage": 0.89
       },
       "S3": {
-        "count": 3,
-        "percentage": 1.34
+        "count": 2,
+        "percentage": 0.89
       },
       "Scala": {
         "count": 8,
@@ -10814,6 +10890,10 @@ var data = [
         "percentage": 0.0
       },
       "WinRT": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "WordPress": {
         "count": 0,
         "percentage": 0.0
       },
@@ -10928,16 +11008,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 16,
-        "percentage": 5.44
+        "count": 10,
+        "percentage": 3.4
       },
       "C++": {
         "count": 9,
         "percentage": 3.06
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.7
       },
       "Celery": {
         "count": 0,
@@ -10999,6 +11079,10 @@ var data = [
         "count": 2,
         "percentage": 0.68
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 1,
         "percentage": 0.34
@@ -11035,10 +11119,6 @@ var data = [
         "count": 7,
         "percentage": 2.38
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -11048,8 +11128,8 @@ var data = [
         "percentage": 0.68
       },
       "Hadoop": {
-        "count": 12,
-        "percentage": 4.08
+        "count": 11,
+        "percentage": 3.74
       },
       "Haskell": {
         "count": 1,
@@ -11080,12 +11160,12 @@ var data = [
         "percentage": 10.2
       },
       "JavaScript": {
-        "count": 39,
-        "percentage": 13.27
+        "count": 38,
+        "percentage": 12.93
       },
       "jQuery": {
-        "count": 23,
-        "percentage": 7.82
+        "count": 22,
+        "percentage": 7.48
       },
       "JSON API": {
         "count": 0,
@@ -11160,8 +11240,8 @@ var data = [
         "percentage": 0.34
       },
       "nginx": {
-        "count": 4,
-        "percentage": 1.36
+        "count": 3,
+        "percentage": 1.02
       },
       "NLP": {
         "count": 2,
@@ -11180,8 +11260,8 @@ var data = [
         "percentage": 0.34
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.34
       },
       "Objective-J": {
         "count": 0,
@@ -11196,8 +11276,8 @@ var data = [
         "percentage": 0.68
       },
       "PHP": {
-        "count": 26,
-        "percentage": 8.84
+        "count": 22,
+        "percentage": 7.48
       },
       "Postgres": {
         "count": 2,
@@ -11216,8 +11296,8 @@ var data = [
         "percentage": 9.52
       },
       "R": {
-        "count": 2,
-        "percentage": 0.68
+        "count": 1,
+        "percentage": 0.34
       },
       "RabbitMQ": {
         "count": 2,
@@ -11244,8 +11324,8 @@ var data = [
         "percentage": 1.36
       },
       "Ruby": {
-        "count": 32,
-        "percentage": 10.88
+        "count": 31,
+        "percentage": 10.54
       },
       "Sass": {
         "count": 2,
@@ -11359,6 +11439,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.34
+      },
       "WPF": {
         "count": 1,
         "percentage": 0.34
@@ -11470,16 +11554,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 21,
-        "percentage": 7.61
+        "count": 12,
+        "percentage": 4.35
       },
       "C++": {
         "count": 14,
         "percentage": 5.07
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.17
       },
       "Celery": {
         "count": 1,
@@ -11541,6 +11625,10 @@ var data = [
         "count": 3,
         "percentage": 1.09
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 1,
         "percentage": 0.36
@@ -11577,10 +11665,6 @@ var data = [
         "count": 9,
         "percentage": 3.26
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -11602,8 +11686,8 @@ var data = [
         "percentage": 0.0
       },
       "Heroku": {
-        "count": 2,
-        "percentage": 0.72
+        "count": 1,
+        "percentage": 0.36
       },
       "HTML5": {
         "count": 7,
@@ -11626,8 +11710,8 @@ var data = [
         "percentage": 12.32
       },
       "jQuery": {
-        "count": 15,
-        "percentage": 5.43
+        "count": 13,
+        "percentage": 4.71
       },
       "JSON API": {
         "count": 0,
@@ -11646,8 +11730,8 @@ var data = [
         "percentage": 0.0
       },
       "LAMP": {
-        "count": 5,
-        "percentage": 1.81
+        "count": 4,
+        "percentage": 1.45
       },
       "less": {
         "count": 2,
@@ -11694,16 +11778,16 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 21,
-        "percentage": 7.61
+        "count": 20,
+        "percentage": 7.25
       },
       "neo4j": {
         "count": 1,
         "percentage": 0.36
       },
       "nginx": {
-        "count": 4,
-        "percentage": 1.45
+        "count": 2,
+        "percentage": 0.72
       },
       "NLP": {
         "count": 2,
@@ -11722,8 +11806,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.09
       },
       "Objective-J": {
         "count": 0,
@@ -11738,8 +11822,8 @@ var data = [
         "percentage": 1.45
       },
       "PHP": {
-        "count": 26,
-        "percentage": 9.42
+        "count": 16,
+        "percentage": 5.8
       },
       "Postgres": {
         "count": 2,
@@ -11754,8 +11838,8 @@ var data = [
         "percentage": 0.36
       },
       "Python": {
-        "count": 31,
-        "percentage": 11.23
+        "count": 30,
+        "percentage": 10.87
       },
       "R": {
         "count": 1,
@@ -11770,8 +11854,8 @@ var data = [
         "percentage": 11.23
       },
       "Redis": {
-        "count": 13,
-        "percentage": 4.71
+        "count": 12,
+        "percentage": 4.35
       },
       "Resque": {
         "count": 1,
@@ -11786,8 +11870,8 @@ var data = [
         "percentage": 2.17
       },
       "Ruby": {
-        "count": 33,
-        "percentage": 11.96
+        "count": 31,
+        "percentage": 11.23
       },
       "Sass": {
         "count": 2,
@@ -11826,8 +11910,8 @@ var data = [
         "percentage": 1.09
       },
       "SQL": {
-        "count": 9,
-        "percentage": 3.26
+        "count": 8,
+        "percentage": 2.9
       },
       "SQL Server": {
         "count": 0,
@@ -11901,13 +11985,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.36
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
       },
       "XML": {
-        "count": 1,
-        "percentage": 0.36
+        "count": 0,
+        "percentage": 0.0
       },
       "XML Schema": {
         "count": 0,
@@ -11964,8 +12052,8 @@ var data = [
         "percentage": 1.29
       },
       "api": {
-        "count": 6,
-        "percentage": 2.58
+        "count": 5,
+        "percentage": 2.15
       },
       "Apollo": {
         "count": 0,
@@ -11984,8 +12072,8 @@ var data = [
         "percentage": 1.29
       },
       "Asp": {
-        "count": 3,
-        "percentage": 1.29
+        "count": 2,
+        "percentage": 0.86
       },
       "ASP.NET": {
         "count": 0,
@@ -12012,16 +12100,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 20,
-        "percentage": 8.58
+        "count": 11,
+        "percentage": 4.72
       },
       "C++": {
         "count": 9,
         "percentage": 3.86
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 2.15
       },
       "Celery": {
         "count": 1,
@@ -12056,8 +12144,8 @@ var data = [
         "percentage": 0.0
       },
       "CSS": {
-        "count": 14,
-        "percentage": 6.01
+        "count": 13,
+        "percentage": 5.58
       },
       "d3": {
         "count": 0,
@@ -12083,6 +12171,10 @@ var data = [
         "count": 7,
         "percentage": 3.0
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 0,
         "percentage": 0.0
@@ -12096,8 +12188,8 @@ var data = [
         "percentage": 1.29
       },
       "F#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.43
       },
       "Factor": {
         "count": 0,
@@ -12118,10 +12210,6 @@ var data = [
       "Git": {
         "count": 9,
         "percentage": 3.86
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -12164,8 +12252,8 @@ var data = [
         "percentage": 13.73
       },
       "JavaScript": {
-        "count": 43,
-        "percentage": 18.45
+        "count": 42,
+        "percentage": 18.03
       },
       "jQuery": {
         "count": 23,
@@ -12236,8 +12324,8 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 20,
-        "percentage": 8.58
+        "count": 19,
+        "percentage": 8.15
       },
       "neo4j": {
         "count": 0,
@@ -12264,8 +12352,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.43
       },
       "Objective-J": {
         "count": 0,
@@ -12280,8 +12368,8 @@ var data = [
         "percentage": 3.43
       },
       "PHP": {
-        "count": 25,
-        "percentage": 10.73
+        "count": 22,
+        "percentage": 9.44
       },
       "Postgres": {
         "count": 2,
@@ -12296,8 +12384,8 @@ var data = [
         "percentage": 1.29
       },
       "Python": {
-        "count": 50,
-        "percentage": 21.46
+        "count": 49,
+        "percentage": 21.03
       },
       "R": {
         "count": 1,
@@ -12312,8 +12400,8 @@ var data = [
         "percentage": 15.02
       },
       "Redis": {
-        "count": 13,
-        "percentage": 5.58
+        "count": 12,
+        "percentage": 5.15
       },
       "Resque": {
         "count": 1,
@@ -12328,8 +12416,8 @@ var data = [
         "percentage": 2.58
       },
       "Ruby": {
-        "count": 35,
-        "percentage": 15.02
+        "count": 34,
+        "percentage": 14.59
       },
       "Sass": {
         "count": 3,
@@ -12443,13 +12531,17 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 1.29
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
       },
       "XML": {
-        "count": 4,
-        "percentage": 1.72
+        "count": 2,
+        "percentage": 0.86
       },
       "XML Schema": {
         "count": 0,
@@ -12494,8 +12586,8 @@ var data = [
         "percentage": 6.51
       },
       "Android": {
-        "count": 22,
-        "percentage": 7.17
+        "count": 21,
+        "percentage": 6.84
       },
       "angular": {
         "count": 0,
@@ -12526,8 +12618,8 @@ var data = [
         "percentage": 0.0
       },
       "Asp": {
-        "count": 3,
-        "percentage": 0.98
+        "count": 2,
+        "percentage": 0.65
       },
       "ASP.NET": {
         "count": 0,
@@ -12554,16 +12646,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 17,
-        "percentage": 5.54
+        "count": 10,
+        "percentage": 3.26
       },
       "C++": {
         "count": 10,
         "percentage": 3.26
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 2.28
       },
       "Celery": {
         "count": 0,
@@ -12598,8 +12690,8 @@ var data = [
         "percentage": 0.33
       },
       "CSS": {
-        "count": 16,
-        "percentage": 5.21
+        "count": 15,
+        "percentage": 4.89
       },
       "d3": {
         "count": 0,
@@ -12624,6 +12716,10 @@ var data = [
       "EC2": {
         "count": 7,
         "percentage": 2.28
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 1,
@@ -12661,10 +12757,6 @@ var data = [
         "count": 14,
         "percentage": 4.56
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -12686,12 +12778,12 @@ var data = [
         "percentage": 0.33
       },
       "Heroku": {
-        "count": 2,
-        "percentage": 0.65
+        "count": 1,
+        "percentage": 0.33
       },
       "HTML5": {
-        "count": 10,
-        "percentage": 3.26
+        "count": 9,
+        "percentage": 2.93
       },
       "iOS": {
         "count": 27,
@@ -12806,8 +12898,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 0.98
       },
       "Objective-J": {
         "count": 0,
@@ -12822,8 +12914,8 @@ var data = [
         "percentage": 3.26
       },
       "PHP": {
-        "count": 32,
-        "percentage": 10.42
+        "count": 28,
+        "percentage": 9.12
       },
       "Postgres": {
         "count": 4,
@@ -12838,20 +12930,20 @@ var data = [
         "percentage": 0.33
       },
       "Python": {
-        "count": 37,
-        "percentage": 12.05
+        "count": 36,
+        "percentage": 11.73
       },
       "R": {
-        "count": 3,
-        "percentage": 0.98
+        "count": 2,
+        "percentage": 0.65
       },
       "RabbitMQ": {
         "count": 3,
         "percentage": 0.98
       },
       "Rails": {
-        "count": 33,
-        "percentage": 10.75
+        "count": 32,
+        "percentage": 10.42
       },
       "Redis": {
         "count": 7,
@@ -12870,8 +12962,8 @@ var data = [
         "percentage": 1.63
       },
       "Ruby": {
-        "count": 47,
-        "percentage": 15.31
+        "count": 46,
+        "percentage": 14.98
       },
       "Sass": {
         "count": 3,
@@ -12985,6 +13077,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 3,
+        "percentage": 0.98
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
@@ -13048,8 +13144,8 @@ var data = [
         "percentage": 1.52
       },
       "api": {
-        "count": 4,
-        "percentage": 1.21
+        "count": 3,
+        "percentage": 0.91
       },
       "Apollo": {
         "count": 0,
@@ -13096,16 +13192,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 22,
-        "percentage": 6.67
+        "count": 12,
+        "percentage": 3.64
       },
       "C++": {
         "count": 18,
         "percentage": 5.45
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.42
       },
       "Celery": {
         "count": 0,
@@ -13132,16 +13228,16 @@ var data = [
         "percentage": 0.0
       },
       "CoffeeScript": {
-        "count": 3,
-        "percentage": 0.91
+        "count": 2,
+        "percentage": 0.61
       },
       "Couch": {
         "count": 1,
         "percentage": 0.3
       },
       "CSS": {
-        "count": 15,
-        "percentage": 4.55
+        "count": 14,
+        "percentage": 4.24
       },
       "d3": {
         "count": 0,
@@ -13152,8 +13248,8 @@ var data = [
         "percentage": 0.0
       },
       "Django": {
-        "count": 16,
-        "percentage": 4.85
+        "count": 14,
+        "percentage": 4.24
       },
       "Docker": {
         "count": 0,
@@ -13166,6 +13262,10 @@ var data = [
       "EC2": {
         "count": 6,
         "percentage": 1.82
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 0,
@@ -13202,10 +13302,6 @@ var data = [
       "Git": {
         "count": 6,
         "percentage": 1.82
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -13248,12 +13344,12 @@ var data = [
         "percentage": 7.27
       },
       "JavaScript": {
-        "count": 40,
-        "percentage": 12.12
+        "count": 39,
+        "percentage": 11.82
       },
       "jQuery": {
-        "count": 16,
-        "percentage": 4.85
+        "count": 15,
+        "percentage": 4.55
       },
       "JSON API": {
         "count": 0,
@@ -13320,8 +13416,8 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 26,
-        "percentage": 7.88
+        "count": 25,
+        "percentage": 7.58
       },
       "neo4j": {
         "count": 0,
@@ -13348,8 +13444,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.21
       },
       "Objective-J": {
         "count": 0,
@@ -13364,8 +13460,8 @@ var data = [
         "percentage": 2.42
       },
       "PHP": {
-        "count": 24,
-        "percentage": 7.27
+        "count": 22,
+        "percentage": 6.67
       },
       "Postgres": {
         "count": 2,
@@ -13380,12 +13476,12 @@ var data = [
         "percentage": 0.0
       },
       "Python": {
-        "count": 38,
-        "percentage": 11.52
+        "count": 37,
+        "percentage": 11.21
       },
       "R": {
-        "count": 4,
-        "percentage": 1.21
+        "count": 2,
+        "percentage": 0.61
       },
       "RabbitMQ": {
         "count": 1,
@@ -13416,8 +13512,8 @@ var data = [
         "percentage": 11.82
       },
       "Sass": {
-        "count": 3,
-        "percentage": 0.91
+        "count": 2,
+        "percentage": 0.61
       },
       "S3": {
         "count": 4,
@@ -13452,8 +13548,8 @@ var data = [
         "percentage": 1.82
       },
       "SQL": {
-        "count": 8,
-        "percentage": 2.42
+        "count": 6,
+        "percentage": 1.82
       },
       "SQL Server": {
         "count": 0,
@@ -13476,8 +13572,8 @@ var data = [
         "percentage": 0.61
       },
       "Storm": {
-        "count": 1,
-        "percentage": 0.3
+        "count": 0,
+        "percentage": 0.0
       },
       "TDD": {
         "count": 1,
@@ -13526,6 +13622,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.3
       },
       "WPF": {
         "count": 0,
@@ -13590,8 +13690,8 @@ var data = [
         "percentage": 1.37
       },
       "api": {
-        "count": 7,
-        "percentage": 2.39
+        "count": 6,
+        "percentage": 2.05
       },
       "Apollo": {
         "count": 0,
@@ -13606,8 +13706,8 @@ var data = [
         "percentage": 0.0
       },
       "Assembly": {
-        "count": 3,
-        "percentage": 1.02
+        "count": 2,
+        "percentage": 0.68
       },
       "Asp": {
         "count": 1,
@@ -13638,16 +13738,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 15,
-        "percentage": 5.12
+        "count": 6,
+        "percentage": 2.05
       },
       "C++": {
         "count": 12,
         "percentage": 4.1
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.71
       },
       "Celery": {
         "count": 1,
@@ -13694,8 +13794,8 @@ var data = [
         "percentage": 1.02
       },
       "Django": {
-        "count": 19,
-        "percentage": 6.48
+        "count": 18,
+        "percentage": 6.14
       },
       "Docker": {
         "count": 0,
@@ -13708,6 +13808,10 @@ var data = [
       "EC2": {
         "count": 9,
         "percentage": 3.07
+      },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Elasticsearch": {
         "count": 0,
@@ -13744,10 +13848,6 @@ var data = [
       "Git": {
         "count": 4,
         "percentage": 1.37
-      },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
       },
       "golang": {
         "count": 0,
@@ -13890,8 +13990,8 @@ var data = [
         "percentage": 0.0
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.37
       },
       "Objective-J": {
         "count": 0,
@@ -13906,8 +14006,8 @@ var data = [
         "percentage": 1.02
       },
       "PHP": {
-        "count": 26,
-        "percentage": 8.87
+        "count": 23,
+        "percentage": 7.85
       },
       "Postgres": {
         "count": 2,
@@ -13922,12 +14022,12 @@ var data = [
         "percentage": 0.0
       },
       "Python": {
-        "count": 39,
-        "percentage": 13.31
+        "count": 38,
+        "percentage": 12.97
       },
       "R": {
-        "count": 2,
-        "percentage": 0.68
+        "count": 0,
+        "percentage": 0.0
       },
       "RabbitMQ": {
         "count": 1,
@@ -13954,8 +14054,8 @@ var data = [
         "percentage": 1.71
       },
       "Ruby": {
-        "count": 39,
-        "percentage": 13.31
+        "count": 37,
+        "percentage": 12.63
       },
       "Sass": {
         "count": 3,
@@ -14069,6 +14169,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.34
+      },
       "WPF": {
         "count": 0,
         "percentage": 0.0
@@ -14180,16 +14284,16 @@ var data = [
         "percentage": 0.0
       },
       "C": {
-        "count": 18,
-        "percentage": 6.1
+        "count": 6,
+        "percentage": 2.03
       },
       "C++": {
         "count": 9,
         "percentage": 3.05
       },
       "C#": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 3.39
       },
       "Celery": {
         "count": 1,
@@ -14251,6 +14355,10 @@ var data = [
         "count": 6,
         "percentage": 2.03
       },
+      "EDI": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "Elasticsearch": {
         "count": 0,
         "percentage": 0.0
@@ -14287,10 +14395,6 @@ var data = [
         "count": 9,
         "percentage": 3.05
       },
-      "oG": {
-        "count": 0,
-        "percentage": 0.0
-      },
       "golang": {
         "count": 0,
         "percentage": 0.0
@@ -14312,8 +14416,8 @@ var data = [
         "percentage": 0.34
       },
       "Heroku": {
-        "count": 5,
-        "percentage": 1.69
+        "count": 4,
+        "percentage": 1.36
       },
       "HTML5": {
         "count": 9,
@@ -14404,8 +14508,8 @@ var data = [
         "percentage": 0.0
       },
       "MySQL": {
-        "count": 20,
-        "percentage": 6.78
+        "count": 19,
+        "percentage": 6.44
       },
       "neo4j": {
         "count": 0,
@@ -14432,8 +14536,8 @@ var data = [
         "percentage": 0.34
       },
       "Objective-C": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.68
       },
       "Objective-J": {
         "count": 0,
@@ -14448,8 +14552,8 @@ var data = [
         "percentage": 3.39
       },
       "PHP": {
-        "count": 24,
-        "percentage": 8.14
+        "count": 23,
+        "percentage": 7.8
       },
       "Postgres": {
         "count": 3,
@@ -14468,8 +14572,8 @@ var data = [
         "percentage": 12.88
       },
       "R": {
-        "count": 2,
-        "percentage": 0.68
+        "count": 0,
+        "percentage": 0.0
       },
       "RabbitMQ": {
         "count": 2,
@@ -14610,6 +14714,10 @@ var data = [
       "WinRT": {
         "count": 0,
         "percentage": 0.0
+      },
+      "WordPress": {
+        "count": 1,
+        "percentage": 0.34
       },
       "WPF": {
         "count": 1,
