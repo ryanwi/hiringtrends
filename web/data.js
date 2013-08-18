@@ -1,6 +1,6 @@
 var data = [
   {
-    "month": "August2013",
+    "month": "Aug13",
     "num_comments": "395",
     "terms": {
       "0MQ": {
@@ -546,7 +546,7 @@ var data = [
     }
   },
   {
-    "month": "July2013",
+    "month": "Jul13",
     "num_comments": "395",
     "terms": {
       "0MQ": {
@@ -1092,7 +1092,7 @@ var data = [
     }
   },
   {
-    "month": "June2013",
+    "month": "Jun13",
     "num_comments": "385",
     "terms": {
       "0MQ": {
@@ -1638,7 +1638,7 @@ var data = [
     }
   },
   {
-    "month": "May2013",
+    "month": "May13",
     "num_comments": "471",
     "terms": {
       "0MQ": {
@@ -2184,7 +2184,7 @@ var data = [
     }
   },
   {
-    "month": "April2013",
+    "month": "Apr13",
     "num_comments": "430",
     "terms": {
       "0MQ": {
@@ -2730,7 +2730,7 @@ var data = [
     }
   },
   {
-    "month": "March2013",
+    "month": "Mar13",
     "num_comments": "375",
     "terms": {
       "0MQ": {
@@ -3276,7 +3276,7 @@ var data = [
     }
   },
   {
-    "month": "February2013",
+    "month": "Feb13",
     "num_comments": "269",
     "terms": {
       "0MQ": {
@@ -3822,7 +3822,7 @@ var data = [
     }
   },
   {
-    "month": "January2013",
+    "month": "Jan13",
     "num_comments": "272",
     "terms": {
       "0MQ": {
@@ -4368,7 +4368,7 @@ var data = [
     }
   },
   {
-    "month": "December2012",
+    "month": "Dec12",
     "num_comments": "300",
     "terms": {
       "0MQ": {
@@ -4914,7 +4914,7 @@ var data = [
     }
   },
   {
-    "month": "November2012",
+    "month": "Nov12",
     "num_comments": "284",
     "terms": {
       "0MQ": {
@@ -5460,7 +5460,7 @@ var data = [
     }
   },
   {
-    "month": "October2012",
+    "month": "Oct12",
     "num_comments": "313",
     "terms": {
       "0MQ": {
@@ -6006,7 +6006,7 @@ var data = [
     }
   },
   {
-    "month": "September2012",
+    "month": "Sep12",
     "num_comments": "319",
     "terms": {
       "0MQ": {
@@ -6552,7 +6552,7 @@ var data = [
     }
   },
   {
-    "month": "August2012",
+    "month": "Aug12",
     "num_comments": "315",
     "terms": {
       "0MQ": {
@@ -7098,7 +7098,7 @@ var data = [
     }
   },
   {
-    "month": "July2012",
+    "month": "Jul12",
     "num_comments": "253",
     "terms": {
       "0MQ": {
@@ -7644,7 +7644,7 @@ var data = [
     }
   },
   {
-    "month": "June2012",
+    "month": "Jun12",
     "num_comments": "217",
     "terms": {
       "0MQ": {
@@ -8190,7 +8190,7 @@ var data = [
     }
   },
   {
-    "month": "May2012",
+    "month": "May12",
     "num_comments": "276",
     "terms": {
       "0MQ": {
@@ -8736,7 +8736,7 @@ var data = [
     }
   },
   {
-    "month": "April2012",
+    "month": "Apr12",
     "num_comments": "226",
     "terms": {
       "0MQ": {
@@ -9282,7 +9282,7 @@ var data = [
     }
   },
   {
-    "month": "March2012",
+    "month": "Mar12",
     "num_comments": "307",
     "terms": {
       "0MQ": {
@@ -9828,7 +9828,7 @@ var data = [
     }
   },
   {
-    "month": "February2012",
+    "month": "Feb12",
     "num_comments": "250",
     "terms": {
       "0MQ": {
@@ -10374,7 +10374,7 @@ var data = [
     }
   },
   {
-    "month": "January2012",
+    "month": "Jan12",
     "num_comments": "230",
     "terms": {
       "0MQ": {
@@ -10920,7 +10920,7 @@ var data = [
     }
   },
   {
-    "month": "November2011",
+    "month": "Nov11",
     "num_comments": "314",
     "terms": {
       "0MQ": {
@@ -11466,7 +11466,7 @@ var data = [
     }
   },
   {
-    "month": "October2011",
+    "month": "Oct11",
     "num_comments": "285",
     "terms": {
       "0MQ": {
@@ -12012,7 +12012,7 @@ var data = [
     }
   },
   {
-    "month": "September2011",
+    "month": "Sep11",
     "num_comments": "240",
     "terms": {
       "0MQ": {
@@ -12558,7 +12558,7 @@ var data = [
     }
   },
   {
-    "month": "August2011",
+    "month": "Aug11",
     "num_comments": "324",
     "terms": {
       "0MQ": {
@@ -13104,7 +13104,7 @@ var data = [
     }
   },
   {
-    "month": "June2011",
+    "month": "Jun11",
     "num_comments": "340",
     "terms": {
       "0MQ": {
@@ -13650,7 +13650,7 @@ var data = [
     }
   },
   {
-    "month": "May2011",
+    "month": "May11",
     "num_comments": "302",
     "terms": {
       "0MQ": {
@@ -14196,7 +14196,7 @@ var data = [
     }
   },
   {
-    "month": "April2011",
+    "month": "Apr11",
     "num_comments": "301",
     "terms": {
       "0MQ": {
