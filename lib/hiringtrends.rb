@@ -45,7 +45,7 @@ class HiringTrends
         num_comments = result["item"]["num_comments"]
         submission_key = "#{SUBMISSION_KEY_PREFIX}#{sigid}"
         @redis.rpush(SUBMISSIONS_KEY, submission_key)
-        @redis.hmset(submission_key, "sigid", sigid, "month", "#{match[:month]}#{match[:year]}", "num_comments", num_comments)
+        @redis.hmset(submission_key, "sigid", sigid, "month", "#{match[:month][0...3]}#{match[:year][2..4]}", "num_comments", num_comments)
       end
     end
     self
