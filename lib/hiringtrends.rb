@@ -8,10 +8,9 @@ class HiringTrends
   SUBMISSIONS_KEY = "hn_submissions"
   SUBMISSION_KEY_PREFIX = "submission:"
 
-  def initialize(dictionary_url)
+  def initialize
     @redis = Redis.new
     @software_terms = {}
-    @dictionary_url = dictionary_url
   end
 
   # Remove data from redis
@@ -72,7 +71,8 @@ class HiringTrends
   end
 
   # Process all submissions, counting comments counts for each term in the technology dictionary
-  def analyze_submissions
+  def analyze_submissions(dictionary_url)
+    @dictionary_url = dictionary_url
     initialize_dictionary if @software_terms.empty?
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     submission_keys.each do |submission_key|
