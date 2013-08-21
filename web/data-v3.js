@@ -3,10 +3,6 @@ var data = [
     "month": "Aug13",
     "num_comments": "395",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.26
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -68,8 +64,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 0.77
       },
       "AWS": {
         "count": 21,
@@ -83,9 +79,9 @@ var data = [
         "count": 2,
         "percentage": 0.52
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.26
+      "Big Data": {
+        "count": 25,
+        "percentage": 6.44
       },
       "C": {
         "count": 13,
@@ -138,6 +134,14 @@ var data = [
       "d3": {
         "count": 12,
         "percentage": 3.09
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.52
+      },
+      "Data Science": {
+        "count": 9,
+        "percentage": 2.32
       },
       "Delphi": {
         "count": 0,
@@ -248,6 +252,10 @@ var data = [
         "percentage": 7.73
       },
       "JSON API": {
+        "count": 1,
+        "percentage": 0.26
+      },
+      "JSP": {
         "count": 0,
         "percentage": 0.0
       },
@@ -292,8 +300,8 @@ var data = [
         "percentage": 0.52
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 20,
+        "percentage": 5.15
       },
       "MATLAB": {
         "count": 1,
@@ -448,8 +456,8 @@ var data = [
         "percentage": 5.15
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 1.55
       },
       "SQS": {
         "count": 1,
@@ -500,8 +508,8 @@ var data = [
         "percentage": 0.26
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 13,
+        "percentage": 3.35
       },
       "WebForms": {
         "count": 1,
@@ -510,6 +518,10 @@ var data = [
       "WebSockets": {
         "count": 2,
         "percentage": 0.52
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 1,
@@ -549,10 +561,6 @@ var data = [
     "month": "Jul13",
     "num_comments": "395",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -614,8 +622,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.54
       },
       "AWS": {
         "count": 17,
@@ -629,9 +637,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 18,
+        "percentage": 4.85
       },
       "C": {
         "count": 15,
@@ -684,6 +692,14 @@ var data = [
       "d3": {
         "count": 7,
         "percentage": 1.89
+      },
+      "Data Mining": {
+        "count": 1,
+        "percentage": 0.27
+      },
+      "Data Science": {
+        "count": 6,
+        "percentage": 1.62
       },
       "Delphi": {
         "count": 0,
@@ -797,6 +813,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -838,8 +858,8 @@ var data = [
         "percentage": 0.54
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 20,
+        "percentage": 5.39
       },
       "MATLAB": {
         "count": 2,
@@ -994,8 +1014,8 @@ var data = [
         "percentage": 2.7
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.27
       },
       "SQS": {
         "count": 1,
@@ -1046,8 +1066,8 @@ var data = [
         "percentage": 0.27
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.16
       },
       "WebForms": {
         "count": 0,
@@ -1056,6 +1076,10 @@ var data = [
       "WebSockets": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.27
       },
       "WinForms": {
         "count": 0,
@@ -1095,10 +1119,6 @@ var data = [
     "month": "Jun13",
     "num_comments": "385",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.27
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -1160,8 +1180,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.1
       },
       "AWS": {
         "count": 23,
@@ -1175,9 +1195,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.27
+      "Big Data": {
+        "count": 13,
+        "percentage": 3.57
       },
       "C": {
         "count": 12,
@@ -1230,6 +1250,14 @@ var data = [
       "d3": {
         "count": 9,
         "percentage": 2.47
+      },
+      "Data Mining": {
+        "count": 6,
+        "percentage": 1.65
+      },
+      "Data Science": {
+        "count": 4,
+        "percentage": 1.1
       },
       "Delphi": {
         "count": 0,
@@ -1343,6 +1371,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -1384,8 +1416,8 @@ var data = [
         "percentage": 0.55
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 22,
+        "percentage": 6.04
       },
       "MATLAB": {
         "count": 2,
@@ -1540,8 +1572,8 @@ var data = [
         "percentage": 4.95
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 1.65
       },
       "SQS": {
         "count": 0,
@@ -1592,8 +1624,8 @@ var data = [
         "percentage": 0.27
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 13,
+        "percentage": 3.57
       },
       "WebForms": {
         "count": 0,
@@ -1602,6 +1634,10 @@ var data = [
       "WebSockets": {
         "count": 2,
         "percentage": 0.55
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.27
       },
       "WinForms": {
         "count": 0,
@@ -1641,10 +1677,6 @@ var data = [
     "month": "May13",
     "num_comments": "471",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.23
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -1706,8 +1738,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 0.68
       },
       "AWS": {
         "count": 25,
@@ -1721,9 +1753,9 @@ var data = [
         "count": 6,
         "percentage": 1.36
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.23
+      "Big Data": {
+        "count": 20,
+        "percentage": 4.52
       },
       "C": {
         "count": 19,
@@ -1776,6 +1808,14 @@ var data = [
       "d3": {
         "count": 8,
         "percentage": 1.81
+      },
+      "Data Mining": {
+        "count": 5,
+        "percentage": 1.13
+      },
+      "Data Science": {
+        "count": 4,
+        "percentage": 0.9
       },
       "Delphi": {
         "count": 0,
@@ -1886,6 +1926,10 @@ var data = [
         "percentage": 7.01
       },
       "JSON API": {
+        "count": 1,
+        "percentage": 0.23
+      },
+      "JSP": {
         "count": 0,
         "percentage": 0.0
       },
@@ -1930,8 +1974,8 @@ var data = [
         "percentage": 0.23
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 23,
+        "percentage": 5.2
       },
       "MATLAB": {
         "count": 1,
@@ -2086,8 +2130,8 @@ var data = [
         "percentage": 4.75
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 0.9
       },
       "SQS": {
         "count": 0,
@@ -2138,8 +2182,8 @@ var data = [
         "percentage": 0.23
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 1.36
       },
       "WebForms": {
         "count": 1,
@@ -2148,6 +2192,10 @@ var data = [
       "WebSockets": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.23
       },
       "WinForms": {
         "count": 1,
@@ -2187,10 +2235,6 @@ var data = [
     "month": "Apr13",
     "num_comments": "430",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -2252,8 +2296,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 0.71
       },
       "AWS": {
         "count": 24,
@@ -2267,9 +2311,9 @@ var data = [
         "count": 2,
         "percentage": 0.48
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 18,
+        "percentage": 4.29
       },
       "C": {
         "count": 22,
@@ -2322,6 +2366,14 @@ var data = [
       "d3": {
         "count": 6,
         "percentage": 1.43
+      },
+      "Data Mining": {
+        "count": 5,
+        "percentage": 1.19
+      },
+      "Data Science": {
+        "count": 4,
+        "percentage": 0.95
       },
       "Delphi": {
         "count": 0,
@@ -2435,6 +2487,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -2476,8 +2532,8 @@ var data = [
         "percentage": 0.24
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 26,
+        "percentage": 6.19
       },
       "MATLAB": {
         "count": 0,
@@ -2632,8 +2688,8 @@ var data = [
         "percentage": 5.24
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 1.67
       },
       "SQS": {
         "count": 0,
@@ -2684,14 +2740,18 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 2.14
       },
       "WebForms": {
         "count": 2,
         "percentage": 0.48
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },
@@ -2733,10 +2793,6 @@ var data = [
     "month": "Mar13",
     "num_comments": "375",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -2798,8 +2854,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.55
       },
       "AWS": {
         "count": 15,
@@ -2813,9 +2869,9 @@ var data = [
         "count": 2,
         "percentage": 0.55
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 18,
+        "percentage": 4.97
       },
       "C": {
         "count": 25,
@@ -2868,6 +2924,14 @@ var data = [
       "d3": {
         "count": 4,
         "percentage": 1.1
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.55
+      },
+      "Data Science": {
+        "count": 1,
+        "percentage": 0.28
       },
       "Delphi": {
         "count": 0,
@@ -2981,6 +3045,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 1,
         "percentage": 0.28
@@ -3022,8 +3090,8 @@ var data = [
         "percentage": 0.55
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 26,
+        "percentage": 7.18
       },
       "MATLAB": {
         "count": 0,
@@ -3178,8 +3246,8 @@ var data = [
         "percentage": 3.04
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.38
       },
       "SQS": {
         "count": 0,
@@ -3230,14 +3298,18 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.21
       },
       "WebForms": {
         "count": 0,
         "percentage": 0.0
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },
@@ -3279,10 +3351,6 @@ var data = [
     "month": "Feb13",
     "num_comments": "269",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.39
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -3359,9 +3427,9 @@ var data = [
         "count": 1,
         "percentage": 0.39
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.39
+      "Big Data": {
+        "count": 13,
+        "percentage": 5.06
       },
       "C": {
         "count": 18,
@@ -3414,6 +3482,14 @@ var data = [
       "d3": {
         "count": 5,
         "percentage": 1.95
+      },
+      "Data Mining": {
+        "count": 4,
+        "percentage": 1.56
+      },
+      "Data Science": {
+        "count": 2,
+        "percentage": 0.78
       },
       "Delphi": {
         "count": 0,
@@ -3527,6 +3603,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.39
+      },
       "JUnit": {
         "count": 2,
         "percentage": 0.78
@@ -3568,8 +3648,8 @@ var data = [
         "percentage": 0.39
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 24,
+        "percentage": 9.34
       },
       "MATLAB": {
         "count": 0,
@@ -3724,8 +3804,8 @@ var data = [
         "percentage": 1.95
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.39
       },
       "SQS": {
         "count": 0,
@@ -3776,8 +3856,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 11,
+        "percentage": 4.28
       },
       "WebForms": {
         "count": 0,
@@ -3786,6 +3866,10 @@ var data = [
       "WebSockets": {
         "count": 1,
         "percentage": 0.39
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 0,
@@ -3825,10 +3909,6 @@ var data = [
     "month": "Jan13",
     "num_comments": "272",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.39
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -3890,8 +3970,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.39
       },
       "AWS": {
         "count": 15,
@@ -3905,9 +3985,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.39
+      "Big Data": {
+        "count": 13,
+        "percentage": 5.06
       },
       "C": {
         "count": 16,
@@ -3960,6 +4040,14 @@ var data = [
       "d3": {
         "count": 4,
         "percentage": 1.56
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.17
+      },
+      "Data Science": {
+        "count": 2,
+        "percentage": 0.78
       },
       "Delphi": {
         "count": 0,
@@ -4073,6 +4161,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.39
+      },
       "JUnit": {
         "count": 1,
         "percentage": 0.39
@@ -4114,8 +4206,8 @@ var data = [
         "percentage": 0.39
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 11,
+        "percentage": 4.28
       },
       "MATLAB": {
         "count": 0,
@@ -4270,8 +4362,8 @@ var data = [
         "percentage": 4.28
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.78
       },
       "SQS": {
         "count": 0,
@@ -4322,14 +4414,18 @@ var data = [
         "percentage": 0.39
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.78
       },
       "WebForms": {
         "count": 0,
         "percentage": 0.0
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },
@@ -4371,10 +4467,6 @@ var data = [
     "month": "Dec12",
     "num_comments": "300",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.35
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -4436,8 +4528,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.7
       },
       "AWS": {
         "count": 12,
@@ -4451,9 +4543,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.35
+      "Big Data": {
+        "count": 16,
+        "percentage": 5.59
       },
       "C": {
         "count": 14,
@@ -4506,6 +4598,14 @@ var data = [
       "d3": {
         "count": 2,
         "percentage": 0.7
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.05
+      },
+      "Data Science": {
+        "count": 0,
+        "percentage": 0.0
       },
       "Delphi": {
         "count": 0,
@@ -4619,6 +4719,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 2,
+        "percentage": 0.7
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -4660,8 +4764,8 @@ var data = [
         "percentage": 0.35
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 15,
+        "percentage": 5.24
       },
       "MATLAB": {
         "count": 2,
@@ -4816,8 +4920,8 @@ var data = [
         "percentage": 1.75
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.7
       },
       "SQS": {
         "count": 0,
@@ -4868,8 +4972,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.05
       },
       "WebForms": {
         "count": 0,
@@ -4878,6 +4982,10 @@ var data = [
       "WebSockets": {
         "count": 2,
         "percentage": 0.7
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.35
       },
       "WinForms": {
         "count": 0,
@@ -4917,10 +5025,6 @@ var data = [
     "month": "Nov12",
     "num_comments": "284",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.38
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -4982,8 +5086,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.52
       },
       "AWS": {
         "count": 13,
@@ -4997,9 +5101,9 @@ var data = [
         "count": 2,
         "percentage": 0.76
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.38
+      "Big Data": {
+        "count": 11,
+        "percentage": 4.18
       },
       "C": {
         "count": 15,
@@ -5052,6 +5156,14 @@ var data = [
       "d3": {
         "count": 3,
         "percentage": 1.14
+      },
+      "Data Mining": {
+        "count": 1,
+        "percentage": 0.38
+      },
+      "Data Science": {
+        "count": 1,
+        "percentage": 0.38
       },
       "Delphi": {
         "count": 0,
@@ -5162,6 +5274,10 @@ var data = [
         "percentage": 6.84
       },
       "JSON API": {
+        "count": 2,
+        "percentage": 0.76
+      },
+      "JSP": {
         "count": 0,
         "percentage": 0.0
       },
@@ -5206,8 +5322,8 @@ var data = [
         "percentage": 0.38
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 12,
+        "percentage": 4.56
       },
       "MATLAB": {
         "count": 0,
@@ -5362,8 +5478,8 @@ var data = [
         "percentage": 3.04
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.76
       },
       "SQS": {
         "count": 0,
@@ -5414,8 +5530,8 @@ var data = [
         "percentage": 0.38
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.14
       },
       "WebForms": {
         "count": 0,
@@ -5424,6 +5540,10 @@ var data = [
       "WebSockets": {
         "count": 1,
         "percentage": 0.38
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 0,
@@ -5463,10 +5583,6 @@ var data = [
     "month": "Oct12",
     "num_comments": "313",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.34
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -5528,8 +5644,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.34
       },
       "AWS": {
         "count": 13,
@@ -5543,9 +5659,9 @@ var data = [
         "count": 4,
         "percentage": 1.36
       },
-      "BigData": {
-        "count": 2,
-        "percentage": 0.68
+      "Big Data": {
+        "count": 12,
+        "percentage": 4.07
       },
       "C": {
         "count": 21,
@@ -5598,6 +5714,14 @@ var data = [
       "d3": {
         "count": 2,
         "percentage": 0.68
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.68
+      },
+      "Data Science": {
+        "count": 3,
+        "percentage": 1.02
       },
       "Delphi": {
         "count": 0,
@@ -5708,8 +5832,12 @@ var data = [
         "percentage": 7.12
       },
       "JSON API": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.34
+      },
+      "JSP": {
+        "count": 2,
+        "percentage": 0.68
       },
       "JUnit": {
         "count": 0,
@@ -5752,8 +5880,8 @@ var data = [
         "percentage": 0.34
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 18,
+        "percentage": 6.1
       },
       "MATLAB": {
         "count": 2,
@@ -5960,8 +6088,8 @@ var data = [
         "percentage": 0.34
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 2.37
       },
       "WebForms": {
         "count": 0,
@@ -5970,6 +6098,10 @@ var data = [
       "WebSockets": {
         "count": 2,
         "percentage": 0.68
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 0,
@@ -6009,10 +6141,6 @@ var data = [
     "month": "Sep12",
     "num_comments": "319",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.33
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -6074,8 +6202,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.33
       },
       "AWS": {
         "count": 6,
@@ -6089,9 +6217,9 @@ var data = [
         "count": 1,
         "percentage": 0.33
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.33
+      "Big Data": {
+        "count": 11,
+        "percentage": 3.65
       },
       "C": {
         "count": 21,
@@ -6142,6 +6270,14 @@ var data = [
         "percentage": 4.65
       },
       "d3": {
+        "count": 2,
+        "percentage": 0.66
+      },
+      "Data Mining": {
+        "count": 6,
+        "percentage": 1.99
+      },
+      "Data Science": {
         "count": 2,
         "percentage": 0.66
       },
@@ -6254,8 +6390,12 @@ var data = [
         "percentage": 4.65
       },
       "JSON API": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.33
+      },
+      "JSP": {
+        "count": 3,
+        "percentage": 1.0
       },
       "JUnit": {
         "count": 0,
@@ -6298,8 +6438,8 @@ var data = [
         "percentage": 0.33
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 18,
+        "percentage": 5.98
       },
       "MATLAB": {
         "count": 3,
@@ -6454,8 +6594,8 @@ var data = [
         "percentage": 2.99
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.0
       },
       "SQS": {
         "count": 0,
@@ -6506,14 +6646,18 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.66
       },
       "WebForms": {
         "count": 0,
         "percentage": 0.0
       },
       "WebSockets": {
+        "count": 1,
+        "percentage": 0.33
+      },
+      "Windows Phone": {
         "count": 1,
         "percentage": 0.33
       },
@@ -6555,10 +6699,6 @@ var data = [
     "month": "Aug12",
     "num_comments": "315",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.34
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -6620,8 +6760,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.03
       },
       "AWS": {
         "count": 12,
@@ -6635,9 +6775,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.34
+      "Big Data": {
+        "count": 9,
+        "percentage": 3.08
       },
       "C": {
         "count": 17,
@@ -6690,6 +6830,14 @@ var data = [
       "d3": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.03
+      },
+      "Data Science": {
+        "count": 2,
+        "percentage": 0.68
       },
       "Delphi": {
         "count": 0,
@@ -6803,6 +6951,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -6844,8 +6996,8 @@ var data = [
         "percentage": 0.34
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 20,
+        "percentage": 6.85
       },
       "MATLAB": {
         "count": 3,
@@ -7000,8 +7152,8 @@ var data = [
         "percentage": 3.42
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.03
       },
       "SQS": {
         "count": 0,
@@ -7052,8 +7204,8 @@ var data = [
         "percentage": 0.68
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 13,
+        "percentage": 4.45
       },
       "WebForms": {
         "count": 0,
@@ -7062,6 +7214,10 @@ var data = [
       "WebSockets": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.34
       },
       "WinForms": {
         "count": 1,
@@ -7101,10 +7257,6 @@ var data = [
     "month": "Jul12",
     "num_comments": "253",
     "terms": {
-      "0MQ": {
-        "count": 2,
-        "percentage": 0.8
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -7181,9 +7333,9 @@ var data = [
         "count": 2,
         "percentage": 0.8
       },
-      "BigData": {
-        "count": 2,
-        "percentage": 0.8
+      "Big Data": {
+        "count": 9,
+        "percentage": 3.61
       },
       "C": {
         "count": 10,
@@ -7236,6 +7388,14 @@ var data = [
       "d3": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.8
+      },
+      "Data Science": {
+        "count": 2,
+        "percentage": 0.8
       },
       "Delphi": {
         "count": 0,
@@ -7349,6 +7509,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -7390,8 +7554,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 15,
+        "percentage": 6.02
       },
       "MATLAB": {
         "count": 0,
@@ -7546,8 +7710,8 @@ var data = [
         "percentage": 1.61
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.8
       },
       "SQS": {
         "count": 0,
@@ -7598,8 +7762,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.41
       },
       "WebForms": {
         "count": 0,
@@ -7608,6 +7772,10 @@ var data = [
       "WebSockets": {
         "count": 2,
         "percentage": 0.8
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 0,
@@ -7647,10 +7815,6 @@ var data = [
     "month": "Jun12",
     "num_comments": "217",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.39
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -7727,9 +7891,9 @@ var data = [
         "count": 3,
         "percentage": 1.18
       },
-      "BigData": {
-        "count": 1,
-        "percentage": 0.39
+      "Big Data": {
+        "count": 10,
+        "percentage": 3.92
       },
       "C": {
         "count": 20,
@@ -7780,6 +7944,14 @@ var data = [
         "percentage": 8.63
       },
       "d3": {
+        "count": 1,
+        "percentage": 0.39
+      },
+      "Data Mining": {
+        "count": 4,
+        "percentage": 1.57
+      },
+      "Data Science": {
         "count": 1,
         "percentage": 0.39
       },
@@ -7895,6 +8067,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -7936,8 +8112,8 @@ var data = [
         "percentage": 0.39
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 25,
+        "percentage": 9.8
       },
       "MATLAB": {
         "count": 3,
@@ -8092,8 +8268,8 @@ var data = [
         "percentage": 3.53
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.39
       },
       "SQS": {
         "count": 0,
@@ -8144,8 +8320,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 3.53
       },
       "WebForms": {
         "count": 0,
@@ -8154,6 +8330,10 @@ var data = [
       "WebSockets": {
         "count": 3,
         "percentage": 1.18
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 0,
@@ -8193,10 +8373,6 @@ var data = [
     "month": "May12",
     "num_comments": "276",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -8258,8 +8434,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.74
       },
       "AWS": {
         "count": 13,
@@ -8273,9 +8449,9 @@ var data = [
         "count": 2,
         "percentage": 0.74
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 12,
+        "percentage": 4.44
       },
       "C": {
         "count": 15,
@@ -8328,6 +8504,14 @@ var data = [
       "d3": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 4,
+        "percentage": 1.48
+      },
+      "Data Science": {
+        "count": 1,
+        "percentage": 0.37
       },
       "Delphi": {
         "count": 0,
@@ -8441,6 +8625,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.37
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -8482,8 +8670,8 @@ var data = [
         "percentage": 0.37
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 19,
+        "percentage": 7.04
       },
       "MATLAB": {
         "count": 1,
@@ -8638,8 +8826,8 @@ var data = [
         "percentage": 2.22
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.48
       },
       "SQS": {
         "count": 0,
@@ -8690,8 +8878,8 @@ var data = [
         "percentage": 0.74
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.11
       },
       "WebForms": {
         "count": 0,
@@ -8700,6 +8888,10 @@ var data = [
       "WebSockets": {
         "count": 4,
         "percentage": 1.48
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.37
       },
       "WinForms": {
         "count": 0,
@@ -8739,10 +8931,6 @@ var data = [
     "month": "Apr12",
     "num_comments": "226",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -8804,8 +8992,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.45
       },
       "AWS": {
         "count": 12,
@@ -8819,9 +9007,9 @@ var data = [
         "count": 1,
         "percentage": 0.45
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 5,
+        "percentage": 2.24
       },
       "C": {
         "count": 10,
@@ -8872,6 +9060,14 @@ var data = [
         "percentage": 8.52
       },
       "d3": {
+        "count": 1,
+        "percentage": 0.45
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.35
+      },
+      "Data Science": {
         "count": 1,
         "percentage": 0.45
       },
@@ -8984,8 +9180,12 @@ var data = [
         "percentage": 9.87
       },
       "JSON API": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.45
+      },
+      "JSP": {
+        "count": 3,
+        "percentage": 1.35
       },
       "JUnit": {
         "count": 0,
@@ -9028,8 +9228,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 11,
+        "percentage": 4.93
       },
       "MATLAB": {
         "count": 0,
@@ -9184,8 +9384,8 @@ var data = [
         "percentage": 3.14
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.45
       },
       "SQS": {
         "count": 0,
@@ -9236,8 +9436,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.79
       },
       "WebForms": {
         "count": 0,
@@ -9246,6 +9446,10 @@ var data = [
       "WebSockets": {
         "count": 1,
         "percentage": 0.45
+      },
+      "Windows Phone": {
+        "count": 2,
+        "percentage": 0.9
       },
       "WinForms": {
         "count": 0,
@@ -9285,10 +9489,6 @@ var data = [
     "month": "Mar12",
     "num_comments": "307",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -9350,8 +9550,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.67
       },
       "AWS": {
         "count": 11,
@@ -9365,9 +9565,9 @@ var data = [
         "count": 3,
         "percentage": 1.01
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 16,
+        "percentage": 5.39
       },
       "C": {
         "count": 13,
@@ -9418,6 +9618,14 @@ var data = [
         "percentage": 6.4
       },
       "d3": {
+        "count": 1,
+        "percentage": 0.34
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.01
+      },
+      "Data Science": {
         "count": 1,
         "percentage": 0.34
       },
@@ -9533,6 +9741,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 4,
+        "percentage": 1.35
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -9574,8 +9786,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.69
       },
       "MATLAB": {
         "count": 2,
@@ -9730,8 +9942,8 @@ var data = [
         "percentage": 3.37
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.01
       },
       "SQS": {
         "count": 0,
@@ -9782,8 +9994,8 @@ var data = [
         "percentage": 0.34
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 11,
+        "percentage": 3.7
       },
       "WebForms": {
         "count": 0,
@@ -9792,6 +10004,10 @@ var data = [
       "WebSockets": {
         "count": 1,
         "percentage": 0.34
+      },
+      "Windows Phone": {
+        "count": 2,
+        "percentage": 0.67
       },
       "WinForms": {
         "count": 0,
@@ -9831,10 +10047,6 @@ var data = [
     "month": "Feb12",
     "num_comments": "250",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -9896,8 +10108,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.43
       },
       "AWS": {
         "count": 12,
@@ -9911,9 +10123,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 8,
+        "percentage": 3.48
       },
       "C": {
         "count": 13,
@@ -9964,6 +10176,14 @@ var data = [
         "percentage": 7.39
       },
       "d3": {
+        "count": 1,
+        "percentage": 0.43
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.3
+      },
+      "Data Science": {
         "count": 1,
         "percentage": 0.43
       },
@@ -10079,6 +10299,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 2,
+        "percentage": 0.87
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -10120,8 +10344,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 4.35
       },
       "MATLAB": {
         "count": 0,
@@ -10276,8 +10500,8 @@ var data = [
         "percentage": 3.48
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.43
       },
       "SQS": {
         "count": 0,
@@ -10328,8 +10552,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 4.35
       },
       "WebForms": {
         "count": 0,
@@ -10338,6 +10562,10 @@ var data = [
       "WebSockets": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Windows Phone": {
+        "count": 5,
+        "percentage": 2.17
       },
       "WinForms": {
         "count": 0,
@@ -10377,10 +10605,6 @@ var data = [
     "month": "Jan12",
     "num_comments": "230",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -10442,8 +10666,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.45
       },
       "AWS": {
         "count": 7,
@@ -10457,9 +10681,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 8,
+        "percentage": 3.57
       },
       "C": {
         "count": 6,
@@ -10512,6 +10736,14 @@ var data = [
       "d3": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Science": {
+        "count": 1,
+        "percentage": 0.45
       },
       "Delphi": {
         "count": 0,
@@ -10625,6 +10857,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.45
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -10666,8 +10902,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 4.02
       },
       "MATLAB": {
         "count": 0,
@@ -10822,8 +11058,8 @@ var data = [
         "percentage": 1.79
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.45
       },
       "SQS": {
         "count": 0,
@@ -10874,8 +11110,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 4,
+        "percentage": 1.79
       },
       "WebForms": {
         "count": 0,
@@ -10884,6 +11120,10 @@ var data = [
       "WebSockets": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.45
       },
       "WinForms": {
         "count": 0,
@@ -10923,10 +11163,6 @@ var data = [
     "month": "Nov11",
     "num_comments": "314",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -10988,8 +11224,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.68
       },
       "AWS": {
         "count": 10,
@@ -11003,9 +11239,9 @@ var data = [
         "count": 1,
         "percentage": 0.34
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 8,
+        "percentage": 2.72
       },
       "C": {
         "count": 10,
@@ -11056,6 +11292,14 @@ var data = [
         "percentage": 7.48
       },
       "d3": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.02
+      },
+      "Data Science": {
         "count": 0,
         "percentage": 0.0
       },
@@ -11171,6 +11415,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 2,
+        "percentage": 0.68
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -11212,8 +11460,8 @@ var data = [
         "percentage": 0.34
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 10,
+        "percentage": 3.4
       },
       "MATLAB": {
         "count": 0,
@@ -11368,8 +11616,8 @@ var data = [
         "percentage": 3.4
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.68
       },
       "SQS": {
         "count": 0,
@@ -11420,8 +11668,8 @@ var data = [
         "percentage": 0.68
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 2.72
       },
       "WebForms": {
         "count": 1,
@@ -11430,6 +11678,10 @@ var data = [
       "WebSockets": {
         "count": 1,
         "percentage": 0.34
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 1,
@@ -11469,10 +11721,6 @@ var data = [
     "month": "Oct11",
     "num_comments": "285",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -11534,8 +11782,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.36
       },
       "AWS": {
         "count": 11,
@@ -11549,9 +11797,9 @@ var data = [
         "count": 1,
         "percentage": 0.36
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 5,
+        "percentage": 1.81
       },
       "C": {
         "count": 12,
@@ -11602,6 +11850,14 @@ var data = [
         "percentage": 7.25
       },
       "d3": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.72
+      },
+      "Data Science": {
         "count": 0,
         "percentage": 0.0
       },
@@ -11717,6 +11973,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 0,
+        "percentage": 0.0
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -11758,8 +12018,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.17
       },
       "MATLAB": {
         "count": 0,
@@ -11914,8 +12174,8 @@ var data = [
         "percentage": 2.9
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.36
       },
       "SQS": {
         "count": 0,
@@ -11966,8 +12226,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 2.17
       },
       "WebForms": {
         "count": 0,
@@ -11976,6 +12236,10 @@ var data = [
       "WebSockets": {
         "count": 1,
         "percentage": 0.36
+      },
+      "Windows Phone": {
+        "count": 0,
+        "percentage": 0.0
       },
       "WinForms": {
         "count": 0,
@@ -12015,10 +12279,6 @@ var data = [
     "month": "Sep11",
     "num_comments": "240",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -12095,9 +12355,9 @@ var data = [
         "count": 2,
         "percentage": 0.86
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 8,
+        "percentage": 3.43
       },
       "C": {
         "count": 11,
@@ -12150,6 +12410,14 @@ var data = [
       "d3": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 3,
+        "percentage": 1.29
+      },
+      "Data Science": {
+        "count": 1,
+        "percentage": 0.43
       },
       "Delphi": {
         "count": 0,
@@ -12263,6 +12531,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.43
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -12304,8 +12576,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 9,
+        "percentage": 3.86
       },
       "MATLAB": {
         "count": 0,
@@ -12460,8 +12732,8 @@ var data = [
         "percentage": 5.15
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 2.15
       },
       "SQS": {
         "count": 1,
@@ -12512,14 +12784,18 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 8,
+        "percentage": 3.43
       },
       "WebForms": {
         "count": 0,
         "percentage": 0.0
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },
@@ -12561,10 +12837,6 @@ var data = [
     "month": "Aug11",
     "num_comments": "324",
     "terms": {
-      "0MQ": {
-        "count": 1,
-        "percentage": 0.33
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -12626,8 +12898,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.33
       },
       "AWS": {
         "count": 7,
@@ -12641,9 +12913,9 @@ var data = [
         "count": 1,
         "percentage": 0.33
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 5,
+        "percentage": 1.63
       },
       "C": {
         "count": 10,
@@ -12694,6 +12966,14 @@ var data = [
         "percentage": 4.89
       },
       "d3": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.65
+      },
+      "Data Science": {
         "count": 0,
         "percentage": 0.0
       },
@@ -12809,6 +13089,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 3,
+        "percentage": 0.98
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -12850,8 +13134,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 2.28
       },
       "MATLAB": {
         "count": 0,
@@ -13006,8 +13290,8 @@ var data = [
         "percentage": 3.58
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.33
       },
       "SQS": {
         "count": 1,
@@ -13058,14 +13342,18 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 2.28
       },
       "WebForms": {
         "count": 0,
         "percentage": 0.0
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },
@@ -13107,10 +13395,6 @@ var data = [
     "month": "Jun11",
     "num_comments": "340",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -13172,8 +13456,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.3
       },
       "AWS": {
         "count": 12,
@@ -13187,9 +13471,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 4,
+        "percentage": 1.21
       },
       "C": {
         "count": 12,
@@ -13240,6 +13524,14 @@ var data = [
         "percentage": 4.24
       },
       "d3": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.61
+      },
+      "Data Science": {
         "count": 0,
         "percentage": 0.0
       },
@@ -13355,6 +13647,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.3
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -13396,8 +13692,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.52
       },
       "MATLAB": {
         "count": 1,
@@ -13552,8 +13848,8 @@ var data = [
         "percentage": 1.82
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.61
       },
       "SQS": {
         "count": 1,
@@ -13604,14 +13900,18 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 6,
+        "percentage": 1.82
       },
       "WebForms": {
         "count": 1,
         "percentage": 0.3
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },
@@ -13653,10 +13953,6 @@ var data = [
     "month": "May11",
     "num_comments": "302",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -13733,9 +14029,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 6,
+        "percentage": 2.05
       },
       "C": {
         "count": 6,
@@ -13786,6 +14082,14 @@ var data = [
         "percentage": 3.41
       },
       "d3": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 2,
+        "percentage": 0.68
+      },
+      "Data Science": {
         "count": 0,
         "percentage": 0.0
       },
@@ -13901,6 +14205,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.34
+      },
       "JUnit": {
         "count": 0,
         "percentage": 0.0
@@ -13942,8 +14250,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.02
       },
       "MATLAB": {
         "count": 0,
@@ -14098,8 +14406,8 @@ var data = [
         "percentage": 2.39
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.68
       },
       "SQS": {
         "count": 1,
@@ -14150,8 +14458,8 @@ var data = [
         "percentage": 0.0
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 2,
+        "percentage": 0.68
       },
       "WebForms": {
         "count": 0,
@@ -14160,6 +14468,10 @@ var data = [
       "WebSockets": {
         "count": 0,
         "percentage": 0.0
+      },
+      "Windows Phone": {
+        "count": 1,
+        "percentage": 0.34
       },
       "WinForms": {
         "count": 0,
@@ -14199,10 +14511,6 @@ var data = [
     "month": "Apr11",
     "num_comments": "301",
     "terms": {
-      "0MQ": {
-        "count": 0,
-        "percentage": 0.0
-      },
       ".NET": {
         "count": 0,
         "percentage": 0.0
@@ -14264,8 +14572,8 @@ var data = [
         "percentage": 0.0
       },
       "ASP.NET MVC": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 1,
+        "percentage": 0.34
       },
       "AWS": {
         "count": 5,
@@ -14279,9 +14587,9 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
-      "BigData": {
-        "count": 0,
-        "percentage": 0.0
+      "Big Data": {
+        "count": 6,
+        "percentage": 2.03
       },
       "C": {
         "count": 6,
@@ -14332,6 +14640,14 @@ var data = [
         "percentage": 5.08
       },
       "d3": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Data Mining": {
+        "count": 1,
+        "percentage": 0.34
+      },
+      "Data Science": {
         "count": 0,
         "percentage": 0.0
       },
@@ -14447,6 +14763,10 @@ var data = [
         "count": 0,
         "percentage": 0.0
       },
+      "JSP": {
+        "count": 1,
+        "percentage": 0.34
+      },
       "JUnit": {
         "count": 1,
         "percentage": 0.34
@@ -14488,8 +14808,8 @@ var data = [
         "percentage": 0.0
       },
       "Machine Learning": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 7,
+        "percentage": 2.37
       },
       "MATLAB": {
         "count": 0,
@@ -14644,8 +14964,8 @@ var data = [
         "percentage": 3.39
       },
       "SQL Server": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 3,
+        "percentage": 1.02
       },
       "SQS": {
         "count": 1,
@@ -14696,14 +15016,18 @@ var data = [
         "percentage": 0.68
       },
       "Web Services": {
-        "count": 0,
-        "percentage": 0.0
+        "count": 5,
+        "percentage": 1.69
       },
       "WebForms": {
         "count": 0,
         "percentage": 0.0
       },
       "WebSockets": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "Windows Phone": {
         "count": 0,
         "percentage": 0.0
       },

@@ -35,7 +35,9 @@
         })();
       </script>
 
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ryan-williams.net/hacker-news-hiring-trends/" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+
+      <a href="https://news.ycombinator.com/item?id=6237116">Discuss on Hacker News</a>
     </div>
 
   </div>
@@ -93,12 +95,14 @@
   </div>
 
 
-  <h2>About</h2>
+  <h3>About</h3>
   <p>
     This chart represents trends in languagues, frameworks and technologies used to develop modern software applications as indicated by <a href="https://news.ycombinator.com/">Hacker News</a> activity. Using the <a href="https://www.hnsearch.com/api">HN Search API</a> and a <a href="https://gist.github.com/ryanwi/6135845">dictionary of software terms</a>, all of the the comments (job postings) in the "<a href="https://news.ycombinator.com/user?id=whoishiring">whoishiring</a>" submissions from April 2011 to August 2013 were processed to count the number of times each software term was mentioned.
   </p>
 
+  <h3>Subscribe</h3>
   <p>
+    <a href="http://eepurl.com/DVVSb" class="btn btn-primary btn-lg">Subscribe for updates</a>
   </p>
 
   <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
@@ -110,9 +114,9 @@
 
 </div>
 
-<script src="lib-v1.js"></script>
+<script src="lib-v3.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="data.js"></script>
+<script src="data-v3.js"></script>
 <script>
 var terms;
 var categories;
@@ -141,6 +145,8 @@ var highChartConverter = (function ( $ ) {
           term_data["data"].push( datapoint["terms"][term]["count"] );
           term_data["total_mentions"] += datapoint["terms"][term]["count"];
         });
+
+        // calculate YOY change
         var first = term_data["data"][term_data["data"].length-13];
         var last = term_data["data"][term_data["data"].length-1]
         if (first == 0 || last == 0) {
@@ -148,8 +154,10 @@ var highChartConverter = (function ( $ ) {
         } else {
           term_data["change"] = (last - first) / first;
         }
+
         series.push(term_data);
       });
+
       return series;
     }
 
@@ -165,7 +173,7 @@ var chartBuilder = (function ( $ ) {
         type: 'line'
       },
       title: {
-        text: 'Hacker News Hiring Trends'
+        text: ''
       },
       xAxis: {
         categories: categories,
@@ -216,14 +224,16 @@ var tableBuilder = (function ( $ ) {
     renderRising: function() {
       var rising = series.slice().sort(function( a,b ){ return b.change - a.change }).slice(0, 10);
       $.each(rising, function ( i, val ) {
-        $('#rising tbody').append('<tr><td>' + val["name"] +'</td><td>' + (val["change"]*100).toFixed(2) +'%</td></tr>');
+        $('#rising tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' + 
+          (val["change"]*100).toFixed(2) +'%</td></tr>');
       });
     },
 
     renderFalling: function( falling ) {
       var falling = series.slice().sort(function( a,b ){ return a.change - b.change }).slice(0, 10);
       $.each(falling, function ( i, val ) {
-        $('#falling tbody').append('<tr><td>' + val["name"] +'</td><td>' + (val["change"]*100).toFixed(2) +'%</td></tr>');
+        $('#falling tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' + 
+          (val["change"]*100).toFixed(2) +'%</td></tr>');
       });
     }
 
