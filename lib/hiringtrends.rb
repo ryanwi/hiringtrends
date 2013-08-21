@@ -73,7 +73,7 @@ class HiringTrends
   # Process all submissions, counting comments counts for each term in the technology dictionary
   def analyze_submissions(dictionary_url)
     @dictionary_url = dictionary_url
-    initialize_dictionary if @software_terms.empty?
+    initialize_dictionary
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     submission_keys.each do |submission_key|
       # create a fresh dictionary (need a deep copy) of each term with initial count of 0
@@ -129,8 +129,11 @@ class HiringTrends
       # identify if each term is in the comment
       terms.keys.each do |term|
         # increment count as its found
-        terms[term][:count] += 1 if comment_words.include?( term.downcase )
-        # terms[term][:count] += 1 if comment_text.downcase.scan(term.downcase).any?
+        if term.include? " "
+          terms[term][:count] += 1 if comment_text.downcase.scan( term.downcase ).any?
+        else
+          terms[term][:count] += 1 if comment_words.include?( term.downcase )
+        end
       end
     end
 
