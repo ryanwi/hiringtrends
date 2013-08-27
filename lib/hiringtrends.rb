@@ -102,7 +102,7 @@ class HiringTrends
     # Get comments from API and page results as necessary
     for j in 0...pages
       start = j*100
-      comments_url = "http://api.thriftdb.com/api.hnsearch.com/items/_search?limit=100&start=#{start}&filter[fields][discussion.sigid]=#{sigid}&filter[fields][type]=comment&sortby=create_ts+desc"
+      comments_url = "http://api.thriftdb.com/api.hnsearch.com/items/_search?limit=100&start=#{start}&filter[fields][parent_sigid]=#{sigid}&filter[fields][type]=comment&sortby=create_ts+desc"
       response = Faraday.get comments_url
       comments_results = JSON.parse response.body
       comments.concat(comments_results["results"])
