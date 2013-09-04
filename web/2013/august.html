@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News (HN) Tech Hiring Trends</title>
+  <meta name="description" content="View what's trending in software development by analyzing job postings on Hacker News">  
+  <meta property="og:title" content="Hacker News Tech Hiring Trends" />
+  <meta property="og:description" content="View what's trending in software development by analyzing job postings on Hacker News" />
+  <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
+  <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
+  <link href="../styles-v1.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="page-header">
+    <h1>
+      Hacker News Tech Hiring Trends
+    </h1>
+
+    <div class="badges">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript">
+       lang: en_US
+      </script>
+      <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/" data-counter="right"></script>
+
+      <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/"></div>
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+
+      <a href="https://news.ycombinator.com/item?id=6237116">Discuss on Hacker News</a>
+    </div>
+
+  </div>
+
+  <div class="chart-filters">
+    <form id="chart_filter" method="get" class="form-inline" role="form">
+    Show: 
+    <select id="topfilter" class="form-control">
+      <option value="5" selected>Top 5</option>
+      <option value="10">Top 10</option>
+      <option value="20">Top 20</option>
+      <option value="50">Top 50</option>
+      <option value="-1">All</option>
+    </select>
+
+    <span style="margin-right: 10px;">or compare</span>
+
+    <input type="text" name="compare1" class="term-compare form-control" placeholder="Ruby" />
+    <input type="text" name="compare2" class="term-compare form-control" placeholder="Python" />
+    <input type="text" name="compare3" class="term-compare form-control" />
+    <input type="text" name="compare4" class="term-compare form-control" />
+    <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
+    </form>
+  </div>
+
+  <div id="chart" style="width:100%; height:400px;"></div>
+
+  <div class="row" style="margin-top:30px;">
+    <div class="col-md-6">
+      <h4>Rising</h4>
+      <table id="rising" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h4>Falling</h4>
+      <table id="falling" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <h3>About</h3>
+  <p>
+    This chart represents trends in languagues, frameworks and technologies used to develop modern software applications as indicated by <a href="https://news.ycombinator.com/">Hacker News</a> activity. Using the <a href="https://www.hnsearch.com/api">HN Search API</a> and a <a href="https://gist.github.com/ryanwi/6135845">dictionary of software terms</a>, all of the the comments (job postings) in the "<a href="https://news.ycombinator.com/user?id=whoishiring">whoishiring</a>" submissions from April 2011 to August 2013 were processed to count the number of times each software term was mentioned.
+  </p>
+
+  <h3>Subscribe</h3>
+  <p>
+    <a href="http://eepurl.com/DVVSb" class="btn btn-primary btn-lg">Subscribe for updates</a>
+  </p>
+
+  <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
+    <a href="http://www.ryan-williams.net">Portland web developer Ryan Williams</a> • 
+    <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> • 
+    Email: ryan at ryan-williams.net • 
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+  </footer>
+
+</div>
+
+<script src="../lib-v3.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="data-20130801.js"></script>
+<script>
+var terms;
+var categories;
+var series;
+
+var highChartConverter = (function ( $ ) {
+
+  return  {
+
+    convertCategories: function () {
+      // initialize  xaxis categories (months)
+      var months = [];
+      $.map(data, function ( datapoint, i ) {
+        months.push(datapoint["month"]);
+      });
+      return months;
+    },
+
+    convertSeries: function () {
+      // initialize series data
+      var series = [];
+      $.map(terms, function ( term, i ) {
+        var term_data = { "name": term, "data": [], "total_mentions": 0 }
+        // build data
+        $.map(data, function ( datapoint, i ) {
+          term_data["data"].push( datapoint["terms"][term]["count"] );
+          term_data["total_mentions"] += datapoint["terms"][term]["count"];
+        });
+
+        // calculate YOY change
+        var first = term_data["data"][term_data["data"].length-13];
+        var last = term_data["data"][term_data["data"].length-1]
+
+        // assign a floor to have more meaningful change calculation
+        if (first == 0) {
+          first = 1;
+        }
+        if (last == 0) {
+          last = 1;
+        }
+
+        term_data["change"] = (last - first) / first;
+        series.push(term_data);
+      });
+
+      return series;
+    }
+
+  }
+
+}) ( jQuery );
+
+var chartBuilder = (function ( $ ) {
+
+  function render( seriesData ) {
+    $('#chart').highcharts({
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        categories: categories,
+        labels: {
+          step: 3,
+          staggerLines: 1
+        }          
+      },
+      yAxis: {
+        title: {
+          text: 'Number of Comments mentioned'
+        },
+        min: 0
+      },
+      tooltip: {
+      },        
+      series: seriesData
+    });
+  }
+
+  return {
+
+    renderTopTerms: function( numTerms ) {
+      render( series.slice( 0, numTerms ) );
+    },
+
+    renderComparison: function() {
+      var compareTerms = [];
+      var compareSeries = [];
+      $(".term-compare").each ( function ( i, val ) {
+        compareTerms.push( val.value.toLowerCase() );
+      });
+      $.each(series, function ( i, val) {
+        if ( $.inArray(val.name.toLowerCase(), compareTerms) > -1 ) {
+          compareSeries.push( val );
+        }
+      });
+      render( compareSeries );
+    }
+  }
+
+}) ( jQuery );
+
+var tableBuilder = (function ( $ ) {
+
+  return {
+
+    renderRising: function() {
+      var rising = series.slice().sort(function( a,b ){ return b.change - a.change }).slice(0, 10);
+      $.each(rising, function ( i, val ) {
+        $('#rising tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' + 
+          (val["change"]*100).toFixed(2) +'%</td></tr>');
+      });
+    },
+
+    renderFalling: function( falling ) {
+      var falling = series.slice().sort(function( a,b ){ return a.change - b.change }).slice(0, 10);
+      $.each(falling, function ( i, val ) {
+        $('#falling tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' + 
+          (val["change"]*100).toFixed(2) +'%</td></tr>');
+      });
+    }
+
+  }
+
+}) ( jQuery );
+
+$(function () { 
+  data.reverse();
+  terms = Object.keys( data[0]["terms"] );
+
+  // transform raw data in to format consumable by highcharts
+  categories = highChartConverter.convertCategories();
+  series = highChartConverter.convertSeries();
+
+  // sort by cumulative popularity
+  series.sort(function(a,b){ return b.total_mentions - a.total_mentions });
+
+  // wire up top terms filter
+  $( "#topfilter" ).on( "change", function ( e ) {
+    chartBuilder.renderTopTerms( parseInt($(this).val()) );
+  });
+
+  // process url parameters if present
+  var urlParams = parseQueryString();
+  if ( Object.keys( urlParams ).length > 0 ) {
+    for (var term in urlParams) {
+      $("input[name=" + term + "]").val( urlParams[term] );
+    }
+    chartBuilder.renderComparison();
+  } else {
+    chartBuilder.renderTopTerms( 5 );
+  }
+
+  // populate rising/falling tables
+  tableBuilder.renderRising();
+  tableBuilder.renderFalling();
+
+  // wire up autocomplete
+  $( ".term-compare" ).autocomplete({
+    source: terms
+  });
+
+});
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<a href="https://github.com/ryanwi/hiringtrends"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16316427-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
