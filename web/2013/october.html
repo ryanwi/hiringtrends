@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News (HN) Tech Hiring Trends (October 2013)</title>
+  <meta name="description" content="Update for October, 2013 - View what's trending in software development by analyzing job postings on Hacker News">  
+  <meta property="og:title" content="October 2013 Hacker News Tech Hiring Trends" />
+  <meta property="og:description" content="October Update - View what's trending in software development by analyzing job postings on Hacker News" />
+  <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
+  <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
+  <link href="../styles-v1.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="page-header">
+    <h1>
+      Hacker News Tech Hiring Trends (October 2013)
+    </h1>
+
+    <p>
+      <a href="../">Previous months</a>
+    </p>
+
+    <div class="badges">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript">
+       lang: en_US
+      </script>
+      <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/2013/october.html" data-counter="right"></script>
+
+      <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/2013/october.html"></div>
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/2013/october.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+
+      <!-- <a href="https://news.ycombinator.com/item?id=6237116">Discuss Original on Hacker News</a> -->
+    </div>
+
+  </div>
+
+  <div class="chart-filters">
+    <form id="chart_filter" method="get" class="form-inline" role="form">
+    Show: 
+    <select id="topfilter" class="form-control">
+      <option value="5" selected>Top 5</option>
+      <option value="10">Top 10</option>
+      <option value="20">Top 20</option>
+      <option value="50">Top 50</option>
+      <option value="-1">All</option>
+    </select>
+
+    <span style="margin-right: 10px;">or compare</span>
+
+    <input type="text" name="compare1" class="term-compare form-control" placeholder="Ruby" />
+    <input type="text" name="compare2" class="term-compare form-control" placeholder="Python" />
+    <input type="text" name="compare3" class="term-compare form-control" />
+    <input type="text" name="compare4" class="term-compare form-control" />
+    <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
+    </form>
+  </div>
+
+  <div id="chart" style="width:100%; height:400px;"></div>
+
+  <div class="row" style="margin-top:30px;">
+    <div class="col-md-4">
+      <h4>Top 10</h4>
+      <table id="topterms" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>Mentions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h4>Rising</h4>
+      <table id="rising" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>Mentions</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h4>Falling</h4>
+      <table id="falling" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>Mentions</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <h3>October Highlights</h3>
+  <p>
+  </p>
+
+
+  <h3>Subscribe</h3>
+  <p>
+    <a href="http://eepurl.com/DVVSb" class="btn btn-primary btn-lg">Subscribe for updates</a>
+  </p>
+
+  <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
+    <a href="http://www.ryan-williams.net">Portland web developer Ryan Williams</a> • 
+    <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> • 
+    Email: ryan at ryan-williams.net • 
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+  </footer>
+
+</div>
+
+<script src="../lib-v3.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="data-20131001.js"></script>
+<script src="../builder-v1.js"></script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<a href="https://github.com/ryanwi/hiringtrends"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16316427-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
