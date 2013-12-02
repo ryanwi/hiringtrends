@@ -33,5 +33,5 @@ With a command line
     > hn = HiringTrends.new
     > hn.get_submissions
     > hn.get_comments_for_submissions
-    > hn.analyze_submissions("https://gist.github.com/ryanwi/6135845/raw/106aa752a61456cfd18c70f1810d61690dea2eb1/software-terms.dic")
+    > hn.analyze_submissions("https://gist.github.com/ryanwi/6135845/raw/e0232fa58d3af5c20e38e638e247a7a9b372bdca/software-terms.dic")
     > hn.publish("data.js")
