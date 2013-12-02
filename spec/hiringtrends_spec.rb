@@ -2,7 +2,7 @@ require_relative './spec_helper'
 
 describe HiringTrends do
   before :each do
-    @hn = HiringTrends.new("")
+    @hn = HiringTrends.new
   end
 
   # describe "#analyze_submission" do
@@ -10,7 +10,6 @@ describe HiringTrends do
   #     @hn.initialize_dictionary
   #   end
   # end
-
 
   describe "#analyze_submission" do
 
@@ -88,7 +87,7 @@ describe HiringTrends do
       terms["angular"][:count].should == 1
     end
 
-    it "handles spaces" do
+    it "counts multi-word terms" do
       terms = {
         "Visual Basic" => {:count => 0, :percentage => 0},
         "Web services" => {:count => 0, :percentage => 0},
@@ -99,17 +98,6 @@ describe HiringTrends do
 
       terms = @hn.analyze_submission(terms, comments)
       terms["Visual Basic"][:count].should == 1
-    end
-
-    it "counts multi-word terms" do
-      terms = {
-        "C" => {:count => 0, :percentage => 0}
-      }
-      comments = [{"item" => {"text" => "Javascript visual basic c web services"}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
-
-      terms = @hn.analyze_submission(terms, comments)
-      terms["C"][:count].should == 1
     end
 
     it "counts .net" do
