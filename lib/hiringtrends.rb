@@ -34,18 +34,32 @@ class HiringTrends
   # Find and load all hiring submissions from HN Search API
   def get_submissions
     puts "== get_submissions =="
-    submissions_url = "http://api.thriftdb.com/api.hnsearch.com/items/_search?filter[fields][username]=whoishiring&limit=100&sortby=create_ts+desc&filter[fields][type]=submission"
-    response = Faraday.get submissions_url
-    hn_search = JSON.parse response.body
-    hn_search["results"].each do |result|
+    submissions_url = "https://hn.algolia.com/api/v1/search_by_date?query=Who+is+hiring&tags=story,author_whoishiring"
+    page = 0
+    results = []
+    loop do
+      puts "=== page #{page} ==="
+      response = Faraday.get "#{submissions_url}&page=#{page}"
+      hits = JSON.parse response.body
+      results += hits["hits"]
+      page += 1
+      break if hits["hits"].empty?
+    end
+
+    results.each do |result|
       # filter for only hiring and determine month/year
-      match = /ask hn: who is hiring\? \((?<month>.*) (?<year>\d{4})\)/i.match(result["item"]["title"])
+      puts result["title"]
+      match = /ask hn: who is hiring\? \((?<month>.*) (?<year>\d{4})\)/i.match(result["title"])
       unless match.nil?
-        sigid = result["item"]["_id"]
-        num_comments = result["item"]["num_comments"]
-        submission_key = "#{SUBMISSION_KEY_PREFIX}#{sigid}"
+        puts "match"
+        objectID = result["objectID"]
+        submission_key = "#{SUBMISSION_KEY_PREFIX}#{result["objectID"]}"
         @redis.rpush(SUBMISSIONS_KEY, submission_key)
-        @redis.hmset(submission_key, "sigid", sigid, "month", "#{match[:month][0...3]}#{match[:year][2..4]}", "num_comments", num_comments)
+        @redis.hmset(submission_key,
+          "objectID", objectID,
+          "month", "#{match[:month][0...3]}#{match[:year][2..4]}",
+          "num_comments", result["num_comments"]
+        )
       end
     end
     self
@@ -57,15 +71,16 @@ class HiringTrends
     submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
     submission_keys.each do |submission_key|
       # get all comments for submission from API
-      submission_sigid = @redis.hget(submission_key, "sigid")
+      submission_objectid = @redis.hget(submission_key, "objectID")
       num_comments = @redis.hget(submission_key, "num_comments")
       month = @redis.hget(submission_key, "month")
 
-      comments = get_comments_for_submission(submission_sigid, num_comments)
+      comments = get_comments_for_submission(submission_objectid)
 
       # store comment text in redis
       puts "#{month}: #{comments.count} comments found..."
       @redis.hset(submission_key, "comments", comments.to_json)
+      sleep 2
     end
     self
   end
@@ -90,25 +105,15 @@ class HiringTrends
   # Find comments for individual submission
   #
   # Arguments:
-  #  sigid: (String)
-  #  num_comments: (Integer)
-  def get_comments_for_submission(sigid, num_comments)
-    puts "== get_comments_for_submission #{sigid} =="
+  #  objectID: (String)
+  def get_comments_for_submission(objectID)
+    puts "== get_comments_for_submission #{objectID} =="
 
-    # accumulate comments across all pages
-    comments = []
-    pages = (num_comments.to_f / 100).ceil
-
-    # Get comments from API and page results as necessary
-    for j in 0...pages
-      start = j*100
-      comments_url = "http://api.thriftdb.com/api.hnsearch.com/items/_search?limit=100&start=#{start}&filter[fields][parent_sigid]=#{sigid}&filter[fields][type]=comment&sortby=create_ts+desc"
-      response = Faraday.get comments_url
-      comments_results = JSON.parse response.body
-      comments.concat(comments_results["results"])
-    end
-
-    comments
+    # Get comments from API
+    item_url = "https://hn.algolia.com/api/v1/items/#{objectID}"
+    response = Faraday.get item_url
+    item = JSON.parse response.body
+    comments = item["children"]
   end
 
   # Calculate term frequency across all comments for individual submission
@@ -120,7 +125,8 @@ class HiringTrends
     # accumulate mentions of term as comments are searched
     comments.each do |comment|
       # extract comment text
-      comment_text = comment["item"]["text"]
+      comment_text = comment["text"]
+      next if comment_text.nil?
 
       # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
       # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
@@ -141,7 +147,7 @@ class HiringTrends
     terms.keys.each do |term|
       terms[term][:percentage] = ((terms[term][:count]/comments.count.to_f) * 100).round(2)
     end
-    
+
     terms
   end
 
@@ -150,9 +156,9 @@ class HiringTrends
     initialize_dictionary if @software_terms.empty?
 
     # initialize the data structure to publish, will look like
-    # data = [ 
-    # { :month => month1, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
-    # { :month => month2, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }}, 
+    # data = [
+    # { :month => month1, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }},
+    # { :month => month2, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }},
     # ]
     data = []
 
@@ -165,7 +171,7 @@ class HiringTrends
       data << datapoint
     end
 
-    File.open(filename, "wb") { |f| f.write(JSON.pretty_generate(data)) }    
+    File.open(filename, "wb") { |f| f.write(JSON.pretty_generate(data)) }
 
     self
   end
