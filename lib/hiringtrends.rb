@@ -51,7 +51,6 @@ class HiringTrends
       puts result["title"]
       match = /ask hn: who is hiring\? \((?<month>.*) (?<year>\d{4})\)/i.match(result["title"])
       unless match.nil?
-        puts "match"
         objectID = result["objectID"]
         submission_key = "#{SUBMISSION_KEY_PREFIX}#{result["objectID"]}"
         @redis.rpush(SUBMISSIONS_KEY, submission_key)
