@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'hiringtrends'
-  s.version = '0.0.7'
-  s.date = '2013-10-01'
+  s.version = '0.0.8'
+  s.date = '2014-04-02'
   s.summary = 'Hiring Trends'
   s.description = 'Hiring trends analysis from Hacker News monthly whoishiring posts'
   s.authors = ["Ryan Williams"]
