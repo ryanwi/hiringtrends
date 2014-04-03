@@ -1,4 +1,4 @@
-require_relative './spec_helper'
+require 'spec_helper'
 
 describe HiringTrends do
   before :each do
@@ -15,12 +15,14 @@ describe HiringTrends do
 
     it "separates words with slash separators" do
       terms = {
-        "Ruby" => {:count => 0, :percentage => 0}, 
-        "Python" => {:count => 0, :percentage => 0}, 
+        "Ruby" => {:count => 0, :percentage => 0},
+        "Python" => {:count => 0, :percentage => 0},
         "JavaScript" => {:count => 0, :percentage => 0}
       }
-      comments = [{"item" => {"text" => "This first comment has ruby in it."}}, 
-        {"item" => {"text" => "in this comment is ruby/javascript"}}]
+      comments = [
+        {"text" => "This first comment has ruby in it."},
+        {"text" => "in this comment is ruby/javascript"}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
 
@@ -30,12 +32,14 @@ describe HiringTrends do
 
     it "separates words with comma separators" do
       terms = {
-        "Ruby" => {:count => 0, :percentage => 0}, 
-        "Python" => {:count => 0, :percentage => 0}, 
+        "Ruby" => {:count => 0, :percentage => 0},
+        "Python" => {:count => 0, :percentage => 0},
         "JavaScript" => {:count => 0, :percentage => 0}
       }
-      comments = [{"item" => {"text" => "This first comment has ruby in it."}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "This first comment has ruby in it."},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms["Ruby"][:count].should == 2
@@ -43,8 +47,10 @@ describe HiringTrends do
 
     it "separates words with periods at end of sentence" do
       terms = {"Ruby" => {:count => 0, :percentage => 0}}
-      comments = [{"item" => {"text" => "This first comment has ruby."}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "This first comment has ruby."},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms["Ruby"][:count].should == 2
@@ -52,8 +58,10 @@ describe HiringTrends do
 
     it "is case insensitive" do
       terms = {"Ruby" => {:count => 0, :percentage => 0}}
-      comments = [{"item" => {"text" => "This first comment has Ruby in it."}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "This first comment has Ruby in it."},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms["Ruby"][:count].should == 2
@@ -63,11 +71,13 @@ describe HiringTrends do
       terms = {
         "JavaScript" => {:count => 0, :percentage => 0},
         "Objective-c" => {:count => 0, :percentage => 0},
-        "PHP" => {:count => 0, :percentage => 0}, 
+        "PHP" => {:count => 0, :percentage => 0},
         "Python" => {:count => 0, :percentage => 0}
       }
-      comments = [{"item" => {"text" => "Primary languages are javascript and python, with a history in php and a little bit of Objective-c. I have experience with many of the common client-side frameworks like Backbone, Knockout, etc."}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "Primary languages are javascript and python, with a history in php and a little bit of Objective-c. I have experience with many of the common client-side frameworks like Backbone, Knockout, etc."},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms["Objective-c"][:count].should == 1
@@ -77,11 +87,13 @@ describe HiringTrends do
       terms = {
         "JavaScript" => {:count => 0, :percentage => 0},
         "angular" => {:count => 0, :percentage => 0},
-        "backbone" => {:count => 0, :percentage => 0}, 
+        "backbone" => {:count => 0, :percentage => 0},
         "node" => {:count => 0, :percentage => 0}
       }
-      comments = [{"item" => {"text" => "Javascript  ['angular','backbone','node']"}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "Javascript  ['angular','backbone','node']"},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms["angular"][:count].should == 1
@@ -93,8 +105,10 @@ describe HiringTrends do
         "Web services" => {:count => 0, :percentage => 0},
         "node" => {:count => 0, :percentage => 0}
       }
-      comments = [{"item" => {"text" => "Javascript visual basic web services"}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "Javascript visual basic web services"},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms["Visual Basic"][:count].should == 1
@@ -104,8 +118,10 @@ describe HiringTrends do
       terms = {
         ".NET" => {:count => 0, :percentage => 0}
       }
-      comments = [{"item" => {"text" => "Javascript visual basic c web services C#/.NET"}}, 
-        {"item" => {"text" => "in this comment is ruby, javascript."}}]
+      comments = [
+        {"text" => "Javascript visual basic c web services C#/.NET"},
+        {"text" => "in this comment is ruby, javascript."}
+      ]
 
       terms = @hn.analyze_submission(terms, comments)
       terms[".NET"][:count].should == 1
