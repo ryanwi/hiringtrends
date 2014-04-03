@@ -129,7 +129,7 @@ class HiringTrends
 
       # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
       # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
-      comment_words = comment_text.split(/[[:space:]!|;:,\.\?\/'\(\)\[\]]/).map(&:downcase)
+      comment_words = comment_text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/).map(&:downcase)
 
       # identify if each term is in the comment
       terms.keys.each do |term|
