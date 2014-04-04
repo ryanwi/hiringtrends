@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe HiringTrends do
+describe HiringTrends::Program do
   before :each do
-    @hn = HiringTrends.new
+    @hn = HiringTrends::Program.new
   end
 
   # describe "#analyze_submission" do
@@ -15,9 +15,9 @@ describe HiringTrends do
 
     it "separates words with slash separators" do
       terms = {
-        "Ruby" => {:count => 0, :percentage => 0},
-        "Python" => {:count => 0, :percentage => 0},
-        "JavaScript" => {:count => 0, :percentage => 0}
+        "Ruby" => {:count => 0, :percentage => 0, :full_term => "Ruby"},
+        "Python" => {:count => 0, :percentage => 0, :full_term => "Python"},
+        "JavaScript" => {:count => 0, :percentage => 0, :full_term => "JavaScript"}
       }
       comments = [
         {"text" => "This first comment has ruby in it."},
@@ -32,9 +32,9 @@ describe HiringTrends do
 
     it "separates words with comma separators" do
       terms = {
-        "Ruby" => {:count => 0, :percentage => 0},
-        "Python" => {:count => 0, :percentage => 0},
-        "JavaScript" => {:count => 0, :percentage => 0}
+        "Ruby" => {:count => 0, :percentage => 0, :full_term => "Ruby"},
+        "Python" => {:count => 0, :percentage => 0, :full_term => "Python"},
+        "JavaScript" => {:count => 0, :percentage => 0, :full_term => "JavaScript"}
       }
       comments = [
         {"text" => "This first comment has ruby in it."},
@@ -46,7 +46,7 @@ describe HiringTrends do
     end
 
     it "separates words with periods at end of sentence" do
-      terms = {"Ruby" => {:count => 0, :percentage => 0}}
+      terms = {"Ruby" => {:count => 0, :percentage => 0, :full_term => "Ruby"}}
       comments = [
         {"text" => "This first comment has ruby."},
         {"text" => "in this comment is ruby, javascript."}
@@ -57,7 +57,7 @@ describe HiringTrends do
     end
 
     it "is case insensitive" do
-      terms = {"Ruby" => {:count => 0, :percentage => 0}}
+      terms = {"Ruby" => {:count => 0, :percentage => 0, :full_term => "Ruby"}}
       comments = [
         {"text" => "This first comment has Ruby in it."},
         {"text" => "in this comment is ruby, javascript."}
@@ -69,10 +69,10 @@ describe HiringTrends do
 
     it "counts Objective-c" do
       terms = {
-        "JavaScript" => {:count => 0, :percentage => 0},
-        "Objective-c" => {:count => 0, :percentage => 0},
-        "PHP" => {:count => 0, :percentage => 0},
-        "Python" => {:count => 0, :percentage => 0}
+        "JavaScript" => {:count => 0, :percentage => 0, :full_term => "JavaScript"},
+        "Objective-C" => {:count => 0, :percentage => 0, :full_term => "Objective-C/alias[Objective-C|ObjectiveC|Objective C]"},
+        "PHP" => {:count => 0, :percentage => 0, :full_term => "PHP"},
+        "Python" => {:count => 0, :percentage => 0, :full_term => "Python"}
       }
       comments = [
         {"text" => "Primary languages are javascript and python, with a history in php and a little bit of Objective-c. I have experience with many of the common client-side frameworks like Backbone, Knockout, etc."},
@@ -80,15 +80,15 @@ describe HiringTrends do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["Objective-c"][:count].should == 1
+      terms["Objective-C"][:count].should == 1
     end
 
     it "ignore quotes" do
       terms = {
-        "JavaScript" => {:count => 0, :percentage => 0},
-        "angular" => {:count => 0, :percentage => 0},
-        "backbone" => {:count => 0, :percentage => 0},
-        "node" => {:count => 0, :percentage => 0}
+        "JavaScript" => {:count => 0, :percentage => 0, :full_term => "JavaScript"},
+        "AngularJS" => {:count => 0, :percentage => 0, :full_term => "AngularJS/js[Angular]"},
+        "backbone" => {:count => 0, :percentage => 0, :full_term => "backbone/js[backbone]"},
+        "node.js" => {:count => 0, :percentage => 0, :full_term => "node.js/js[node]"}
       }
       comments = [
         {"text" => "Javascript  ['angular','backbone','node']"},
@@ -96,14 +96,14 @@ describe HiringTrends do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["angular"][:count].should == 1
+      terms["AngularJS"][:count].should == 1
     end
 
     it "counts multi-word terms" do
       terms = {
-        "Visual Basic" => {:count => 0, :percentage => 0},
-        "Web services" => {:count => 0, :percentage => 0},
-        "node" => {:count => 0, :percentage => 0}
+        "Visual Basic" => {:count => 0, :percentage => 0, :full_term => "Visual Basic"},
+        "Web services" => {:count => 0, :percentage => 0, :full_term => "Web services"},
+        "node.js" => {:count => 0, :percentage => 0, :full_term => "node.js/js[node]"}
       }
       comments = [
         {"text" => "Javascript visual basic web services"},
@@ -116,7 +116,7 @@ describe HiringTrends do
 
     it "counts .net" do
       terms = {
-        ".NET" => {:count => 0, :percentage => 0}
+        ".NET" => {:count => 0, :percentage => 0, :full_term => ".NET"}
       }
       comments = [
         {"text" => "Javascript visual basic c web services C#/.NET"},
@@ -127,10 +127,9 @@ describe HiringTrends do
       terms[".NET"][:count].should == 1
     end
 
-
     it "counts RabbitMQ" do
       terms = {
-        "RabbitMQ" => {:count => 0, :percentage => 0}
+        "RabbitMQ" => {:count => 0, :percentage => 0, :full_term => "RabbitMQ"}
       }
       comments = [
         {"text" => "Shirts.io – Fremont, CA<p>Want a free custom t-shirt? Read on!<p><i>The Company</i><p><a href=\"https://www.shirts.io\" rel=\"nofollow\">https:&#x2F;&#x2F;www.shirts.io</a> is an online fulfillment service that prints, packs, and delivers custom printed t-shirts, posters, and phone cases.<p>Our mission is to empower our customers to start their own merchandising business by offering well-designed online software with world-class production infrastructure.<p>We are headquartered in Silicon Valley with facilities in California, Pennsylvania and Indiana.<p><i>The Role</i><p>We are looking for junior, mid, and senior full-stack web developers and&#x2F;or software developers with all or some of the following.<p><pre><code> Backend skill sets:\\n\\n - Python, Django, PHP, MySQL, Postgresql\\n - Redis or RabbitMQ\\n - Python Image Library or Ghostscript experience\\n\\n Frontend skill sets:\\n\\n - JavaScript, jQuery\\n - Nice to have: AngularJS, NodeJS, Express.js\\n\\n DevOp skill sets:\\n\\n - Heroku or Amazon AWS, Amazon S3\\n - NewRelic or Sentry for error tracking, Loggly for logging\\n\\n Testing&#x2F;QA skill sets:\\n\\n - Continuous Integration\\n - Selenium testing\\n\\n The Benefits\\n\\n - Competitive salary\\n - Newly furnished office\\n - Professional Mac or PC equipment\\n - Catered meals on Fridays\\n</code></pre>\\nInterested in helping us making printing custom apparel and products easy? Email us at info@shirts.io<p>Just interested in your free custom t-shirt? Take a look at our site and implement a project with our API then email info@shirts.io"},

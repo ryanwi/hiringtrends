@@ -12,7 +12,7 @@ This is a personal development project, in particular for exploring redis.  You 
 
 ## Requirements
 
-  * Ruby (developed and tested on 2.0.0-p247)
+  * Ruby (developed and tested on 2.1.1-p76)
   * Redis
 
 ## Installation
@@ -32,10 +32,10 @@ With a command line
     $ irb
 
     > require 'hiringtrends'
-    > hn = HiringTrends.new
+    > hn = HiringTrends::Program.new
     > hn.get_submissions
     > hn.get_comments_for_submissions
-    > hn.analyze_submissions("https://gist.github.com/ryanwi/6135845/raw/e0232fa58d3af5c20e38e638e247a7a9b372bdca/software-terms.dic")
+    > hn.analyze_submissions("https://gist.githubusercontent.com/ryanwi/6135845/raw/397d2924c9156b11877a56bc46d61703ce0ed4da/software-terms.dic")
     > hn.publish("data.js")
 
 

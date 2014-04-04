@@ -31,22 +31,22 @@
 
   <div class="chart-filters">
     <form id="chart_filter" method="get" class="form-inline" role="form">
-    Show:
-    <select id="topfilter" class="form-control">
-      <option value="5" selected>Top 5</option>
-      <option value="10">Top 10</option>
-      <option value="20">Top 20</option>
-      <option value="50">Top 50</option>
-      <option value="-1">All</option>
-    </select>
+      Show:
+      <select id="topfilter">
+        <option value="5" selected>Top 5</option>
+        <option value="10">Top 10</option>
+        <option value="20">Top 20</option>
+        <option value="50">Top 50</option>
+        <option value="-1">All</option>
+      </select>
 
-    <span style="margin-right: 10px;">or compare</span>
+      <span style="margin-right: 10px;">or compare</span>
 
-    <input type="text" name="compare1" class="term-compare form-control" placeholder="Ruby" />
-    <input type="text" name="compare2" class="term-compare form-control" placeholder="Python" />
-    <input type="text" name="compare3" class="term-compare form-control" />
-    <input type="text" name="compare4" class="term-compare form-control" />
-    <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
+      <input type="text" name="compare1" class="term-compare" placeholder="Ruby" />
+      <input type="text" name="compare2" class="term-compare" placeholder="Python" />
+      <input type="text" name="compare3" class="term-compare" />
+      <input type="text" name="compare4" class="term-compare" />
+      <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
     </form>
   </div>
 
@@ -120,13 +120,13 @@
   <h3>April Highlights</h3>
   <div style="color:#666;">Thursday, April 3, 2014</div>
   <p>
-    JavaScript takes the top spot for the second straight month and as it has for most of the past year. The top 5 as a whole remains unchanged in April: JavaScript, Python, iOS, Android and Ruby. Out of the top 10, MySQL is the new entrant, holding off many competitors in the database world.
+    JavaScript takes the top spot for the second straight month and as it has for most of the past year. The top 5 as a whole remains unchanged in April: JavaScript, Python, iOS, Android and Ruby.
   </p>
   <p>
-    As far as emerging technology goes, node.js is making a strong run and appears likely to continue its growth. It notched its third straight top 10, despite being somewhat undercounted (there are 3 major spelling variations, and I currently only capture 2 of them). Other technologies to keep an eye on are <a href="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/april.html?compare1=Docker&compare2=Ansible&compare3=Kafka&compare4=">Docker, Ansible and Kafka</a> which make their debut in the "Rising" category showing significant growth in the last year.
+    As far as emerging technology goes, node.js is making a strong run and appears likely to continue its growth. It notched its third straight top 10. Other technologies to keep an eye on are <a href="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/april.html?compare1=Docker&compare2=Ansible&compare3=Kafka&compare4=">Docker, Ansible and Kafka</a> which make their debut in the "Rising" category showing significant growth in the last year.
   </p>
   <p>
-    Speaking of databases, mongodb is showing a strong 2nd place in the matchup of <a href="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/april.html?compare1=mysql&compare2=Mongodb&compare3=Postgresql&compare4=">mysql, mongodb and postgresql</a>, the three major data persistence technologies in the discussions.
+    Speaking of databases, mongodb is showing a strong 3rd place, pushing the standard SQL databases, in the matchup of <a href="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/april.html?compare1=mysql&compare2=Mongodb&compare3=Postgresql&compare4=">mysql, mongodb and postgresql</a>.
   </p>
   <p>
     Finally, we've all heard the hype about Big Data and Data Science,and its clear that is making its way into these job postings. In looking at the combination of <a href="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/april.html?compare1=Hadoop&compare2=Data+Science&compare3=statistics&compare4=Big+Data">Hadoop, Data Science, Statistics and Big Data</a>, all show sustained numbers.
@@ -148,7 +148,7 @@
 
 <script src="../lib-v4.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="data-20140401.js"></script>
+<script src="data-20140402.js"></script>
 <script src="../builder-v1.js"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
