@@ -1,0 +1,25 @@
+<h4>Top {{ count }}</h4>
+<table id="" class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Rank</th>
+      <th>Rank Last Month</th>
+      <th>Change</th>
+      <th>Rank Last Year</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for term in terms %}
+    <tr>
+      <td>{{ term[0] }}</td>
+      <td>{{ term[1].rank }}</td>
+      <td>{{ term[1].rank_last_month }}</td>
+      <td>{{ term[1].rank_change_month }}</td>
+      <td>{{ term[1].rank_last_year }}</td>
+      <td>{{ term[1].rank_change_year }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News Hiring Trends - Most Popular Programming Languages ({{ month }} {{ year }})</title>
+  <meta property="og:title" content="Hacker News Hiring Trends - Most Popular Programming Languages ({{ month }} {{ year }})" />
+  <meta name="description" content="Most Popular programming languanges
+  and software development technologies for {{ month }}, {{ year }}">
+  <meta property="og:description" content="Most Popular programming
+  languanges and software development technologies for {{month}}, {{year}}">
+  <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
+  <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
+  <link href="../css/styles-v2.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="page-header">
+    <h1>
+      Hacker News Hiring Trends ({{ month }} {{ year }})
+    </h1>
+    <p class="lead">
+      Tracking the most popular programming languages, databases and software development tools in <a href="https://news.ycombinator.com/submitted?id=whoishiring">whoishiring discussion threads</a>.
+    </p>
+    <p>
+      <a href="../">Previous months</a>
+    </p>
+  </div>
+
+  <div class="chart-filters">
+    <form id="chart_filter" method="get" class="form-inline" role="form">
+      Show:
+      <select id="topfilter">
+        <option value="5" selected>Top 5</option>
+        <option value="10">Top 10</option>
+        <option value="20">Top 20</option>
+        <option value="50">Top 50</option>
+        <option value="-1">All</option>
+      </select>
+
+      <span style="margin-right: 10px;">or compare</span>
+
+      <input type="text" name="compare1" class="term-compare" placeholder="Ruby" />
+      <input type="text" name="compare2" class="term-compare" placeholder="Python" />
+      <input type="text" name="compare3" class="term-compare" />
+      <input type="text" name="compare4" class="term-compare" />
+      <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
+    </form>
+  </div>
+
+  <div id="chart" style="width:100%; height:400px;"></div>
+
+  <div class="row" style="margin-top:30px;">
+    <div class="col-md-4">
+      <h4>Top 10</h4>
+      <table id="topterms" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>Mentions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h4>Rising</h4>
+      <table id="rising" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>Mentions</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h4>Falling</h4>
+      <table id="falling" class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>Mentions</th>
+            <th>YOY Change</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <div class="badges">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript">
+       lang: en_US
+      </script>
+      <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-counter="right"></script>
+
+      <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html"></div>
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+
+      <!-- <a href="https://news.ycombinator.com/item?id=6237116">Discuss Original on Hacker News</a> -->
+    </div>
+
+
+  <h3>{{ month }} Highlights</h3>
+  <div style="color:#666;">{{ day }}, {{ month }} {{ date }}, {{ year }}</div>
+  <p>
+  </p>
+
+
+  <p style="margin-top:30px;">
+    <a href="http://eepurl.com/DVVSb" class="btn btn-success btn-lg">Subscribe for updates</a>
+  </p>
+
+  <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
+    <a href="http://www.ryan-williams.net">Portland web developer Ryan Williams</a> •
+    <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> •
+    Email: ryan at ryan-williams.net •
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+  </footer>
+
+</div>
+
+<script src="../js/lib-v4.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="data/{{ data_filename }}.js"></script>
+<script src="../js/builder-v1.js"></script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16316427-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
