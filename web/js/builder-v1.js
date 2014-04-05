@@ -65,7 +65,7 @@ var chartBuilder = (function ( $ ) {
         labels: {
           step: 3,
           staggerLines: 1
-        }          
+        }
       },
       yAxis: {
         title: {
@@ -74,7 +74,7 @@ var chartBuilder = (function ( $ ) {
         min: 0
       },
       tooltip: {
-      },        
+      },
       series: seriesData
     });
   }
@@ -109,7 +109,7 @@ var tableBuilder = (function ( $ ) {
     renderTopTerms: function() {
       var topTerms = series.slice(0, 10);
       $.each(topTerms, function ( i, val ) {
-        $('#topterms tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' + 
+        $('#topterms tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' +
           val["latest_mentions"] +'</td></tr>');
       });
     },
@@ -118,7 +118,7 @@ var tableBuilder = (function ( $ ) {
       var rising = series.slice().sort(function( a,b ){ return b.change - a.change }).slice(0, 10);
       $.each(rising, function ( i, val ) {
         $('#rising tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' +
-          val["latest_mentions"] + '</td><td>' + 
+          val["latest_mentions"] + '</td><td>' +
           (val["change"]*100).toFixed(2) +'%</td></tr>');
       });
     },
@@ -126,8 +126,8 @@ var tableBuilder = (function ( $ ) {
     renderFalling: function( falling ) {
       var falling = series.slice().sort(function( a,b ){ return a.change - b.change }).slice(0, 10);
       $.each(falling, function ( i, val ) {
-        $('#falling tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' + 
-          val["latest_mentions"] + '</td><td>' + 
+        $('#falling tbody').append('<tr><td><a href="?compare1=' + encodeURIComponent(val.name) + '">' + val.name +'</a></td><td>' +
+          val["latest_mentions"] + '</td><td>' +
           (val["change"]*100).toFixed(2) +'%</td></tr>');
       });
     }
@@ -136,7 +136,7 @@ var tableBuilder = (function ( $ ) {
 
 }) ( jQuery );
 
-$(function () { 
+$(function () {
   data.reverse();
   terms = Object.keys( data[0]["terms"] );
 
