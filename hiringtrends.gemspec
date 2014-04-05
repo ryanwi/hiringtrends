@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name = 'hiringtrends'
-  s.version = '0.0.9'
-  s.date = '2014-04-04'
-  s.summary = 'Hiring Trends'
+  s.version = '0.1.0'
+  s.date = '2014-04-05'
+  s.summary = 'Hacker News Hiring Trends'
   s.description = 'Most popular programming languagues and technologies from Hacker News monthly whoishiring posts'
   s.authors = ["Ryan Williams"]
   s.email = 'ryan@ryan-williams.net'
@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
   s.add_dependency('faraday')
   s.add_dependency('redis')
+  s.add_dependency('liquid')
   s.add_development_dependency('rspec')
   s.requirements << 'redis'
 end
