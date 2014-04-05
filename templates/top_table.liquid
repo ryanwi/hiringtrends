@@ -16,9 +16,13 @@
       <td>{{ term[0] }}</td>
       <td>{{ term[1].rank }}</td>
       <td>{{ term[1].rank_last_month }}</td>
-      <td>{{ term[1].rank_change_month }}</td>
+      {% if term[1].rank_change_month < 0 %}<td class="positive">{{ term[1].rank_change_month }}</td>
+      {% elsif term[1].rank_change_month > 0 %}<td class="negative">{{ term[1].rank_change_month }}</td>
+      {% else %}<td>{{ term[1].rank_change_month }}</td>{% endif %}
       <td>{{ term[1].rank_last_year }}</td>
-      <td>{{ term[1].rank_change_year }}</td>
+      {% if term[1].rank_change_year < 0 %}<td class="positive">{{ term[1].rank_change_year }}</td>
+      {% elsif term[1].rank_change_year > 0 %}<td class="negative">{{ term[1].rank_change_year }}</td>
+      {% else %}<td>{{ term[1].rank_change_year }}</td>{% endif %}
     </tr>
     {% endfor %}
   </tbody>
