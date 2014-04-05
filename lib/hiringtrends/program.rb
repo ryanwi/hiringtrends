@@ -2,6 +2,7 @@ require "redis"
 require "json"
 require "faraday"
 require "open-uri"
+require "liquid"
 
 
 module HiringTrends
@@ -21,6 +22,15 @@ module HiringTrends
       submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
       @redis.del(submission_keys) unless submission_keys.empty?
       @redis.del(SUBMISSIONS_KEY)
+      self
+    end
+
+    # Remove just analysis data, not hn data
+    def clean_terms
+      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      submission_keys.each do |submission_key|
+        @redis.hdel(submission_key, "terms")
+      end
       self
     end
 
@@ -144,17 +154,79 @@ module HiringTrends
         terms[term][:percentage] = ((terms[term][:count]/comments.count.to_f) * 100).round(2)
       end
 
+      # rank terms, order by count
+      ranked_terms = terms.sort_by { |k, v| -v[:count] }.to_a
+      ranked_terms.each_with_index { |item, index|
+        terms[item[0]][:rank] = index+1
+      }
+
       terms
     end
 
     # Publish analysis
-    def publish(filename)
-      initialize_dictionary if @software_terms.empty?
+    def publish(month, year, day, date, top_count)
+      data_filename = "data-#{year}#{month}_fillin_.js"
+      publish_data(year, data_filename)
+      publish_page(month, year, day, date, data_filename)
+      publish_top_table(top_count)
+    end
 
+  private
+
+    # Publish a table of top terms with their relative ranks compared to last
+    # month and last year
+    def publish_top_table(top_count)
+      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      month = @redis.hget(submission_keys.first, "month")
+      terms = JSON.parse(@redis.hget(submission_keys.first, "terms"))
+      ranked_terms = terms.sort_by { |k, v| v["rank"] }.to_a.take(top_count)
+
+      ranked_terms.each do |term|
+        lm_terms = JSON.parse(@redis.hget(submission_keys[1], "terms"))
+        lm_term = lm_terms[term[0]]
+        ly_terms = JSON.parse(@redis.hget(submission_keys[12], "terms"))
+        ly_term = ly_terms[term[0]]
+
+        term_stats = term[1]
+        term_stats["count_last_month"] = lm_term["count"]
+        term_stats["count_last_year"] = ly_term["count"]
+        term_stats["rank_last_month"] = lm_term["rank"]
+        term_stats["rank_change_month"] = (term_stats["rank"] - lm_term["rank"])
+        term_stats["rank_last_year"] = ly_term["rank"]
+        term_stats["rank_change_year"] = (term_stats["rank"] - ly_term["rank"])
+      end
+
+      data = { 'count' => top_count, 'terms' => ranked_terms }
+      template = File.open('templates/top_table.liquid', 'rb') { |f| f.read }
+      content = Liquid::Template.parse(template).render(data)
+      File.open("web/top_table.html", 'w') { |file| file.write(content) }
+
+      self
+    end
+
+    def publish_page(month, year, day, date, data_filename)
+      data = {
+        'year' => year,
+        'month' => month,
+        'day' => day,
+        'date' => date,
+        'data_filename' => data_filename,
+      }
+
+      template = File.open('templates/page.liquid', 'rb') { |f| f.read }
+      content = Liquid::Template.parse(template).render(data)
+      File.open("web/#{year}/#{month.downcase}.html", 'w') { |file| file.write(content) }
+
+      self
+    end
+
+    def publish_data(year, filename)
       # initialize the data structure to publish, will look like
       # data = [
-      # { :month => month1, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }},
-      # { :month => month2, num_comments => num, terms => {term1 => {:count => 5, :percentage => .05 }, term2 => }},
+      # { :month => month1, num_comments => num, terms => {term1 =>
+      #   {:count => 5, :percentage => .05 }, term2 => }},
+      # { :month => month2, num_comments => num, terms => {term1 =>
+      #    {:count => 5, :percentage => .05 }, term2 => }},
       # ]
       data = []
 
@@ -163,12 +235,18 @@ module HiringTrends
         month = @redis.hget(submission_key, "month")
         datapoint = { :month => month }
         datapoint[:num_comments] = @redis.hget(submission_key, "num_comments")
-        datapoint[:terms] = JSON.parse(@redis.hget(submission_key, "terms"))
+
+        terms = JSON.parse(@redis.hget(submission_key, "terms"))
+        ranked_terms = terms.sort_by { |k, v| -v["count"] }.to_a
+        ranked_terms.each_with_index{ |item, index|
+          terms[item[0]]["rank"] = index+1
+        }
+        datapoint[:terms] = terms
         data << datapoint
       end
 
-      File.open(filename, "wb") { |f| f.write(JSON.pretty_generate(data)) }
-
+      File.open("web/#{year}/data/#{filename}", "wb") { |f|
+        f.write(JSON.pretty_generate(data)) }
       self
     end
 
