@@ -1,2 +1,2 @@
 require 'hiringtrends/program'
-require 'hiringtrends/comment'
+require 'hiringtrends/job_posting'
