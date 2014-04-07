@@ -1,7 +1,7 @@
 
 module HiringTrends
 
-  class Comment
+  class JobPosting
     attr_accessor :text
     attr_accessor :words
 

@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.name = 'hiringtrends'
-  s.version = '0.1.0'
+  s.version = '0.2.0'
   s.date = '2014-04-05'
   s.summary = 'Hacker News Hiring Trends'
   s.description = 'Most popular programming languagues and technologies from Hacker News monthly whoishiring posts'
   s.authors = ["Ryan Williams"]
   s.email = 'ryan@ryan-williams.net'
   s.homepage = 'https://github.com/ryanwi/hiringtrends'
-  s.files = ["lib/hiringtrends.rb", "lib/hiringtrends/program.rb", "lib/hiringtrends/comment.rb"]
+  s.files = ["lib/hiringtrends.rb", "lib/hiringtrends/program.rb", "lib/hiringtrends/job_posting.rb"]
   s.require_paths = ["lib"]
   s.license = 'MIT'
   s.add_dependency('faraday')

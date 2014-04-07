@@ -140,7 +140,7 @@ module HiringTrends
         comment_text = comment["text"]
         next if comment_text.nil?
 
-        hn_comment = HiringTrends::Comment.new(comment_text)
+        hn_comment = HiringTrends::JobPosting.new(comment_text)
 
         # identify if each term is in the comment
         terms.keys.each do |term|
