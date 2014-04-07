@@ -1,0 +1,27 @@
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for term in losers %}
+    <tr>
+      <td><a href="{{ year }}/{{ month | downcase }}.html?compare1={{ term[0] }}">{{ term[0] }}</td>
+      <td>{{ term[1].count }}</td>
+      <td>{{ term[1].rank }}</td>
+      <td>{{ term[1].count_last_year }}</td>
+      <td>{{ term[1].rank_last_year }}</td>
+      {% if term[1].rank_change_year > 0 %}<td class="positive success">+{{ term[1].rank_change_year }}</td>
+      {% elsif term[1].rank_change_year < 0 %}<td class="negative danger">{{ term[1].rank_change_year }}</td>
+      {% else %}<td>{{ term[1].rank_change_year }}</td>{% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
