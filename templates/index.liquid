@@ -38,24 +38,6 @@
         <a href="{{ year }}/{{ month | downcase }}.html">See the chart for more details</a>
       </p>
 
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#top20" data-toggle="tab">Top 20</a></li>
-        <li><a href="#rising" data-toggle="tab">Rising</a></li>
-        <li><a href="#falling" data-toggle="tab">Falling</a></li>
-      </ul>
-
-      <div class="tab-content">
-        <div class="tab-pane active" id="top20">
-          {% include 'top_table' %}
-        </div>
-        <div class="tab-pane" id="rising">
-          {% include 'gainers_table' %}
-        </div>
-        <div class="tab-pane" id="falling">
-          {% include 'losers_table' %}
-        </div>
-      </div>
 
       <h2>About</h2>
       <p>
