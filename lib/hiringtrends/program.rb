@@ -165,22 +165,25 @@ module HiringTrends
 
     # Publish analysis
     def publish(month, year, day, date, top_count)
-      data_filename = "data-#{year}#{month}_fillin_.js"
+      data_filename = "data-#{year}#{month}_fillin_"
       publish_data(year, data_filename)
-      publish_page(month, year, day, date, data_filename)
-      publish_top_table(top_count)
+
+      key_measures = calculate_key_measures
+
+      publish_index(month, year, day, date, top_count, key_measures)
+      publish_post(month, year, day, date, data_filename, key_measures)
     end
 
   private
 
-    # Publish a table of top terms with their relative ranks compared to last
-    # month and last year
-    def publish_top_table(top_count)
+    def calculate_key_measures
       submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      month = @redis.hget(submission_keys.first, "month")
       terms = JSON.parse(@redis.hget(submission_keys.first, "terms"))
-      ranked_terms = terms.sort_by { |k, v| v["rank"] }.to_a.take(top_count)
 
+      # Order this month's results by ranking
+      ranked_terms = terms.sort_by { |k, v| v["rank"] }.to_a
+
+      # Augment the ranking data with data from periods to compare against
       ranked_terms.each do |term|
         lm_terms = JSON.parse(@redis.hget(submission_keys[1], "terms"))
         lm_term = lm_terms[term[0]]
@@ -191,33 +194,57 @@ module HiringTrends
         term_stats["count_last_month"] = lm_term["count"]
         term_stats["count_last_year"] = ly_term["count"]
         term_stats["rank_last_month"] = lm_term["rank"]
-        term_stats["rank_change_month"] = (term_stats["rank"] - lm_term["rank"])
+        term_stats["rank_change_month"] = -(term_stats["rank"] - lm_term["rank"])
         term_stats["rank_last_year"] = ly_term["rank"]
-        term_stats["rank_change_year"] = (term_stats["rank"] - ly_term["rank"])
+        term_stats["rank_change_year"] = -(term_stats["rank"] - ly_term["rank"])
       end
 
-      data = { 'count' => top_count, 'terms' => ranked_terms }
-      template = File.open('templates/top_table.liquid', 'rb') { |f| f.read }
-      content = Liquid::Template.parse(template).render(data)
-      File.open("web/top_table.html", 'w') { |file| file.write(content) }
+      # Order by YOY rank gain, with a minimum of 5 mentions this year
+      gainers = ranked_terms.sort_by { |te| -te[1]["rank_change_year"] }
+      gainers.reject! { |te| te[1]["count"] < 5 }
 
-      self
+      # Order by YOY rank decline, with a minimum of 5 mentions last year
+      losers = ranked_terms.sort_by { |te| te[1]["rank_change_year"] }
+      losers.reject! { |te| te[1]["count_last_year"] < 5 }
+
+      return ranked_terms, gainers, losers
     end
 
-    def publish_page(month, year, day, date, data_filename)
+    #
+    def publish_index(month, year, day, date, top_count, key_measures)
+      data = {
+        'year' => year,
+        'month' => month,
+        'day' => day,
+        'date' => date,
+        'top_terms' => key_measures[0].take(20),
+        'gainers' => key_measures[1].take(10),
+        'losers' => key_measures[2].take(10)
+      }
+
+      Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
+      template = File.open('templates/index.liquid', 'rb') { |f| f.read }
+      content = Liquid::Template.parse(template).render(data)
+      File.open("web/index.html", 'w') { |file| file.write(content) }
+    end
+
+    #
+    def publish_post(month, year, day, date, data_filename, key_measures)
       data = {
         'year' => year,
         'month' => month,
         'day' => day,
         'date' => date,
         'data_filename' => data_filename,
+        'top_terms' => key_measures[0].take(20),
+        'gainers' => key_measures[1].take(10),
+        'losers' => key_measures[2].take(10)
       }
 
-      template = File.open('templates/page.liquid', 'rb') { |f| f.read }
+      Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
+      template = File.open('templates/post.liquid', 'rb') { |f| f.read }
       content = Liquid::Template.parse(template).render(data)
       File.open("web/#{year}/#{month.downcase}.html", 'w') { |file| file.write(content) }
-
-      self
     end
 
     def publish_data(year, filename)
@@ -235,12 +262,7 @@ module HiringTrends
         month = @redis.hget(submission_key, "month")
         datapoint = { :month => month }
         datapoint[:num_comments] = @redis.hget(submission_key, "num_comments")
-
         terms = JSON.parse(@redis.hget(submission_key, "terms"))
-        ranked_terms = terms.sort_by { |k, v| -v["count"] }.to_a
-        ranked_terms.each_with_index{ |item, index|
-          terms[item[0]]["rank"] = index+1
-        }
         datapoint[:terms] = terms
         data << datapoint
       end
