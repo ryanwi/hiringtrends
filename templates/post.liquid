@@ -11,7 +11,9 @@
   languanges and software development technologies for {{month}}, {{year}}">
   <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
   <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
-  <link href="../css/styles-v2.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="htpp://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+  <link href="../css/styles-v3.css" rel="stylesheet">
 </head>
 <body>
 
@@ -52,6 +54,46 @@
 
   <div id="chart" style="width:100%; height:400px;"></div>
 
+    <div class="badges">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript">
+       lang: en_US
+      </script>
+      <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-counter="right"></script>
+
+      <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html"></div>
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+
+      <!-- <a href="https://news.ycombinator.com/item?id=6237116">Discuss Original on Hacker News</a> -->
+    </div>
+
+
+    <h3>{{ month }} Highlights</h3>
+    <div style="color:#666;">{{ day }}, {{ month }} {{ date }}, {{ year }}</div>
+    <p>
+    </p>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="top20">
+        {% include 'top_table' %}
+      </div>
+      <div class="tab-pane" id="rising">
+        {% include 'gainers_table' %}
+      </div>
+      <div class="tab-pane" id="falling">
+        {% include 'losers_table' %}
+      </div>
+    </div>
+
+
+    <!--
   <div class="row" style="margin-top:30px;">
     <div class="col-md-4">
       <h4>Top 10</h4>
@@ -95,32 +137,7 @@
       </table>
     </div>
   </div>
-
-    <div class="badges">
-      <script src="//platform.linkedin.com/in.js" type="text/javascript">
-       lang: en_US
-      </script>
-      <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-counter="right"></script>
-
-      <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html"></div>
-      <script type="text/javascript">
-        (function() {
-          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-          po.src = 'https://apis.google.com/js/plusone.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
-      </script>
-
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
-
-      <!-- <a href="https://news.ycombinator.com/item?id=6237116">Discuss Original on Hacker News</a> -->
-    </div>
-
-
-  <h3>{{ month }} Highlights</h3>
-  <div style="color:#666;">{{ day }}, {{ month }} {{ date }}, {{ year }}</div>
-  <p>
-  </p>
+  -->
 
 
   <p style="margin-top:30px;">
@@ -136,10 +153,12 @@
 
 </div>
 
-<script src="../js/lib-v4.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="data/{{ data_filename }}.js"></script>
-<script src="../js/builder-v1.js"></script>
+<script src="../js/builder-v2.js"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
