@@ -30,15 +30,19 @@
 
 <div class="container">
 
+  <ol class="breadcrumb">
+    <li><a href="../">Home and Archives</a></li>
+    <li class="active">{{ month }} {{ year }}</li>
+    <li><a href="#highlights">Highlights and Analysis</a></li>
+    <li><a href="#data">Data</a></li>
+  </ol>
+
   <div class="page-header">
     <h1>
       Hacker News Hiring Trends ({{ month }} {{ year }})
     </h1>
     <p class="lead">
       Tracking the most popular programming languages, databases and software development tools in <a href="https://news.ycombinator.com/submitted?id=whoishiring">whoishiring discussion threads</a>.
-    </p>
-    <p>
-      <a href="../">Previous months</a>
     </p>
   </div>
 
@@ -85,10 +89,13 @@
     <!-- <a href="https://news.ycombinator.com/item?id=6237116">Discuss Original on Hacker News</a> -->
   </div>
 
-  <h3>{{ month }} Highlights</h3>
+  <h3 id="highlights">{{ month }} Highlights</h3>
   <div class="post-date">{{ day }}, {{ month }} {{ date }}, {{ year }}</div>
   <p>
   </p>
+
+  <br>
+  <div id="data"></div>
 
   <ul class="nav nav-tabs">
     <li class="active"><a href="#top20" data-toggle="tab">Top 20</a></li>
