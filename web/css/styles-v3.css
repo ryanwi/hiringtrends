@@ -1,0 +1,9 @@
+.chart-filters { margin: 15px; }
+.chart-filters select, .chart-filters input { margin-right: 10px; }
+#topfilter { width: 100px; }
+.sidebar h4 { margin-top: 25px;border-bottom: 1px solid #DDDDDD; }
+.sidebar ul { list-style-type: none; margin: 0; padding: 0; }
+.sidebar li { list-style-type: none; margin: 2px 0; padding: 0; }
+.term-compare { width: 100px; }
+.negative { color: red; }
+.positive { color: green; }
