@@ -35,8 +35,8 @@ With a command line
     > hn = HiringTrends::Program.new
     > hn.get_submissions
     > hn.get_comments_for_submissions
-    > hn.analyze_submissions("https://gist.githubusercontent.com/ryanwi/6135845/raw/397d2924c9156b11877a56bc46d61703ce0ed4da/software-terms.dic")
-    > hn.publish("data.js")
+    > hn.analyze_submissions("https://gist.githubusercontent.com/ryanwi/6135845/raw/ca74c2273e3241dc7debbb4e4f45271bb53d9000/software-terms.dic")
+    > hn.publish("June", "2014", "Tuesday, "3", 20)
 
 
 ## Author

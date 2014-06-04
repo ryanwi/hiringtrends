@@ -1,0 +1,803 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News Hiring Trends - Most Popular Programming Languages (June 2014)</title>
+  <meta property="og:title" content="Hacker News Hiring Trends - Most Popular Programming Languages (June 2014)" />
+  <meta name="description" content="Most Popular programming languanges
+  and software development technologies for June, 2014">
+  <meta property="og:description" content="Most Popular programming
+  languanges and software development technologies for June, 2014">
+  <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
+  <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+  <style>
+    .chart-filters { margin: 15px; }
+    .chart-filters select, .chart-filters input { margin-right: 10px; }
+    #topfilter { width: 100px; }
+    .sidebar h4 { margin-top: 25px;border-bottom: 1px solid #DDDDDD; }
+    .sidebar ul { list-style-type: none; margin: 0; padding: 0; }
+    .sidebar li { list-style-type: none; margin: 2px 0; padding: 0; }
+    .term-compare { width: 100px; }
+    .negative { color: red; }
+    .positive { color: green; }
+    .post-date { margin-bottom: 15px; color:#666; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="../">Home and Archives</a></li>
+    <li class="active">June 2014</li>
+    <li><a href="#highlights">Highlights and Analysis</a></li>
+    <li><a href="#data">Data</a></li>
+  </ol>
+
+  <div class="page-header">
+    <h1>
+      Hacker News Hiring Trends (June 2014)
+    </h1>
+    <p class="lead">
+      Tracking the most popular programming languages, databases and software development tools in <a href="https://news.ycombinator.com/submitted?id=whoishiring">whoishiring discussion threads</a>.
+    </p>
+  </div>
+
+  <div class="chart-filters">
+    <form id="chart_filter" method="get" class="form-inline" role="form">
+      Show:
+      <select id="topfilter">
+        <option value="5" selected>Top 5</option>
+        <option value="10">Top 10</option>
+        <option value="20">Top 20</option>
+        <option value="50">Top 50</option>
+        <option value="-1">All</option>
+      </select>
+
+      <span style="margin-right: 10px;">or compare</span>
+
+      <input type="text" name="compare1" class="term-compare" placeholder="Ruby" />
+      <input type="text" name="compare2" class="term-compare" placeholder="Python" />
+      <input type="text" name="compare3" class="term-compare" />
+      <input type="text" name="compare4" class="term-compare" />
+      <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
+    </form>
+  </div>
+
+  <div id="chart" style="width:100%; height:400px;"></div>
+
+  <div class="badges">
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+     lang: en_US
+    </script>
+    <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/june.html" data-counter="right"></script>
+
+    <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/june.html"></div>
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/2014/june.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+
+  </div>
+
+  <h3 id="highlights">June Highlights</h3>
+  <div class="post-date">Tuesdsay, June 3, 2014</div>
+
+  <p>
+    With a Sunday posting day, the number of postings was down this month which
+    explains the drop in the charts across the board. This month I'm also trying
+    something new, breaking out the big list into more specific categories. I'll
+    add more charts and categories next month as I assign categories for the
+    terms.
+  </p>
+
+  <h4>Programming Languages</h4>
+  <p>
+    Not much of a change in the programming language race. The top 4 remained
+    the same.
+  </p>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Rank</th>
+        <th>Last Month</th>
+        <th>Change</th>
+        <th>Last Year</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="?compare1=Python">Python</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>2</td>
+        <td class="positive success">+1</td>
+      </tr>
+      <tr>
+        <td><a href="?compare1=JavaScript">JavaScript</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1</td>
+        <td class="negative danger">-1</td>
+      </tr>
+
+      <tr>
+        <td><a href="?compare1=Ruby">Ruby</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>3</td>
+        <td>0</td>
+      </tr>
+
+      <tr>
+        <td><a href="?compare1=Java">Java</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>4</td>
+        <td>0</td>
+      </tr>
+
+      <tr>
+        <td><a href="?compare1=C%2B%2B">C++</td>
+        <td>5</td>
+        <td>6</td>
+        <td class="positive success">+1</td>
+        <td>6</td>
+        <td class="positive success">+1</td>
+      </tr>
+      <tr>
+        <td><a href="?compare1=Clojure">Clojure</td>
+        <td>6</td>
+        <td>8</td>
+        <td class="positive success">+2</td>
+        <td>8</td>
+        <td class="positive success">+2</td>
+      </tr>
+      <tr>
+        <td><a href="?compare1=Scala">Scala</td>
+        <td>7</td>
+        <td>5</td>
+        <td class="negative danger">-2</td>
+        <td>9</td>
+        <td class="positive success">+2</td>
+      </tr>
+      <tr>
+        <td><a href="?compare1=C">C</td>
+        <td>8</td>
+        <td>7</td>
+        <td class="negative danger">-1</td>
+        <td>7</td>
+        <td class="negative danger">-1</td>
+      </tr>
+      <tr>
+        <td><a href="?compare1=C#">C#</td>
+        <td>9</td>
+        <td>10</td>
+        <td class="positive success">+1</td>
+        <td>5</td>
+        <td class="negative danger">-4</td>
+      </tr>
+      <tr>
+        <td><a href="?compare1=Objective-C">Objective-C</td>
+        <td>10</td>
+        <td>9</td>
+        <td class="negative danger">-1</td>
+        <td>10</td>
+        <td>0</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <h4>Server-side Frameworks</h4>
+  <p>
+    <a href="?compare1=Rails&compare2=node.js&compare3=PHP&compare4=Django">
+      Compare Rails, node.js, PHP and Django
+    </a>
+  </p>
+  <p>
+    June shows more of the same with the rank being 1) Rails 2) node.js 3) PHP
+    and 4) Django. After threatening Rails in May, with only 1 less mention,
+    node.js has fallen back again leaving Rails as the clear top choice.
+  </p>
+
+  <h4>JavaScript Frameworks</h4>
+  <p>
+    <a href="?compare1=AngularJS&compare2=Backbone&compare3=Ember&compare4=jQuery">
+      Compare AngularJS, Backbone, Ember and jQuery
+    </a>
+  </p>
+  <p>
+    JavaScript Frameworks are a fast moving bunch. In a comparison of some of
+    the most popular ones though, we can see AngularJS double up Backbone for
+    the second month in a row. jQuery took a large drop this month, perhaps
+    because its now assumed or becuase it's becoming less necessary?
+  </p>
+
+  <h4>SQL Databases</h4>
+  <p>
+    <a href="?compare1=Postgresql&compare2=MySQL&compare3=SQL+Server&compare4=">
+      Compare Postgresql, MySQL and SQL Server
+    </a>
+  </p>
+  <p>
+    Postgresql shows a steady rise to being the top RDBMS choice. It regained
+    the top spot after MySQL won the past 2 months. Not only that though,
+    Postgresql achieved its largest margin of victory ever.
+  </p>
+
+  <h4>NoSQL Databases</h4>
+  <p>
+    <a href="?compare1=Cassandra&compare2=Mongodb&compare3=Riak&compare4=CouchDB">
+      Compare Mongodb, Cassandra, Riak and CouchDB
+    </a>
+  </p>
+  <p>
+    After dominating the NoSQL space for the past 3 years, MongoDB came close to
+    losing its crown to Cassandra, encountering a large dropoff from May to
+    June. Other databases such as Riak and CouchDB continue to have a presence,
+    but do not show much growth.
+  </p>
+
+  <h4>DevOps Tools</h4>
+  <p>
+    <a href="?compare1=Chef&compare2=Puppet&compare3=Ansible&compare4=DevOps">
+      Compare Chef, Puppet, Ansible and the DevOps term itself
+    </a>
+  </p>
+  <p>
+    DevOps, the merger of systems administrators and programmers to drive
+    infrastructure automation, is enjoying a real competition. With the current
+    big 3, Chef was the clear winner with Puppet regaining its standard second
+    place finish. Ansible could not maintain the momentum this month and fell
+    back to third, but keep an eye on this one over the next few months. I'm
+    witnessing Ansible chosen more anecdotally and I myself chose it recently.
+  </p>
+
+  <hr>
+  <h3>Overall Rankings</h3>
+  <div id="data"></div>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#top20" data-toggle="tab">Top 20</a></li>
+    <li><a href="#rising" data-toggle="tab">Rising</a></li>
+    <li><a href="#falling" data-toggle="tab">Falling</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="top20">
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Rank</th>
+      <th>Last Month</th>
+      <th>Change</th>
+      <th>Last Year</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><a href="?compare1=Python">Python</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td class="positive success">+1</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=JavaScript">JavaScript</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td class="negative danger">-1</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Ruby">Ruby</td>
+      <td>3</td>
+      <td>5</td>
+      <td class="positive success">+2</td>
+
+      <td>3</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=iOS">iOS</td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Rails">Rails</td>
+      <td>5</td>
+      <td>6</td>
+      <td class="positive success">+1</td>
+
+      <td>5</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Android">Android</td>
+      <td>6</td>
+      <td>3</td>
+      <td class="negative danger">-3</td>
+
+      <td>7</td>
+      <td class="positive success">+1</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=AngularJS">AngularJS</td>
+      <td>7</td>
+      <td>8</td>
+      <td class="positive success">+1</td>
+
+      <td>22</td>
+      <td class="positive success">+15</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Postgresql">Postgresql</td>
+      <td>8</td>
+      <td>14</td>
+      <td class="positive success">+6</td>
+
+      <td>32</td>
+      <td class="positive success">+24</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Java">Java</td>
+      <td>9</td>
+      <td>9</td>
+      <td>0</td>
+      <td>6</td>
+      <td class="negative danger">-3</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=node.js">node.js</td>
+      <td>10</td>
+      <td>7</td>
+      <td class="negative danger">-3</td>
+
+      <td>13</td>
+      <td class="positive success">+3</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=linux">linux</td>
+      <td>11</td>
+      <td>22</td>
+      <td class="positive success">+11</td>
+
+      <td>16</td>
+      <td class="positive success">+5</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Machine Learning">Machine Learning</td>
+      <td>12</td>
+      <td>15</td>
+      <td class="positive success">+3</td>
+
+      <td>17</td>
+      <td class="positive success">+5</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=passionate">passionate</td>
+      <td>13</td>
+      <td>13</td>
+      <td>0</td>
+      <td>15</td>
+      <td class="positive success">+2</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=CSS">CSS</td>
+      <td>14</td>
+      <td>11</td>
+      <td class="negative danger">-3</td>
+
+      <td>8</td>
+      <td class="negative danger">-6</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Front End">Front End</td>
+      <td>15</td>
+      <td>19</td>
+      <td class="positive success">+4</td>
+
+      <td>31</td>
+      <td class="positive success">+16</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=passion">passion</td>
+      <td>16</td>
+      <td>27</td>
+      <td class="positive success">+11</td>
+
+      <td>27</td>
+      <td class="positive success">+11</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=AWS">AWS</td>
+      <td>17</td>
+      <td>17</td>
+      <td>0</td>
+      <td>14</td>
+      <td class="negative danger">-3</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Redis">Redis</td>
+      <td>18</td>
+      <td>25</td>
+      <td class="positive success">+7</td>
+
+      <td>24</td>
+      <td class="positive success">+6</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=PHP">PHP</td>
+      <td>19</td>
+      <td>16</td>
+      <td class="negative danger">-3</td>
+
+      <td>18</td>
+      <td class="negative danger">-1</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=DevOps">DevOps</td>
+      <td>20</td>
+      <td>18</td>
+      <td class="negative danger">-2</td>
+
+      <td>48</td>
+      <td class="positive success">+28</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+    </div>
+    <div class="tab-pane" id="rising">
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><a href="?compare1=Bash">Bash</td>
+      <td>5</td>
+      <td>61</td>
+      <td>0</td>
+      <td>190</td>
+      <td class="positive success">+129</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Docker">Docker</td>
+      <td>6</td>
+      <td>57</td>
+      <td>0</td>
+      <td>172</td>
+      <td class="positive success">+115</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=OpenStack">OpenStack</td>
+      <td>5</td>
+      <td>62</td>
+      <td>1</td>
+      <td>133</td>
+      <td class="positive success">+71</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Spark">Spark</td>
+      <td>7</td>
+      <td>52</td>
+      <td>1</td>
+      <td>114</td>
+      <td class="positive success">+62</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Puppet">Puppet</td>
+      <td>6</td>
+      <td>58</td>
+      <td>1</td>
+      <td>110</td>
+      <td class="positive success">+52</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=R">R</td>
+      <td>8</td>
+      <td>50</td>
+      <td>2</td>
+      <td>96</td>
+      <td class="positive success">+46</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Spring">Spring</td>
+      <td>10</td>
+      <td>46</td>
+      <td>2</td>
+      <td>89</td>
+      <td class="positive success">+43</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=EC2">EC2</td>
+      <td>7</td>
+      <td>55</td>
+      <td>2</td>
+      <td>86</td>
+      <td class="positive success">+31</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Data Science">Data Science</td>
+      <td>14</td>
+      <td>37</td>
+      <td>4</td>
+      <td>67</td>
+      <td class="positive success">+30</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=DevOps">DevOps</td>
+      <td>21</td>
+      <td>20</td>
+      <td>8</td>
+      <td>48</td>
+      <td class="positive success">+28</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+    </div>
+    <div class="tab-pane" id="falling">
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><a href="?compare1=Erlang">Erlang</td>
+      <td>1</td>
+      <td>120</td>
+      <td>6</td>
+      <td>51</td>
+      <td class="negative danger">-69</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Asp">Asp</td>
+      <td>2</td>
+      <td>97</td>
+      <td>5</td>
+      <td>58</td>
+      <td class="negative danger">-39</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=C#">C#</td>
+      <td>5</td>
+      <td>65</td>
+      <td>15</td>
+      <td>30</td>
+      <td class="negative danger">-35</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Objective-C">Objective-C</td>
+      <td>4</td>
+      <td>78</td>
+      <td>9</td>
+      <td>45</td>
+      <td class="negative danger">-33</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=jQuery">jQuery</td>
+      <td>12</td>
+      <td>40</td>
+      <td>26</td>
+      <td>10</td>
+      <td class="negative danger">-30</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Mongodb">Mongodb</td>
+      <td>14</td>
+      <td>36</td>
+      <td>23</td>
+      <td>12</td>
+      <td class="negative danger">-24</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Haskell">Haskell</td>
+      <td>3</td>
+      <td>84</td>
+      <td>5</td>
+      <td>61</td>
+      <td class="negative danger">-23</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Heroku">Heroku</td>
+      <td>4</td>
+      <td>79</td>
+      <td>5</td>
+      <td>56</td>
+      <td class="negative danger">-23</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=Django">Django</td>
+      <td>12</td>
+      <td>42</td>
+      <td>20</td>
+      <td>19</td>
+      <td class="negative danger">-23</td>
+
+    </tr>
+
+    <tr>
+      <td><a href="?compare1=SQL Server">SQL Server</td>
+      <td>4</td>
+      <td>76</td>
+      <td>6</td>
+      <td>54</td>
+      <td class="negative danger">-22</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+    </div>
+  </div>
+
+  <p style="margin-top:30px;">
+    <a href="http://eepurl.com/DVVSb" class="btn btn-success btn-lg">Subscribe for updates</a>
+  </p>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'hackernewshiringtrends';
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
+    <a href="http://www.ryan-williams.net">Portland web developer Ryan Williams</a> •
+    <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> •
+    Email: ryan at ryan-williams.net •
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+  </footer>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="data/data-20140601.js"></script>
+<script src="../js/builder-v2.js"></script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16316427-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
