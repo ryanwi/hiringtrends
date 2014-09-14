@@ -47,7 +47,7 @@ module HiringTrends
     # Find and load all hiring submissions from HN Search API
     def get_submissions
       puts "== get_submissions =="
-      submissions_url = "https://hn.algolia.com/api/v1/search_by_date?query=Who+is+hiring&tags=story,author_whoishiring"
+      submissions_url = "https://hn.algolia.com/api/v1/search_by_date?query=hiring&tags=story,author_whoishiring"
       page = 0
       results = []
       loop do
