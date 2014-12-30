@@ -104,16 +104,20 @@ module HiringTrends
       @dictionary_url = dictionary_url
       initialize_dictionary
       submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      submission_keys.reverse.each do |submission_key|
+
+      # Process oldest to newest
+      processed_keys = []
+      submission_keys.reverse.each_with_index do |submission_key, index|
         puts "== Analyzing #{@redis.hget(submission_key, "month")} =="
 
         # create a fresh dictionary (need a deep copy) of each term with initial count of 0
         terms = Marshal.load(Marshal.dump(@software_terms))
         raw_comments = @redis.hget(submission_key, "comments")
         comments = JSON.parse raw_comments
-        term_data = analyze_submission(terms, comments)
+        term_data = analyze_submission(terms, comments, processed_keys.count >= 2 ? processed_keys.last(2) : [])
         # store the counts
         @redis.hset(submission_key, "terms", term_data.to_json)
+        processed_keys << submission_key
       end
       self
     end
@@ -137,7 +141,7 @@ module HiringTrends
     # Arguments:
     #  terms: (Hash)
     #  comments: (Array)
-    def analyze_submission(terms, comments)
+    def analyze_submission(terms, comments, previous_submission_keys)
       # accumulate mentions of term as comments are searched
       comments.each do |comment|
         # extract comment text
@@ -156,6 +160,17 @@ module HiringTrends
       # calculate percentage of comments
       terms.keys.each do |term|
         terms[term][:percentage] = ((terms[term][:count]/comments.count.to_f) * 100).round(2)
+      end
+
+      # moving average to smooth chart
+      unless previous_submission_keys.empty?
+        one_month_previous_terms = JSON.parse(@redis.hget(previous_submission_keys[0], "terms"))
+        two_month_previous_terms = JSON.parse(@redis.hget(previous_submission_keys[1], "terms"))
+        terms.keys.each do |term|
+          terms[term][:mavg3] = (terms[term][:count] +
+            one_month_previous_terms[term]["count"] +
+            two_month_previous_terms[term]["count"]) / 3
+        end
       end
 
       # rank terms, order by count
@@ -214,7 +229,6 @@ module HiringTrends
       return ranked_terms, gainers, losers
     end
 
-    #
     def publish_index(month, year, day, date, top_count, key_measures)
       data = {
         'year' => year,
@@ -232,7 +246,6 @@ module HiringTrends
       File.open("web/index.html", 'w') { |file| file.write(content) }
     end
 
-    #
     def publish_post(month, year, day, date, data_filename, key_measures)
       data = {
         'year' => year,
