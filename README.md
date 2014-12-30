@@ -36,7 +36,7 @@ require 'hiringtrends'
 hn = HiringTrends::Program.new
 hn.get_submissions
 hn.get_comments_for_submissions
-hn.analyze_submissions("https://gist.githubusercontent.com/ryanwi/6135845/raw/ca74c2273e3241dc7debbb4e4f45271bb53d9000/software-terms.dic")
+hn.analyze_submissions("https://gist.githubusercontent.com/ryanwi/6135845/raw/b7f1934051da434d0ffe092193a8eddf05e2a977/software-terms.dic")
 hn.publish("June", "2014", "Tuesday", "3", 20)
 ```
 
