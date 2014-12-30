@@ -39,7 +39,7 @@ module HiringTrends
       puts "== initialize_dictionary =="
       open(@dictionary_url) {|f|
         f.each_line {|line| @software_terms[line.chomp.split("/").first] =
-          {count: 0, percentage: 0, full_term: line.chomp }}
+          {count: 0, percentage: 0, mavg3: 0, full_term: line.chomp }}
       }
       self
     end
@@ -104,14 +104,16 @@ module HiringTrends
       @dictionary_url = dictionary_url
       initialize_dictionary
       submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      submission_keys.each do |submission_key|
+      submission_keys.reverse.each do |submission_key|
+        puts "== Analyzing #{@redis.hget(submission_key, "month")} =="
+
         # create a fresh dictionary (need a deep copy) of each term with initial count of 0
         terms = Marshal.load(Marshal.dump(@software_terms))
         raw_comments = @redis.hget(submission_key, "comments")
         comments = JSON.parse raw_comments
         term_data = analyze_submission(terms, comments)
         # store the counts
-        @redis.hmset(submission_key, "terms", term_data.to_json)
+        @redis.hset(submission_key, "terms", term_data.to_json)
       end
       self
     end
@@ -253,9 +255,9 @@ module HiringTrends
       # initialize the data structure to publish, will look like
       # data = [
       # { :month => month1, num_comments => num, terms => {term1 =>
-      #   {:count => 5, :percentage => .05 }, term2 => }},
+      #   { :count => 5, :percentage => .05, :rank => 1, :mavg3 => 5 }, term2 => }},
       # { :month => month2, num_comments => num, terms => {term1 =>
-      #    {:count => 5, :percentage => .05 }, term2 => }},
+      #    { :count => 5, :percentage => .05, :rank => 2,, :mavg3 => 5 }, term2 => }},
       # ]
       data = []
 
