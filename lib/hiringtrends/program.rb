@@ -69,8 +69,7 @@ module HiringTrends
           @redis.rpush(SUBMISSIONS_KEY, submission_key)
           @redis.hmset(submission_key,
             "objectID", objectID,
-            "month", "#{match[:month][0...3]}#{match[:year][2..4]}",
-            "num_comments", result["num_comments"]
+            "month", "#{match[:month][0...3]}#{match[:year][2..4]}"
           )
         end
       end
@@ -91,7 +90,10 @@ module HiringTrends
 
         # store comment text in redis
         puts "#{month}: #{comments.count} comments found..."
-        @redis.hset(submission_key, "comments", comments.to_json)
+        @redis.hmset(submission_key,
+          "comments", comments.to_json,
+          "num_comments", comments.count
+        )
         sleep 2
       end
       self
