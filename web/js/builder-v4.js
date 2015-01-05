@@ -80,7 +80,7 @@ var chartBuilder = (function ( $ ) {
       },
       yAxis: {
         title: {
-          text: 'Number of Comments mentioned'
+          text: 'Number of posts (3 mo. moving average)'
         },
         min: 0
       },
