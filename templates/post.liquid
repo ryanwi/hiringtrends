@@ -11,8 +11,9 @@
   languanges and software development technologies for {{month}}, {{year}}">
   <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
   <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
   <style>
     .chart-filters { margin: 15px; }
     .chart-filters select, .chart-filters input { margin-right: 10px; }
@@ -37,13 +38,29 @@
     <li><a href="#data">Data</a></li>
   </ol>
 
-  <div class="page-header">
-    <h1>
-      Hacker News Hiring Trends ({{ month }} {{ year }})
-    </h1>
-    <p class="lead">
-      Tracking the most popular programming languages, databases and software development tools in <a href="https://news.ycombinator.com/submitted?id=whoishiring">whoishiring discussion threads</a>.
-    </p>
+  <div class="page-header row">
+    <div class="col-sm-8">
+      <h1>
+        Hacker News Hiring Trends
+      </h1>
+      <p class="lead">
+        {{ month }} {{ year }} - Tracking the most popular programming languages, databases and software development tools in <a href="https://news.ycombinator.com/submitted?id=whoishiring">whoishiring discussion threads</a>.
+      </p>
+    </div>
+    <div class="col-sm-4">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Hiring Trends Post Header Fixed -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-8158729563514453"
+     data-ad-slot="4618198672"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
   </div>
 
   <div class="chart-filters">
@@ -69,32 +86,90 @@
 
   <div id="chart" style="width:100%; height:400px;"></div>
 
+  <div class="row">
+    <div class="col-md-9">
+      <h3 id="highlights">{{ month }} Highlights</h3>
+      <div class="post-date">{{ day }}, {{ month }} {{ date }}, {{ year }}</div>
+      <p>
+      </p>
+
+  <h4>Programming Languages</h4>
+  <p>
+    <a href="?compare1=javascript&compare2=python&compare3=ruby&compare4=java">
+      Compare JavaScript, Python, Ruby and Java
+    </a>
+    <br>
+    <a href="?compare1=golang&compare2=Scala&compare3=Clojure&compare4=c%2B%2B">
+      Compare C++, Scala, Clojure and Go
+    </a>
+  </p>
+  <p>
+  </p>
+
+  <h4>Server-side Frameworks</h4>
+  <p>
+    <a href="?compare1=Rails&compare2=node.js&compare3=PHP&compare4=Django">
+      Compare Rails, node.js, PHP and Django
+    </a>
+  </p>
+  <p>
+  </p>
+
+  <h4>JavaScript Frameworks</h4>
+  <p>
+    <a href="?compare1=AngularJS&compare2=Backbone&compare3=Ember&compare4=React">
+      Compare AngularJS, Backbone, Ember and React
+    </a>
+  </p>
+  <p>
+  </p>
+
+  <h4>SQL Databases</h4>
+  <p>
+    <a href="?compare1=Postgresql&compare2=MySQL&compare3=SQL+Server&compare4=">
+      Compare Postgresql, MySQL and SQL Server
+    </a>
+  </p>
+  <p>
+  </p>
+
+  <h4>NoSQL Databases</h4>
+  <p>
+    <a href="?compare1=Cassandra&compare2=Mongodb&compare3=Riak&compare4=CouchDB">
+      Compare Mongodb, Cassandra, Riak and CouchDB
+    </a>
+  </p>
+  <p>
+  </p>
+
+  <h4>DevOps Tools</h4>
+  <p>
+    <a href="?compare1=Chef&compare2=Puppet&compare3=Ansible&compare4=DevOps">
+      Compare Chef, Puppet, Ansible and the DevOps term itself
+    </a>
+  </p>
+
+
+    </div>
+
+      <div class="col-md-3">
+        <p style="margin-top:30px;">
+          <a href="http://eepurl.com/DVVSb" class="btn btn-success btn-lg">Subscribe for updates</a>
+        </p>
+
   <div class="badges">
     <script src="//platform.linkedin.com/in.js" type="text/javascript">
      lang: en_US
     </script>
     <script type="IN/Share" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-counter="right"></script>
 
-    <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html"></div>
-    <script type="text/javascript">
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
-
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ryan-williams.net/hacker-news-hiring-trends/{{ year }}/{{ month | downcase }}.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
 
     <!-- <a href="https://news.ycombinator.com/item?id=6237116">Discuss Original on Hacker News</a> -->
   </div>
+</div>
+</div>
 
-  <h3 id="highlights">{{ month }} Highlights</h3>
-  <div class="post-date">{{ day }}, {{ month }} {{ date }}, {{ year }}</div>
-  <p>
-  </p>
-
-  <br>
   <div id="data"></div>
 
   <ul class="nav nav-tabs">
@@ -115,23 +190,6 @@
     </div>
   </div>
 
-  <p style="margin-top:30px;">
-    <a href="http://eepurl.com/DVVSb" class="btn btn-success btn-lg">Subscribe for updates</a>
-  </p>
-
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'hackernewshiringtrends';
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
   <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
     <a href="http://www.ryan-williams.net">Portland web developer Ryan Williams</a> •
     <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> •
@@ -141,12 +199,12 @@
 
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="data/{{ data_filename }}.js"></script>
-<script src="../js/builder-v3.js"></script>
+<script src="../js/builder-v5.js"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -158,7 +216,6 @@
 
   ga('create', 'UA-16316427-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 </body>
