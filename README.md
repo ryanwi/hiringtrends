@@ -1,6 +1,6 @@
 # Hacker News (HN) Hiring Trends
 
-A Ruby library for analyizing software technology trends from Hacker News whoishiring posts.
+A Ruby library for analyzing software technology trends from Hacker News whoishiring posts.
 Created by <a href="http://www.ryan-williams.net">Ryan Williams</a>
 (<a href="https://twitter.com/ryanwi">@ryanwi</a>)
 
