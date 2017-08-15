@@ -1,16 +1,8 @@
-
 module HiringTrends
-
   class JobPosting
-    attr_accessor :text
-    attr_accessor :words
-
     def initialize(text)
-      @text = text.downcase
-
-      # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
-      # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
-      @words = @text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/)
+      self.original_text = text
+      self.text = text.downcase
     end
 
     def has_term?(term)
@@ -19,15 +11,30 @@ module HiringTrends
       return has_term_with_modifier?(modifier) unless modifier.nil?
 
       if term.include? " "
-        return true if @text.downcase.scan(term.downcase).any?
+        return true if text.downcase.scan(term.downcase).any?
       else
-        return true if @words.include?(term.downcase)
+        return true if words.include?(term.downcase)
+      end
+
+      if term == "golang"
+        return true if original_words.include?("Go")
       end
 
       return false
     end
 
   private
+    attr_accessor :original_text, :text
+
+    # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
+    # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
+    def words
+      @words ||= text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/)
+    end
+
+    def original_words
+      @original_words ||= original_text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/)
+    end
 
     # Some terms go by different names, modifiers are used to search for
     # different options.
@@ -60,6 +67,5 @@ module HiringTrends
 
       return false
     end
-
   end
 end

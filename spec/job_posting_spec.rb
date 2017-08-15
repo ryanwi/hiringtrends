@@ -86,6 +86,31 @@ describe HiringTrends::JobPosting do
       expect(comment.has_term?("Mongodb/alias[mongo|mongodb]")).to be false
     end
 
-  end
+    context "when term is golang" do
+      it "counts capital G Go for golang" do
+        comment = HiringTrends::JobPosting.new("Stack: Go, TypeScript, GraphQL, Docker + Kubernetes")
+        expect(comment.has_term?("golang")).to be true
+      end
 
+      it "counts capital G Go for golang" do
+        comment = HiringTrends::JobPosting.new("Apple | Backend (Go, PostgreSQL) engineer | Shanghai, China | ONSITE | Full Time")
+        expect(comment.has_term?("golang")).to be true
+      end
+
+      it "counts capital G Go for golang" do
+        comment = HiringTrends::JobPosting.new("the frontend app is Go in the back and react/redux in the front")
+        expect(comment.has_term?("golang")).to be true
+      end
+
+      it "counts capital G Go for golang" do
+        comment = HiringTrends::JobPosting.new("Nyaruka Ltd - Senior SDE - Go / Python / React / Postgres - REMOTE - $90-$150k")
+        expect(comment.has_term?("golang")).to be true
+      end
+
+      it "counts capital G Go for golang" do
+        comment = HiringTrends::JobPosting.new("We're looking for a C++/Go hacker")
+        expect(comment.has_term?("golang")).to be true
+      end
+    end
+  end
 end
