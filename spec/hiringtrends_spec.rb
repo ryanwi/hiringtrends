@@ -26,8 +26,8 @@ describe HiringTrends::Program do
 
       terms = @hn.analyze_submission(terms, comments)
 
-      terms["Ruby"][:count].should == 2
-      terms["JavaScript"][:count].should == 1
+      expect(terms["Ruby"][:count]).to eq(2)
+      expect(terms["JavaScript"][:count]).to eq(1)
     end
 
     it "separates words with comma separators" do
@@ -42,7 +42,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["Ruby"][:count].should == 2
+      expect(terms["Ruby"][:count]).to eq(2)
     end
 
     it "separates words with periods at end of sentence" do
@@ -53,7 +53,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["Ruby"][:count].should == 2
+      expect(terms["Ruby"][:count]).to eq(2)
     end
 
     it "is case insensitive" do
@@ -64,7 +64,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["Ruby"][:count].should == 2
+      expect(terms["Ruby"][:count]).to eq(2)
     end
 
     it "counts Objective-c" do
@@ -80,7 +80,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["Objective-C"][:count].should == 1
+      expect(terms["Objective-C"][:count]).to eq(1)
     end
 
     it "ignore quotes" do
@@ -96,7 +96,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["AngularJS"][:count].should == 1
+      expect(terms["AngularJS"][:count]).to eq(1)
     end
 
     it "counts multi-word terms" do
@@ -111,7 +111,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["Visual Basic"][:count].should == 1
+      expect(terms["Visual Basic"][:count]).to eq(1)
     end
 
     it "counts .net" do
@@ -124,7 +124,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms[".NET"][:count].should == 1
+      expect(terms[".NET"][:count]).to eq(1)
     end
 
     it "counts RabbitMQ" do
@@ -138,10 +138,7 @@ describe HiringTrends::Program do
       ]
 
       terms = @hn.analyze_submission(terms, comments)
-      terms["RabbitMQ"][:count].should == 3
+      expect(terms["RabbitMQ"][:count]).to eq(3)
     end
-
-
   end
-
 end
