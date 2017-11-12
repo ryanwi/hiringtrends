@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'hiringtrends'
-  s.version = '0.10.0'
+  s.version = '0.11.0'
   s.date = '2015-04-02'
   s.summary = 'Hacker News Hiring Trends'
   s.description = 'Most popular programming languagues and technologies from Hacker News monthly whoishiring posts'

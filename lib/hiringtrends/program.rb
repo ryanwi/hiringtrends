@@ -4,32 +4,29 @@ require "faraday"
 require "open-uri"
 require "liquid"
 
-
 module HiringTrends
-
   class Program
     SUBMISSIONS_KEY = "hn_submissions"
     SUBMISSION_KEY_PREFIX = "submission:"
 
     def initialize
-      @redis = Redis.new
       @software_terms = {}
     end
 
     # Remove data from redis
     def clean
       puts "== clean =="
-      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      @redis.del(submission_keys) unless submission_keys.empty?
-      @redis.del(SUBMISSIONS_KEY)
+      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      redis.del(submission_keys) unless submission_keys.empty?
+      redis.del(SUBMISSIONS_KEY)
       self
     end
 
     # Remove just analysis data, not hn data
     def clean_terms
-      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
       submission_keys.each do |submission_key|
-        @redis.hdel(submission_key, "terms")
+        redis.hdel(submission_key, "terms")
       end
       self
     end
@@ -66,8 +63,8 @@ module HiringTrends
         unless match.nil?
           objectID = result["objectID"]
           submission_key = "#{SUBMISSION_KEY_PREFIX}#{result["objectID"]}"
-          @redis.rpush(SUBMISSIONS_KEY, submission_key)
-          @redis.hmset(submission_key,
+          redis.rpush(SUBMISSIONS_KEY, submission_key)
+          redis.hmset(submission_key,
             "objectID", objectID,
             "month", "#{match[:month][0...3]}#{match[:year][2..4]}"
           )
@@ -79,45 +76,15 @@ module HiringTrends
     # Find and load all comments for the hiring submissions
     def get_comments_for_submissions
       puts "== get_comments_for_submissions =="
-      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
       submission_keys.each do |submission_key|
         # get all comments for submission from API
-        submission_objectid = @redis.hget(submission_key, "objectID")
-        num_comments = @redis.hget(submission_key, "num_comments")
-        month = @redis.hget(submission_key, "month")
+        submission_objectid = redis.hget(submission_key, "objectID")
+        num_comments = redis.hget(submission_key, "num_comments")
+        month = redis.hget(submission_key, "month")
 
-        comments = get_comments_for_submission(submission_objectid)
-
-        # store comment text in redis
-        puts "#{month}: #{comments.count} comments found..."
-        @redis.hmset(submission_key,
-          "comments", comments.to_json,
-          "num_comments", comments.count
-        )
+        get_comments_for_submission(submission_objectid)
         sleep 2
-      end
-      self
-    end
-
-    # Process all submissions, counting comments counts for each term in the technology dictionary
-    def analyze_submissions(dictionary_url)
-      @dictionary_url = dictionary_url
-      initialize_dictionary
-      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-
-      # Process oldest to newest
-      processed_keys = []
-      submission_keys.reverse.each_with_index do |submission_key, index|
-        puts "== Analyzing #{@redis.hget(submission_key, "month")} =="
-
-        # create a fresh dictionary (need a deep copy) of each term with initial count of 0
-        terms = Marshal.load(Marshal.dump(@software_terms))
-        raw_comments = @redis.hget(submission_key, "comments")
-        comments = JSON.parse raw_comments
-        term_data = analyze_submission(terms, comments, processed_keys.count >= 2 ? processed_keys.last(2) : [])
-        # store the counts
-        @redis.hset(submission_key, "terms", term_data.to_json)
-        processed_keys << submission_key
       end
       self
     end
@@ -129,11 +96,39 @@ module HiringTrends
     def get_comments_for_submission(objectID)
       puts "== get_comments_for_submission #{objectID} =="
 
-      # Get comments from API
       item_url = "https://hn.algolia.com/api/v1/items/#{objectID}"
       response = Faraday.get item_url
       item = JSON.parse response.body
       comments = item["children"]
+
+      puts "#{objectID}: #{comments.count} comments found..."
+      redis.hmset("#{SUBMISSION_KEY_PREFIX}#{objectID}",
+        "comments", comments.to_json,
+        "num_comments", comments.count
+      )
+    end
+
+    # Process all submissions, counting comments counts for each term in the technology dictionary
+    def analyze_submissions(dictionary_url)
+      @dictionary_url = dictionary_url
+      initialize_dictionary
+      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
+
+      # Process oldest to newest
+      processed_keys = []
+      submission_keys.reverse.each_with_index do |submission_key, index|
+        puts "== Analyzing #{redis.hget(submission_key, "month")} =="
+
+        # create a fresh dictionary (need a deep copy) of each term with initial count of 0
+        terms = Marshal.load(Marshal.dump(@software_terms))
+        raw_comments = redis.hget(submission_key, "comments")
+        comments = JSON.parse raw_comments
+        term_data = analyze_submission(terms, comments, processed_keys.count >= 2 ? processed_keys.last(2) : [])
+        # store the counts
+        redis.hset(submission_key, "terms", term_data.to_json)
+        processed_keys << submission_key
+      end
+      self
     end
 
     # Calculate term frequency across all comments for individual submission
@@ -164,8 +159,8 @@ module HiringTrends
 
       # moving average to smooth chart
       unless previous_submission_keys.empty?
-        one_month_previous_terms = JSON.parse(@redis.hget(previous_submission_keys[0], "terms"))
-        two_month_previous_terms = JSON.parse(@redis.hget(previous_submission_keys[1], "terms"))
+        one_month_previous_terms = JSON.parse(redis.hget(previous_submission_keys[0], "terms"))
+        two_month_previous_terms = JSON.parse(redis.hget(previous_submission_keys[1], "terms"))
         terms.keys.each do |term|
           terms[term][:mavg3] = (terms[term][:count] +
             one_month_previous_terms[term]["count"] +
@@ -195,18 +190,22 @@ module HiringTrends
 
   private
 
+    def redis
+      @redis ||= Redis.new
+    end
+
     def calculate_key_measures
-      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      terms = JSON.parse(@redis.hget(submission_keys.first, "terms"))
+      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      terms = JSON.parse(redis.hget(submission_keys.first, "terms"))
 
       # Order this month's results by ranking
       ranked_terms = terms.sort_by { |k, v| v["rank"] }.to_a
 
       # Augment the ranking data with data from periods to compare against
       ranked_terms.each do |term|
-        lm_terms = JSON.parse(@redis.hget(submission_keys[1], "terms"))
+        lm_terms = JSON.parse(redis.hget(submission_keys[1], "terms"))
         lm_term = lm_terms[term[0]]
-        ly_terms = JSON.parse(@redis.hget(submission_keys[12], "terms"))
+        ly_terms = JSON.parse(redis.hget(submission_keys[12], "terms"))
         ly_term = ly_terms[term[0]]
 
         term_stats = term[1]
@@ -274,12 +273,12 @@ module HiringTrends
       # ]
       data = []
 
-      submission_keys = @redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
       submission_keys.each do |submission_key|
-        month = @redis.hget(submission_key, "month")
+        month = redis.hget(submission_key, "month")
         datapoint = { :month => month }
-        datapoint[:num_comments] = @redis.hget(submission_key, "num_comments")
-        terms = JSON.parse(@redis.hget(submission_key, "terms"))
+        datapoint[:num_comments] = redis.hget(submission_key, "num_comments")
+        terms = JSON.parse(redis.hget(submission_key, "terms"))
         datapoint[:terms] = terms
         data << datapoint
       end
@@ -288,6 +287,5 @@ module HiringTrends
         f.write(JSON.pretty_generate(data)) }
       self
     end
-
   end
 end
