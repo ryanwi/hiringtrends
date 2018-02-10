@@ -60,7 +60,7 @@ var highChartConverter = (function ( $ ) {
     convertCountYoySeries: function () {
       var countSeries = [];
       var months = {'Jan':0,'Feb':1,'Mar':2,'Apr':3,'May':4,'Jun':5,'Jul':6,'Aug':7,'Sep':8,'Oct':9,'Nov':10,'Dec':11};
-      var years = {'13':0, '14':1, '15':2, '16':3, '17':4};
+      var years = {'13':0, '14':1, '15':2, '16':3, '17':4, '18':5};
       $.each(years, function(key, value) {
         countSeries.push({ name: "'" + key, data: [0,0,0,0,0,0,0,0,0,0,0,0]});
       });
