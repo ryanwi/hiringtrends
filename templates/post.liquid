@@ -11,33 +11,22 @@
   languanges and software development technologies for {{month}}, {{year}}">
   <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png"/>
   <meta property="og:image:secure_url" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
-  <style>
-    * { font-size: 16px; }
-    .chart-filters { margin: 15px; }
-    .chart-filters select, .chart-filters input { margin-right: 10px; }
-    #topfilter { width: 100px; }
-    .sidebar h4 { margin-top: 25px;border-bottom: 1px solid #DDDDDD; }
-    .sidebar ul { list-style-type: none; margin: 0; padding: 0; }
-    .sidebar li { list-style-type: none; margin: 2px 0; padding: 0; }
-    .term-compare { width: 100px; }
-    .negative { color: red; }
-    .positive { color: green; }
-    .post-date { margin-bottom: 15px; color:#666; }
-  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
 
 <div class="container">
 
-  <ol class="breadcrumb">
-    <li><a href="../">Home and Archives</a></li>
-    <li class="active">{{ month }} {{ year }}</li>
-    <li><a href="#highlights">Highlights and Analysis</a></li>
-    <li><a href="#data">Data</a></li>
-  </ol>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../">Home and Archives</a></li>
+      <li class="breadcrumb-item active">{{ month }} {{ year }}</li>
+      <li class="breadcrumb-item"><a href="#highlights">Highlights and Analysis</a></li>
+      <li class="breadcrumb-item"><a href="#data">Data</a></li>
+    </ol>
+  </nav>
 
   <div class="page-header row">
     <div class="col-sm-8">
@@ -64,28 +53,32 @@
 
   </div>
 
-  <div class="chart-filters">
-    <form id="chart_filter" method="get" class="form-inline" role="form">
-      Show:
-      <select id="topfilter">
-        <option value="5" selected>Top 5</option>
-        <option value="10">Top 10</option>
-        <option value="20">Top 20</option>
-        <option value="50">Top 50</option>
-        <option value="-1">All</option>
-      </select>
+  <div class="chart-filters mb-2">
+    <form id="chart_filter" method="get" class="form-inline">
+      <div class="input-group">
+        Show:
+        <select id="topfilter" class="form-control form-control-sm">
+          <option value="5" selected>Top 5</option>
+          <option value="10">Top 10</option>
+          <option value="20">Top 20</option>
+          <option value="50">Top 50</option>
+          <option value="-1">All</option>
+        </select>
+      </div>
 
-      <span style="margin-right: 10px;">or compare</span>
+      <div class="input-group">
+        <span>or compare:</span>
+        <input type="text" name="compare1" class="term-compare form-control form-control-sm" placeholder="Ruby" />
+        <input type="text" name="compare2" class="term-compare form-control form-control-sm" placeholder="Python" />
+        <input type="text" name="compare3" class="term-compare form-control form-control-sm" />
+        <input type="text" name="compare4" class="term-compare form-control form-control-sm" />
+      </div>
 
-      <input type="text" name="compare1" class="term-compare" placeholder="Ruby" />
-      <input type="text" name="compare2" class="term-compare" placeholder="Python" />
-      <input type="text" name="compare3" class="term-compare" />
-      <input type="text" name="compare4" class="term-compare" />
-      <input type="submit" id="compare" value="Compare" class="btn btn-primary btn-small" />
+      <input type="submit" id="compare" value="Compare" class="btn btn-sm" />
     </form>
   </div>
 
-  <div id="chart" style="width:100%; height:400px;"></div>
+  <div id="chart" class="mb-5" style="width:100%; height:400px;"></div>
 
   <div class="row">
     <div class="col-md-9">
@@ -171,12 +164,16 @@
 </div>
 </div>
 
-  <div id="data"></div>
+<h3>Total Postings Trend</h3>
+<div id="comments_chart" style="width:100%; height:300px;" class="mb-5"></div>
+
+<h3>Rankings and movers</h3>
+<div id="data"></div>
 
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#top20" data-toggle="tab">Top 20</a></li>
-    <li><a href="#rising" data-toggle="tab">Rising</a></li>
-    <li><a href="#falling" data-toggle="tab">Falling</a></li>
+    <li class="nav-item"><a href="#top20" class="nav-link active" data-toggle="tab">Top 20</a></li>
+    <li class="nav-item"><a href="#rising" class="nav-link" data-toggle="tab">Rising</a></li>
+    <li class="nav-item"><a href="#falling" class="nav-link" data-toggle="tab">Falling</a></li>
   </ul>
 
   <div class="tab-content">
@@ -200,12 +197,13 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="data/{{ data_filename }}.js"></script>
-<script src="../js/builder-v6.js"></script>
+<script src="../data/{{ data_filename }}.js"></script>
+<script src="../js/builder-v8.js"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
