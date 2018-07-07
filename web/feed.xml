@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Hacker News Hiring Trends</title>
+    <description>Scout people and communities with smart lists.</description>
+    <link>https://www.hntrends.com/</link>
+    <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 25 Feb 2018 23:30:05 +0000</pubDate>
+    <lastBuildDate>Sun, 25 Feb 2018 23:30:05 +0000</lastBuildDate>
+    <item>
+      <title>No signs of slowing for React</title>
+      <description>
+&lt;p&gt;React reached new heights in June with a mention in over 28% of postings, easily taking the top spot for the thirteenth month in a row. The highest ever for a technology was 32% for JavaScript nearly four years ago. Can React challenge it? With React's adoption on the web and for mobile app developments with React Native, it presents an attractive platform for many developers to explore. But, front-end technologies have a history of being replaced for the hot new thing, so how long can React stay on top?&lt;/p&gt;
+
+&lt;p&gt;Recent notable movers, Node.js (into the top 5 last month) and Go (first top 10 appearance 2 months ago), could not continue their climbs, and have leveled off a bit, though still near their peaks.&lt;/p&gt;
+      </description>
+      <pubDate>Fri, 6 Jul 2018 00:00:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html
+      </guid>
+    </item>
+    <item>
+      <title>Node.js breaks into the Top 5</title>
+      <description>
+&lt;p&gt;In another sign of JavaScript's ubiquity, Node.js became the second JavaScript related technology to surpass mentions of JavaScript itself. Node.js took the #4 spot in May, its first time in the top 5, and just ahead of JavaScript. React was the first to do so, and React also continued its streak of wins, taking the top spot for the 12th month in a row, sustaining its rank for a complete year.&lt;/p&gt;
+
+&lt;p&gt;May also marked an all time high in total postings, with more than 1000 postings for only the 2nd time ever and was up 17% over last May.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2018/may-node-js-breaks-into-top-5.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2018/may-node-js-breaks-into-top-5.html
+      </guid>
+    </item>
+    <item>
+      <title>Golang jumps into Top 10</title>
+      <description>
+&lt;p&gt;The Go Programming Language (golang) made its first appearance in the Top 10 and is now the third most popular programming language in the rankings. Go jumped over both Java and Ruby this month. First released in 2012, Go has climbed steadily as its popularity grows, and was mentioned in over 10% of postings in April.&lt;/p&gt;
+
+&lt;p&gt;I was looking forward to a month without writing about React, but that will have to wait. React easily won the rankings again, its 11th win in a row. But, not only that, it's still climbing, reaching its all time best of over 26% of postings.&lt;/p&gt;
+
+&lt;p&gt;There are couple of changes to the tracking worth mentioning this month. First, Amazon's DynamoDB has replaced Riak as the top key-value store and has been added to the NoSQL category below. Second, GraphQL, Facebook's popular query language for APIs has been added thanks to Jørgen Orehøj Erichsen keen eye. GraphQL is one to keep an eye on its already cracked the top 50 in less than 3 years.&lt;/p&gt;
+      </description>
+      <pubDate>Sat, 14 Apr 2018 00:00:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2018/apr-golang-jumps-into-top-10.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2018/apr-golang-jumps-into-top-10.html
+      </guid>
+    </item>
+  </channel>
+</rss>
