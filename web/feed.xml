@@ -1,11 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Hacker News Hiring Trends</title>
-    <description>Scout people and communities with smart lists.</description>
+    <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 6 Jul 2018 00:00:00 +0000</pubDate>
-    <lastBuildDate>Fri, 6 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <pubDate>Sun, 15 Jul 2018 22:20:00 +0000</pubDate>
+    <lastBuildDate>Sun, 15 Jul 2018 22:20:00 +0000</lastBuildDate>
+    <item>
+      <title></title>
+      <description>
+&lt;p&gt;For most months, this post examines technologies across the sprectrum of software development, from languages to frameworks to products. And, that data is all still here for you to examine as well. But, I thought it would be interesting to take a look at the state of Programming Languages specifically as their trends can often be obscured in the overall analysis.&lt;/p&gt;
+      </description>
+      <pubDate>Sun, 15 Jul 2018 22:20:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2018/jul-top-ten-programming-languages.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2018/jul-top-ten-programming-languages.html
+      </guid>
+    </item>
     <item>
       <title>No signs of slowing for React</title>
       <description>
