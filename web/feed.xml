@@ -4,8 +4,21 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Jul 2018 22:20:00 +0000</pubDate>
-    <lastBuildDate>Sun, 15 Jul 2018 22:20:00 +0000</lastBuildDate>
+    <pubDate>Mon, 04 Sep 2018 00:09:00 +0000</pubDate>
+    <lastBuildDate>Mon, 04 Sep 2018 00:09:00 +0000</lastBuildDate>
+    <item>
+      <title>Summer hiring heats up; React still on fire</title>
+      <description>
+&lt;p&gt;The Top 5 remained exactly the same in August as it was in July with React on top followed by Python, AWS, Postgresql and JavaScript. This is React's fifteenth month in a row in the top spot. Though React has slid back in terms of share over the last quarter after peaking in June, it's still in a dominant position.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 04 Sep 2018 00:09:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2018/aug-summer-hiring-heats-up-react-fire.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2018/aug-summer-hiring-heats-up-react-fire.html
+      </guid>
+    </item>
     <item>
       <title>Top 10 Programming Languages</title>
       <description>
