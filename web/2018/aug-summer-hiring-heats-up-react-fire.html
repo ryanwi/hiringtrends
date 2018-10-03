@@ -45,28 +45,40 @@
   </div>
 
   <div class="chart-filters mb-2">
-    <form id="chart_filter" method="get" class="form-inline">
-      <div class="input-group">
-        Show:
-        <select id="topfilter" class="form-control form-control-sm">
-          <option value="5" selected>Top 5</option>
-          <option value="10">Top 10</option>
-          <option value="20">Top 20</option>
-          <option value="50">Top 50</option>
-        </select>
-      </div>
+    <form id="chart_filter" method="get">
+      <div class="form-row align-items-center">
+        <div class="col-md-1">
+          <select id="topfilter" class="form-control">
+            <option value="5" selected>Top 5</option>
+            <option value="10">Top 10</option>
+            <option value="20">Top 20</option>
+            <option value="50">Top 50</option>
+          </select>
+        </div>
 
-      <div class="input-group">
-        <span>or compare:</span>
-        <div id="term_comparisons">
-          <input type="text" name="compare" class="term-compare form-control form-control-sm" placeholder="Ruby" />
-          <input type="text" name="compare" class="term-compare form-control form-control-sm" placeholder="Python" />
-          <input type="text" name="compare" class="term-compare form-control form-control-sm" />
-          <input type="text" name="compare" class="term-compare form-control form-control-sm" />
+        <div class="col-md-1">
+          or compare
+        </div>
+
+        <div id="term_comparisons" class="col-md-9 form-row">
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" placeholder="Ruby" />
           </div>
-      </div>
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" placeholder="Python" />
+          </div>
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" />
+          </div>
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" />
+          </div>
+        </div>
 
-      <input type="submit" value="Compare" class="btn btn-sm" />
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-default">Compare</button>
+        </div>
+      </div>
     </form>
   </div>
 
@@ -693,7 +705,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="../data/data-20180801.js"></script>
-<script src="../js/builder-v9.js"></script>
+<script src="../js/builder-v10.js"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
