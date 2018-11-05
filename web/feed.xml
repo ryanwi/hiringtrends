@@ -4,13 +4,25 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Oct 2018 05:30:00 +0000</pubDate>
-    <lastBuildDate>Wed, 03 Oct 2018 05:30:00 +0000</lastBuildDate>
+    <pubDate>Mon, 05 Nov 2018 05:41:00 +0000</pubDate>
+    <lastBuildDate>Mon, 05 Nov 2018 05:41:00 +0000</lastBuildDate>
+    <item>
+      <title>React holds off Python</title>
+      <description>
+&lt;p&gt;React is still on top after a whopping seventeen months, but it did have its closest finish in almost a year, beating second place Python by just over a percentage point. JavaScript made a strong jump to third place with AWS and Node.js rounding out the Top 5 for October..&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 05 Nov 2018 05:41:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2018/oct-react-holds-off-python.html.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2018/oct-react-holds-off-python.html.html
+      </guid>
+    </item>
     <item>
       <title>TypeScript makes its move</title>
       <description>
-&lt;p&gt;While there was a little bit of a shake-up internally within the Top 5 in September compared to previous months, the players mostly look familiar. At the top, React claimed its sixteenth win in a row, a streak that began in June, 2017. Following up in second as usual, Python continued its own streak. Making a first appearance in the Top 5 was "Full Stack", proving that the term is still alive and well. Rounding out the top 5 was node.js, its first Top 5 finish since May.
-.&lt;/p&gt;
+&lt;p&gt;While there was a little bit of a shake-up internally within the Top 5 in September compared to previous months, the players mostly look familiar. At the top, React claimed its sixteenth win in a row, a streak that began in June, 2017. Following up in second as usual, Python continued its own streak. Making a first appearance in the Top 5 was "Full Stack", proving that the term is still alive and well. Rounding out the top 5 was node.js, its first Top 5 finish since May.&lt;/p&gt;
       </description>
       <pubDate>Wed, 03 Oct 2018 05:30:00 +0000</pubDate>
       <link>
