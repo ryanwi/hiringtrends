@@ -20,7 +20,7 @@ module HiringTrends
         return true if original_words.include?("Go")
       end
 
-      return false
+      false
     end
 
   private
@@ -46,7 +46,7 @@ module HiringTrends
       if parts.count == 1
         return nil
       end
-      return parts[1]
+      parts[1]
     end
 
     def has_term_with_modifier?(modifier)
@@ -65,7 +65,7 @@ module HiringTrends
         end
       end
 
-      return false
+      false
     end
   end
 end
