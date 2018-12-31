@@ -4,8 +4,22 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Nov 2018 06:42:00 +0000</pubDate>
-    <lastBuildDate>Thu, 29 Nov 2018 06:42:00 +0000</lastBuildDate>
+    <pubDate>Mon, 31 Dec 23:25:00 +0000</pubDate>
+    <lastBuildDate>Mon, 31 Dec 2018 23:25:00 +0000</lastBuildDate>
+    <item>
+      <title>React closes out dominant 2018 - Hacker News Hiring Trends (December 2018)</title>
+      <description>
+&lt;p&gt;The story of 2018, much like 2017, remains to be React as it becomes the first technology to remain on top for an entire calendar year. React also runs its win streak to an incredible nineteen months in a row. Looking at the larger world of JavaScript libraries does not reveal any emerging threats to React on the horizon. Angular is trending down, Vue.js is still in search of a jump to the next level and Ember remains flat.&lt;/p&gt;
+&lt;p&gt;As far as programming languages go, Python is miorroring React's overall dominance, claiming the crown as most popular programming language for the past nineteen months. It was last topped by JavaScript in May, 2017.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 31 Dec 2018 23:25:00 +0000</pubDate>
+      <link>
+        https://hntrends.com/2018/dec-react-closes-out-dominant-2018.html
+      </link>
+      <guid isPermaLink="true">
+        https://hntrends.com/2018/dec-react-closes-out-dominant-2018.html
+      </guid>
+    </item>
     <item>
       <title>React still on top; Containers are hot</title>
       <description>
