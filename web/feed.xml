@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 31 Dec 2018 23:25:00 +0000</pubDate>
-    <lastBuildDate>Mon, 31 Dec 2018 23:25:00 +0000</lastBuildDate>
+    <pubDate>Thu, 31 Jan 2019 06:36:00 +0000</pubDate>
+    <lastBuildDate>Thu, 31 Jan 2019 06:36:00 +0000</lastBuildDate>
+    <item>
+      <title>React win streak reaches 20 months - Hacker News Hiring Trends (January 2019)</title>
+      <description>
+&lt;p&gt;Will React ever be defeated? That is the question I am beginning to ask each month as React continues to dominate the whoishiring posts on Hacker News. You have to think React can't continue this dominance indefinitely, it will begin a decline at some point. But, when, and what will dethrone it?&lt;/p&gt;
+&lt;p&gt;Overall, the rankings look similar to previous months, including a Top 5 that is exactly the same as last month. 5-10 saw a little bit of movement with Postgresql moving up 4 spots from 10 to 6. Go cracked the top 10 again with a jump from 11 to 8, becoming the third most popular programming language in the rankings.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2018/jan-react-win-streak-reaches-20-months.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full January rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Thu, 31 Jan 2019 06:36:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2019/jan-react-win-streak-reaches-20-months.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2019/jan-react-win-streak-reaches-20-months.html
+      </guid>
+    </item>
     <item>
       <title>React closes out dominant 2018 - Hacker News Hiring Trends (December 2018)</title>
       <description>
@@ -14,10 +29,10 @@
       </description>
       <pubDate>Mon, 31 Dec 2018 23:25:00 +0000</pubDate>
       <link>
-        https://hntrends.com/2018/dec-react-closes-out-dominant-2018.html
+        https://www.hntrends.com/2018/dec-react-closes-out-dominant-2018.html
       </link>
       <guid isPermaLink="true">
-        https://hntrends.com/2018/dec-react-closes-out-dominant-2018.html
+        https://www.hntrends.com/2018/dec-react-closes-out-dominant-2018.html
       </guid>
     </item>
     <item>
