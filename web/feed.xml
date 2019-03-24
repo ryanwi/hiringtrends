@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Jan 2019 06:36:00 +0000</pubDate>
-    <lastBuildDate>Thu, 31 Jan 2019 06:36:00 +0000</lastBuildDate>
+    <pubDate>Sun, 24 Mar 2019 23:55:00 +0000</pubDate>
+    <lastBuildDate>Sun, 24 Mar 2019 23:55:00 +0000</lastBuildDate>
+    <item>
+      <title>PostgreSQL vs MySQL no longer close - Hacker News Hiring Trends (March 2019)</title>
+      <description>
+&lt;p&gt;With React's incredible rise and dominance, this month marks 22 wins in a row, it becomes an interesting challenge to find other trends in the rankings. One such trend worth mentioning is the database battles. A few years ago, the competition between PostgreSQL and MySQL was close with each going back and forth. Sometime around 2015, PostgreSQL began to consistently beat MySQL and fast forward to 2019, it's no longer close with &lt;a href="https://www.hntrends.com/2019/mar-postgresql-vs-mysql-no-longer-close.html?compare=Postgresql&compare=MySQL"&gt;PostgreSQL opening a 10% lead over MySQL this month&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Overall, the Top 5 went React, Python, AWS, PostgreSQL and JavaScript this month. JavaScript climbing to #5 is the only change there, ironically trading places with Node.js. The rest of the Top 10 was mostly the same with minor bumps for most of 6-10. Docker's still knocking on the door at 11 while Kubernetes has gained the most momentum towards a Top 10 finish in the last year, though actually reaching the Top 10 may take some time.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/mar-postgresql-vs-mysql-no-longer-close.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full January rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Sun, 24 Mar 2019 23:55:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2019/mar-postgresql-vs-mysql-no-longer-close.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2019/mar-postgresql-vs-mysql-no-longer-close.html
+      </guid>
+    </item>
     <item>
       <title>React win streak reaches 20 months - Hacker News Hiring Trends (January 2019)</title>
       <description>
