@@ -44,6 +44,6 @@ hn.publish("August", "2017", "Saturday", "12", 20)
 
 **Ryan Williams**
 
-- <http://www.ryan-williams.net>
+- <https://www.ryanwilliams.dev>
 - <https://twitter.com/ryanwi>
 - <https://github.com/ryanwi>
