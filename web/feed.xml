@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Mar 2019 23:55:00 +0000</pubDate>
-    <lastBuildDate>Sun, 24 Mar 2019 23:55:00 +0000</lastBuildDate>
+    <pubDate>Mon, 29 Jul 2019 05:05:00 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Jul 2019 05:05:00 +0000</lastBuildDate>
+    <item>
+      <title>PostgreSQL vs MySQL no longer close - Hacker News Hiring Trends (March 2019)</title>
+      <description>
+&lt;p&gt;Welcome back! Hacker News Hiring Trends returns from a Spring Break to get caught up on 2019 technology trends. It may come as a surprise, but React is still on top, running its win streak past 2 years. React first won in June 2017 and has been on top ever since. No other technology has enjoyed such a string of success in the 8 year history of "Who is hiring".&lt;/p&gt;
+&lt;p&gt;Since it has been a few months since I last posted, it does allow other areas of software development to experience a shake-up and surprisingly programming languages are seeing some interesting trends. Normally, programming languages have been fairly static relative to the faster moving area of frameworks, but a number of programming languages are appearing frequently in job postings. The Go programming language is establishing itself as the third most popular programming language and consistently placing in the Top 10 overall. Rust is another programming language making news as it records its first appearance in the Top 10 programming languages, knocking out C in the process.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/jul-dont-worry-react-still-dominating.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full July rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 29 Jul 2019 05:05:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2019/jul-dont-worry-react-still-dominating.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2019/jul-dont-worry-react-still-dominating.html
+      </guid>
+    </item>    
     <item>
       <title>PostgreSQL vs MySQL no longer close - Hacker News Hiring Trends (March 2019)</title>
       <description>
