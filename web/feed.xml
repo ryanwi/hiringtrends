@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Jul 2019 05:05:00 +0000</pubDate>
-    <lastBuildDate>Mon, 29 Jul 2019 05:05:00 +0000</lastBuildDate>
+    <pubDate>Sun, 8 Sep 2019 23:00:00 +0000</pubDate>
+    <lastBuildDate>Sun, 8 Sep 2019 23:00:00 +0000</lastBuildDate>
+    <item>
+      <title>TypeScript reaches the Top 10 (August 2019)</title>
+      <description>
+&lt;p&gt;While React won again, its 27th month in a row, TypeScript looks like August's top story, as it cracks the Top 10 for the first time. TypeScript reached the Top 20 last September and continued to climb over the past twelve months. TypeScript appears to have gotten swept up in Reacts ecosystem as developers use TypeScript to create React apps. TypeScript is even the 3rd most popular programming language overall now, jumping over the Go Programming Languge.&lt;/p&gt;
+&lt;p&gt;Kuberetes is another climber, reaching #12, and matching its all time best performance. It's now neck and neck with Docker as those two continue to feed off each other to grow the containerized application industry.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/aug-typescript-reaches-top-10.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full August rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Sun, 8 Sep 2019 23:00:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2019/aug-typescript-reaches-top-10.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2019/aug-typescript-reaches-top-10.html
+      </guid>
+    </item>    
     <item>
       <title>Don't worry, React is still dominating - Hacker News Hiring Trends (July 2019)</title>
       <description>
