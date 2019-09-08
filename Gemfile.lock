@@ -1,0 +1,25 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.2)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
+    liquid (4.0.0)
+    method_source (0.9.0)
+    multipart-post (2.0.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    redis (4.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  faraday
+  liquid
+  pry
+  redis
+
+BUNDLED WITH
+   1.16.2

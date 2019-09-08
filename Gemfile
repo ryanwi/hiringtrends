@@ -1,2 +1,6 @@
 source 'https://rubygems.org'
-gemspec
+
+gem 'redis'
+gem 'faraday'
+gem 'liquid'
+gem 'pry'
