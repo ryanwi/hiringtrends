@@ -10,7 +10,7 @@
       <title>React reaches 30% of all posts (September 2019)</title>
       <description>
 &lt;p&gt;React continues on the path towards software ubiquity as it cracks the 30% barrier. That means 30% of the job postings on &lt;a href="https://news.ycombinator.com/item?id=20867123"&gt;September's "Ask HN: Who is hiring?" thread&lt;/a&gt; mentioned React. Not since Septepmber, 2014 when JavaScript cracked 30% has there been a technology mentioned so frequently.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Speaking of software uqiquity, JavaScript is the foundational technology for both React and TypeScript but JavaScript itself has declined from that peak of 30% five years ago, to 12% in the latest results. JavaScript was also passed by TypeScript for the #2 programming language. As more technologies are built on top of JavaScript, the need to have JavaScript skills either becomes so essential as to not needing to be stated, or not necessary because of the new abstractions. Is this JavaScript realizing the &lt;a href="https://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx"&gt;prediction to becoming the assembly language for the web?&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2019/sep-react-reaches-thirty-percent-posts.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full September rankings.&lt;/p&gt;
       </description>
       <pubDate>Mon, 16 Sep 2019 00:30:00 +0000</pubDate>
