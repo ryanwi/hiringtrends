@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Sep 2019 00:30:00 +0000</pubDate>
-    <lastBuildDate>Mon, 16 Sep 2019 00:30:00 +0000</lastBuildDate>
+    <pubDate>Mon, 28 Oct 2019 02:50:00 +0000</pubDate>
+    <lastBuildDate>Mon, 28 Oct 2019 02:50:00 +0000</lastBuildDate>
+    <item>
+      <title>No sign of React Falling Back - Hacker News Hiring Trends (October 2019)</title>
+      <description>
+&lt;p&gt;Fall hiring season was in full swing in &lt;a href="https://news.ycombinator.com/item?id=21126014"&gt;October's "Ask HN: Who is hiring?" thread&lt;/a&gt; with the usual technologies in demand. React ran away with the top spot again, showing no sign of weakness as it beat Python by 8 percentage points and won for the 29th month in a row.&lt;/p&gt;
+&lt;p&gt;Overall, there was not a lot of movement in the top rankings. The top 3 remain unchnaged from last month. TypeScript did slide back a few  spots, while Full Stack and JavaScript reclaimed some ground.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full September rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 28 Oct 2019 02:50:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html
+      </guid>
+    </item>    
     <item>
       <title>React reaches 30% of all posts (September 2019)</title>
       <description>
