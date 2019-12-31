@@ -4,14 +4,38 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Nov 2019 00:15:00 +0000</pubDate>
-    <lastBuildDate>Mon, 25 Nov 2019 00:15:00 +0000</lastBuildDate>
+    <pubDate>Tue, 31 Dec 2019 22:20:00 +0000</pubDate>
+    <lastBuildDate>Tue, 31 Dec 2019 22:20:00 +0000</lastBuildDate>
+    <item>
+      <title>Another year on top for React - Hacker News Hiring Trends (December 2019)</title>
+      <description>
+&lt;p&gt;Just as it did last year, React completed the full calendar 2019 as the
+top tech in &lt;a href="https://news.ycombinator.com/item?id=21683554"&gt;Ask HN: Who is hiring?&lt;/a&gt;
+extending its win streak to 31 months. React has been trending down in
+recent months and December marks its lowest share of the year, at just
+over 25% of postings. But, the runner up, Python, still has a long way
+to go to catch up.&lt;/p&gt;
+&lt;p&gt;There were some notable big movers in December. Machine Learning made
+a jump from #12 to #4. While Go jumped back into the Top 10 overall
+and was the second most popular programming language.&lt;/p&gt;
+&lt;p&gt;The other big story for 2019 would have to be TypeScript which is now a
+Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/dec-another-year-on-top-for-react.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full December rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Tue, 31 Dec 2019 22:20:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2019/dec-another-year-on-top-for-react.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2019/dec-another-year-on-top-for-react.html
+      </guid>
+    </item>    
     <item>
       <title>GraphQL Reaches Top 20 - Hacker News Hiring Trends (November 2019)</title>
       <description>
 &lt;p&gt;GraphQL continues a fast rise that mirrors what popular JavaScript frameworks have done. November marks GraphQL's first time in the top 20 of techologies mentioned on the &lt;a href="https://news.ycombinator.com/item?id=21419536"&gt;Hacker News "Who is Hiring?" thread.&lt;/a&gt; GraphQL was &lt;a href="https://news.ycombinator.com/item?id=10153497"&gt;first mentioned in September, 2015&lt;/a&gt; and joins TypeScript as one of the newest entries in the Top 20 over the past year.&lt;/p&gt;
 &lt;p&gt;At the top of rankings, React won again, extending its win streak to 30th month in a row. A full 2 and a half years and running as the top tech. The Top 3 remain unchanged with Python #2 and AWS #3. JavaScript rose 2 spots to #4 and PostgreSQL kept its spot at #5.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/nov-graphql-reaches-top-20.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full September rankings.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/nov-graphql-reaches-top-20.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full November rankings.&lt;/p&gt;
       </description>
       <pubDate>Mon, 25 Nov 2019 00:15:00 +0000</pubDate>
       <link>
@@ -26,7 +50,7 @@
       <description>
 &lt;p&gt;Fall hiring season was in full swing in &lt;a href="https://news.ycombinator.com/item?id=21126014"&gt;October's "Ask HN: Who is hiring?" thread&lt;/a&gt; with the usual technologies in demand. React ran away with the top spot again, showing no sign of weakness as it beat Python by 8 percentage points and won for the 29th month in a row.&lt;/p&gt;
 &lt;p&gt;Overall, there was not a lot of movement in the top rankings. The top 3 remain unchnaged from last month. TypeScript did slide back a few  spots, while Full Stack and JavaScript reclaimed some ground.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full September rankings.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full October rankings.&lt;/p&gt;
       </description>
       <pubDate>Mon, 28 Oct 2019 02:50:00 +0000</pubDate>
       <link>
