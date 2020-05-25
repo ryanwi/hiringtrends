@@ -2,24 +2,35 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.2)
-    faraday (0.15.2)
+    faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    liquid (4.0.0)
-    method_source (0.9.0)
-    multipart-post (2.0.0)
-    pry (0.11.3)
-      coderay (~> 1.1.0)
-      method_source (~> 0.9.0)
-    redis (4.0.1)
+    io-console (0.5.6)
+    irb (1.2.4)
+      reline (>= 0.0.1)
+    liquid (4.0.3)
+    method_source (1.0.0)
+    multipart-post (2.1.1)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    rake (13.0.1)
+    redis (4.1.4)
+    reline (0.1.4)
+      io-console (~> 0.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   faraday
+  irb
   liquid
   pry
+  rake
   redis
 
+RUBY VERSION
+   ruby 2.7.1p83
+
 BUNDLED WITH
-   1.16.2
+   2.1.4
