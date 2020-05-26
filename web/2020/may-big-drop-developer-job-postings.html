@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big drop in developer job postings - HN Hiring Trends (May 2020)</title>
+    <meta property="og:site_name" content="HN Hiring Trends" />
+    <meta property="og:site" content="www.hntrends.com" />
+    <meta property="og:title" content="Big drop in developer job postings - HN Hiring Trends (May 2020)" />
+    <meta property="og:description" content="Most Popular programming languanges and software development technologies for May, 2020">
+    <meta property="og:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
+    <meta property="og:url" content="https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html" />
+    <meta property="og:type" content="article" />
+    <meta name="description" content="Most Popular programming languanges and software development technologies for May, 2020">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ryanwi" />
+    <meta name="twitter:title" content="Big drop in developer job postings - HN Hiring Trends (May 2020)" />
+    <meta name="twitter:description" content="Most Popular programming languanges and software development technologies for May, 2020" />
+    <meta name="twitter:image" content="https://s3.amazonaws.com/rw-net/hacker-news-hiring-trends/hacker-news-hiring-trends.png" />
+    <link rel="me" href="https://twitter.com/ryanwi">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/carbon-left.css" />
+    <link rel="alternate" type="application/rss+xml" title="Hacker News Hiring Trends" href="https://www.hntrends.com/feed.xml">
+  </head>
+  <body>
+
+<div class="container">
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../">Home and Archives</a></li>
+      <li class="breadcrumb-item active">May 2020</li>
+      <li class="breadcrumb-item"><a href="#highlights">Highlights and Analysis</a></li>
+      <li class="breadcrumb-item"><a href="#data">Data</a></li>
+    </ol>
+  </nav>
+
+  <div class="page-header row">
+    <div class="col-sm-8">
+      <h1>
+        Big drop in developer job postings
+      </h1>
+      <p class="lead">
+        May 2020 Hacker News Hiring Trends
+      </p>
+    </div>
+    <div class="col-sm-4">
+<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DC53L&placement=wwwhntrendscom" id="_carbonads_js"></script>
+    </div>
+  </div>
+
+  <div class="chart-filters mb-2">
+    <form id="chart_filter" method="get">
+      <div class="form-row align-items-center">
+        <div class="col-md-1">
+          <select id="topfilter" class="form-control">
+            <option value="5" selected>Top 5</option>
+            <option value="10">Top 10</option>
+            <option value="20">Top 20</option>
+            <option value="50">Top 50</option>
+          </select>
+        </div>
+
+        <div class="col-md-1">
+          or compare
+        </div>
+
+        <div id="term_comparisons" class="col-md-9 form-row">
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" placeholder="Ruby" />
+          </div>
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" placeholder="Python" />
+          </div>
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" />
+          </div>
+          <div class="col">
+            <input type="text" name="compare" class="term-compare form-control" />
+          </div>
+        </div>
+
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-light">Compare</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="chart" class="mb-5" style="width:100%; height:400px;"></div>
+
+  <div class="row">
+    <div class="col-md-9">
+      <h3 id="highlights">May Highlights</h3>
+      <div class="post-date">Monday, May 25, 2020</div>
+      <p>
+        With the midway point of 2020 fast approaching, and the world in the midst of perhaps the largest shift in employment in my lifetime, it seems like an appropriate time time to take a peek at how software job trends are looking through the lens of <a href="https://news.ycombinator.com/item?id=23042618"><em>Ask HN: Who is hiring?</em></a>, a regular, monthly collection of software development job postings. The summary posts on hntrends.com usually focus on specific technologies that are gaining or losing adoption, but first let's look at how Covid-19 is affecting this specific job board.
+      </p>
+      <p>
+        From my two perspectives, this data and my own job it should be no surprise that Software Development jobs have been significantly impacted by Covid-19. As companies halt hiring and announce furloughs and layoffs, the trend is showing clearly on <em>Ask HN: Who is hiring?</em>. April and May both dropped sharply, 39% decreases over the same month in 2019. May is traditionally the peak month of the year for postings on HN, let's hope the summer and fall can rebound to beat May this year.
+      </p>
+
+      <div id="comments_chart" style="width:100%; height:300px;" class="mb-5"></div>
+
+      <p>
+        Now, onto the tech changes, or lack thereof. React still reigns supreme in the number 1 spot with Python and AWS holding steady in second and third place, respectively. This is the same top three as April as well as the same top three as last May.
+      </p>
+      <p>
+        Looking further through the rankings, it looks like TypeScript is the one making the biggest push in 2020, just like it was in 2019. TypeScript has held the #5 spot nearly all of 2020. In fact 4 of the top 10 are JavaScript related as JavaScript continues its dominance of the web stack.
+      </p>
+      <p>
+        Onto the rankings...
+      </p>
+
+      <h4>Top 10 Programming Languages</h4>
+      <ol>
+        <li><a href="?compare=Python">Python</a></li>
+        <li><a href="?compare=TypeScript">TypeScript</a></li>
+        <li><a href="?compare=JavaScript">JavaScript</a></li>
+        <li><a href="?compare=golang">Go</a></li>
+        <li><a href="?compare=Java">Java</a></li>
+        <li><a href="?compare=Ruby">Ruby</a></li>
+        <li><a href="?compare=C%2B%2B">C++</a></li>
+        <li><a href="?compare=Rust">Rust</a></li>
+        <li><a href="?compare=Kotlin">Kotlin</a></li>
+        <li><a href="?compare=C%23">C#</a></li>
+      </ol>
+      <p>
+        <a href="?compare=Python&amp;compare=TypeScript&amp;compare=JavaScript&amp;compare=golang&amp;compare=Java&amp;compare=Ruby&amp;compare=C%2B%2B&amp;compare=Rust&amp;compare=Kotlin&amp;compare=C%23">Compare Top 10 Programming Languages</a>
+      </p>
+
+
+      <h4>Server-side Frameworks</h4>
+      <p>
+        <a href="?compare=Rails&compare=node.js&compare=PHP&compare=Django">
+          Compare Rails, node.js, PHP and Django
+        </a>
+      </p>
+
+      <h4>JavaScript Frameworks</h4>
+      <p>
+        <a href="?compare=AngularJS&compare=Ember&compare=React&compare=Vue">
+          Compare React, Angular, Vue, and Ember
+        </a>
+      </p>
+
+      <h4>SQL Databases</h4>
+      <p>
+        <a href="?compare=Postgresql&compare=MySQL&compare=SQL+Server&compare=">
+          Compare Postgresql, MySQL and SQL Server
+        </a>
+      </p>
+
+      <h4>NoSQL Databases</h4>
+      <p>
+        <a href="?compare=Mongodb&amp;compare=elasticsearch&amp;compare=Cassandra&amp;compare=DynamoDB">
+          Compare Mongodb, Elasticsearch, Cassandra and DynamoDB
+        </a>
+      </p>
+
+      <h4>Big Data</h4>
+      <p>
+        <a href="?compare=storm&amp;compare=Hadoop&amp;compare=Spark">
+          Compare Storm, Hadoop and Spark
+        </a>
+      </p>
+
+      <h4>Messaging</h4>
+      <p>
+        <a href="?compare=kafka&amp;compare=rabbitmq&amp;compare=SQS&amp;compare=Kinesis">
+          Compare Kafka, RabbitMQ, SQS and Kinesis
+        </a>
+      </p>
+
+      <h4>DevOps Tools</h4>
+      <p>
+        <a href="?compare=Chef&amp;compare=Puppet&amp;compare=Ansible&amp;compare=Terraform&amp;compare=CloudFormation">
+          Compare Terraform, Chef, Puppet, Ansible and CloudFormation
+        </a>
+      </p>
+
+      <h4>Virtualization and Container Tools</h4>
+      <p>
+        <a href="?compare=docker&amp;compare=Kubernetes&amp;compare=mesos&amp;compare=Terraform">
+          Compare Docker, Kubernetes, Mesos and Terraform
+        </a>
+      </p>
+
+      <h4>Cryptocurrency and Blockchain</h4>
+      <p>
+        <a href="?compare=blockchain&amp;compare=bitcoin&amp;compare=ethereum"> Compare Blockchain, Bitcoin and Ethereum</a>
+      </p>
+
+      <h4>Cloud Providers</h4>
+      <p>
+        <a href="?compare=AWS&amp;compare=GCP&amp;compare=Azure">Compare AWS, GCP and Azure</a>
+      </p>
+
+      <h4>Deep Learning</h4>
+      <p>
+        <a href="?compare=TensorFlow&amp;compare=PyTorch&amp;compare=Keras">Compare TensorFlow, PyTorch and Keras</a>
+      </p>
+    </div>
+
+    <div class="col-md-3">
+      <p style="margin-top:30px;">
+        <a href="http://eepurl.com/DVVSb" class="btn btn-success btn-lg">Subscribe for updates</a>
+      </p>
+
+  <div class="badges">
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+     lang: en_US
+    </script>
+    <script type="IN/Share" data-url="https://hntrends.com/2020/may-big-drop-developer-job-postings.html" data-counter="right"></script>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="hntrends.com/2020/may-big-drop-developer-job-postings.html" data-text="Hacker News tech hiring trends" data-via="ryanwi" data-hashtags="hackernews">Tweet</a>
+  </div>
+
+  </div>
+</div>
+
+<h3>Rankings and movers</h3>
+<div id="data"></div>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item"><a href="#top20" class="nav-link active" data-toggle="tab">Top 20</a></li>
+    <li class="nav-item"><a href="#rising" class="nav-link" data-toggle="tab">Rising</a></li>
+    <li class="nav-item"><a href="#falling" class="nav-link" data-toggle="tab">Falling</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="top20">
+      
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Rank</th>
+      <th>Last Month</th>
+      <th>Change</th>
+      <th>Last Year</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><a href="?compare1=React">React</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Python">Python</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=AWS">AWS</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Full Stack">Full Stack</td>
+      <td>4</td>
+      <td>7</td>
+      <td class="positive success">+3</td>
+      
+      <td>8</td>
+      <td class="positive success">+4</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=TypeScript">TypeScript</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0</td>
+      <td>12</td>
+      <td class="positive success">+7</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=node.js">node.js</td>
+      <td>6</td>
+      <td>10</td>
+      <td class="positive success">+4</td>
+      
+      <td>4</td>
+      <td class="negative danger">-2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=JavaScript">JavaScript</td>
+      <td>7</td>
+      <td>8</td>
+      <td class="positive success">+1</td>
+      
+      <td>7</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Postgresql">Postgresql</td>
+      <td>8</td>
+      <td>4</td>
+      <td class="negative danger">-4</td>
+      
+      <td>6</td>
+      <td class="negative danger">-2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=golang">golang</td>
+      <td>9</td>
+      <td>12</td>
+      <td class="positive success">+3</td>
+      
+      <td>10</td>
+      <td class="positive success">+1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Java">Java</td>
+      <td>10</td>
+      <td>13</td>
+      <td class="positive success">+3</td>
+      
+      <td>11</td>
+      <td class="positive success">+1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=DevOps">DevOps</td>
+      <td>11</td>
+      <td>9</td>
+      <td class="negative danger">-2</td>
+      
+      <td>5</td>
+      <td class="negative danger">-6</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Machine Learning">Machine Learning</td>
+      <td>12</td>
+      <td>6</td>
+      <td class="negative danger">-6</td>
+      
+      <td>9</td>
+      <td class="negative danger">-3</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Docker">Docker</td>
+      <td>13</td>
+      <td>19</td>
+      <td class="positive success">+6</td>
+      
+      <td>13</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=AI">AI</td>
+      <td>14</td>
+      <td>11</td>
+      <td class="negative danger">-3</td>
+      
+      <td>17</td>
+      <td class="positive success">+3</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Ruby">Ruby</td>
+      <td>15</td>
+      <td>18</td>
+      <td class="positive success">+3</td>
+      
+      <td>18</td>
+      <td class="positive success">+3</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=iOS">iOS</td>
+      <td>16</td>
+      <td>15</td>
+      <td class="negative danger">-1</td>
+      
+      <td>21</td>
+      <td class="positive success">+5</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Android">Android</td>
+      <td>17</td>
+      <td>14</td>
+      <td class="negative danger">-3</td>
+      
+      <td>15</td>
+      <td class="negative danger">-2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=GraphQL">GraphQL</td>
+      <td>18</td>
+      <td>17</td>
+      <td class="negative danger">-1</td>
+      
+      <td>31</td>
+      <td class="positive success">+13</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Kubernetes">Kubernetes</td>
+      <td>19</td>
+      <td>16</td>
+      <td class="negative danger">-3</td>
+      
+      <td>14</td>
+      <td class="negative danger">-5</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Rails">Rails</td>
+      <td>20</td>
+      <td>20</td>
+      <td>0</td>
+      <td>16</td>
+      <td class="negative danger">-4</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+    <div class="tab-pane" id="rising">
+      
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><a href="?compare1=Spring">Spring</td>
+      <td>8</td>
+      <td>64</td>
+      <td>3</td>
+      <td>133</td>
+      <td class="positive success">+69</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Asp">Asp</td>
+      <td>5</td>
+      <td>73</td>
+      <td>3</td>
+      <td>131</td>
+      <td class="positive success">+58</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Oracle">Oracle</td>
+      <td>6</td>
+      <td>69</td>
+      <td>4</td>
+      <td>123</td>
+      <td class="positive success">+54</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Haskell">Haskell</td>
+      <td>6</td>
+      <td>67</td>
+      <td>6</td>
+      <td>98</td>
+      <td class="positive success">+31</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Express">Express</td>
+      <td>9</td>
+      <td>58</td>
+      <td>8</td>
+      <td>87</td>
+      <td class="positive success">+29</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=REST">REST</td>
+      <td>17</td>
+      <td>33</td>
+      <td>17</td>
+      <td>54</td>
+      <td class="positive success">+21</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Bitcoin">Bitcoin</td>
+      <td>5</td>
+      <td>75</td>
+      <td>6</td>
+      <td>96</td>
+      <td class="positive success">+21</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Distributed Systems">Distributed Systems</td>
+      <td>16</td>
+      <td>34</td>
+      <td>17</td>
+      <td>55</td>
+      <td class="positive success">+21</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Rust">Rust</td>
+      <td>19</td>
+      <td>31</td>
+      <td>20</td>
+      <td>51</td>
+      <td class="positive success">+20</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Apollo">Apollo</td>
+      <td>6</td>
+      <td>68</td>
+      <td>8</td>
+      <td>84</td>
+      <td class="positive success">+16</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+    <div class="tab-pane" id="falling">
+      
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><a href="?compare1=webpack">webpack</td>
+      <td>0</td>
+      <td>204</td>
+      <td>9</td>
+      <td>79</td>
+      <td class="negative danger">-125</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=RDS">RDS</td>
+      <td>0</td>
+      <td>222</td>
+      <td>6</td>
+      <td>100</td>
+      <td class="negative danger">-122</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Git">Git</td>
+      <td>1</td>
+      <td>168</td>
+      <td>13</td>
+      <td>62</td>
+      <td class="negative danger">-106</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=HTML5">HTML5</td>
+      <td>0</td>
+      <td>181</td>
+      <td>7</td>
+      <td>88</td>
+      <td class="negative danger">-93</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Web Services">Web Services</td>
+      <td>1</td>
+      <td>162</td>
+      <td>8</td>
+      <td>85</td>
+      <td class="negative danger">-77</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Redshift">Redshift</td>
+      <td>1</td>
+      <td>172</td>
+      <td>6</td>
+      <td>101</td>
+      <td class="negative danger">-71</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=S3">S3</td>
+      <td>1</td>
+      <td>129</td>
+      <td>12</td>
+      <td>69</td>
+      <td class="negative danger">-60</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Apache">Apache</td>
+      <td>1</td>
+      <td>151</td>
+      <td>6</td>
+      <td>95</td>
+      <td class="negative danger">-56</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=SQL">SQL</td>
+      <td>5</td>
+      <td>79</td>
+      <td>39</td>
+      <td>27</td>
+      <td class="negative danger">-52</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare1=Embedded Systems">Embedded Systems</td>
+      <td>1</td>
+      <td>139</td>
+      <td>6</td>
+      <td>97</td>
+      <td class="negative danger">-42</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+  </div>
+
+  <footer style="text-align:center;margin-top:30px;margin-bottom:30px;">
+    <a href="https://www.ryanwilliams.dev">Portland web developer Ryan Williams</a> •
+    <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> •
+    Email: ryan at ryanwilliams.dev •
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+  </footer>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="../data/data-20200501.js"></script>
+<script src="../js/builder-v12.js"></script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16316427-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+
+<!-- May
+2020 524
+2019 856
+2018 1033
+2017 913
+
+April
+2020 479
+2019 791
+2018 884
+2017 753
+
+March
+
+April
+
+May
+
+
+
+-->

@@ -4,8 +4,25 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Dec 2019 22:20:00 +0000</pubDate>
-    <lastBuildDate>Tue, 31 Dec 2019 22:20:00 +0000</lastBuildDate>
+    <pubDate>Tue, 26 May 2020 03:30:00 +0000</pubDate>
+    <lastBuildDate>Tue, 26 May 2020 03:30:00 +0000</lastBuildDate>
+    <item>
+      <title>Big drop in developer job postings - HN Hiring Trends (May 2020)</title>
+      <description>
+&lt;p&gt;With the midway point of 2020 fast approaching, and the world in the midst of perhaps the largest shift in employment in my lifetime, it seems like an appropriate time time to take a peek at how software job trends are looking through the lens of &lt;a href="https://news.ycombinator.com/item?id=23042618"&gt;&lt;em&gt;Ask HN: Who is hiring?&lt;/em&gt;&lt;/a&gt;, a regular, monthly collection of software development job postings. The summary posts on hntrends.com usually focus on specific technologies that are gaining or losing adoption, but first let's look at how Covid-19 is affecting this specific job board.&lt;/p&gt;
+&lt;p&gt;From my two perspectives, this data and my own job it should be no surprise that Software Development jobs have been significantly impacted by Covid-19. As companies halt hiring and announce furloughs and layoffs, the trend is showing clearly on &lt;em&gt;Ask HN: Who is hiring?&lt;/em&gt;. April and May both dropped sharply, 39% decreases over the same month in 2019. May is traditionally the peak month of the year for postings on HN, let's hope the summer and fall can rebound to beat May this year.&lt;/p&gt;
+&lt;p&gt;Now, onto the tech changes, or lack thereof. React still reigns supreme in the number 1 spot with Python and AWS holding steady in second and third place, respectively. This is the same top three as April as well as the same top three as last May.&lt;/p&gt;
+&lt;p&gt;Looking further through the rankings, it looks like TypeScript is the one making the biggest push in 2020, just like it was in 2019. TypeScript has held the #5 spot nearly all of 2020. In fact 4 of the top 10 are JavaScript related as JavaScript continues its dominance of the web stack.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full May rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Tue, 26 May 2020 03:30:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html
+      </guid>
+    </item>    
     <item>
       <title>Another year on top for React - Hacker News Hiring Trends (December 2019)</title>
       <description>
