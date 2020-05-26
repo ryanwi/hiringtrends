@@ -204,8 +204,8 @@ $(function () {
   });
 
   // wire up autocomplete
-  // $( ".term-compare" ).autocomplete({
-  //   source: terms
-  // });
+  $( ".term-compare" ).autocomplete({
+    source: terms
+  });
 
 });
