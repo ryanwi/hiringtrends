@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe HiringTrends::Program do
   before :each do
     @hn = HiringTrends::Program.new

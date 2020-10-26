@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe HiringTrends::JobPosting do
   it "initializes" do
     tc = HiringTrends::JobPosting.new("comment")
