@@ -12,14 +12,11 @@ This is a personal development project, in particular for exploring redis.  You 
 
 ## Requirements
 
-  * Ruby (developed and tested on 2.1.1-p76)
+  * Ruby (2.5+)
   * Redis
 
 ## Installation
 
-Install via RubyGems:
-
-    gem install hiringtrends
 
 ## Usage
 
