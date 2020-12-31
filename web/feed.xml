@@ -4,13 +4,18 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate></pubDate>
-    <lastBuildDate></lastBuildDate>
+    <pubDate>Thu, 31 Dec 2020 06:53:00 +0000</pubDate>
+    <lastBuildDate>Thu, 31 Dec 2020 06:53:00 +0000</lastBuildDate>
     <item>
       <title> - HN Hiring Trends (December 2020)</title>
       <description>
+&lt;p&gt;I think it's safe to say that the World experienced unprecedented change this year with the Covid-19 Pandemic and the response to it. But, even with a shift to remote work, and a strong software job market, the tools and technologies that Software Developers used in 2020 remained very similar to the tools used in prior years. Looking at the job postings from &lt;a href="https://news.ycombinator.com/item?id=25266288"&gt;Hacker News&lt;/a&gt;, this data reveals very little change from what was found in 2019.&lt;/p&gt;
+&lt;p&gt;Starting at the top of the rankings, the Top Three this month are the exact same Top 3 from December 2019 with React, Python and AWS taking their usual positions. TypeScript did take a jump into the top 5, but as an extension of the JavaScript ecosystem, it's essentially taken JavaScript's spot. Otherwise 9 of last December's Top 10 are in the Top 10 this December.&lt;/p&gt;
+&lt;p&gt;For those that live on the bleeding edge, it may have even been a disappointing year since there was no obvious breakout tech in 2020. Where 2019 had TypeScript and 2018 had Kubernetes, there was nothing that experienced a similar meteoric rise in 2020.&lt;/p&gt;
+&lt;p&gt;Looking ahead to 2021, what technologies should we keeping an eye on?&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full December rankings.&lt;/p&gt;
       </description>
-      <pubDate></pubDate>
+      <pubDate>Thu, 31 Dec 2020 06:53:00 +0000</pubDate>
       <link>
         https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html
       </link>
