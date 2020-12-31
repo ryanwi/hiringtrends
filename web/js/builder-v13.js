@@ -146,7 +146,7 @@ $(function () {
       comparisons = comparisons.concat(Array(4-comparisons.length).fill(""));
     }
 
-    $("div#term_comparisons").empty();    
+    $("div#term_comparisons").empty();
     comparisons.forEach(function(queryTerm) {
       $("div#term_comparisons").append(
         $("<div class=\"col\">").append(
@@ -159,7 +159,7 @@ $(function () {
         )
       );
     });
-    
+
     chartBuilder.renderComparison();
   } else {
     chartBuilder.renderTopTerms(5);
