@@ -4,8 +4,20 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 May 2020 03:30:00 +0000</pubDate>
-    <lastBuildDate>Tue, 26 May 2020 03:30:00 +0000</lastBuildDate>
+    <pubDate></pubDate>
+    <lastBuildDate></lastBuildDate>
+    <item>
+      <title> - HN Hiring Trends (December 2020)</title>
+      <description>
+      </description>
+      <pubDate></pubDate>
+      <link>
+        https://www.hntrends.com/2020/
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2020/
+      </guid>
+    </item>
     <item>
       <title>Big drop in developer job postings - HN Hiring Trends (May 2020)</title>
       <description>
@@ -22,7 +34,7 @@
       <guid isPermaLink="true">
         https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>Another year on top for React - Hacker News Hiring Trends (December 2019)</title>
       <description>
@@ -46,7 +58,7 @@ Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
       <guid isPermaLink="true">
         https://www.hntrends.com/2019/dec-another-year-on-top-for-react.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>GraphQL Reaches Top 20 - Hacker News Hiring Trends (November 2019)</title>
       <description>
@@ -61,7 +73,7 @@ Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
       <guid isPermaLink="true">
         https://www.hntrends.com/2019/nov-graphql-reaches-top-20.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>No sign of React Falling Back - Hacker News Hiring Trends (October 2019)</title>
       <description>
@@ -76,7 +88,7 @@ Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
       <guid isPermaLink="true">
         https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>React reaches 30% of all posts (September 2019)</title>
       <description>
@@ -91,7 +103,7 @@ Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
       <guid isPermaLink="true">
         https://www.hntrends.com/2019/sep-react-reaches-thirty-percent-posts.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>TypeScript reaches the Top 10 (August 2019)</title>
       <description>
@@ -106,7 +118,7 @@ Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
       <guid isPermaLink="true">
         https://www.hntrends.com/2019/aug-typescript-reaches-top-10.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>Don't worry, React is still dominating - Hacker News Hiring Trends (July 2019)</title>
       <description>
@@ -121,7 +133,7 @@ Top 10 contender every month and at parity with JavaScript regularly.&lt;/p&gt;
       <guid isPermaLink="true">
         https://www.hntrends.com/2019/jul-dont-worry-react-still-dominating.html
       </guid>
-    </item>    
+    </item>
     <item>
       <title>PostgreSQL vs MySQL no longer close - Hacker News Hiring Trends (March 2019)</title>
       <description>
