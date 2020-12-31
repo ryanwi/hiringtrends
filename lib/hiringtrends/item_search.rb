@@ -9,7 +9,7 @@ module HiringTrends
 
       loop do
         puts "=== page #{page} ==="
-        response = connection.get search_url(page)
+        response = conn.get search_url(page)
         hits = response.body
         results += hits["hits"]
         page += 1
@@ -17,17 +17,17 @@ module HiringTrends
       end
 
       results
-        .select {|result| result["title"][/ask hn: who is hiring\?\s\(\w*\s\d{4}\)/i] }
-        .map {|r| HiringTrends::Item.new(r)}
+        .select { |result| result["title"][/ask hn: who is hiring\?\s\(\w*\s\d{4}\)/i] }
+        .map { |result| HiringTrends::Item.new(result) }
     end
 
     def search_url(page = 0)
       "/api/v1/search_by_date?query=hiring&tags=story,%28author__whoishiring,%20author_whoishiring%29&page=#{page}"
     end
 
-    def connection
-      @connection ||= Faraday.new(url: "https://hn.algolia.com") do |conn|
-        conn.response :json
+    def conn
+      @conn ||= Faraday.new(url: "https://hn.algolia.com") do |builder|
+        builder.response :json
       end
     end
   end
