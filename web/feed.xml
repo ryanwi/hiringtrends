@@ -4,8 +4,24 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Dec 2020 06:53:00 +0000</pubDate>
-    <lastBuildDate>Thu, 31 Dec 2020 06:53:00 +0000</lastBuildDate>
+    <pubDate>Mon, 22 Feb 2021 01:50:00 +0000</pubDate>
+    <lastBuildDate>Mon, 22 Feb 2021 01:50:00 +0000</lastBuildDate>
+    <item>
+      <title>Remote Work is now the norm - Hacker News Hiring Trends (February 2021)</title>
+      <description>
+&lt;p&gt;The new year and a new way of working in the Covid era allows us to take a fresh look at hiring trends on &lt;a href="https://news.ycombinator.com/item?id=25989764"&gt;Hacker News' whoishiring threads&lt;/a&gt;. This month, we are going beyond just technology. A few new terms have been added to the analysis, looking at software job specialization (frontend, backend, full-stack), and job experience/level (Principal, Staff, Senior, Junior).&lt;/p&gt;
+&lt;p&gt;But, first, and not all that surprisingly, the biggest change this month is from checking in on remote work. Remote postings now account for about 2/3 of all postings, up from about 30% a year ago, pre-Covid. Remote is now the most common attribute of job postings, drowing out perennial winner React.&lt;/p&gt;
+&lt;p&gt;The second finding from the month is that hiring is ramping up. The spring is usually when the total number of posts starts spiking for the year, but this month had the third most posts ever in the history of the whoishiring thread. This is a significant rebound from &lt;a href="https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html"&gt;last May when it was noted that jobs were dropping&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2021/feb-remote-work-now-norm.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full February rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 22 Feb 2021 01:50:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2021/feb-remote-work-now-norm.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2021/feb-remote-work-now-norm.html
+      </guid>
+    </item>
     <item>
       <title>2020 was a year unlike any other, but tech tools didn't change much - HN Hiring Trends (December 2020)</title>
       <description>
