@@ -18,8 +18,8 @@
       <td>{{ term[1].rank }}</td>
       <td>{{ term[1].count_last_year }}</td>
       <td>{{ term[1].rank_last_year }}</td>
-      {% if term[1].rank_change_year > 0 %}<td class="positive success">+{{ term[1].rank_change_year }}</td>
-      {% elsif term[1].rank_change_year < 0 %}<td class="negative danger">{{ term[1].rank_change_year }}</td>
+      {% if term[1].rank_change_year > 0 %}<td class="positive table-success">+{{ term[1].rank_change_year }}</td>
+      {% elsif term[1].rank_change_year < 0 %}<td class="negative table-danger">{{ term[1].rank_change_year }}</td>
       {% else %}<td>{{ term[1].rank_change_year }}</td>{% endif %}
     </tr>
     {% endfor %}
