@@ -125,14 +125,21 @@
       <div id="data"></div>
 
       <div>
-        <ul class="nav nav-tabs">
-          <li class="nav-item"><a href="#top20" class="nav-link active" data-toggle="tab">Top 20</a></li>
-          <li class="nav-item"><a href="#rising" class="nav-link" data-toggle="tab">Rising</a></li>
-          <li class="nav-item"><a href="#falling" class="nav-link" data-toggle="tab">Falling</a></li>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#top20" type="button" role="tab" aria-selected="true">Top 20</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#rising" type="button" role="tab" aria-selected="false">Rising</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#falling" type="button" role="tab" aria-selected="false">Falling</button>
+          </li>
         </ul>
 
+
         <div class="tab-content">
-          <div class="tab-pane active" id="top20">
+          <div class="tab-pane active" role="tabpanel" id="top20">
             <table class="table table-condensed">
               <thead>
                 <tr>
@@ -356,7 +363,7 @@
               </tbody>
             </table>
           </div>
-          <div class="tab-pane" id="rising">
+          <div class="tab-pane" role="tabpanel" id="rising">
             <table class="table table-condensed">
               <thead>
                 <tr>
@@ -474,7 +481,7 @@
             </table>
 
           </div>
-          <div class="tab-pane" id="falling">
+          <div class="tab-pane" role="tabpanel" id="falling">
             <table class="table table-condensed">
               <thead>
                 <tr>
