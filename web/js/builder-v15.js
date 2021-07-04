@@ -6,14 +6,14 @@ let terms;
 let categories;
 let series;
 
-function populateTermsDatalist() {
-  const list = document.getElementById('datalistTerms'); 
-  terms.forEach(item => {
+const populateTermsDatalist = (dataListElement, optionList) => {
+  const list = document.getElementById(dataListElement); 
+  optionList.forEach(item => {
     let option = document.createElement('option');
     option.value = item;   
     list.appendChild(option);
   });
-}
+};
 
 const highChartConverter = (function () {
 
@@ -220,7 +220,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     series: highChartConverter.convertCountYoySeries()
   });
 
-  // wire up autocomplete/datalist
-  populateTermsDatalist();
-
+  populateTermsDatalist('datalistTerms', terms);
 });
