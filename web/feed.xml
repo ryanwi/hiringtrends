@@ -4,8 +4,27 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Jul 2021 21:47:00 +0000</pubDate>
-    <lastBuildDate>Sun, 04 Jul 2021 21:47:00 +0000</lastBuildDate>
+    <pubDate>Sat, 31 Jul 2021 23:40:00 +0000</pubDate>
+    <lastBuildDate>Sat, 31 Jul 2021 23:40:00 +0000</lastBuildDate>
+    <item>
+      <title>July 2021 Hacker News Hiring Trends</title>
+      <description>
+&lt;p&gt;For July, jobs postings in the "Ask HN: Who is hiring?" thread remained strong with 65% year-over-year growth compared to July of 2020. At the time of this post, there were 931 top level comments in the July thread which represent job postings being analyzed. This is a bit of a dip from June's all time record high number of 1040 posts, but that's not too unusual looking at past years' summer time hiring dips.&lt;/p&gt;
+&lt;h4&gt;Beyond technology trends&lt;/h4&gt;
+&lt;p&gt;With the COVID Pandemic sigificantly altering the work landscape between Office and Remote, I have added several non-tech terms into the analyis. The result of this is that the "Remote" keyword is the top term by far, with over 70% of positiona being offered as remote. If companies delay return to office plans due to the resurgence of COVID then this trend will likely remain.&lt;/p&gt;
+&lt;p&gt;Looking further at the non-tech results, thre are a couple of interesting trends to watch. First, the type of developer positions being advertised include variations on the preferred candidate focus between &lt;a href="https://www.hntrends.com/2021/july.html?compare=Back+End&amp;compare=Front+End&amp;compare=Full+Stack"&gt;Back-end vs Front-end vs Full-stack&lt;/a&gt; with Back-end winning for now. Meanwhile, when it comes to experience, &lt;a href="https://www.hntrends.com/2021/july.html?compare=Senior&amp;compare=Junior"&gt;Senior level developers are being sought 10 times more frequently than Junior developers&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Where is the hot Tech?&lt;/h4&gt;
+&lt;p&gt;There has not been a breakout tech trend that I can spot yet this year. React, Python, AWS, and TypeScript are still at the top when it comes to technology related terms. The Go programming language is perhaps the biggest trend as &lt;a href="https://www.hntrends.com/2021/july.html?compare=golang&amp;compare=ruby&amp;compare=java"&gt;Go has begun to separate from Ruby and Java a bit&lt;/a&gt;. Kubernetes has made a push into the top 20 as well over the past year, but both the rise of Go and Kubernetes have been happening for a few years.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2021/july.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full July rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Sat, 31 Jul 2021 23:40:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2021/july.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2021/july.html
+      </guid>
+    </item>
     <item>
       <title>New record for job postings - Hacker News Hiring Trends (June 2021)</title>
       <description>
