@@ -54,6 +54,7 @@ module HiringTrends
       manager = Typhoeus::Hydra.new(:max_concurrency => 10)
       conn = Faraday.new(url: "https://hn.algolia.com") do |builder|
         builder.adapter  :typhoeus
+        builder.response :logger
         builder.response :json
       end
 
