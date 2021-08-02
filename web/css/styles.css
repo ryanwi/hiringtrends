@@ -2,34 +2,10 @@ body {
   background-color: #f6f6ef;
 }
 
-body.index {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-h3 {
-
-}
-
 a {
-  color: #045fb4;
 }
 
 ol.breadcrumb {
-  background-color: #FF742B;
-}
-
-.breadcrumb>.active {
-  color: #fff;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #FF742B;
-  margin: 1em 0;
-  padding: 0;
 }
 
 .post { margin-bottom: 2rem; }
@@ -44,3 +20,24 @@ hr {
 
 .negative { color: red; background-color: #f2dede; }
 .positive { color: green; background-color: #dff0d8; }
+
+.masthead {
+  position: relative;
+  padding: 2rem 1.25rem;
+  font-weight: 300;
+  color: #f6f6ef;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+  background-image: linear-gradient(#4D4D4D, #666666);
+}
+
+.masthead h1 {
+  margin-bottom: .25rem;
+}
+
+.masthead p {
+  max-width: 640px;
+}
+
+.masthead a {
+  color: #f6f6ef;
+}
