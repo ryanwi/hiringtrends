@@ -1,9 +1,10 @@
 require_relative 'lib/hiringtrends'
 
-hn = HiringTrends::Program.new "https://gist.githubusercontent.com/ryanwi/6135845/raw/9c13f1e036b8f18554fccd4755c1cc3aeac00453/software-terms.dic"
+terms = "https://gist.githubusercontent.com/ryanwi/6135845/raw/749910d33a5cf860562048ebd473d6731f9abe6e/software-terms.dic"
+hn = HiringTrends::Program.new terms
 hn.clean
 hn.get_submissions
 hn.get_comments_for_submissions
 hn.save_submissions
 hn.analyze_submissions
-hn.publish("February", "2021", "Sunday", "21", 20)
+hn.publish("November", "2021", "Sunday", "14")

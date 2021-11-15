@@ -167,13 +167,13 @@ module HiringTrends
     end
 
     # Publish analysis
-    def publish(month, year, day, date, top_count)
+    def publish(month, year, day, date)
       data_filename = "data-#{year}#{month}_fillin_"
       publish_data(year, data_filename)
 
       key_measures = calculate_key_measures
 
-      publish_index(month, year, day, date, top_count, key_measures)
+      publish_index(month, year, day, date, key_measures)
       publish_post(month, year, day, date, data_filename, key_measures)
     end
 
@@ -219,7 +219,7 @@ module HiringTrends
       return ranked_terms, gainers, losers
     end
 
-    def publish_index(month, year, day, date, top_count, key_measures)
+    def publish_index(month, year, day, date, key_measures)
       data = {
         'year' => year,
         'month' => month,
