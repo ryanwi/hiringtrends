@@ -13,7 +13,7 @@
   <tbody>
     {% for term in losers %}
     <tr>
-      <td><a href="?compare1={{ term[0] }}">{{ term[0] }}</td>
+      <td><a href="?compare={{ term[0] }}">{{ term[0] }}</td>
       <td>{{ term[1].count }}</td>
       <td>{{ term[1].rank }}</td>
       <td>{{ term[1].count_last_year }}</td>

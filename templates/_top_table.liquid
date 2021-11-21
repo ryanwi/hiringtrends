@@ -13,7 +13,7 @@
   <tbody>
     {% for term in top_terms %}
     <tr>
-      <td><a href="?compare1={{ term[0] }}">{{ term[0] }}</td>
+      <td><a href="?compare={{ term[0] }}">{{ term[0] }}</td>
       <td>{{ term[1].rank }}</td>
       <td>{{ term[1].rank_last_month }}</td>
       {% if term[1].rank_change_month > 0 %}<td class="positive table-success">+{{ term[1].rank_change_month }}</td>
