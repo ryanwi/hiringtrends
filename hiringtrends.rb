@@ -7,4 +7,4 @@ hn.get_submissions
 hn.get_comments_for_submissions
 hn.save_submissions
 hn.analyze_submissions
-hn.publish("November", "2021", "Sunday", "14")
+hn.publish("November", "2021", "Sunday", "21")
