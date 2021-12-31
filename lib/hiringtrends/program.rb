@@ -3,7 +3,7 @@ require "faraday"
 require "liquid"
 require "typhoeus"
 require "typhoeus/adapters/faraday"
-require "pry"
+require "debug"
 
 module HiringTrends
   class Program
@@ -71,7 +71,7 @@ module HiringTrends
             .body
             .fetch("children")
         rescue NoMethodError => e
-          binding.pry
+          binding.break
         end
       end
     end
@@ -94,7 +94,7 @@ module HiringTrends
             "num_comments", item.comments.count
           )
         rescue => e
-          binding.pry
+          binding.break
         end
       end
     end
@@ -266,11 +266,9 @@ module HiringTrends
 
       submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
       submission_keys.each do |submission_key|
-        month = redis.hget(submission_key, "month")
-        datapoint = { :month => month }
+        datapoint = { :month => redis.hget(submission_key, "month") }
         datapoint[:num_comments] = redis.hget(submission_key, "num_comments")
-        terms = JSON.parse(redis.hget(submission_key, "terms"))
-        datapoint[:terms] = terms
+        datapoint[:terms] = JSON.parse(redis.hget(submission_key, "terms"))
         data << datapoint
       end
 
