@@ -4,8 +4,25 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Jul 2021 23:40:00 +0000</pubDate>
-    <lastBuildDate>Sat, 31 Jul 2021 23:40:00 +0000</lastBuildDate>
+    <pubDate>Sat, 01 Jan 2022 02:30:00 +0000</pubDate>
+    <lastBuildDate>Sat, 01 Jan 2022 02:30:00 +0000</lastBuildDate>
+    <item>
+      <title>Remote Work trend still climbing - Hacker News Hiring Trends (December 2021)</title>
+      <description>
+&lt;p&gt;In the final month of 2021, the remote work trend that exploded in mid-2020 due to the COVID pandemic shows no sign of slowing. Remote-friendly positions account for nearly 77% of the job postings in December's "Ask HN: Who is hiring?" thread.&lt;/p&gt;
+&lt;p&gt;As for technology trends, there are a couple of interesting updates. First, Java dropped to the #8 programming language, tied with C++. This is likely the lowest, relatvie to other programming languages, Java has ever been in the ten years worth of data tracked here. Ten years ago, Java was peaking at 20% of postings. Now, it's down to about 6%.&lt;/p&gt;
+&lt;p&gt;React is still on top of the tech world, though its trend looks to be plateauing. Might we see it on a downward trend in 2022?&lt;/p&gt;
+&lt;p&gt;Finally, 2021 was the year that Web3 made a big spash onto the scene and so Web3 has now been added to the trends here to track its impact on tech jobs. I'm sure it's only a matter of time until we see job postings asking for 10 years of Web3 experience.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2021/july.html"&gt;Visit the site&lt;/a&gt; to compare trends by technology and view the full December rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Sat, 01 Jan 2022 02:30:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2021/dec-remote-work-trend-still-climbing.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2021/dec-remote-work-trend-still-climbing.html
+      </guid>
+    </item>
     <item>
       <title>July 2021 Hacker News Hiring Trends</title>
       <description>
