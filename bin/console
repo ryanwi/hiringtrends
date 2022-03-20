@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-# require "hiringtrends"
+require_relative "../lib/hiringtrends"
 
 require "irb"
 IRB.start(__FILE__)
