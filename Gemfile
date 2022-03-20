@@ -12,5 +12,3 @@ gem "rake"
 gem "redis"
 gem "rspec"
 gem "typhoeus"
-
-gem "cli-ui", "~> 1.5", ">= 1.5.1"
