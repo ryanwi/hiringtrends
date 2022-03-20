@@ -1,13 +1,18 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-ruby '3.1.1'
+source "https://rubygems.org"
 
-gem 'debug'
-gem 'faraday'
-gem 'faraday_middleware'
-gem 'kredis'
-gem 'liquid'
-gem 'rake'
-gem 'redis'
-gem 'rspec'
-gem 'typhoeus'
+ruby "3.1.1"
+
+gem "debug"
+gem "faraday"
+# gem "faraday_middleware"
+gem "kredis"
+gem "liquid"
+gem "rake"
+gem "redis"
+gem "rspec"
+gem "typhoeus"
+gem "pry"
+
+gem "cli-ui", "~> 1.5", ">= 1.5.1"
