@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require "json"
 require "faraday"
 require "liquid"
 require "typhoeus"
-require "typhoeus/adapters/faraday"
 require "debug"
 
 module HiringTrends
@@ -53,9 +54,9 @@ module HiringTrends
       puts "== retrieving comments from API in parallel =="
       manager = Typhoeus::Hydra.new(:max_concurrency => 10)
       conn = Faraday.new(url: "https://hn.algolia.com") do |builder|
-        builder.adapter  :typhoeus
         builder.response :logger
         builder.response :json
+        builder.adapter  :typhoeus
       end
 
       responses = []

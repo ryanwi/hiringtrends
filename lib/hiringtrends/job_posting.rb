@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HiringTrends
   class JobPosting
     def initialize(text)

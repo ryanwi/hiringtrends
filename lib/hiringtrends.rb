@@ -1,8 +1,10 @@
-require 'redis'
-require_relative 'hiringtrends/program'
-require_relative 'hiringtrends/item_search'
-require_relative 'hiringtrends/item'
-require_relative 'hiringtrends/job_posting'
+# frozen_string_literal: true
+
+require "redis"
+require_relative "hiringtrends/program"
+require_relative "hiringtrends/item_search"
+require_relative "hiringtrends/item"
+require_relative "hiringtrends/job_posting"
 
 module HiringTrends
   SUBMISSIONS_KEY = "hn_submissions"

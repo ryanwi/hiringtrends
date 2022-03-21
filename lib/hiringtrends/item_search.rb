@@ -1,5 +1,6 @@
-require 'faraday'
-require 'faraday_middleware'
+# frozen_string_literal: true
+
+require "faraday"
 
 module HiringTrends
   class ItemSearch
@@ -18,7 +19,7 @@ module HiringTrends
 
       results
         .select { |result| result["title"][/ask hn: who is hiring\?\s\(\w*\s\d{4}\)/i] }
-        .map { |result| HiringTrends::Item.new(result) }
+        .map { |result| HiringTrends::Item.new(result["objectID"], result["author"], result["num_comments"], result["title"]) }
     end
 
     def search_url(page = 0)
