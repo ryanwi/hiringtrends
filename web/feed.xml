@@ -4,14 +4,18 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Mar 2022 03:11:00 +0000</pubDate>
-    <lastBuildDate>Sun, 21 Mar 2022 3:11:00 +0000</lastBuildDate>
+    <pubDate>Mon, 21 Mar 2022 03:40:00 +0000</pubDate>
+    <lastBuildDate>Mon, 21 Mar 2022 3:40:00 +0000</lastBuildDate>
     <item>
       <title>March 2022 Hacker News Hiring Trends</title>
       <description>
-
+&lt;p&gt;Checking in with a quick March Update since it's been a few months. The list of terms used to analyze the job postings has been refreshed with some newer and popular technolgies, technologies that have been gaining ground over the last year. A few of the newer technologies that have cracked the "Rising" list with entries include: FastAPI, Tailwind CSS, web3, Clickhouse, and Flutter.&lt;/p&gt;
+&lt;p&gt;Back up at the top of the charts, the remote hiring trend appears to have peaked, dropping back from an all time high of ~77% of postings to this month with ~74% of postings. Not a big drop, and that's already amazingly high, but the trend is not climbing higher.&lt;/p&gt;
+&lt;p&gt;Looking further at the top 20, it has remained very stable over the last year. Techology-wise, React, Python, and TypeScript are still dominating.&lt;/p&gt;
+&lt;p&gt;Type the technologies or software-related terms of interest to you into the comparison tool above to see how they are faring. What trends do you see?&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2022/march.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full March rankings.&lt;/p&gt;
       </description>
-      <pubDate>Sun, 21 Mar 2022 03:11:00 +0000</pubDate>
+      <pubDate>Mon, 21 Mar 2022 03:35:00 +0000</pubDate>
       <link>
         https://www.hntrends.com/2022/march.html
       </link>
