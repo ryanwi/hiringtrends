@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Mar 2022 03:40:00 +0000</pubDate>
-    <lastBuildDate>Mon, 21 Mar 2022 03:40:00 +0000</lastBuildDate>
+    <pubDate>Mon, 02 May 2022 04:45:00 +0000</pubDate>
+    <lastBuildDate>Mon, 02 May 2022 04:45:00 +0000</lastBuildDate>
+    <item>
+      <title>April 2022 Hacker News Hiring Trends</title>
+      <description>
+&lt;p&gt;TypeScript has dethroned Python. For the first time in over six years, there is a new #1 programming language in the rankings with TypeScript jumping ahead of Python. Python has had a remarkable run, taking the top spot among programming languages for since March, 2016. TypeScript steps up to the top spot in same year it turns ten years old.&lt;/p&gt;
+&lt;p&gt;In the last two years alone, TypeScript has jumped from around ~12% of postings to nearly ~20% in April's postings. I am curious about what is driving this recent surge. Is it solely because JavaScript development is steadily migrating to TypeScript, or is it because new waves of developers and use cases are calling for it?&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2022/april.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full March rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 02 May 2022 04:45:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2022/april.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2022/april.html
+      </guid>
+    </item>
     <item>
       <title>March 2022 Hacker News Hiring Trends</title>
       <description>
