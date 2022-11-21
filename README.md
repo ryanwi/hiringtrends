@@ -1,6 +1,6 @@
 # Hacker News (HN) Hiring Trends
 
-A Ruby library for analyzing software technology trends from Hacker News whoishiring posts.
+A Ruby program for analyzing software technology trends from Hacker News whoishiring posts.
 Created by <a href="https://www.ryanwilliams.dev">Ryan Williams</a>
 (<a href="https://twitter.com/ryanwi">@ryanwi</a>)
 
@@ -10,7 +10,7 @@ This is a personal development project, in particular for exploring redis.  You 
 
 ## Requirements
 
-  * Ruby (2.5+)
+  * Ruby (2.6+)
   * Redis
 
 ## Usage
