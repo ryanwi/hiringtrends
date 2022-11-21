@@ -4,8 +4,24 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jun 2022 23:30:00 +0000</pubDate>
-    <lastBuildDate>Mon, 20 Jun 2022 23:30:00 +0000</lastBuildDate>
+    <pubDate>Mon, 21 Nov 2022 03:00:00 +0000</pubDate>
+    <lastBuildDate>Mon, 21 Nov 2022 03:00:00 +0000</lastBuildDate>
+    <item>
+      <title>November 2022 Hacker News Hiring Trends</title>
+      <description>
+&lt;p&gt;What a difference a year makes. The number of job postings in the &lt;a href="https://news.ycombinator.com/item?id=33422129"&gt;&quot;Ask HN: Who is hiring?&quot; thread for November&lt;/a&gt; bounced back a bit from October's near all-time low, but was still way down from last year. For November, there were 555 postings (top level comments), up 13% over October. But, postings are down year-over-year, 45%, from November 2021.&lt;/p&gt;
+&lt;p&gt;The Rust programming language has moved up to to the fourth most popular language. The language has &lt;a href="https://stackoverflow.blog/2022/06/22/asked-and-answered-the-results-for-the-2022-developer-survey-are-here/"&gt;enjoyed success as the "most loved" language for many years&lt;/a&gt; and it has continually picked up momentem in the Who is hiring? thread now too.&lt;/p&gt;
+&lt;p&gt;React is still the top &quot;tech&quot; term in the rankings. However, it hit a 5 year low last month, and stayed at near the same level this month at 22.88% of postings.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2022/november.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full November rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 21 Nov 2022 03:00:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2022/november.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2022/november.html
+      </guid>
+    </item>
     <item>
       <title>June 2022 Hacker News Hiring Trends</title>
       <description>
