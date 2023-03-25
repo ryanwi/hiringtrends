@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>March 2023 Hacker News Hiring Trends</title>
+    <meta property="og:site_name" content="Hacker News Hiring Trends" />
+    <meta property="og:site" content="www.hntrends.com" />
+    <meta property="og:title" content="headline - Hacker News Hiring Trends (March 2023)" />
+    <meta property="og:description" content="Most Popular programming languanges and software development technologies for March, 2023">
+    <meta property="og:image" content="https://www.hntrends.com/image" />
+    <meta property="og:url" content="https://www.hntrends.com/" />
+    <meta property="og:type" content="article" />
+    <meta name="description" content="Most Popular programming languanges and software development technologies for March, 2023">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ryanwi" />
+    <meta name="twitter:title" content="headline - Hacker News Hiring Trends (March 2023)" />
+    <meta name="twitter:description" content="Most Popular programming languanges and software development technologies for March, 2023" />
+    <meta name="twitter:image" content="https://www.hntrends.com/image" />
+    <link rel="me" href="https://twitter.com/ryanwi">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="Hacker News Hiring Trends" href="https://www.hntrends.com/feed.xml">
+</head>
+<body>
+
+<div class="container">
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb p-2">
+      <li class="breadcrumb-item"><a href="../">Home and Archives</a></li>
+      <li class="breadcrumb-item active">March 2023</li>
+      <li class="breadcrumb-item"><a href="#highlights">Highlights and Analysis</a></li>
+      <li class="breadcrumb-item"><a href="#data">Data</a></li>
+    </ol>
+  </nav>
+
+  <div class="page-header">
+    <h1>
+      March 2023 Hacker News Hiring Trends
+    </h1>
+    <p class="lead">
+      March 2023 Hacker News Hiring Trends
+    </p>
+  </div>
+
+  <div class="chart-filters mb-2">
+    <form id="chart_filter" method="get">
+      <div class="row g-3">
+        <div class="col-auto">
+          <select id="topfilter" class="form-select">
+            <option value="5" selected>Top 5</option>
+            <option value="10">Top 10</option>
+            <option value="20">Top 20</option>
+            <option value="50">Top 50</option>
+          </select>
+        </div>
+
+        <div class="col-auto">
+          or
+        </div>
+
+        <div class="col">
+          <div id="term_comparisons" class="row g-3">
+            <div class="col">
+              <input class="form-control term-compare" name="compare" placeholder="Ruby" list="datalistTerms">
+            </div>
+            <div class="col">
+              <input class="form-control term-compare" name="compare" placeholder="Python" list="datalistTerms">
+            </div>
+            <div class="col">
+              <input class="form-control term-compare" name="compare" list="datalistTerms">
+            </div>
+            <div class="col">
+              <input class="form-control term-compare" name="compare" list="datalistTerms">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-secondary">Compare</button>
+        </div>
+      </div>
+      <datalist id="datalistTerms"></datalist>
+    </form>
+  </div>
+
+  <div id="chart" class="mb-5" style="width:100%; height:400px;"></div>
+
+  <div class="row">
+    <div class="col-md-9">
+      <h3 id="highlights">March Highlights</h3>
+      <div class="post-date">Saturday, March 25, 2023</div>
+      <p>
+
+      </p>
+    </div>
+
+      <div class="col-md-3">
+        <p style="margin-top:30px;">
+          <a href="http://eepurl.com/DVVSb" class="btn btn-success btn-lg">Subscribe for updates</a>
+        </p>
+
+    </div>
+  </div>
+
+<h3>Total Postings Trend</h3>
+<div id="comments_chart" style="width:100%; height:300px;" class="mb-5"></div>
+
+<h3>Rankings and movers</h3>
+<div id="data"></div>
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#top20" type="button" role="tab" aria-selected="true">Top 20</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#rising" type="button" role="tab" aria-selected="false">Rising</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#falling" type="button" role="tab" aria-selected="false">Falling</button>
+    </li>
+  </ul>
+
+
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="top20">
+      
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Rank</th>
+      <th>Last Month</th>
+      <th>Change</th>
+      <th>Last Year</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><a href="?compare=Remote">Remote</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Senior">Senior</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Full Stack">Full Stack</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>4</td>
+      <td class="positive table-success">+1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Back End">Back End</td>
+      <td>4</td>
+      <td>5</td>
+      <td class="positive table-success">+1</td>
+      
+      <td>5</td>
+      <td class="positive table-success">+1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=React">React</td>
+      <td>5</td>
+      <td>4</td>
+      <td class="negative table-danger">-1</td>
+      
+      <td>3</td>
+      <td class="negative table-danger">-2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Python">Python</td>
+      <td>6</td>
+      <td>6</td>
+      <td>0</td>
+      <td>7</td>
+      <td class="positive table-success">+1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Front End">Front End</td>
+      <td>7</td>
+      <td>10</td>
+      <td class="positive table-success">+3</td>
+      
+      <td>6</td>
+      <td class="negative table-danger">-1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Onsite">Onsite</td>
+      <td>8</td>
+      <td>7</td>
+      <td class="negative table-danger">-1</td>
+      
+      <td>10</td>
+      <td class="positive table-success">+2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=TypeScript">TypeScript</td>
+      <td>9</td>
+      <td>8</td>
+      <td class="negative table-danger">-1</td>
+      
+      <td>8</td>
+      <td class="negative table-danger">-1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Machine Learning">Machine Learning</td>
+      <td>10</td>
+      <td>9</td>
+      <td class="negative table-danger">-1</td>
+      
+      <td>14</td>
+      <td class="positive table-success">+4</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=AWS">AWS</td>
+      <td>11</td>
+      <td>12</td>
+      <td class="positive table-success">+1</td>
+      
+      <td>9</td>
+      <td class="negative table-danger">-2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Next.js">Next.js</td>
+      <td>12</td>
+      <td>17</td>
+      <td class="positive table-success">+5</td>
+      
+      <td>18</td>
+      <td class="positive table-success">+6</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Cloud">Cloud</td>
+      <td>13</td>
+      <td>11</td>
+      <td class="negative table-danger">-2</td>
+      
+      <td>12</td>
+      <td class="negative table-danger">-1</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=AI">AI</td>
+      <td>14</td>
+      <td>14</td>
+      <td>0</td>
+      <td>24</td>
+      <td class="positive table-success">+10</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Hybrid">Hybrid</td>
+      <td>15</td>
+      <td>15</td>
+      <td>0</td>
+      <td>28</td>
+      <td class="positive table-success">+13</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Open Source">Open Source</td>
+      <td>16</td>
+      <td>16</td>
+      <td>0</td>
+      <td>20</td>
+      <td class="positive table-success">+4</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Postgresql">Postgresql</td>
+      <td>17</td>
+      <td>13</td>
+      <td class="negative table-danger">-4</td>
+      
+      <td>11</td>
+      <td class="negative table-danger">-6</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=golang">golang</td>
+      <td>18</td>
+      <td>19</td>
+      <td class="positive table-success">+1</td>
+      
+      <td>13</td>
+      <td class="negative table-danger">-5</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=DevOps">DevOps</td>
+      <td>19</td>
+      <td>20</td>
+      <td class="positive table-success">+1</td>
+      
+      <td>17</td>
+      <td class="negative table-danger">-2</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Security">Security</td>
+      <td>20</td>
+      <td>18</td>
+      <td class="negative table-danger">-2</td>
+      
+      <td>15</td>
+      <td class="negative table-danger">-5</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+    <div class="tab-pane" role="tabpanel" id="rising">
+      
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><a href="?compare=AR">AR</td>
+      <td>6</td>
+      <td>69</td>
+      <td>3</td>
+      <td>149</td>
+      <td class="positive table-success">+80</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Prometheus">Prometheus</td>
+      <td>6</td>
+      <td>67</td>
+      <td>6</td>
+      <td>106</td>
+      <td class="positive table-success">+39</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Git">Git</td>
+      <td>10</td>
+      <td>47</td>
+      <td>8</td>
+      <td>86</td>
+      <td class="positive table-success">+39</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Snowflake">Snowflake</td>
+      <td>7</td>
+      <td>61</td>
+      <td>6</td>
+      <td>99</td>
+      <td class="positive table-success">+38</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=gRPC">gRPC</td>
+      <td>6</td>
+      <td>65</td>
+      <td>6</td>
+      <td>103</td>
+      <td class="positive table-success">+38</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Grafana">Grafana</td>
+      <td>5</td>
+      <td>72</td>
+      <td>6</td>
+      <td>102</td>
+      <td class="positive table-success">+30</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Redux">Redux</td>
+      <td>10</td>
+      <td>46</td>
+      <td>14</td>
+      <td>69</td>
+      <td class="positive table-success">+23</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Distributed Systems">Distributed Systems</td>
+      <td>11</td>
+      <td>44</td>
+      <td>15</td>
+      <td>67</td>
+      <td class="positive table-success">+23</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Computer Vision">Computer Vision</td>
+      <td>7</td>
+      <td>58</td>
+      <td>10</td>
+      <td>76</td>
+      <td class="positive table-success">+18</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Tailwind">Tailwind</td>
+      <td>7</td>
+      <td>62</td>
+      <td>10</td>
+      <td>78</td>
+      <td class="positive table-success">+16</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+    <div class="tab-pane" role="tabpanel" id="falling">
+      
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Mentions</th>
+      <th>Rank</th>
+      <th>Last Year Mentions</th>
+      <th>Last Year Rank</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><a href="?compare=NestJS">NestJS</td>
+      <td>0</td>
+      <td>228</td>
+      <td>5</td>
+      <td>116</td>
+      <td class="negative table-danger">-112</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Kinesis">Kinesis</td>
+      <td>0</td>
+      <td>209</td>
+      <td>5</td>
+      <td>115</td>
+      <td class="negative table-danger">-94</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Apollo">Apollo</td>
+      <td>1</td>
+      <td>167</td>
+      <td>8</td>
+      <td>89</td>
+      <td class="negative table-danger">-78</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Ethereum">Ethereum</td>
+      <td>1</td>
+      <td>165</td>
+      <td>8</td>
+      <td>90</td>
+      <td class="negative table-danger">-75</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=.NET Core">.NET Core</td>
+      <td>1</td>
+      <td>171</td>
+      <td>6</td>
+      <td>96</td>
+      <td class="negative table-danger">-75</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=PyTorch">PyTorch</td>
+      <td>1</td>
+      <td>143</td>
+      <td>12</td>
+      <td>71</td>
+      <td class="negative table-danger">-72</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Phoenix">Phoenix</td>
+      <td>1</td>
+      <td>168</td>
+      <td>6</td>
+      <td>107</td>
+      <td class="negative table-danger">-61</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Elixir">Elixir</td>
+      <td>2</td>
+      <td>110</td>
+      <td>20</td>
+      <td>56</td>
+      <td class="negative table-danger">-54</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Bitcoin">Bitcoin</td>
+      <td>1</td>
+      <td>141</td>
+      <td>8</td>
+      <td>88</td>
+      <td class="negative table-danger">-53</td>
+      
+    </tr>
+    
+    <tr>
+      <td><a href="?compare=Spring">Spring</td>
+      <td>2</td>
+      <td>130</td>
+      <td>9</td>
+      <td>82</td>
+      <td class="negative table-danger">-48</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+    </div>
+  </div>
+
+  <footer class="mt-3 mb-3 text-center">
+    <a href="https://www.ryanwilliams.dev">Portland Ruby, Web and Software developer Ryan Williams</a> •
+    <a href="https://twitter.com/ryanwi">Follow @ryanwi</a> •
+    Email: ryan at ryanwilliams.dev •
+    <a href="https://github.com/ryanwi/hiringtrends">Code on GitHub</a>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="../data/data-20230301.js"></script>
+<script src="../js/builder-v17.js"></script>
+
+</body>
+</html>
