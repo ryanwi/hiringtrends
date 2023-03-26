@@ -94,11 +94,12 @@ const chartBuilder = (function () {
         text: ''
       },
       xAxis: {
+        type: 'datetime',
         categories: categories,
         endOnTick: true,
         labels: {
           rotation: [-45],
-          step: 2
+          step: 4
         }
       },
       yAxis: {
@@ -188,7 +189,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       type: 'column'
     },
     title: {
-      text: 'Total Posts on Ask HN: Who is hiring?'
+      text: 'Total Job Postings by Month on Ask HN: Who is hiring?'
     },
     xAxis: {
       categories: [
@@ -218,6 +219,42 @@ window.addEventListener('DOMContentLoaded', (event) => {
       enabled: true
     },
     series: highChartConverter.convertCountYoySeries()
+  });
+
+  Highcharts.chart('total_postings_history_chart',{
+    chart: {
+      type: 'line'
+    },
+    legend: {
+      enabled: false
+    },
+    title: {
+      text: 'Total Job Postings on Ask HN: Who is hiring?'
+    },
+    yAxis: {
+      title: {
+        text: 'Number of Job Postings'
+      },
+      min: 0
+    },
+    xAxis: {
+      type: 'datetime',
+      categories: categories,
+      labels: {
+        rotation: [-45],
+        step: 4
+      },
+      accessibility: {
+        rangeDescription: 'Range: April 2011 to 2023'
+      }
+    },
+    plotOptions: {
+    },
+    series: [
+      {
+        name: 'Total Job Postings',
+        data: data.map(function(value, index) { return [parseInt(value["num_comments"])] })
+      }]
   });
 
   populateTermsDatalist('datalistTerms', terms);

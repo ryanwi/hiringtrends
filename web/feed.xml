@@ -4,14 +4,17 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Mar 2023 20:00:00 +0000</pubDate>
-    <lastBuildDate>Sat, 25 Mar 2023 20:00:00 +0000</lastBuildDate>
+    <pubDate>Sun, 26 Mar 2023 02:12:00 +0000</pubDate>
+    <lastBuildDate>Sun, 26 Mar 2023 02:12:00 +0000</lastBuildDate>
     <item>
       <title>March 2023 Hacker News Hiring Trends</title>
       <description>
+&lt;p&gt;The Software Developer job industry is facing many changing dynamics, and the data from the &lt;a href="https://news.ycombinator.com/item?id=34983767"&gt;"Ask HN: Who is hiring?" thread on Hacker News&lt;/a&gt; is a great way to track the changes. From the overall drop in job postings, the return of work to the office, to the rise in AI technogies poised to cause disruption to the way we work.&lt;/p&gt;
+&lt;p&gt;First, there is the total number of job postings, at the lowest levels in years. For March, there are 440 (as of this writing) top level comments on the thread, which represent individual job postings. This is up a bit from last month's count of 394, but prior to Feburary, there wasn't a month with less than 480 postings since December, 2015. This analysis was also confirmed/cited earlier this week over at &lt;a href="https://newsletter.pragmaticengineer.com/p/is-there-a-drop-in-software-engineer"&gt;The Pragmatic Engineer&lt;/a&gt;.&lt;/p&gt;
+&lt;img src="https://www.hntrends.com/images/hacker-news-hiring-trends-remote-vs-onsite-march-2023.png" alt="March 2023 Hacker News Hiring Trends: Remote vs Onsite" /&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2023/march.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full November rankings.&lt;/p&gt;
       </description>
-      <pubDate>Sat, 25 Mar 2023 20:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Mar 2023 02:12:00 +0000</pubDate>
       <link>
         https://www.hntrends.com/2023/march.html
       </link>
