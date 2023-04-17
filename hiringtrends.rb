@@ -9,4 +9,4 @@ hn.get_submissions
 hn.get_comments_for_submissions;nil
 hn.save_submissions;nil
 hn.analyze_submissions;nil
-hn.publish("March", "2023", "Saturday", "20")
+hn.publish("April", "2023", "Sunday", "16")
