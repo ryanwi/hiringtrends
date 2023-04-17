@@ -4,6 +4,7 @@ require "json"
 require "faraday"
 require "liquid"
 require "typhoeus"
+require "faraday/typhoeus"
 require "debug"
 
 module HiringTrends

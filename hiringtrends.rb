@@ -2,7 +2,7 @@
 
 require_relative 'lib/hiringtrends'
 
-terms = "https://gist.githubusercontent.com/ryanwi/6135845/raw/da40c9790227757fcc4f63a84be56e54215813a7/software-terms.dic"
+terms = "https://gist.githubusercontent.com/ryanwi/6135845/raw/5c3d3362acf0391304e98a363ab53c0fb93fe41a/software-terms.dic"
 hn = HiringTrends::Program.new terms
 hn.clean
 hn.get_submissions
