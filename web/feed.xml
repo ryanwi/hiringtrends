@@ -4,8 +4,20 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Mar 2023 02:12:00 +0000</pubDate>
-    <lastBuildDate>Sun, 26 Mar 2023 02:12:00 +0000</lastBuildDate>
+    <pubDate></pubDate>
+    <lastBuildDate></lastBuildDate>
+    <item>
+      <title>April 2023 Hacker News Hiring Trends</title>
+      <description>
+      </description>
+      <pubDate></pubDate>
+      <link>
+        https://www.hntrends.com/2023/april.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2023/april.html
+      </guid>
+    </item>
     <item>
       <title>March 2023 Hacker News Hiring Trends</title>
       <description>
