@@ -93,7 +93,7 @@ const chartBuilder = (function () {
         type: 'line'
       },
       title: {
-        text: ''
+        text: 'Remote vs Onsite vs Hybrid'
       },
       subtitle: {
         text: 'April 2023 Hacker News Hiring Trends'
@@ -106,7 +106,7 @@ const chartBuilder = (function () {
           step: 4,
           rotation: [-45],
           formatter: function() {
-            return Highcharts.dateFormat('%b %y', this.value);
+            return Highcharts.dateFormat('%Y', this.value);
           }
         }
       },
@@ -201,7 +201,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     title: {
       text: 'Ask HN: Who is hiring? Total Job Postings'
     },
-    yAxis: {
+    subtitle: {
+      text: 'April 2023'
+    },
+  yAxis: {
       title: {
         text: 'Number of Job Postings'
       },
@@ -210,11 +213,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     xAxis: {
       type: 'datetime',
       categories: categories,
+      dateTimeLabelFormats: {
+        month: '%b %y'
+      },
       labels: {
         rotation: [-45],
-        step: 4,
+        step: 5,
         formatter: function() {
-          return Highcharts.dateFormat('%b %y', this.value);
+          return Highcharts.dateFormat('%Y', this.value);
         }
     },
       accessibility: {
