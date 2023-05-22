@@ -93,7 +93,7 @@ const chartBuilder = (function () {
         type: 'line'
       },
       title: {
-        text: 'Remote vs Onsite vs Hybrid'
+        text: ''
       },
       subtitle: {
         text: 'May 2023 Hacker News Hiring Trends'

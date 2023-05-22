@@ -4,8 +4,31 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 May 2023 00:50:00 +0000</pubDate>
-    <lastBuildDate>Mon, 01 May 2023 00:50:00 +0000</lastBuildDate>
+    <pubDate>Mon, 22 May 2023 02:505:00 +0000</pubDate>
+    <lastBuildDate>Mon, 22 May 2023 02:50:00 +0000</lastBuildDate>
+    <item>
+      <title>Remote jobs drop to lowest levels post-COVID - May 2023 Hacker News Hiring Trends</title>
+      <description>
+&lt;p&gt;Change is happening fast in the software developer hiring landscape. Let's jump in and take a look at the results from &lt;a href="https://news.ycombinator.com/item?id=35773707"&gt;May's Hacker News "Ask HN: Who is hiring?"&lt;/a&gt; thread.&lt;/p&gt;
+&lt;p&gt;First, in a positive sign, there were 431 postings (as of May 21), which marks a 12% increase over &lt;a href="https://www.hntrends.com/2023/april.html"&gt;April&lt;/a&gt;. April's total was the lowest in over 7 years, so it's good to see some growth in job opportunites.&lt;/p&gt;
+&lt;p&gt;The most significant change for May's "Who is hiring?" thread may be the ever-evolving situation of remote work. There was a big drop in remote positions, down to just over 50%, a drop of 11% from April. Hybrid is picking up the difference for the most part still.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.hntrends.com/images/202305-remote-vs-onsite-vs-hybr.svg" alt="Remote Work" /&gt;&lt;/p&gt;
+&lt;h4&gt;Top 10 Programming Languages&lt;/h4&gt;
+&lt;p&gt;The Top 3 for May remain the same, Python, TypeScript, and Go. But, Rust gets back to #4, matching its all time high. Also getting back into the Top 10 is Swift, at #10. Swift has been been in the Top 10. I can't recall the last time it has been there.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.hntrends.com/images/202305-top-10-programming-langu.svg" alt="Top 10 Programming Languages" /&gt;&lt;/p&gt;
+&lt;h4&gt;AI&lt;/h4&gt;
+&lt;p&gt;In the AI category, probably the most covered technology of 2023, it is hard to say with certainty if there are significant changes. Mentions of Machine Learning were down a bit, while AI was up a bit.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.hntrends.com/images/202305-ai-vs-machine-learning-v.svg" alt="AI trends" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2023/may-remote-jobs-drop-lowest-levels-post-covid.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full May rankings.&lt;/p&gt;
+      </description>
+      <pubDate>Mon, 22 May 2023 02:50:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2023/may-remote-jobs-drop-lowest-levels-post-covid.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2023/may-remote-jobs-drop-lowest-levels-post-covid.html
+      </guid>
+    </item>
     <item>
       <title>Hiring Slowdown Continues - April 2023 Hacker News Hiring Trends</title>
       <description>
