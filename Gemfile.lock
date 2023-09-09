@@ -1,14 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (7.0.8)
-      activesupport (= 7.0.8)
-    activesupport (7.0.8)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 1.6, < 2)
-      minitest (>= 5.1)
-      tzinfo (~> 2.0)
-    concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     debug (1.8.0)
       irb (>= 1.5.0)
@@ -24,18 +16,11 @@ GEM
       faraday (~> 2.0)
       typhoeus (~> 1.4)
     ffi (1.15.5)
-    i18n (1.14.1)
-      concurrent-ruby (~> 1.0)
     io-console (0.6.0)
     irb (1.8.1)
       rdoc
       reline (>= 0.3.8)
-    kredis (1.5.0)
-      activemodel (>= 6.0.0)
-      activesupport (>= 6.0.0)
-      redis (>= 4.2, < 6)
     liquid (5.4.0)
-    minitest (5.20.0)
     psych (5.1.0)
       stringio
     rake (13.0.6)
@@ -64,8 +49,6 @@ GEM
     stringio (3.0.8)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
 
 PLATFORMS
   ruby
@@ -74,10 +57,10 @@ DEPENDENCIES
   debug
   faraday
   faraday-typhoeus
-  kredis
   liquid
   rake
   redis
+  redis-client
   rspec
   typhoeus
 
