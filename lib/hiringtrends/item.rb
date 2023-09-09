@@ -2,11 +2,12 @@
 
 module HiringTrends
   class Item
-    attr_reader :id, :source, :title, :author, :num_comments
+    attr_reader :id, :created_at, :source, :title, :author, :num_comments
     attr_accessor :comments
 
-    def initialize(id, author, num_comments, title)
+    def initialize(id, created_at, author, num_comments, title)
       self.id = id
+      self.created_at = created_at
       self.author = author
       self.num_comments = num_comments
       self.title = title
@@ -23,6 +24,6 @@ module HiringTrends
 
     private
 
-    attr_writer :id, :source, :title, :author, :num_comments
+    attr_writer :id, :created_at, :source, :title, :author, :num_comments
   end
 end

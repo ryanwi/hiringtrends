@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "redis"
+require "redis-client"
 require_relative "hiringtrends/program"
 require_relative "hiringtrends/item_search"
 require_relative "hiringtrends/item"
@@ -12,6 +12,6 @@ module HiringTrends
   HN_API_ROOT = "https://hn.algolia.com/api/v1"
 
   def self.redis
-    @redis ||= Redis.new
+    @redis ||= RedisClient.config.new_client
   end
 end

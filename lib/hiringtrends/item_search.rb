@@ -19,7 +19,7 @@ module HiringTrends
 
       results
         .select { |result| result["title"][/ask hn: who is hiring\?\s\(\w*\s\d{4}\)/i] }
-        .map { |result| HiringTrends::Item.new(result["objectID"], result["author"], result["num_comments"], result["title"]) }
+        .map { |result| HiringTrends::Item.new(result["objectID"], result["created_at"], result["author"], result["num_comments"], result["title"]) }
     end
 
     def search_url(page = 0)

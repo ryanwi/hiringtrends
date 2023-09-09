@@ -18,16 +18,16 @@ module HiringTrends
     # Remove data from redis
     def clean
       puts "== removing all data from redis =="
-      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      redis.del(submission_keys) unless submission_keys.empty?
-      redis.del(SUBMISSIONS_KEY)
+      submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
+      redis.call("DEL", submission_keys) unless submission_keys.empty?
+      redis.call("DEL", SUBMISSIONS_KEY)
     end
 
     # Remove just analysis data, not hn data
     def clean_terms
-      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
       submission_keys.each do |submission_key|
-        redis.hdel(submission_key, "terms")
+        redis.call("HDEL", submission_key, "terms")
       end
     end
 
@@ -49,6 +49,30 @@ module HiringTrends
     def get_submissions
       puts "== searching for whoishiring submissions =="
       @items ||= HiringTrends::ItemSearch.new.execute
+    end
+
+    def save_submissions
+      puts "== persisting to redis =="
+      items.each do |item|
+        puts item.title
+        submission_key = "#{SUBMISSION_KEY_PREFIX}#{item.id}"
+
+        redis.call("ZADD", SUBMISSIONS_KEY, Time.parse(item.created_at).to_i, submission_key)
+        redis.call("HMSET", submission_key,
+          "objectID", item.id,
+          "month", item.month
+        )
+
+        puts "#{item.id}: #{item.comments.count} comments found..."
+        begin
+          redis.call("HMSET", submission_key,
+            "comments", item.comments.to_json,
+            "num_comments", item.comments.count
+          )
+        rescue => e
+          binding.break
+        end
+      end
     end
 
     def get_comments_for_submissions
@@ -78,45 +102,22 @@ module HiringTrends
       end
     end
 
-    def save_submissions
-      puts "== persisting to redis =="
-      @items.each do |item|
-        puts item.title
-        submission_key = "#{SUBMISSION_KEY_PREFIX}#{item.id}"
-        redis.rpush(SUBMISSIONS_KEY, submission_key)
-        redis.hmset(submission_key,
-          "objectID", item.id,
-          "month", item.month
-        )
-
-        puts "#{item.id}: #{item.comments.count} comments found..."
-        begin
-          redis.hmset(submission_key,
-            "comments", item.comments.to_json,
-            "num_comments", item.comments.count
-          )
-        rescue => e
-          binding.break
-        end
-      end
-    end
-
     # Process all submissions, counting comments counts for each term in the technology dictionary
     def analyze_submissions
-      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      # Get in order of oldest to newest, ZRANGE orders from lowest to the highest score
+      submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
 
-      # Process oldest to newest
       processed_keys = []
-      submission_keys.reverse.each_with_index do |submission_key, index|
-        puts "== Analyzing #{redis.hget(submission_key, "month")} =="
+      submission_keys.each_with_index do |submission_key, index|
+        puts "== Analyzing #{redis.call("HGET", submission_key, "month")} =="
 
         # create a fresh dictionary (need a deep copy) of each term with initial count of 0
         terms = Marshal.load(Marshal.dump(software_terms))
-        raw_comments = redis.hget(submission_key, "comments")
+        raw_comments = redis.call("HGET", submission_key, "comments")
         comments = JSON.parse raw_comments
         term_data = analyze_submission(terms, comments, processed_keys.count >= 2 ? processed_keys.last(2) : [])
         # store the counts
-        redis.hset(submission_key, "terms", term_data.to_json)
+        redis.call("HSET", submission_key, "terms", term_data.to_json)
         processed_keys << submission_key
       end
       self
@@ -150,8 +151,8 @@ module HiringTrends
 
       # moving average to smooth chart
       unless previous_submission_keys.empty?
-        one_month_previous_terms = JSON.parse(redis.hget(previous_submission_keys[0], "terms"))
-        two_month_previous_terms = JSON.parse(redis.hget(previous_submission_keys[1], "terms"))
+        one_month_previous_terms = JSON.parse(redis.call("HGET", previous_submission_keys[0], "terms"))
+        two_month_previous_terms = JSON.parse(redis.call("HGET", previous_submission_keys[1], "terms"))
         terms.keys.each do |term|
           terms[term][:mavg3] = (terms[term][:count] +
             one_month_previous_terms[term]["count"] +
@@ -181,24 +182,24 @@ module HiringTrends
 
   private
 
-    attr_accessor :redis, :software_terms, :dictionary_url
+    attr_accessor :redis, :software_terms, :dictionary_url, :items
 
     def redis
       HiringTrends.redis
     end
 
     def calculate_key_measures
-      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
-      terms = JSON.parse(redis.hget(submission_keys.first, "terms"))
+      submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
+      terms = JSON.parse(redis.call("HGET", submission_keys.first, "terms"))
 
       # Order this month's results by ranking
       ranked_terms = terms.sort_by { |k, v| v["rank"] }.to_a
 
       # Augment the ranking data with data from periods to compare against
       ranked_terms.each do |term|
-        lm_terms = JSON.parse(redis.hget(submission_keys[1], "terms"))
+        lm_terms = JSON.parse(redis.call("HGET", submission_keys[1], "terms"))
         lm_term = lm_terms[term[0]]
-        ly_terms = JSON.parse(redis.hget(submission_keys[12], "terms"))
+        ly_terms = JSON.parse(redis.call("HGET", submission_keys[12], "terms"))
         ly_term = ly_terms[term[0]]
 
         term_stats = term[1]
@@ -266,11 +267,12 @@ module HiringTrends
       # ]
       data = []
 
-      submission_keys = redis.lrange(SUBMISSIONS_KEY, 0, -1)
+      submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
       submission_keys.each do |submission_key|
-        datapoint = { :month => redis.hget(submission_key, "month") }
-        datapoint[:num_comments] = redis.hget(submission_key, "num_comments")
-        datapoint[:terms] = JSON.parse(redis.hget(submission_key, "terms"))
+        # TODO: Get all in one redis call
+        datapoint = { :month => redis.call("HGET", submission_key, "month") }
+        datapoint[:num_comments] = redis.call("HGET", submission_key, "num_comments")
+        datapoint[:terms] = JSON.parse(redis.call("HGET", submission_key, "terms"))
         data << datapoint
       end
 
