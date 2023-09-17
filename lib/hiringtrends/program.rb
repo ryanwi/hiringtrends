@@ -9,9 +9,11 @@ require "debug"
 
 module HiringTrends
   class Program
+    attr_accessor :software_terms, :dictionary_url, :items
+
     def initialize(dictionary_url)
-      self.software_terms = {}
-      self.dictionary_url = dictionary_url
+      @software_terms = {}
+      @dictionary_url = dictionary_url
       initialize_dictionary
     end
 
