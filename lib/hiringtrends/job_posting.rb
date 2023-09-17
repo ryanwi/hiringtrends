@@ -1,37 +1,33 @@
 # frozen_string_literal: true
 
 module HiringTrends
+  # Represents a job posting from an HN comment that be searched against
   class JobPosting
     def initialize(text)
       self.original_text = text
       self.text = text.downcase
     end
 
-    def has_term?(term)
+    def term?(term)
       modifier = parse_modifier(term)
 
-      return has_term_with_modifier?(modifier) unless modifier.nil?
+      return term_with_modifier?(modifier) if modifier
 
-      if term.include? " "
-        return true if text.downcase.scan(term.downcase).any?
-      else
-        return true if words.include?(term.downcase)
-      end
-
-      if term == "golang"
-        return true if original_words.include?("Go")
-      end
+      search_term = term.downcase
+      return true if term_in_text?(search_term)
+      return true if term_special_cases?(search_term)
 
       false
     end
 
-  private
+    private
+
     attr_accessor :original_text, :text
 
     # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
-    # todo: handle multi-word phrases (i.e. Visual Basic), with or without dot (i.e. node.js)
+    # For multi-word phrases (e.g. Visual Basic), search directly against the comment string.
     def words
-      @words ||= text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/)
+      @words ||= text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/).map(&:strip).reject(&:empty?).map(&:downcase)
     end
 
     def original_words
@@ -45,29 +41,46 @@ module HiringTrends
     # term/alias[word1|word2]
     def parse_modifier(term)
       parts = term.split "/"
-      if parts.count == 1
-        return nil
-      end
+      return nil if parts.count == 1
+
       parts[1]
     end
 
-    def has_term_with_modifier?(modifier)
-      modifier_data = modifier.match(/\[(.*?)\]/).captures.first
-
-      if modifier.start_with? "js["
-        # for javascript names, get the term root and recurse over options
-        return true if has_term?(modifier_data)
-        return true if has_term?("#{modifier_data}.js")
-        return true if has_term?("#{modifier_data}js")
-      elsif modifier.start_with? "alias["
-        # get the aliases and recurse
-        aliases = modifier_data.split "|"
-        aliases.each do |al|
-          return true if has_term?(al)
-        end
+    def term_in_text?(term)
+      if term.include?(" ") || term.include?(".")
+        # For multi-word phrases (e.g. Visual Basic), search directly against the comment string.
+        return true if text.include?(term)
+      elsif words.include?(term)
+        return true
       end
 
       false
+    end
+
+    def term_special_cases?(term)
+      return true if term == "golang" && original_words.include?("Go")
+
+      false
+    end
+
+    def term_with_modifier?(modifier)
+      modifier_data = modifier.match(/\[(.*?)\]/).captures.first
+
+      if modifier.start_with?("js[")
+        search_js_variations(modifier_data)
+      elsif modifier.start_with?("alias[")
+        search_alias_variations(modifier_data)
+      else
+        false
+      end
+    end
+
+    def search_js_variations(data)
+      [data, "#{data}.js", "#{data}js"].any? { |variation| term?(variation) }
+    end
+
+    def search_alias_variations(data)
+      data.split("|").any? { |a| term?(a) }
     end
   end
 end
