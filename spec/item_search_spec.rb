@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe HiringTrends::ItemSearch do
   describe "#execute" do
     it "returns the correct result" do
