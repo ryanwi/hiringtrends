@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'lib/hiringtrends'
+require_relative "lib/hiringtrends"
 
-terms = "https://gist.githubusercontent.com/ryanwi/6135845/raw/5c3d3362acf0391304e98a363ab53c0fb93fe41a/software-terms.dic"
+terms = "https://gist.githubusercontent.com/ryanwi/6135845/raw/80d82437174965a54186b74ca5bc31ff2f9d4779/software-terms.dic"
 hn = HiringTrends::Program.new terms
-hn.clean
-hn.get_submissions
-hn.get_comments_for_submissions;nil
-hn.save_submissions;nil
-hn.analyze_submissions;nil
-hn.publish("September", "2023", "Sunday", "10")
+hn.fetch_submissions
+hn.analyze_submissions
+hn.publish(item_id: "3"7351667")
