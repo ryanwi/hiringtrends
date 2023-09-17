@@ -28,6 +28,8 @@ Layout/TrailingWhitespace:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+Style/RegexpLiteral:
+  Enabled: false
 
 Metrics/MethodLength:
   Enabled: false

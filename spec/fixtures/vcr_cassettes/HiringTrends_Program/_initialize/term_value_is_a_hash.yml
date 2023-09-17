@@ -1,0 +1,329 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.githubusercontent.com/ryanwi/6135845/raw/80d82437174965a54186b74ca5bc31ff2f9d4779/software-terms.dic
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - keep-alive
+      content-length:
+      - '2758'
+      cache-control:
+      - max-age=300
+      content-security-policy:
+      - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type:
+      - text/plain; charset=utf-8
+      etag:
+      - W/"15477ab65e2663fe1e368d747590b42dc18af1fd96938f9f167b85ac492b43eb"
+      strict-transport-security:
+      - max-age=31536000
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+      x-github-request-id:
+      - 7FEA:19A4:2C9E1:36233:6506921C
+      accept-ranges:
+      - bytes
+      date:
+      - Sun, 17 Sep 2023 06:59:43 GMT
+      via:
+      - 1.1 varnish
+      x-served-by:
+      - cache-bfi-krnt7300107-BFI
+      x-cache:
+      - HIT
+      x-cache-hits:
+      - '1'
+      x-timer:
+      - S1694933983.109196,VS0,VE1
+      vary:
+      - Authorization,Accept-Encoding,Origin
+      access-control-allow-origin:
+      - "*"
+      cross-origin-resource-policy:
+      - cross-origin
+      x-fastly-request-id:
+      - 3f1296b434e7fd68a45b05ea5faf3b6295ee7808
+      expires:
+      - Sun, 17 Sep 2023 07:04:43 GMT
+      source-age:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: |
+        .NET
+        .NET Core
+        Agile
+        AI/alias[AI|Artificial Intelligence]
+        Airflow
+        Android
+        Ansible
+        Angular 2/alias[Angular2|Angular 2]
+        AngularJS/js[Angular]
+        API
+        Apollo
+        App Engine/alias[App Engine|AppEngine|GAE]
+        AR/alias[AR|Augmented Reality]
+        Assembly
+        Asp
+        ASP.NET
+        ASP.NET MVC
+        Aurora
+        AWS
+        Azure
+        Back End/alias[Backend|Back-end]
+        Backbone/js[Backbone]
+        Bash
+        Big Data/alias[BigData|Big Data]
+        BigQuery
+        Bitcoin
+        Blazor
+        Blockchain
+        C
+        C++
+        C#
+        CakePHP
+        Cassandra
+        Celery
+        ChatGPT
+        Chef
+        ClickHouse
+        Clojure
+        ClojureScript
+        Cloud
+        Cloudflare
+        CloudFormation
+        CloudFront
+        COBOL
+        CockroachDB
+        CodeIgniter
+        CoffeeScript
+        Common Lisp
+        Compass
+        Computer Vision
+        CouchDB
+        CQRS
+        Crystal
+        CSS
+        D3.js/js[D3]
+        Dart
+        Data Mining
+        Data Science
+        dbt
+        Deep Learning
+        Delphi
+        DevOps
+        Distributed Systems
+        Django
+        Docker
+        Drupal
+        DynamoDB
+        EC2
+        Eclipse
+        ECS
+        EDI
+        Elasticache
+        Elasticsearch/alias[Elasticsearch|Elastic Search]
+        Electron
+        Elixir
+        Elm
+        Emacs
+        Embedded Systems
+        Ember/js[Ember]
+        Erlang
+        Ethereum
+        ETL
+        Express/js[Express]
+        F#
+        Fargate
+        FastAPI
+        Fastify
+        Fintech
+        Firebase
+        Firecracker
+        Flask
+        Flutter
+        Flux
+        Front End/alias[Front-end|Frontend]
+        Full Stack/alias[Full-Stack|Fullstack|Full Stack]
+        Gatsby
+        GCP
+        Git
+        GitHub
+        GitLab
+        golang
+        GPT
+        GPT-3
+        GPT-4
+        Grafana
+        Graphite
+        GraphQL
+        Groovy
+        gRPC
+        Hadoop
+        haproxy
+        Haskell
+        HaXe
+        Heroku
+        Hotwire
+        Hybrid
+        InfluxDB
+        iOS
+        Java
+        JavaScript
+        jenkins
+        jQuery
+        JSON API
+        JSP
+        Julia
+        Junior
+        JUnit
+        Jupyter
+        Kafka
+        Keras
+        Kinesis
+        Knockout/js[Knockout]
+        Kotlin
+        Kubernetes
+        Lambda
+        LAMP
+        Laravel
+        less
+        linux
+        Lisp
+        Lua
+        Lucene
+        Mahout
+        Machine Learning/alias[Machine Learning|ML]
+        MapReduce
+        MariaDB
+        MATLAB
+        Maven
+        memcached/alias[memcached|memcache]
+        Mesos
+        Metabase
+        Meteor
+        Microservices/alias[Microservices|Microservices|Micro Services]
+        Mongodb/alias[mongo|mongodb]
+        MySQL
+        neo4j
+        NestJS/js[nest]
+        Next.js/js[next]
+        nginx
+        NLP
+        node.js/js[node]
+        Nomad
+        NumPy
+        Objective-C/alias[Objective-C|ObjectiveC|Objective C]
+        Observability
+        OCaml
+        Onsite/alias[Onsite|On-site]
+        Open Source/alias[Open Source|open-source]
+        OpenAI
+        OpenCV
+        OpenGL
+        OpenStack
+        Oracle
+        Pandas
+        Perl
+        PhantomJS/js[phantom]
+        Phoenix
+        PHP
+        Pig
+        Postgresql/alias[postgres|postgresql]
+        Principal
+        Processing
+        Prolog
+        Prometheus
+        Protocol Buffers/alias[Protocol Buffers|Protocol Buffer|protobuf]
+        Puppet
+        Python
+        PyTorch
+        R
+        RabbitMQ
+        Rails
+        RDS
+        React/js[react]
+        React Native
+        Redis
+        Redshift
+        Redux
+        Remote
+        REST
+        Riak
+        Robotics
+        Ruby
+        Rust
+        Sass
+        S3
+        Scala
+        Scheme
+        Scrum
+        Security
+        Selenium
+        Senior
+        Shell
+        Sidekiq
+        Snowflake
+        SNS
+        Solr
+        Spark
+        Spinnaker
+        Spring
+        SQL
+        SQL Server
+        SQS
+        Staff
+        statistics
+        Storm
+        Struts
+        Supabase
+        Svelte
+        SvelteKit
+        Swift
+        Symfony
+        Tailwind
+        TensorFlow
+        Terraform
+        TDD
+        TimescaleDB
+        Transformers
+        Turbo
+        TypeScript
+        Unreal Engine
+        Vagrant
+        Varnish
+        Vi/alias[Vi|Vim]
+        Visual Basic
+        Vue/js[vue]
+        VR/alias[VR|Virtual Reality]
+        web3
+        WebAssembly/alias[WASM|Wasm]
+        WebGL
+        Webpack
+        WebRTC
+        WebSockets
+        WordPress
+        WPF
+        Xamarin
+        XML
+        xR
+        ZeroMQ/alias[ZeroMQ|0MQ]
+        Zig
+        zookeeper
+  recorded_at: Sun, 17 Sep 2023 06:59:43 GMT
+recorded_with: VCR 6.2.0
