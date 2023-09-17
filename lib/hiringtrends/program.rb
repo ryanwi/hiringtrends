@@ -17,7 +17,7 @@ module HiringTrends
 
     # Remove data from redis
     def clean
-      puts "== removing all data from redis =="
+      HiringTrends.logger.info "== removing all data from redis =="
       submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
       redis.call("DEL", submission_keys) unless submission_keys.empty?
       redis.call("DEL", SUBMISSIONS_KEY)
@@ -33,7 +33,7 @@ module HiringTrends
 
     # Initialize hash of technology terms from dictionary with 0 counts
     def initialize_dictionary
-      puts "== initialize_dictionary =="
+      HiringTrends.logger.info "== initialize_dictionary =="
       response = Faraday.get dictionary_url
       response.body.lines.each do |line|
         software_terms[line.chomp.split("/").first] = {
@@ -47,14 +47,14 @@ module HiringTrends
 
     # Find and load all hiring submissions from HN Search API
     def get_submissions
-      puts "== searching for whoishiring submissions =="
+      HiringTrends.logger.info "== searching for whoishiring submissions =="
       @items ||= HiringTrends::ItemSearch.new.execute
     end
 
     def save_submissions
-      puts "== persisting to redis =="
+      HiringTrends.logger.info "== persisting to redis =="
       items.each do |item|
-        puts item.title
+        HiringTrends.logger.info item.title
         submission_key = "#{SUBMISSION_KEY_PREFIX}#{item.id}"
 
         redis.call("ZADD", SUBMISSIONS_KEY, Time.parse(item.created_at).to_i, submission_key)
@@ -63,7 +63,7 @@ module HiringTrends
           "month", item.month
         )
 
-        puts "#{item.id}: #{item.comments.count} comments found..."
+        HiringTrends.logger.info "#{item.id}: #{item.comments.count} comments found..."
         begin
           redis.call("HMSET", submission_key,
             "comments", item.comments.to_json,
@@ -76,7 +76,7 @@ module HiringTrends
     end
 
     def get_comments_for_submissions
-      puts "== retrieving comments from API in parallel =="
+      HiringTrends.logger.info "== retrieving comments from API in parallel =="
       manager = Typhoeus::Hydra.new(:max_concurrency => 10)
       conn = Faraday.new(url: "https://hn.algolia.com") do |builder|
         builder.response :logger
@@ -89,7 +89,7 @@ module HiringTrends
         @items.each { |item| responses << conn.get(item.rel) }
       end
 
-      puts "== loading comments into items =="
+      HiringTrends.logger.info "== loading comments into items =="
       @items.each do |item|
         begin
           item.comments = responses
@@ -109,7 +109,7 @@ module HiringTrends
 
       processed_keys = []
       submission_keys.each_with_index do |submission_key, index|
-        puts "== Analyzing #{redis.call("HGET", submission_key, "month")} =="
+        HiringTrends.logger.info "== Analyzing #{redis.call("HGET", submission_key, "month")} =="
 
         # create a fresh dictionary (need a deep copy) of each term with initial count of 0
         terms = Marshal.load(Marshal.dump(software_terms))
