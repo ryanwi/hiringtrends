@@ -32,8 +32,6 @@ module HiringTrends
       count_terms_in_comments
       calculate_percentage_for_terms
       rank_terms_by_count
-
-      @terms
     end
 
     private

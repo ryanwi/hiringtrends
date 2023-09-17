@@ -20,7 +20,7 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
+      item.analyze(terms: terms, comments: comments)
 
       expect(terms["Ruby"][:count]).to eq(2)
       expect(terms["JavaScript"][:count]).to eq(1)
@@ -38,8 +38,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["Ruby"][:count]).to eq(2)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["Ruby"][:count]).to eq(2)
     end
 
     it "separates words with periods at end of sentence" do
@@ -50,8 +50,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["Ruby"][:count]).to eq(2)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["Ruby"][:count]).to eq(2)
     end
 
     it "is case insensitive" do
@@ -62,8 +62,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["Ruby"][:count]).to eq(2)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["Ruby"][:count]).to eq(2)
     end
 
     it "counts Objective-c" do
@@ -80,8 +80,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["Objective-C"][:count]).to eq(1)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["Objective-C"][:count]).to eq(1)
     end
 
     it "ignore quotes" do
@@ -97,8 +97,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["AngularJS"][:count]).to eq(1)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["AngularJS"][:count]).to eq(1)
     end
 
     it "counts multi-word terms" do
@@ -113,8 +113,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["Visual Basic"][:count]).to eq(1)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["Visual Basic"][:count]).to eq(1)
     end
 
     it "counts .net" do
@@ -127,8 +127,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms[".NET"][:count]).to eq(1)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms[".NET"][:count]).to eq(1)
     end
 
     it "counts RabbitMQ" do
@@ -142,8 +142,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      terms = item.analyze(terms: terms, comments: comments)
-      expect(terms["RabbitMQ"][:count]).to eq(3)
+      item.analyze(terms: terms, comments: comments)
+      expect(item.terms["RabbitMQ"][:count]).to eq(3)
     end
   end
 end
