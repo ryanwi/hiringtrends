@@ -6,9 +6,11 @@ module HiringTrends
   class Publisher
     attr_accessor :software_terms, :items, :item_id
 
-    def initialize(software_terms, items, item_id)
+    def initialize(software_terms:, items:, month:, year:, item_id:)
       @software_terms = software_terms
       @items = items
+      @month = month
+      @year = year
       @item_id = item_id
     end
 

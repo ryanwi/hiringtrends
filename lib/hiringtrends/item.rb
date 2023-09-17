@@ -7,12 +7,14 @@ module HiringTrends
     attr_accessor :comments
 
     def initialize(result)
-      self.id = result["objectID"]
-      self.created_at = result["created_at"]
-      self.author = result["author"]
-      self.title = result["title"]
-      self.num_comments = result["num_comments"]
-      self.points = result["points"]
+      @id = result["objectID"] || result["id"]
+      @created_at = result["created_at"]
+      @author = result["author"]
+      @title = result["title"]
+      @num_comments = result["num_comments"]
+      @points = result["points"]
+
+      @comments = result["children"] if result.key?("children")
     end
 
     def month
@@ -24,6 +26,34 @@ module HiringTrends
       "/api/v1/items/#{id}"
     end
 
+    def save
+      File.open("data/item_#{id}.json", "wb") do |f|
+        f.write(to_h.to_json)
+      end
+    end
+
+    def analyze(terms)
+      HiringTrends.logger.info "== Analyzing #{title} =="
+      @terms = terms
+
+      count_terms_in_comments
+      calculate_percentage_for_terms
+      rank_terms_by_count
+    end
+
+    def to_h
+      {
+        id: id,
+        created_at: created_at,
+        source: source,
+        title: title,
+        author: author,
+        num_comments: num_comments,
+        points: points,
+        comments: comments
+      }
+    end
+
     def to_record
       {
         month: month,
@@ -31,16 +61,6 @@ module HiringTrends
         points: points,
         terms: terms
       }
-    end
-
-    def analyze(comments:, terms:)
-      HiringTrends.logger.info "== Analyzing #{title} =="
-      @comments = comments
-      @terms = terms
-
-      count_terms_in_comments
-      calculate_percentage_for_terms
-      rank_terms_by_count
     end
 
     private

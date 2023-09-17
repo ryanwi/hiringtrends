@@ -28,6 +28,19 @@ describe HiringTrends::Item do
     end
   end
 
+  describe "#save" do
+    it "saves the item to disk" do
+      mock_file = instance_double("File")
+      allow(mock_file).to receive(:write)
+      allow(File).to receive(:open).and_yield(mock_file)
+
+      api_item = { "objectID" => 2396027, "title" => "Ask HN: Who is Hiring? (April 2011)", "num_comments" => 295, "points" => 280 }
+      item = described_class.new(api_item)
+      item.save
+      expect(mock_file).to have_received(:write)
+    end
+  end
+
   describe "#analyze" do
     it "separates words with slash separators" do
       terms = {
@@ -41,7 +54,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
 
       expect(terms["Ruby"][:count]).to eq(2)
       expect(terms["JavaScript"][:count]).to eq(1)
@@ -59,7 +73,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["Ruby"][:count]).to eq(2)
     end
 
@@ -71,7 +86,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["Ruby"][:count]).to eq(2)
     end
 
@@ -83,7 +99,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["Ruby"][:count]).to eq(2)
     end
 
@@ -101,7 +118,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["Objective-C"][:count]).to eq(1)
     end
 
@@ -118,7 +136,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["AngularJS"][:count]).to eq(1)
     end
 
@@ -134,7 +153,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["Visual Basic"][:count]).to eq(1)
     end
 
@@ -148,7 +168,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms[".NET"][:count]).to eq(1)
     end
 
@@ -163,7 +184,8 @@ describe HiringTrends::Item do
       ]
 
       item = described_class.new({})
-      item.analyze(terms: terms, comments: comments)
+      item.comments = comments
+      item.analyze(terms)
       expect(item.terms["RabbitMQ"][:count]).to eq(3)
     end
   end
