@@ -29,6 +29,9 @@ Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
 
+Metrics/MethodLength:
+  Enabled: false
+
 RSpec/MultipleExpectations:
   Enabled: false
 RSpec/ExampleLength:

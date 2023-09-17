@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 
 module HiringTrends
+  # Represents an individual hn item with associated details.
   class Item
-    attr_reader :id, :created_at, :source, :title, :author, :num_comments
+    attr_reader :id, :created_at, :source, :title, :author, :num_comments, :points
     attr_accessor :comments
 
-    def initialize(id, created_at, author, num_comments, title)
-      self.id = id
-      self.created_at = created_at
-      self.author = author
-      self.num_comments = num_comments
-      self.title = title
+    def initialize(result)
+      self.id = result["objectID"]
+      self.created_at = result["created_at"]
+      self.author = result["author"]
+      self.title = result["title"]
+      self.num_comments = result["num_comments"]
+      self.points = result["points"]
     end
 
     def month
@@ -24,6 +26,6 @@ module HiringTrends
 
     private
 
-    attr_writer :id, :created_at, :source, :title, :author, :num_comments
+    attr_writer :id, :created_at, :source, :title, :author, :num_comments, :points
   end
 end

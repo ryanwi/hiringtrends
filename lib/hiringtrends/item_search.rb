@@ -3,8 +3,16 @@
 require "faraday"
 
 module HiringTrends
+  # Represents a HN API search for "Ask HN: Who is hiring?" items
   class ItemSearch
     def execute
+      results = fetch_results
+      filter_and_map_results(results)
+    end
+
+    private
+
+    def fetch_results
       page = 0
       results = []
 
@@ -18,8 +26,12 @@ module HiringTrends
       end
 
       results
+    end
+
+    def filter_and_map_results(results)
+      results
         .select { |result| result["title"][/ask hn: who is hiring\?\s\(\w*\s\d{4}\)/i] }
-        .map { |result| HiringTrends::Item.new(result["objectID"], result["created_at"], result["author"], result["num_comments"], result["title"]) }
+        .map { |result| HiringTrends::Item.new(result) }
     end
 
     def search_url(page = 0)
@@ -27,7 +39,7 @@ module HiringTrends
     end
 
     def conn
-      @conn ||= Faraday.new(url: "https://hn.algolia.com") do |builder|
+      @conn ||= Faraday.new(url: HN_API_BASE_URL) do |builder|
         builder.response :json
       end
     end
