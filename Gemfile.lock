@@ -1,9 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.5)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     base64 (0.1.1)
     connection_pool (2.4.1)
+    crack (0.4.5)
+      rexml
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
@@ -19,6 +23,7 @@ GEM
       faraday (~> 2.0)
       typhoeus (~> 1.4)
     ffi (1.15.5)
+    hashdiff (1.0.1)
     io-console (0.6.0)
     irb (1.8.1)
       rdoc
@@ -32,6 +37,7 @@ GEM
       racc
     psych (5.1.0)
       stringio
+    public_suffix (5.0.3)
     racc (1.7.1)
     rainbow (3.1.1)
     rake (13.0.6)
@@ -84,6 +90,11 @@ GEM
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     unicode-display_width (2.4.2)
+    vcr (6.2.0)
+    webmock (3.19.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
@@ -99,6 +110,8 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   typhoeus
+  vcr
+  webmock
 
 RUBY VERSION
    ruby 3.2.2p53
