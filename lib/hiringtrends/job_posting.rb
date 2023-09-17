@@ -27,11 +27,11 @@ module HiringTrends
     # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
     # For multi-word phrases (e.g. Visual Basic), search directly against the comment string.
     def words
-      @words ||= text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/).map(&:strip).reject(&:empty?).map(&:downcase)
+      @words ||= text.split(/[[:space:]!|\\;:,.?\/'()\[\]]/).map(&:strip).reject(&:empty?).map(&:downcase)
     end
 
     def original_words
-      @original_words ||= original_text.split(/[[:space:]!|\\;:,\.\?\/'\(\)\[\]]/)
+      @original_words ||= original_text.split(/[[:space:]!|\\;:,.?\/'()\[\]]/)
     end
 
     # Some terms go by different names, modifiers are used to search for
