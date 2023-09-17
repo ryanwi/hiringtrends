@@ -6,4 +6,4 @@ terms = "https://gist.githubusercontent.com/ryanwi/6135845/raw/80d82437174965a54
 hn = HiringTrends::Program.new terms
 hn.fetch_submissions
 hn.analyze_submissions
-hn.publish(item_id: "3"7351667")
+hn.publish(item_id: "37351667")

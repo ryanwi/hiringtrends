@@ -43,24 +43,23 @@ module HiringTrends
       end
     end
 
-    # # def publish_post(month, year, day, date, data_filename, key_measures)
-    # #   data = {
-    # #     'year' => year,
-    # #     'month' => month,
-    # #     'day' => day,
-    # #     'date' => date,
-    # #     'data_filename' => data_filename,
-    # #     'top_terms' => key_measures[0].take(20),
-    # #     'gainers' => key_measures[1].take(10),
-    # #     'losers' => key_measures[2].take(10)
-    # #   }
+    # def publish_post(month, year, day, date, data_filename, key_measures)
+    #   data = {
+    #     'year' => year,
+    #     'month' => month,
+    #     'day' => day,
+    #     'date' => date,
+    #     'data_filename' => data_filename,
+    #     'top_terms' => key_measures[0].take(20),
+    #     'gainers' => key_measures[1].take(10),
+    #     'losers' => key_measures[2].take(10)
+    #   }
 
-    # #   Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
-    # #   template = File.open('templates/post.liquid', 'rb') { |f| f.read }
-    # #   content = Liquid::Template.parse(template).render(data)
-    # #   File.open("web/#{year}/#{month.downcase}.html", 'w') { |file| file.write(content) }
-    # # end
-
+    #   Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
+    #   template = File.open('templates/post.liquid', 'rb') { |f| f.read }
+    #   content = Liquid::Template.parse(template).render(data)
+    #   File.open("web/#{year}/#{month.downcase}.html", 'w') { |file| file.write(content) }
+    # end
 
     # def calculate_key_measures
     #   submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
