@@ -29,11 +29,7 @@ module HiringTrends
       data = []
 
       items.each do |item|
-        record = {}
-        record[:month] = ""
-        record[:num_comments] = item.num_comments
-        record[:points] = item.points
-        record[:terms] = {}
+        record = item.to_record
         data << record
       end
 

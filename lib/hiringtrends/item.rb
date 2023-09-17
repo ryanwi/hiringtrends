@@ -24,6 +24,15 @@ module HiringTrends
       "/api/v1/items/#{id}"
     end
 
+    def to_record
+      {
+        month: month,
+        num_comments: num_comments,
+        points: points,
+        terms: terms
+      }
+    end
+
     def analyze(comments:, terms:)
       HiringTrends.logger.info "== Analyzing #{title} =="
       @comments = comments

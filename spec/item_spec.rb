@@ -7,6 +7,27 @@ describe HiringTrends::Item do
     end
   end
 
+  describe "#month" do
+    it "returns the formatted month of the item" do
+      api_item = { "title" => "Ask HN: Who is Hiring? (April 2011)" }
+      item = described_class.new(api_item)
+      expect(item.month).to eq("Apr11")
+    end
+  end
+
+  describe "#to_record" do
+    it "formats a record for the publsihed dataset" do
+      api_item = { "title" => "Ask HN: Who is Hiring? (April 2011)", "num_comments" => 295, "points" => 280 }
+      item = described_class.new(api_item)
+      expect(item.to_record).to eq({
+        month: "Apr11",
+        num_comments: 295,
+        points: 280,
+        terms: nil
+      })
+    end
+  end
+
   describe "#analyze" do
     it "separates words with slash separators" do
       terms = {

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "debug"
 require "vcr"
 
 # require File.expand_path("../lib/hiringtrends", __dir__)
