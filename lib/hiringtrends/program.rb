@@ -140,7 +140,7 @@ module HiringTrends
         # identify if each term is in the comment
         terms.keys.each do |term|
           # increment count as its found
-          terms[term][:count] += 1 if hn_comment.has_term?(terms[term][:full_term])
+          terms[term][:count] += 1 if hn_comment.term?(terms[term][:full_term])
         end
       end
 
