@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module HiringTrends
-  # Represents a job posting from an HN comment that be searched against
+  # Represents a job posting from an HN comment that can be searched against
   class JobPosting
     def initialize(text)
       self.original_text = text
