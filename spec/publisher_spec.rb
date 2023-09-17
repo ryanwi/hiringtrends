@@ -9,7 +9,20 @@ describe HiringTrends::Publisher do
 
   describe "#publish" do
     it "publishes" do
-      described_class.new({}, [], "37351667").publish
+      mock_file = instance_double('File')
+      allow(mock_file).to receive(:write)
+      allow(File).to receive(:open).and_yield(mock_file)
+
+      api_item = {
+        "objectID" => "2396027",
+        "created_at" => "2011-04-01T13:11:26.000Z",
+        "title" => "Ask HN: Who is Hiring? (April 2011)",
+        "num_comments" => 295,
+        "points" => 280
+      }
+      items = [HiringTrends::Item.new(api_item)]
+      described_class.new({}, items, "2396027").publish
+      expect(mock_file).to have_received(:write).twice
     end
   end
 end

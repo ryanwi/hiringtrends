@@ -13,12 +13,16 @@ module HiringTrends
     end
 
     def publish
-      publish_data
+      item_for_publishing = items.find { |item| item.id == item_id }
+      item_published_at = Time.parse(item_for_publishing.created_at)
+      filename = "data-#{item_published_at.strftime('%Y%m')}01.js"
+      publish_data(filename)
+
       # key_measures = calculate_key_measures
       # publish_post(month, year, day, date, data_filename, key_measures)
     end
 
-    def publish_data
+    def publish_data(filename)
       # initialize the data structure to publish, will look like
       # data = [
       # { :month => month1, num_comments => num, terms => {term1 =>
@@ -33,9 +37,10 @@ module HiringTrends
         data << record
       end
 
-      # File.open("web/data/#{filename}", "wb") { |f|
-      #   f.write(JSON.pretty_generate(data)) }
-      # end
+      File.open("web/data/#{filename}", "wb") do |f|
+        f.write("data = ")
+        f.write(JSON.pretty_generate(data))
+      end
     end
 
     # # def publish_post(month, year, day, date, data_filename, key_measures)
