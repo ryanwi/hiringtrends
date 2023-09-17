@@ -24,7 +24,7 @@ module HiringTrends
       "/api/v1/items/#{id}"
     end
 
-    def analyze(comments, terms)
+    def analyze(comments:, terms:)
       HiringTrends.logger.info "== Analyzing #{title} =="
       @comments = comments
       @terms = terms
