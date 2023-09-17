@@ -42,8 +42,8 @@ module HiringTrends
       HiringTrends.logger.info "== saving submission and comment data for re-processing =="
 
       items.each do |item|
-        comments = comment_responses.find { |response| response.body.fetch("id") == item.id.to_i }.body.fetch("children")
-        item.comments = comments
+        comments_response = comment_responses.find { |response| response.body.fetch("id") == item.id.to_i }
+        item.comments = comments_response.body.fetch("children")
         item.save
       end
     end
