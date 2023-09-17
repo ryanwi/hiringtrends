@@ -17,8 +17,9 @@ module HiringTrends
       results = []
 
       loop do
-        puts "=== page #{page} ==="
-        response = conn.get search_url(page)
+        url = search_url(page)
+        HiringTrends.logger.info "fetching page #{page}: #{url}"
+        response = conn.get url
         hits = response.body
         results += hits["hits"]
         page += 1

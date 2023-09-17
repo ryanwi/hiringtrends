@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "logger"
 require "redis-client"
 require_relative "hiringtrends/program"
 require_relative "hiringtrends/item_search"
@@ -13,5 +14,9 @@ module HiringTrends
 
   def self.redis
     @redis ||= RedisClient.config.new_client
+  end
+
+  def self.logger
+    @logger ||= Logger.new($stdout)
   end
 end
