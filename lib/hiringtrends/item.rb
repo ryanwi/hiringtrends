@@ -3,8 +3,8 @@
 module HiringTrends
   # Represents an individual hn item with associated details.
   class Item
-    attr_reader :id, :created_at, :source, :title, :author, :num_comments, :points, :terms
-    attr_accessor :comments
+    attr_accessor :id, :comments, :created_at, :source, :title, :author, :num_comments, :points, :terms
+
 
     def initialize(result)
       @id = result["objectID"] || result["id"]
@@ -64,8 +64,6 @@ module HiringTrends
     end
 
     private
-
-    attr_writer :id, :created_at, :source, :title, :author, :num_comments, :points
 
     # accumulate mentions of term as comments are searched
     def count_terms_in_comments
