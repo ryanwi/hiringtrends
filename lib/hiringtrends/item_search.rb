@@ -32,7 +32,7 @@ module HiringTrends
     def filter_and_map_results(results)
       results
         .select { |result| result["title"][/ask hn: who is hiring\?\s\(\w*\s\d{4}\)/i] }
-        .map { |result| HiringTrends::Item.new(result) }
+        .map { |result| result["objectID"] }
     end
 
     def search_url(page = 0)
