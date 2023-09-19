@@ -14,14 +14,14 @@ describe HiringTrends::Publisher do
       allow(File).to receive(:open).and_yield(mock_file)
 
       api_item = {
-        "objectID" => "2396027",
+        "id" => "2396027",
         "created_at" => "2011-04-01T13:11:26.000Z",
         "title" => "Ask HN: Who is Hiring? (April 2011)",
         "num_comments" => 295,
         "points" => 280
       }
       items = [HiringTrends::Item.new(api_item)]
-      publisher = described_class.new(software_terms: {}, items: items, month: 4, year: 2011, item_id: "2396027")
+      publisher = described_class.new(software_terms: {}, items:, month: 4, year: 2011, item_id: "2396027")
       publisher.publish
       expect(mock_file).to have_received(:write).twice
     end
