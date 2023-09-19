@@ -9,8 +9,6 @@ require_relative "hiringtrends/job_posting"
 require_relative "hiringtrends/publisher"
 
 module HiringTrends
-  SUBMISSIONS_KEY = "hn_submissions"
-  SUBMISSION_KEY_PREFIX = "submission:"
   HN_API_BASE_URL = "https://hn.algolia.com"
 
   def self.logger
