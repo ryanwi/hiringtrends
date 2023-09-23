@@ -6,25 +6,37 @@ Created by <a href="https://www.ryanwilliams.dev">Ryan Williams</a>
 
 ## Warnings/Disclaimer
 
-This is a personal development project, in particular for exploring redis.  You are welcome to use, modify, etc. and I welcome any feedback or questions.
+This is a personal development project.  You are welcome to use, modify, etc. and I welcome any feedback or questions.
 
 ## Requirements
 
-  * Ruby (2.6+)
-  * Redis
+  * Ruby (2.7+)
 
 ## Usage
 
 With a command line
 
+Launch the program's console with the following command:
+
 ```
-ruby hiringtrends.rb
+bin/console
 ```
+
+In the console, run the program with the following command:
+
+```
+hn = run_program(item_id)
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Author
 
 **Ryan Williams**
 
 - <https://www.ryanwilliams.dev>
-- <https://twitter.com/ryanwi>
 - <https://github.com/ryanwi>
+- <https://hachyderm.io/@ryanwi>
+- <https://twitter.com/ryanwi>
