@@ -16,11 +16,13 @@ module HiringTrends
     def publish
       item_to_publish = items.find { |item| item.id == item_id.to_i }
       item_published_at = Time.parse(item_to_publish.created_at)
-      filename = "data-#{item_published_at.strftime('%Y%m')}01.js"
-      publish_data(filename)
+      data_filename = "data-#{item_published_at.strftime('%Y%m')}01.js"
 
       # key_measures = calculate_key_measures
       # publish_post(month, year, day, date, data_filename, key_measures)
+
+      publish_data(data_filename)
+      publish_post(item_published_at:, data_filename:)
     end
 
     def publish_data(filename)
@@ -44,25 +46,32 @@ module HiringTrends
       end
     end
 
-    # def publish_post(month, year, day, date, data_filename, key_measures)
-    #   data = {
-    #     'year' => year,
-    #     'month' => month,
-    #     'day' => day,
-    #     'date' => date,
-    #     'data_filename' => data_filename,
-    #     'top_terms' => key_measures[0].take(20),
-    #     'gainers' => key_measures[1].take(10),
-    #     'losers' => key_measures[2].take(10)
-    #   }
+    def publish_post(item_published_at:, data_filename:)
+      today = Time.now
 
-    #   Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
-    #   template = File.open('templates/post.liquid', 'rb') { |f| f.read }
-    #   content = Liquid::Template.parse(template).render(data)
-    #   File.open("web/#{year}/#{month.downcase}.html", 'w') { |file| file.write(content) }
-    # end
+      data = {
+        "year" => today.year,
+        "month" => today.strftime("%B"),
+        "day" => today.strftime("%A"),
+        "date" => today.mday,
+        "data_filename" => data_filename,
+        "top_terms" => [],
+        "gainers" => [],
+        "losers" => []
+        #     'top_terms' => key_measures[0].take(20),
+        #     'gainers' => key_measures[1].take(10),
+        #     'losers' => key_measures[2].take(10)
+      }
 
-    # def calculate_key_measures
+      Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
+      template = File.open("templates/post.liquid", "rb", &:read)
+      content = Liquid::Template.parse(template).render(data)
+
+      post_filename = "web/#{item_published_at.year}/#{item_published_at.strftime('%B').downcase}.html"
+      File.open(post_filename, "w") { |file| file.write(content) }
+    end
+
+    def calculate_key_measures
     #   submission_keys = redis.call("ZRANGE", SUBMISSIONS_KEY, 0, -1)
     #   terms = JSON.parse(redis.call("HGET", submission_keys.first, "terms"))
 
@@ -94,6 +103,6 @@ module HiringTrends
     #   losers.reject! { |te| te[1]["count_last_year"] < 5 }
 
     #   return ranked_terms, gainers, losers
-    # end
+    end
   end
 end
