@@ -53,14 +53,14 @@ describe HiringTrends::Item do
       api_item = {
         "id" => 2396027,
         "title" => "Ask HN: Who is Hiring? (April 2011)",
-        "num_comments" => 295,
-        "points" => 280
+        "points" => 280,
+        "children" => [{ "id" => 2404566, "created_at" => "2011-04-03T23:43:58.000Z" }]
       }
 
       item = described_class.new(api_item)
       expect(item.to_record).to eq({
         month: "Apr11",
-        num_comments: 295,
+        num_comments: 1,
         points: 280,
         terms: nil
       })
@@ -75,7 +75,6 @@ describe HiringTrends::Item do
       api_item = {
         "id" => 2396027,
         "title" => "Ask HN: Who is Hiring? (April 2011)",
-        "num_comments" => 295,
         "points" => 280
       }
 
