@@ -35,21 +35,21 @@ http_interactions:
       x-xss-protection:
       - 1; mode=block
       x-github-request-id:
-      - 7CA0:0CF6:5678DE:6A1B30:65076FE7
+      - F83A:1939:15D57A:1A4E19:650E83E0
       accept-ranges:
       - bytes
       date:
-      - Sun, 17 Sep 2023 22:04:34 GMT
+      - Sat, 23 Sep 2023 06:21:23 GMT
       via:
       - 1.1 varnish
       x-served-by:
-      - cache-pdx12332-PDX
+      - cache-pdx12329-PDX
       x-cache:
       - HIT
       x-cache-hits:
       - '1'
       x-timer:
-      - S1694988274.912299,VS0,VE123
+      - S1695450083.291989,VS0,VE1
       vary:
       - Authorization,Accept-Encoding,Origin
       access-control-allow-origin:
@@ -57,9 +57,9 @@ http_interactions:
       cross-origin-resource-policy:
       - cross-origin
       x-fastly-request-id:
-      - 57a14f0721db0d62c781cd613b236fb2da40250d
+      - 5d50b7d333cb588f3f1300d5b1950946e3f40bb4
       expires:
-      - Sun, 17 Sep 2023 22:09:34 GMT
+      - Sat, 23 Sep 2023 06:26:23 GMT
       source-age:
       - '0'
     body:
@@ -325,7 +325,7 @@ http_interactions:
         ZeroMQ/alias[ZeroMQ|0MQ]
         Zig
         zookeeper
-  recorded_at: Sun, 17 Sep 2023 22:04:34 GMT
+  recorded_at: Sat, 23 Sep 2023 06:21:23 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/items/2396027
@@ -341,7 +341,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sun, 17 Sep 2023 22:04:36 GMT
+      - Sat, 23 Sep 2023 06:21:24 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -353,9 +353,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 9f24c545-f1c7-4813-8d6c-d6d8a5bdad49
+      - '09cd7fb5-7211-4b19-b581-9b7b5235730f'
       x-runtime:
-      - '1.324381'
+      - '1.191446'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -376,7 +376,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 8084a548fb29efa0-PDX
+      - 80b0afed1ff9c39a-SEA
     body:
       encoding: UTF-8
       string: '{"id":2396027,"created_at":"2011-04-01T13:11:26.000Z","created_at_i":1301663486,"type":"story","author":"whoishiring","title":"Ask
@@ -2624,5 +2624,5 @@ http_interactions:
         is an awesome dude, and a great person to work with. In addition to having
         the best hair in all of The Mission, he and his team will no doubt go far
         in the only storefront sector. Can''t imagine a cooler founder to work for!\u003c/p\u003e","points":1,"parent_id":2398962,"story_id":2396027,"children":[],"options":[]}],"options":[]}],"options":[]}'
-  recorded_at: Sun, 17 Sep 2023 22:04:36 GMT
+  recorded_at: Sat, 23 Sep 2023 06:21:25 GMT
 recorded_with: VCR 6.2.0

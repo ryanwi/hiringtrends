@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Tue, 19 Sep 2023 03:30:45 GMT
+      - Sat, 23 Sep 2023 06:21:28 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -27,9 +27,9 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - e4a92c89-81d3-4765-8109-3d5f91e4054d
+      - fdfb73ba-df5e-4225-9d3a-f436b4a650d1
       x-runtime:
-      - '1.154729'
+      - '1.079231'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -50,7 +50,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 808ec0704c4defa4-PDX
+      - 80b0b004eae16826-SEA
     body:
       encoding: UTF-8
       string: '{"id":2396027,"created_at":"2011-04-01T13:11:26.000Z","created_at_i":1301663486,"type":"story","author":"whoishiring","title":"Ask
@@ -2298,5 +2298,5 @@ http_interactions:
         is an awesome dude, and a great person to work with. In addition to having
         the best hair in all of The Mission, he and his team will no doubt go far
         in the only storefront sector. Can''t imagine a cooler founder to work for!\u003c/p\u003e","points":1,"parent_id":2398962,"story_id":2396027,"children":[],"options":[]}],"options":[]}],"options":[]}'
-  recorded_at: Tue, 19 Sep 2023 03:30:45 GMT
+  recorded_at: Sat, 23 Sep 2023 06:21:28 GMT
 recorded_with: VCR 6.2.0
