@@ -3,6 +3,6 @@
 .bundle
 pkg
 .DS_store
-
+tmp/
 data/*
 !data/.gitkeep
