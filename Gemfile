@@ -15,4 +15,3 @@ gem "rubocop-rspec"
 gem "typhoeus"
 gem "vcr"
 gem "webmock"
-gem "rspec-github", require: false

@@ -55,8 +55,6 @@ GEM
     rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-github (2.4.0)
-      rspec-core (~> 3.0)
     rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
@@ -105,7 +103,6 @@ DEPENDENCIES
   liquid
   rake
   rspec
-  rspec-github
   rubocop
   rubocop-rspec
   typhoeus
