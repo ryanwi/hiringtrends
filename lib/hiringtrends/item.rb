@@ -5,7 +5,7 @@ module HiringTrends
   class Item
     # Define accessors to delegate to the underlying item JSON/hash data
     # item schema described https://hn.algolia.com/api
-    %w[id title author created_at num_comments points children].each do |key|
+    %w[id title author created_at points children].each do |key|
       define_method(key) { values[key] }
     end
 
