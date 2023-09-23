@@ -15,8 +15,9 @@ module HiringTrends
     end
 
     def publish
-      item_for_publishing = items.find { |item| item.id == item_id }
-      item_published_at = Time.parse(item_for_publishing.created_at)
+      # binding.break
+      item_to_publish = items.find { |item| item.id == item_id }
+      item_published_at = Time.parse(item_to_publish.created_at)
       filename = "data-#{item_published_at.strftime('%Y%m')}01.js"
       publish_data(filename)
 
