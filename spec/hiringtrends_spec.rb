@@ -19,7 +19,7 @@ describe HiringTrends::Program, vcr: true do
 
   describe "#fetch_submission" do
     it "succeeds", vcr: true do
-      subject.fetch_submission
+      subject.fetch_submission(id: "2396027")
     end
   end
 end
