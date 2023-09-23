@@ -3,7 +3,7 @@
 describe HiringTrends::Publisher do
   describe "#initalize" do
     it "initializes correctly" do
-      described_class.new(software_terms: {}, items: [], month: 4, year: 2011, item_id: "2396027")
+      described_class.new(software_terms: {}, items: [], item_id: "2396027")
     end
   end
 
@@ -21,7 +21,7 @@ describe HiringTrends::Publisher do
         "points" => 280
       }
       items = [HiringTrends::Item.new(api_item)]
-      publisher = described_class.new(software_terms: {}, items:, month: 4, year: 2011, item_id: "2396027")
+      publisher = described_class.new(software_terms: {}, items:, item_id: "2396027")
       publisher.publish
       expect(mock_file).to have_received(:write).twice
     end

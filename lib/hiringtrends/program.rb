@@ -41,7 +41,7 @@ module HiringTrends
     end
 
     def publish(item_id:)
-      publisher = Publisher.new(software_terms:, items:, month:, year:, item_id:)
+      publisher = Publisher.new(software_terms:, items:, item_id:)
       publisher.publish
     end
 
