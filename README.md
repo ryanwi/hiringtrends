@@ -14,9 +14,7 @@ This is a personal development project.  You are welcome to use, modify, etc. an
 
 ## Usage
 
-With a command line
-
-Launch the program's console with the following command:
+From the command line, launch the program's console with the following command:
 
 ```
 bin/console
