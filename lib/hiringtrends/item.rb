@@ -63,7 +63,7 @@ module HiringTrends
     def to_record
       {
         month:,
-        num_comments:,
+        num_comments: comments.count,
         points:,
         terms: terms_data
       }
