@@ -30,6 +30,8 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/RegexpLiteral:
   Enabled: false
+Style/NumericLiterals:
+  Enabled: false
 
 Metrics/MethodLength:
   Enabled: false
