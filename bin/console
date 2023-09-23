@@ -12,6 +12,7 @@ def run_program(item_id)
   hn.fetch_all_submissions
   hn.analyze_submissions
   hn.publish
+  hn
 end
 
 def reload!(print = true)
