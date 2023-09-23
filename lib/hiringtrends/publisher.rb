@@ -22,7 +22,7 @@ module HiringTrends
       # publish_post(month, year, day, date, data_filename, key_measures)
 
       publish_data(data_filename)
-      # publish_post(item_published_at:, data_filename:)
+      publish_post(item_published_at:, data_filename:)
     end
 
     def publish_data(filename)

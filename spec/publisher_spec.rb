@@ -22,18 +22,20 @@ describe HiringTrends::Publisher do
     it "publishes the data file with the right filename" do
       mock_file = instance_double("File")
       allow(mock_file).to receive(:write)
+      allow(mock_file).to receive(:read)
       allow(File).to receive(:open).and_yield(mock_file)
-      expected_filename = "web/data/data-20110401.js"
 
       publisher = described_class.new(software_terms: {}, items:, item_id: 2396027)
       publisher.publish
 
+      expected_filename = "web/data/data-20110401.js"
       expect(File).to have_received(:open).with(expected_filename, "wb")
     end
 
     it "publishes the data file with the right contents" do
       mock_file = instance_double("File")
       allow(mock_file).to receive(:write)
+      allow(mock_file).to receive(:read)
       allow(File).to receive(:open).and_yield(mock_file)
 
       publisher = described_class.new(software_terms: {}, items:, item_id: 2396027)
@@ -41,6 +43,19 @@ describe HiringTrends::Publisher do
 
       expect(mock_file).to have_received(:write).with("data = ").ordered
       expect(mock_file).to have_received(:write).with(("[\n  {\n    \"month\": \"Apr11\",\n    \"num_comments\": 1,\n    \"points\": 280,\n    \"terms\": null\n  }\n]")).ordered
+    end
+
+    it "publishes the post file" do
+      mock_file = instance_double("File")
+      allow(mock_file).to receive(:write)
+      allow(mock_file).to receive(:read)
+      allow(File).to receive(:open).and_yield(mock_file)
+
+      publisher = described_class.new(software_terms: {}, items:, item_id: 2396027)
+      publisher.publish
+
+      expected_filename = "web/2011/april.html"
+      expect(File).to have_received(:open).with(expected_filename, "w")
     end
   end
 end
