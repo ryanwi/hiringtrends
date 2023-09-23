@@ -51,7 +51,7 @@ module HiringTrends
     end
 
     def analyze(terms_template)
-      HiringTrends.logger.info "== Analyzing #{title} =="
+      HiringTrends.logger.info "Analyzing #{id}: #{title}"
 
       @terms_data = Marshal.load(Marshal.dump(terms_template))
 

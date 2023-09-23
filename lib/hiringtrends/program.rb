@@ -5,7 +5,7 @@ require "debug"
 
 module HiringTrends
   class Program
-    attr_accessor :dictionary_url, :month, :year, :item_id, :software_terms, :items
+    attr_accessor :dictionary_url, :item_id, :software_terms, :items
 
     def initialize(dictionary_url:, item_id:)
       @software_terms = {}
@@ -18,17 +18,17 @@ module HiringTrends
     # Find and load all hiring submissions from HN Search API
     def fetch_all_submissions
       HiringTrends.logger.info "== searching for whoishiring submissions =="
-      item_ids = HiringTrends::ItemSearch.new.execute
+      item_ids = ItemSearch.new.execute
       load_items(item_ids)
     end
 
-    def fetch_submission(id:)
-      HiringTrends::Item.load(item_id: id, force_api_source: true)
+    def fetch_submission
+      Item.load(item_id:, force_api_source: true)
     end
 
     def load_items(item_ids)
       item_ids.each do |id|
-        item = HiringTrends::Item.load(item_id: id)
+        item = Item.load(item_id: id)
         items << item
       end
     end
@@ -40,9 +40,8 @@ module HiringTrends
       end
     end
 
-    def publish(item_id:)
-      publisher = Publisher.new(software_terms:, items:, item_id:)
-      publisher.publish
+    def publish
+      Publisher.new(software_terms:, items:, item_id:).publish
     end
 
     private

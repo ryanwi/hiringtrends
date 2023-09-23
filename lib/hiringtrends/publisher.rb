@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "liquid"
+require "debug"
 
 module HiringTrends
   class Publisher
@@ -13,8 +14,7 @@ module HiringTrends
     end
 
     def publish
-      # binding.break
-      item_to_publish = items.find { |item| item.id == item_id }
+      item_to_publish = items.find { |item| item.id == item_id.to_i }
       item_published_at = Time.parse(item_to_publish.created_at)
       filename = "data-#{item_published_at.strftime('%Y%m')}01.js"
       publish_data(filename)
