@@ -5,7 +5,7 @@ require "debug"
 
 module HiringTrends
   class Publisher
-    attr_accessor :dictionary, :items, :item_id
+    attr_reader :dictionary, :items, :item_id
 
     def initialize(dictionary:, items:, item_id:)
       @dictionary = dictionary
@@ -104,5 +104,9 @@ module HiringTrends
 
     #   return ranked_terms, gainers, losers
     end
+
+    private
+
+    attr_writer :dictionary, :items, :item_id
   end
 end

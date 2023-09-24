@@ -4,7 +4,7 @@ require "faraday"
 
 module HiringTrends
   class Program
-    attr_accessor :dictionary_url, :item_id, :dictionary, :items
+    attr_reader :dictionary_url, :item_id, :dictionary, :items
 
     def initialize(dictionary_url:, item_id:)
       @software_terms = {}
@@ -43,5 +43,9 @@ module HiringTrends
     def publish
       Publisher.new(dictionary:, items:, item_id:).publish
     end
+
+    private
+
+    attr_writer :dictionary_url, :item_id, :dictionary, :items
   end
 end
