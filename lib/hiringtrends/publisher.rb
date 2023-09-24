@@ -5,10 +5,10 @@ require "debug"
 
 module HiringTrends
   class Publisher
-    attr_accessor :software_terms, :items, :item_id
+    attr_accessor :dictionary, :items, :item_id
 
-    def initialize(software_terms:, items:, item_id:)
-      @software_terms = software_terms
+    def initialize(dictionary:, items:, item_id:)
+      @dictionary = dictionary
       @items = items
       @item_id = item_id
     end

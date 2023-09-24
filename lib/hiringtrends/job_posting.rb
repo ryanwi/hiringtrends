@@ -3,26 +3,25 @@
 module HiringTrends
   # Represents a job posting from an HN comment that can be searched against
   class JobPosting
-    def initialize(text)
-      self.original_text = text
-      self.text = text.downcase
+    attr_accessor :original_text, :text
+
+    def initialize(job_description:)
+      self.original_text = job_description
+      self.text = job_description.downcase
     end
 
     def term?(term)
-      modifier = parse_modifier(term)
+      modifier = TermsDictionary.parse_modifier(term)
 
       return term_with_modifier?(modifier) if modifier
 
       search_term = term.downcase
       return true if term_in_text?(search_term)
       return true if term_special_cases?(search_term)
-
       false
     end
 
     private
-
-    attr_accessor :original_text, :text
 
     # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
     # For multi-word phrases (e.g. Visual Basic), search directly against the comment string.
@@ -32,18 +31,6 @@ module HiringTrends
 
     def original_words
       @original_words ||= original_text.split(/[[:space:]!|\\;:,.?\/'()\[\]]/)
-    end
-
-    # Some terms go by different names, modifiers are used to search for
-    # different options.
-    # Examples:
-    # term/js[root]
-    # term/alias[word1|word2]
-    def parse_modifier(term)
-      parts = term.split "/"
-      return nil if parts.count == 1
-
-      parts[1]
     end
 
     def term_in_text?(term)

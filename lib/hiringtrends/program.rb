@@ -1,18 +1,17 @@
 # frozen_string_literal: true
 
 require "faraday"
-require "debug"
 
 module HiringTrends
   class Program
-    attr_accessor :dictionary_url, :item_id, :software_terms, :items
+    attr_accessor :dictionary_url, :item_id, :dictionary, :items
 
     def initialize(dictionary_url:, item_id:)
       @software_terms = {}
       @items = []
-      @dictionary_url = dictionary_url
       @item_id = item_id
-      initialize_dictionary
+      @dictionary_url = dictionary_url
+      @dictionary = TermsDictionary.new(dictionary_url)
     end
 
     # Find and load all hiring submissions from HN Search API
@@ -27,6 +26,7 @@ module HiringTrends
     end
 
     def load_items(item_ids)
+      HiringTrends.logger.info "== loading items =="
       item_ids.each do |id|
         item = Item.load(item_id: id)
         items << item
@@ -36,27 +36,12 @@ module HiringTrends
     # Process all submissions, counting comments counts for each term in the technology dictionary
     def analyze_submissions
       items.each do |item|
-        item.analyze(software_terms)
+        item.analyze(dictionary)
       end
     end
 
     def publish
-      Publisher.new(software_terms:, items:, item_id:).publish
-    end
-
-    private
-
-    def initialize_dictionary
-      HiringTrends.logger.info "== initialize_dictionary =="
-      response = Faraday.get dictionary_url
-      response.body.lines.each do |line|
-        software_terms[line.chomp.split("/").first] = {
-          count: 0,
-          percentage: 0,
-          mavg3: 0,
-          full_term: line.chomp
-        }
-      end
+      Publisher.new(dictionary:, items:, item_id:).publish
     end
   end
 end

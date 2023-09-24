@@ -106,6 +106,14 @@ describe HiringTrends::Item do
         "node.js" => { count: 0, percentage: 0, full_term: "node.js/js[node]" }
       }
     }
+    let(:dictionary) { 
+      instance_double("HiringTrends::TermsDictionary")
+    }
+
+    before do
+      allow(HiringTrends::TermsDictionary).to receive(:new).and_return(dictionary)
+      allow(dictionary).to receive(:software_terms_clone).and_return(terms)
+    end
 
     context "when words have slash separatos" do
       let(:comments) {
@@ -116,9 +124,8 @@ describe HiringTrends::Item do
       }
 
       it "separates words" do
-        subject.analyze(terms)
+        subject.analyze(dictionary)
 
-        expect(terms["Ruby"][:count]).to eq(0)
         expect(subject.terms_data["Ruby"][:count]).to eq(2)
         expect(subject.terms_data["JavaScript"][:count]).to eq(1)
       end
@@ -133,7 +140,7 @@ describe HiringTrends::Item do
       }
 
       it "separates words" do
-        subject.analyze(terms)
+        subject.analyze(dictionary)
 
         expect(subject.terms_data["Ruby"][:count]).to eq(2)
       end
@@ -148,7 +155,7 @@ describe HiringTrends::Item do
       }
 
       it "separates words with periods at end of sentence" do
-        subject.analyze(terms)
+        subject.analyze(dictionary)
 
         expect(subject.terms_data["Ruby"][:count]).to eq(2)
         expect(subject.terms_data["JavaScript"][:count]).to eq(1)
@@ -164,7 +171,7 @@ describe HiringTrends::Item do
       }
 
       it "is case insensitive" do
-        subject.analyze(terms)
+        subject.analyze(dictionary)
 
         expect(subject.terms_data["Ruby"][:count]).to eq(2)
         expect(subject.terms_data["JavaScript"][:count]).to eq(1)
@@ -178,16 +185,17 @@ describe HiringTrends::Item do
           { "text" => "in this comment is ruby, javascript." }
         ]
       }
-
-      it "counts it" do
-        terms = {
+      let(:terms) {
+        {
           "JavaScript" => { count: 0, percentage: 0, full_term: "JavaScript" },
           "Objective-C" => { count: 0, percentage: 0, full_term: "Objective-C/alias[Objective-C|ObjectiveC|Objective C]" },
           "PHP" => { count: 0, percentage: 0, full_term: "PHP" },
           "Python" => { count: 0, percentage: 0, full_term: "Python" }
         }
+      }
 
-        subject.analyze(terms)
+      it "counts it" do
+        subject.analyze(dictionary)
         expect(subject.terms_data["Objective-C"][:count]).to eq(1)
       end
     end
@@ -201,7 +209,7 @@ describe HiringTrends::Item do
       }
 
       it "ignore quotes" do
-        subject.analyze(terms)
+        subject.analyze(dictionary)
         expect(subject.terms_data["AngularJS"][:count]).to eq(1)
       end
     end
@@ -213,15 +221,16 @@ describe HiringTrends::Item do
           { "text" => "in this comment is ruby, javascript." }
         ]
       }
-
-      it "counts multi-word terms" do
-        terms = {
+      let(:terms) {
+        {
           "Visual Basic" => { count: 0, percentage: 0, full_term: "Visual Basic" },
           "Web services" => { count: 0, percentage: 0, full_term: "Web services" },
           "node.js" => { count: 0, percentage: 0, full_term: "node.js/js[node]" }
         }
+      }
 
-        subject.analyze(terms)
+      it "counts multi-word terms" do
+        subject.analyze(dictionary)
         expect(subject.terms_data["Visual Basic"][:count]).to eq(1)
       end
     end
@@ -233,13 +242,14 @@ describe HiringTrends::Item do
           { "text" => "in this comment is ruby, javascript." }
         ]
       }
-
-      it "counts .net" do
-        terms = {
+      let(:terms) {
+        {
           ".NET" => { count: 0, percentage: 0, full_term: ".NET" }
         }
+      }
 
-        subject.analyze(terms)
+      it "counts .net" do
+        subject.analyze(dictionary)
         expect(subject.terms_data[".NET"][:count]).to eq(1)
       end
     end
@@ -252,12 +262,14 @@ describe HiringTrends::Item do
           { "text" => "XP-Dev.com - Remote - <a href=\"https://xp-dev.com\" rel=\"nofollow\">https:&#x2F;&#x2F;xp-dev.com</a><p>XP-Dev.com does version control and project hosting (in the same market as Github, Bitbucket, etc). Profitable and bootstrapped.<p>Looking for backend and frontend engineers who would like to get their hands dirty in Subversion, Git and Mercurial. You will be working on new features on the platform that may involve work on the whole stack. You will be liaising directly with real users. Deployments are really quick, and you get to see the impact of your work almost immediately.<p>Stack:<p><pre><code> - Nginx, Apache\\n - Java (Core, Wicket, Hibernate)\\n - Python (mainly for scripting)\\n - Linux\\n - AngularJS, JQuery\\n - MySQL\\n - Redis\\n - RabbitMQ\\n - Fabric\\n</code></pre>\\nThere are other products in the pipeline - most of which are akin to xp-dev.com (hosting&#x2F;productivity platforms). So, there is plenty of room to switch products and try out new things: <a href=\"https://deployer.vc\" rel=\"nofollow\">https:&#x2F;&#x2F;deployer.vc</a>, <a href=\"https://zoned.io\" rel=\"nofollow\">https:&#x2F;&#x2F;zoned.io</a> amongst them.<p>What we&#x27;re looking for:<p><pre><code> - Self starters\\n - Sound understanding of programming\\n you don&#x27;t need to be a Java&#x2F;Python&#x2F;JavaScript guru\\n</code></pre>\\nBenefits:<p><pre><code> - No keeping track of holidays\\n - Flexible working hours\\n - Flexible working conditions (see below)\\n</code></pre>\\nPosition location is remote. You&#x27;ll need to factor in working from home or from a shared space near you (all will be paid for).<p>To apply, just drop a short cover email describing yourself and your CV to rs@exentriquesolutions.com" }
         ]
       }
-      it "counts it" do
-        terms = {
+      let(:terms) {
+        {
           "RabbitMQ" => { count: 0, percentage: 0, full_term: "RabbitMQ" }
         }
+      }
 
-        subject.analyze(terms)
+      it "counts it" do
+        subject.analyze(dictionary)
         expect(subject.terms_data["RabbitMQ"][:count]).to eq(3)
       end
     end

@@ -3,12 +3,12 @@
 describe HiringTrends::Publisher do
   describe "#initalize" do
     it "initializes correctly" do
-      described_class.new(software_terms: {}, items: [], item_id: 2396027)
+      described_class.new(dictionary: nil, items: [], item_id: 2396027)
     end
   end
 
   describe "#publish" do
-    subject(:publisher) { described_class.new(software_terms: {}, items: items, item_id: 2396027) }
+    subject(:publisher) { described_class.new(dictionary: nil, items:, item_id: 2396027) }
 
     let(:api_item) {
       {

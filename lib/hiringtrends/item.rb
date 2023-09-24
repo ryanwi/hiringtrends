@@ -50,10 +50,10 @@ module HiringTrends
       end
     end
 
-    def analyze(terms_template)
+    def analyze(terms_dictionary)
       HiringTrends.logger.info "Analyzing #{id}: #{title}"
 
-      @terms_data = Marshal.load(Marshal.dump(terms_template))
+      @terms_data = terms_dictionary.software_terms_clone
 
       count_terms_in_comments
       calculate_percentage_for_terms
@@ -77,7 +77,7 @@ module HiringTrends
         comment_text = comment["text"]
         next if comment_text.nil?
 
-        posting = HiringTrends::JobPosting.new(comment_text)
+        posting = HiringTrends::JobPosting.new(job_description: comment_text)
 
         # identify if each term is in the comment
         terms_data.each_key do |term|
