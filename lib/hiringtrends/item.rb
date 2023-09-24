@@ -9,7 +9,7 @@ module HiringTrends
       define_method(key) { values[key] }
     end
 
-    attr_accessor :values, :terms_data
+    attr_reader :values, :terms_data
 
     def initialize(values = {})
       @values = values
@@ -70,6 +70,8 @@ module HiringTrends
     end
 
     private
+
+    attr_writer :values, :terms_data
 
     # accumulate mentions of term as comments are searched
     def count_terms_in_comments
