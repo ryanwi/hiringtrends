@@ -160,6 +160,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   rubycritic
+  simplecov
   typhoeus
   vcr
   webmock
