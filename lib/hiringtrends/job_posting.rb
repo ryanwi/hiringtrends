@@ -3,11 +3,11 @@
 module HiringTrends
   # Represents a job posting from an HN comment that can be searched against
   class JobPosting
-    attr_accessor :original_text, :text
+    attr_reader :original_text, :text
 
     def initialize(job_description:)
-      self.original_text = job_description
-      self.text = job_description.downcase
+      @original_text = job_description
+      @text = job_description.downcase
     end
 
     def term?(term)
@@ -22,6 +22,8 @@ module HiringTrends
     end
 
     private
+
+    attr_writer :original_text, :text
 
     # Naive tokenization of comment, build the terms contained in the comment and lower case for searching
     # For multi-word phrases (e.g. Visual Basic), search directly against the comment string.
