@@ -35,21 +35,21 @@ http_interactions:
       x-xss-protection:
       - 1; mode=block
       x-github-request-id:
-      - F83A:1939:15D57A:1A4E19:650E83E0
+      - A6E6:4014:396A9B:462E91:6510C48A
       accept-ranges:
       - bytes
       date:
-      - Sat, 23 Sep 2023 06:21:23 GMT
+      - Sun, 24 Sep 2023 23:54:18 GMT
       via:
       - 1.1 varnish
       x-served-by:
-      - cache-pdx12320-PDX
+      - cache-bfi-krnt7300077-BFI
       x-cache:
-      - MISS
+      - HIT
       x-cache-hits:
-      - '0'
+      - '1'
       x-timer:
-      - S1695450083.043876,VS0,VE135
+      - S1695599658.312896,VS0,VE122
       vary:
       - Authorization,Accept-Encoding,Origin
       access-control-allow-origin:
@@ -57,9 +57,9 @@ http_interactions:
       cross-origin-resource-policy:
       - cross-origin
       x-fastly-request-id:
-      - 9f53e3948dc27a5ed6094aecc65329fead8f47af
+      - 83c669f8ceb6c830a9d255000752a07c60f2e399
       expires:
-      - Sat, 23 Sep 2023 06:26:23 GMT
+      - Sun, 24 Sep 2023 23:59:18 GMT
       source-age:
       - '0'
     body:
@@ -325,5 +325,5 @@ http_interactions:
         ZeroMQ/alias[ZeroMQ|0MQ]
         Zig
         zookeeper
-  recorded_at: Sat, 23 Sep 2023 06:21:23 GMT
+  recorded_at: Sun, 24 Sep 2023 23:54:18 GMT
 recorded_with: VCR 6.2.0
