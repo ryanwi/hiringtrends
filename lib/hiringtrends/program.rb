@@ -7,7 +7,6 @@ module HiringTrends
     attr_reader :dictionary_url, :item_id, :dictionary, :items
 
     def initialize(dictionary_url:, item_id:)
-      @software_terms = {}
       @items = []
       @item_id = item_id
       @dictionary_url = dictionary_url
