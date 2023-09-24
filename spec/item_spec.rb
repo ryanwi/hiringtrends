@@ -112,7 +112,7 @@ describe HiringTrends::Item do
 
     before do
       allow(HiringTrends::TermsDictionary).to receive(:new).and_return(dictionary)
-      allow(dictionary).to receive(:software_terms_clone).and_return(terms)
+      allow(dictionary).to receive(:term_counts_template).and_return(terms)
     end
 
     context "when words have slash separatos" do

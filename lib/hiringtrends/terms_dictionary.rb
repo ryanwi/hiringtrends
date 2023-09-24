@@ -2,25 +2,25 @@
 
 module HiringTrends
   class TermsDictionary
-    attr_reader :raw_terms, :software_terms
+    attr_reader :raw_terms
 
     def initialize(dictionary_url)
       response = Faraday.get dictionary_url
       @raw_terms = response.body.lines.map(&:chomp)
-      @software_terms = {}
-
-      @raw_terms.each do |line|
-        @software_terms[line.split("/").first] = {
+      @term_counts_template = @raw_terms.each_with_object({}) do |term, result|
+        term_without_modifiers = term.split("/").first
+        result[term_without_modifiers] = {
           count: 0,
           percentage: 0,
           mavg3: 0,
-          full_term: line
+          full_term: term
         }
       end
     end
 
-    def software_terms_clone
-      Marshal.load(Marshal.dump(@software_terms))
+    # Returns a copy of the term counts template
+    def term_counts_template
+      Marshal.load(Marshal.dump(@term_counts_template))
     end
 
     # Some terms go by different names, modifiers are used to search for

@@ -32,7 +32,7 @@ module HiringTrends
     end
 
     def comments
-      values["children"] || []
+      values["children"].reject { |comment| comment["text"].nil? } || []
     end
 
     def rel
@@ -53,7 +53,7 @@ module HiringTrends
     def analyze(terms_dictionary)
       HiringTrends.logger.info "Analyzing #{id}: #{title}"
 
-      @terms_data = terms_dictionary.software_terms_clone
+      @terms_data = terms_dictionary.term_counts_template
 
       count_terms_in_comments
       calculate_percentage_for_terms
@@ -76,16 +76,13 @@ module HiringTrends
     # accumulate mentions of term as comments are searched
     def count_terms_in_comments
       comments.each do |comment|
-        comment_text = comment["text"]
-        next if comment_text.nil?
+          posting = HiringTrends::JobPosting.new(job_description: comment["text"])
 
-        posting = HiringTrends::JobPosting.new(job_description: comment_text)
-
-        # identify if each term is in the comment
-        terms_data.each_key do |term|
-          # increment count as its found
-          terms_data[term][:count] += 1 if posting.term?(terms_data[term][:full_term])
-        end
+          # identify if each term is in the comment/job description
+          terms_data.each_key do |term|
+            # increment count as its found
+            terms_data[term][:count] += 1 if posting.term?(terms_data[term][:full_term])
+          end
       end
     end
 

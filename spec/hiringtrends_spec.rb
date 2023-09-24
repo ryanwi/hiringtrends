@@ -5,15 +5,15 @@ describe HiringTrends::Program, vcr: true do
 
   describe "#initialize" do
     it "creates the terms hash structure" do
-      expect(subject.dictionary.software_terms).to be_a(Hash)
+      expect(subject.dictionary.term_counts_template).to be_a(Hash)
     end
 
     it "key is the term" do
-      expect(subject.dictionary.software_terms.keys.first).to eq(".NET")
+      expect(subject.dictionary.term_counts_template.keys.first).to eq(".NET")
     end
 
     it "term value is a hash" do
-      expect(subject.dictionary.software_terms.values.first).to eq({ count: 0, full_term: ".NET", mavg3: 0, percentage: 0 })
+      expect(subject.dictionary.term_counts_template.values.first).to eq({ count: 0, full_term: ".NET", mavg3: 0, percentage: 0 })
     end
   end
 
