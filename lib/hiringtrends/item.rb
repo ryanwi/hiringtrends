@@ -32,7 +32,7 @@ module HiringTrends
     end
 
     def comments
-      values["children"].reject { |comment| comment["text"].nil? } || []
+      @comments ||= values["children"].reject { |comment| comment["text"].nil? } || []
     end
 
     def rel
