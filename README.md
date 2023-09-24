@@ -17,6 +17,12 @@ This is a personal development project.  You are welcome to use, modify, etc. an
 From the command line, launch the program's console with the following command:
 
 ```
+bin/hiringtrends
+```
+
+To launch an interactive console
+
+```
 bin/console
 ```
 
