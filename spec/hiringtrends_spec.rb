@@ -17,6 +17,13 @@ describe HiringTrends::Program, vcr: true do
     end
   end
 
+  describe "#fetch_all_submissions" do
+    it "succeeds", vcr: true do
+      subject.fetch_all_submissions
+      expect(subject.items.count).to eq(149)
+    end
+  end
+
   describe "#fetch_submission" do
     it "succeeds", vcr: true do
       subject.fetch_submission
