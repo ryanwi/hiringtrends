@@ -40,7 +40,8 @@ module HiringTrends
     end
 
     def publish
-      Publisher.new(dictionary:, items:, item_id:).publish
+      item_to_publish = items.find { |item| item.id == item_id.to_i }
+      Publisher.new(item_to_publish:, items:, dictionary:).publish
     end
 
     private

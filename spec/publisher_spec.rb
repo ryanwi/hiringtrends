@@ -3,45 +3,37 @@
 describe HiringTrends::Publisher do
   describe "#initalize" do
     it "initializes correctly" do
-      described_class.new(dictionary: nil, items: [], item_id: 37351667)
+      described_class.new(item_to_publish: nil, items: [], dictionary: nil)
     end
   end
 
   describe "#publish" do
-    subject(:publisher) { described_class.new(dictionary: nil, items:, item_id: 37351667) }
+    subject(:publisher) { described_class.new(item_to_publish: item, items:, dictionary: nil) }
 
-    let(:item) { instance_double("HiringTrends::Item", id: 37351667, created_at: "2023-09-01T15:00:25.000Z", terms_data:) }
-    let(:items) { [item] }
-    let(:terms_data) {
-      {
-        "AI" => {
-          count: 57,
-          percentage: 18.27,
-          mavg3: 0,
-          full_term: "AI/alias[AI|Artificial Intelligence]",
-          rank: 8
-        },
-        "React" => {
-          count: 60,
-          percentage: 19.23,
-          mavg3: 0,
-          full_term: "React/js[react]",
-          rank: 7
-        }
-      }
-    }
     let(:mock_file) { instance_double("File") }
+    let(:item) do
+      instance_double("HiringTrends::Item", id: 37351667, created_at: "2023-09-01T15:00:25.000Z", terms_data:)
+    end
+    let(:items) { [item] }
+    let(:terms_data) do
+      {
+        "AI" => { count: 57, percentage: 18.27, full_term: "AI/alias[AI|Artificial Intelligence]", rank: 8 },
+        "React" => { count: 60, percentage: 19.23, full_term: "React/js[react]", rank: 7 }
+      }
+    end
 
     before do
       allow(mock_file).to receive(:write)
       allow(mock_file).to receive(:read)
       allow(File).to receive(:open).and_yield(mock_file)
-      allow(item).to receive(:to_record).and_return({
-        month: "Sep23",
-        num_comments: 1,
-        points: 280,
-        terms: nil
-      })
+      allow(item).to receive(:to_record).and_return(
+        {
+          month: "Sep23",
+          num_comments: 1,
+          points: 280,
+          terms: nil
+        }
+      )
     end
 
     it "publishes the data file with the right filename" do
