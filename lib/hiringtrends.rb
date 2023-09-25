@@ -2,12 +2,13 @@
 
 require "logger"
 
-require_relative "hiringtrends/program"
-require_relative "hiringtrends/item_search"
-require_relative "hiringtrends/item"
-require_relative "hiringtrends/job_posting"
-require_relative "hiringtrends/publisher"
-require_relative "hiringtrends/terms_dictionary"
+require "hiringtrends/item"
+require "hiringtrends/item_search"
+require "hiringtrends/job_posting"
+require "hiringtrends/key_measures"
+require "hiringtrends/program"
+require "hiringtrends/publisher"
+require "hiringtrends/terms_dictionary"
 
 module HiringTrends
   HN_API_BASE_URL = "https://hn.algolia.com"
