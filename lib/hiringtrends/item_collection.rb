@@ -47,11 +47,11 @@ module HiringTrends
     end
 
     def last_year_terms_data
-      last_year&.terms_data
+      last_year&.terms_data || {}
     end
 
     def last_month_terms_data
-      last_month&.terms_data
+      last_month&.terms_data || {}
     end
 
     private
