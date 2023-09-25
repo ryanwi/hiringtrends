@@ -76,13 +76,13 @@ module HiringTrends
     # accumulate mentions of term as comments are searched
     def count_terms_in_comments
       comments.each do |comment|
-          posting = HiringTrends::JobPosting.new(job_description: comment["text"])
+        posting = HiringTrends::JobPosting.new(job_description: comment["text"])
 
-          # identify if each term is in the comment/job description
-          terms_data.each_key do |term|
-            # increment count as its found
-            terms_data[term][:count] += 1 if posting.term?(terms_data[term][:full_term])
-          end
+        # identify if each term is in the comment/job description
+        terms_data.each_key do |term|
+          # increment count as its found
+          terms_data[term][:count] += 1 if posting.term?(terms_data[term][:full_term])
+        end
       end
     end
 
