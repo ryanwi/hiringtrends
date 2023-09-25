@@ -20,19 +20,23 @@ describe HiringTrends::KeyMeasureCalculator do
       "React" => { count: 60, percentage: 19.23, full_term: "React/js[react]", rank: 7 }
     }
   end
+  before do
+    allow(item_collection).to receive(:last_month_terms_data).and_return(terms_data)
+    allow(item_collection).to receive(:last_year_terms_data).and_return(terms_data)
+  end
 
   describe "#ranked_terms" do
     it "orders the month's results by ranking" do
       expected = {
-        "React" => { count: 60, full_term: "React/js[react]", percentage: 19.23, rank: 7 },
-        "AI" => { count: 57, full_term: "AI/alias[AI|Artificial Intelligence]", percentage: 18.27, rank: 8 }
+        "React" => { count: 60, full_term: "React/js[react]", percentage: 19.23, rank: 7, count_last_month: 60, count_last_year: 60, rank_last_year: 7, rank_last_month: 7 },
+        "AI" => { count: 57, full_term: "AI/alias[AI|Artificial Intelligence]", percentage: 18.27, rank: 8, count_last_month: 57, count_last_year: 57, rank_last_year: 8, rank_last_month: 8 }
       }
       expect(subject.ranked_terms).to eq(expected)
     end
   end
 
   describe "#top_terms" do
-    xit "returns the top terms for the item" do
+    it "returns the top terms for the item" do
       tt = subject.top_terms(1)
 
       expected = {
@@ -41,11 +45,10 @@ describe HiringTrends::KeyMeasureCalculator do
           full_term: "React/js[react]",
           percentage: 19.23,
           rank: 7,
-          count_last_month: 1,
-          count_last_year: 1,
-          rank_change_month: 1,
-          rank_last_year: 1,
-          rank_change_year: 1
+          count_last_month: 60,
+          count_last_year: 60,
+          rank_last_month: 7,
+          rank_last_year: 7
         }
       }
       expect(tt).to eq(expected)

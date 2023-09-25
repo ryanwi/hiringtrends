@@ -35,22 +35,22 @@ module HiringTrends
     private
 
     def calculate_key_measures
-      ranked_terms.each do |term|
-        # join_counts(term)
-        # join_ranks(term)
+      ranked_terms.each do |term, term_data|
+        join_counts(term, term_data)
+        join_ranks(term, term_data)
         # term[:rank_change_month] = -(term[:rank] - term[:rank_last_month])
         # term[:rank_change_year] = -(term[:rank] - term[:rank_last_year])
       end
     end
 
-    def join_counts(term)
-      term[:count_last_month] = item_collection.last_month_terms_data[term][:count]
-      term[:count_last_year] = item_collection.last_year_terms_data[term][:count]
+    def join_counts(term, term_data)
+      term_data[:count_last_month] = item_collection.last_month_terms_data[term][:count]
+      term_data[:count_last_year] = item_collection.last_year_terms_data[term][:count]
     end
 
-    def join_ranks
-      term[:rank_last_month] = item_collection.last_month_terms_data[term][:rank]
-      term[:rank_last_year] = item_collection.last_year_terms_data[term][:rank]
+    def join_ranks(term, term_data)
+      term_data[:rank_last_month] = item_collection.last_month_terms_data[term][:rank]
+      term_data[:rank_last_year] = item_collection.last_year_terms_data[term][:rank]
     end
 
     # Order by YOY rank gain, with a minimum of 5 mentions this year
