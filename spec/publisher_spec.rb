@@ -3,24 +3,25 @@
 describe HiringTrends::Publisher do
   describe "#initalize" do
     it "initializes correctly" do
-      described_class.new(item_to_publish: nil, items: [], dictionary: nil)
+      described_class.new(item_collection: nil, key_measure_calculator: nil, dictionary: nil)
     end
   end
 
   describe "#publish" do
-    subject(:publisher) { described_class.new(item_to_publish: item, items:, dictionary: nil) }
+    subject(:publisher) { described_class.new(item_collection:, key_measure_calculator:, dictionary: nil) }
 
-    let(:mock_file) { instance_double("File") }
     let(:item) do
       instance_double("HiringTrends::Item", id: 37351667, created_at: "2023-09-01T15:00:25.000Z", terms_data:)
     end
-    let(:items) { [item] }
+    let(:item_collection) { HiringTrends::ItemCollection.new(target_item_id: 37351667) }
+    let(:key_measure_calculator) { HiringTrends::KeyMeasureCalculator.new(item_collection:) }
     let(:terms_data) do
       {
         "AI" => { count: 57, percentage: 18.27, full_term: "AI/alias[AI|Artificial Intelligence]", rank: 8 },
         "React" => { count: 60, percentage: 19.23, full_term: "React/js[react]", rank: 7 }
       }
     end
+    let(:mock_file) { instance_double("File") }
 
     before do
       allow(mock_file).to receive(:write)

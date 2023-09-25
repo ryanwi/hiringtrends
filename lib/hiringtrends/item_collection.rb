@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 module HiringTrends
+  # Represents the collection of items
   class ItemCollection
     include Enumerable
 
-    attr_accessor :items
-    attr_reader :target_item_id
+    attr_reader :items, :target_item_id
 
-    def initialize(target_item_id:)
-      @items = []
+    def initialize(items:, target_item_id:)
+      @items = items
       @target_item_id = target_item_id
     end
 
@@ -24,7 +24,11 @@ module HiringTrends
       @target_item ||= items.find { |item| item.id == target_item_id.to_i }
     end
 
-    def analyze!
+    def target_item_created_at
+      target_item&.created_at
+    end
+
+    def analyze
       items.each do |item|
         item.analyze(dictionary)
       end
@@ -43,11 +47,15 @@ module HiringTrends
     end
 
     def last_year_terms_data
-      last_year.terms_data
+      last_year&.terms_data
     end
 
     def last_month_terms_data
-      last_month.terms_data
+      last_month&.terms_data
     end
+
+    private
+
+    attr_writer :items, :target_item_id
   end
 end
