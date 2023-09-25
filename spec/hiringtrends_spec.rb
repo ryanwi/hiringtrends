@@ -13,7 +13,7 @@ describe HiringTrends::Program, vcr: true do
     end
 
     it "term value is a hash" do
-      expect(subject.dictionary.term_counts_template.values.first).to eq({ count: 0, full_term: ".NET", mavg3: 0, percentage: 0 })
+      expect(subject.dictionary.term_counts_template.values.first).to eq({ count: 0, full_term: ".NET", mavg3: 0, percentage: 0, rank: 0 })
     end
   end
 

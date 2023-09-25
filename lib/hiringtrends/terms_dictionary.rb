@@ -13,6 +13,7 @@ module HiringTrends
           count: 0,
           percentage: 0,
           mavg3: 0,
+          rank: 0,
           full_term: term
         }
       end
