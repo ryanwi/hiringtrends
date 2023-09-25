@@ -13,7 +13,7 @@ describe HiringTrends::Publisher do
     let(:item) do
       instance_double("HiringTrends::Item", id: 37351667, created_at: "2023-09-01T15:00:25.000Z", terms_data:)
     end
-    let(:item_collection) { HiringTrends::ItemCollection.new(target_item_id: 37351667) }
+    let(:item_collection) { HiringTrends::ItemCollection.new(items: [item], target_item_id: 37351667) }
     let(:key_measure_calculator) { HiringTrends::KeyMeasureCalculator.new(item_collection:) }
     let(:terms_data) do
       {

@@ -24,19 +24,19 @@ module HiringTrends
         .to_h
     end
 
-    def top_gainers
+    def top_gainers(limit)
       []
     end
 
-    def top_losers
+    def top_losers(limit)
       []
     end
 
     def calculate_key_measures
       # Augment the ranking data with data from periods to compare against
       ranked_terms.each do |term|
-        lm_term = item_collection.last_month_terms_data[term]
-        ly_term = item_collection.last_year_terms_data[term]
+        # lm_term = item_collection.last_month_terms_data[term]
+        # ly_term = item_collection.last_year_terms_data[term]
 
         # term_stats = term[1]
         # term_stats["count_last_month"] = lm_term["count"]
