@@ -20,6 +20,7 @@ describe HiringTrends::KeyMeasureCalculator do
       "React" => { count: 60, percentage: 19.23, full_term: "React/js[react]", rank: 7 }
     }
   end
+
   before do
     allow(item_collection).to receive(:last_month_terms_data).and_return(terms_data)
     allow(item_collection).to receive(:last_year_terms_data).and_return(terms_data)

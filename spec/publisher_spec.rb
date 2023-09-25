@@ -35,6 +35,8 @@ describe HiringTrends::Publisher do
           terms: nil
         }
       )
+      allow(item_collection).to receive(:last_month_terms_data).and_return(terms_data)
+      allow(item_collection).to receive(:last_year_terms_data).and_return(terms_data)
     end
 
     it "publishes the data file with the right filename" do
