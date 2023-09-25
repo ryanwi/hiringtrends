@@ -3,6 +3,7 @@
 require "logger"
 
 require "hiringtrends/item"
+require "hiringtrends/item_collection"
 require "hiringtrends/item_search"
 require "hiringtrends/job_posting"
 require "hiringtrends/key_measures"
