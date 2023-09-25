@@ -25,37 +25,40 @@ module HiringTrends
     end
 
     def top_gainers(limit)
-      []
+      [].first(limit)
     end
 
     def top_losers(limit)
-      []
+      [].first(limit)
     end
+
+    private
 
     def calculate_key_measures
-      # Augment the ranking data with data from periods to compare against
       ranked_terms.each do |term|
-        lm_term = item_collection.last_month_terms_data[term]
-        ly_term = item_collection.last_year_terms_data[term]
-
-        # term_stats = term[1]
-        # term_stats["count_last_month"] = lm_term["count"]
-        # term_stats["count_last_year"] = ly_term["count"]
-        # term_stats["rank_last_month"] = lm_term["rank"]
-        # term_stats["rank_change_month"] = -(term_stats["rank"] - lm_term["rank"])
-        # term_stats["rank_last_year"] = ly_term["rank"]
-        # term_stats["rank_change_year"] = -(term_stats["rank"] - ly_term["rank"])
+        join_counts(term)
+        join_ranks(term)
+        term[:rank_change_month] = -(term[:rank] - term[:rank_last_month])
+        term[:rank_change_year] = -(term[:rank] - term[:rank_last_year])
       end
-
-      # Order by YOY rank gain, with a minimum of 5 mentions this year
-      # gainers = ranked_terms.sort_by { |te| -te[1]["rank_change_year"] }
-      # gainers.reject! { |te| te[1]["count"] < 5 }
-
-      # Order by YOY rank decline, with a minimum of 5 mentions last year
-      # losers = ranked_terms.sort_by { |te| te[1]["rank_change_year"] }
-      # losers.reject! { |te| te[1]["count_last_year"] < 5 }
-
-      ranked_terms
     end
+
+    def join_counts(term)
+      term[:count_last_month] = item_collection.last_month_terms_data[term][:count]
+      term[:count_last_year] = item_collection.last_year_terms_data[term][:count]
+    end
+
+    def join_ranks
+      term[:rank_last_month] = item_collection.last_month_terms_data[term][:rank]
+      term[:rank_last_year] = item_collection.last_year_terms_data[term][:rank]
+    end
+
+    # Order by YOY rank gain, with a minimum of 5 mentions this year
+    # gainers = ranked_terms.sort_by { |te| -te[1]["rank_change_year"] }
+    # gainers.reject! { |te| te[1]["count"] < 5 }
+
+    # Order by YOY rank decline, with a minimum of 5 mentions last year
+    # losers = ranked_terms.sort_by { |te| te[1]["rank_change_year"] }
+    # losers.reject! { |te| te[1]["count_last_year"] < 5 }
   end
 end
