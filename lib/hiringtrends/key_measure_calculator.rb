@@ -38,8 +38,8 @@ module HiringTrends
       ranked_terms.each do |term, term_data|
         join_counts(term, term_data)
         join_ranks(term, term_data)
-        # term[:rank_change_month] = -(term[:rank] - term[:rank_last_month])
-        # term[:rank_change_year] = -(term[:rank] - term[:rank_last_year])
+        term_data[:rank_change_month] = -(term_data[:rank] - term_data[:rank_last_month])
+        term_data[:rank_change_year] = -(term_data[:rank] - term_data[:rank_last_year])
       end
     end
 
