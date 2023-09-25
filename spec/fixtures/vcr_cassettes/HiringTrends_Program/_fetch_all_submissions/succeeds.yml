@@ -35,21 +35,21 @@ http_interactions:
       x-xss-protection:
       - 1; mode=block
       x-github-request-id:
-      - 84EC:47A1:D17CCB:FC62D8:6510FECD
+      - 94E6:4C81:CE7058:F96230:6511007F
       accept-ranges:
       - bytes
       date:
-      - Mon, 25 Sep 2023 03:30:23 GMT
+      - Mon, 25 Sep 2023 03:37:37 GMT
       via:
       - 1.1 varnish
       x-served-by:
-      - cache-bfi-krnt7300031-BFI
+      - cache-pdx12328-PDX
       x-cache:
       - MISS
       x-cache-hits:
       - '0'
       x-timer:
-      - S1695612623.217260,VS0,VE129
+      - S1695613057.302364,VS0,VE146
       vary:
       - Authorization,Accept-Encoding,Origin
       access-control-allow-origin:
@@ -57,9 +57,9 @@ http_interactions:
       cross-origin-resource-policy:
       - cross-origin
       x-fastly-request-id:
-      - 40bdc0d386392243a37490f5c00d936bda679ca6
+      - a707ebc92cbda1c3b5acbfbcc8b0fa485e60e3c7
       expires:
-      - Mon, 25 Sep 2023 03:35:23 GMT
+      - Mon, 25 Sep 2023 03:42:37 GMT
       source-age:
       - '0'
     body:
@@ -325,7 +325,7 @@ http_interactions:
         ZeroMQ/alias[ZeroMQ|0MQ]
         Zig
         zookeeper
-  recorded_at: Mon, 25 Sep 2023 03:30:23 GMT
+  recorded_at: Mon, 25 Sep 2023 03:37:37 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=0&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -341,7 +341,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:23 GMT
+      - Mon, 25 Sep 2023 03:37:37 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -349,13 +349,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"8827ca0b0aaae045bbc9299a937ca024"
+      - W/"10008e7795faeac0716d00b73a29a421"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 82b1da7f-f597-4426-9aaf-1dc858b50fda
+      - 7c71291b-35c9-4277-a538-293a1826b16e
       x-runtime:
-      - '0.055647'
+      - '0.044793'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -376,7 +376,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c03030682927aa-SEA
+      - 80c03ac97a77c4f9-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2023-09-01T15:00:25.000Z","title":"Ask HN:
@@ -1122,8 +1122,8 @@ http_interactions:
         miss these other fine threads:\u003cp\u003e\u003ci\u003eWho wants to be hired?\u003c/i\u003e
         \u003ca href=\"https://news.ycombinator.com/item?id=30164269\" rel=\"nofollow\"\u003ehttps://news.ycombinator.com/item?id=30164269\u003c/a\u003e\u003cp\u003e\u003ci\u003eFreelancer?
         Seeking freelancer?\u003c/i\u003e \u003ca href=\"https://news.ycombinator.com/item?id=30164270\"
-        rel=\"nofollow\"\u003ehttps://news.ycombinator.com/item?id=30164270\u003c/a\u003e","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":0,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=0\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":17,"processingTimingsMS":{"_request":{"roundTrip":15},"afterFetch":{"format":{"highlighting":3,"total":3},"total":4},"fetch":{"query":6,"total":7},"getIdx":{"load":{"dicts":3,"total":4},"total":4},"total":17},"serverTimeMS":17}'
-  recorded_at: Mon, 25 Sep 2023 03:30:23 GMT
+        rel=\"nofollow\"\u003ehttps://news.ycombinator.com/item?id=30164270\u003c/a\u003e","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":0,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=0\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":9,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"format":{"highlighting":1,"total":1},"total":2},"fetch":{"query":5,"total":6},"total":9},"serverTimeMS":10}'
+  recorded_at: Mon, 25 Sep 2023 03:37:37 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=1&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -1139,7 +1139,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:23 GMT
+      - Mon, 25 Sep 2023 03:37:37 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -1147,13 +1147,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"e2a716ebf942c059223a9939addcb611"
+      - W/"07ebda8a407432c0b50ff76fcada38cb"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - f3374331-2b14-4351-be4f-2367e0a9c629
+      - 3ca8c729-b649-4737-af6c-dc122015bbdc
       x-runtime:
-      - '0.050267'
+      - '0.043279'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -1174,7 +1174,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c03031ad7f309c-SEA
+      - 80c03acaa99aec48-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2022-01-03T16:02:14.000Z","title":"Ask HN:
@@ -1999,8 +1999,8 @@ http_interactions:
         rel=\"nofollow\"\u003ehttps://news.ycombinator.com/item?id=23379195\u003c/a\u003e\u003cp\u003eNote
         that these threads are paginated and usually end up with several pages of
         comments. Click \u0026quot;More\u0026quot; at the bottom of each page to go
-        to the next.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":1,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=1\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":14,"processingTimingsMS":{"_request":{"roundTrip":15},"afterFetch":{"format":{"highlighting":2,"total":2},"total":3},"fetch":{"query":6,"total":7},"getIdx":{"load":{"dicts":2,"total":3},"total":3},"total":14},"serverTimeMS":14}'
-  recorded_at: Mon, 25 Sep 2023 03:30:23 GMT
+        to the next.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":1,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=1\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":8,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"format":{"highlighting":1,"total":1},"total":2},"fetch":{"query":5,"total":5},"total":8},"serverTimeMS":9}'
+  recorded_at: Mon, 25 Sep 2023 03:37:37 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=2&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -2016,7 +2016,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:24 GMT
+      - Mon, 25 Sep 2023 03:37:38 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -2024,13 +2024,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"6ec131a8026a1633b5d36ed659a317d7"
+      - W/"2616ff108f64feae9b82f74e1489f9cf"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 9d40d35c-cb18-4794-a42e-9921b773e65a
+      - ef1f8b0f-56a2-477b-9283-8778818ba254
       x-runtime:
-      - '0.048177'
+      - '0.040265'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -2051,7 +2051,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c030332d9ec4a5-SEA
+      - 80c03acbdd80c4e1-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2020-05-01T15:01:30.000Z","title":"Ask HN:
@@ -2836,8 +2836,8 @@ http_interactions:
         \u003ca href=\"https://kennytilton.github.io/whoishiring/\" rel=\"nofollow\"\u003ehttps://kennytilton.github.io/whoishiring/\u003c/a\u003e,\ngadogado''s
         \u003ca href=\"https://hnhired.com/\" rel=\"nofollow\"\u003ehttps://hnhired.com/\u003c/a\u003e,
         or kristopolous'' console script\nat \u003ca href=\"https://news.ycombinator.com/item?id=10313519\"
-        rel=\"nofollow\"\u003ehttps://news.ycombinator.com/item?id=10313519\u003c/a\u003e.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":2,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=2\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":13,"processingTimingsMS":{"_request":{"roundTrip":14},"afterFetch":{"format":{"highlighting":1,"total":2},"total":3},"fetch":{"query":6,"total":6},"getIdx":{"load":{"dicts":2,"total":3},"total":3},"total":14},"serverTimeMS":14}'
-  recorded_at: Mon, 25 Sep 2023 03:30:24 GMT
+        rel=\"nofollow\"\u003ehttps://news.ycombinator.com/item?id=10313519\u003c/a\u003e.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":2,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=2\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":5,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"format":{"highlighting":1,"total":1},"total":2},"fetch":{"query":2,"total":3},"total":5},"serverTimeMS":6}'
+  recorded_at: Mon, 25 Sep 2023 03:37:38 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=3&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -2853,7 +2853,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:24 GMT
+      - Mon, 25 Sep 2023 03:37:38 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -2861,13 +2861,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"5d5f0f4e0999839028b2ad462ca9296d"
+      - W/"5e133a381199bb1718b295a9f9c476f5"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - '09d532fa-3061-4078-8bfb-d2caa7be7655'
+      - 133faf85-b336-44ed-b988-ff564f2d044b
       x-runtime:
-      - '0.044792'
+      - '0.041490'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -2888,7 +2888,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c030379bde30e9-SEA
+      - 80c03ace2d4a279e-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2018-10-01T15:02:10.000Z","title":"Ask HN:
@@ -3345,8 +3345,8 @@ http_interactions:
         company—no\nrecruiting firms or job boards.\u003cp\u003eReaders: please only
         email submitters if you personally are interested in the\njob—no recruiters
         or sales calls.\u003cp\u003eYou can also use kristopolous'' console script
-        to search the thread:\nhttps://news.ycombinator.com/item?id=10313519.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":3,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=3\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":12,"processingTimingsMS":{"_request":{"roundTrip":18},"afterFetch":{"format":{"highlighting":1,"total":1},"total":2},"fetch":{"query":5,"total":6},"getIdx":{"load":{"dicts":1,"total":2},"total":2},"total":12},"serverTimeMS":12}'
-  recorded_at: Mon, 25 Sep 2023 03:30:24 GMT
+        to search the thread:\nhttps://news.ycombinator.com/item?id=10313519.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":3,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=3\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":9,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"format":{"highlighting":1,"total":1},"total":3},"fetch":{"query":5,"total":6},"total":9},"serverTimeMS":9}'
+  recorded_at: Mon, 25 Sep 2023 03:37:38 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=4&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -3362,7 +3362,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:25 GMT
+      - Mon, 25 Sep 2023 03:37:38 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -3370,13 +3370,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"5229db092e6aa7de8122953975db3197"
+      - W/"796faef3c3d7a131dc944620983a9ab2"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - d440939e-dc7b-4301-b073-211d57f62d37
+      - e4a97e69-d7c8-46b1-9d8d-3298b45ca43b
       x-runtime:
-      - '0.038066'
+      - '0.036317'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -3397,7 +3397,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c0303a1910eb97-SEA
+      - 80c03acf4de7307b-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2017-02-01T16:00:39.000Z","title":"Ask HN:
@@ -3763,8 +3763,8 @@ http_interactions:
         any job that may interest HN readers from executive assistant to\nmachine
         learning expert to CTO.\u003cp\u003ePlease only post if you personally are
         part of the \u003cem\u003ehiring\u003c/em\u003e company. No recruiting firms
-        or job boards, please.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":4,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=4\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":6,"processingTimingsMS":{"_request":{"roundTrip":16},"afterFetch":{"total":2},"fetch":{"query":3,"total":3},"total":6},"serverTimeMS":6}'
-  recorded_at: Mon, 25 Sep 2023 03:30:25 GMT
+        or job boards, please.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":4,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=4\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":4,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"total":1},"fetch":{"query":1,"total":2},"total":4},"serverTimeMS":4}'
+  recorded_at: Mon, 25 Sep 2023 03:37:38 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=5&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -3780,7 +3780,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:25 GMT
+      - Mon, 25 Sep 2023 03:37:38 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -3788,13 +3788,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"177ff73ecb1ab2de633ed858152843ec"
+      - W/"aefe9c8c1dfb5465f4fd332b0015776e"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - '00158b9a-dffe-41ee-ab0e-27188742368f'
+      - 1d54bf0d-4fdc-48bb-8f20-5f786a0c2240
       x-runtime:
-      - '0.036175'
+      - '0.035622'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -3815,7 +3815,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c0303c7d83c4d4-SEA
+      - 80c03ad04fdfc379-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2015-06-01T14:55:02.000Z","title":"Ask HN:
@@ -4089,8 +4089,8 @@ http_interactions:
         or H1B if the corresponding sort of candidate is welcome. Feel free to post
         any job that may interest HN readers from executive assistant to machine learning
         expert to CTO.\u003cp\u003eAlso see: Ask HN: Freelancer? Seeking freelancer?
-        (December 2013) http://news.ycombinator.com/item?id=6827545","matchLevel":"none","matchedWords":[]}}}],"nbHits":152,"page":5,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=5\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":4,"processingTimingsMS":{"_request":{"roundTrip":18},"afterFetch":{"total":1},"fetch":{"query":1,"total":2},"total":4},"serverTimeMS":4}'
-  recorded_at: Mon, 25 Sep 2023 03:30:25 GMT
+        (December 2013) http://news.ycombinator.com/item?id=6827545","matchLevel":"none","matchedWords":[]}}}],"nbHits":152,"page":5,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=5\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":4,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"total":1},"fetch":{"query":1,"total":2},"total":4},"serverTimeMS":4}'
+  recorded_at: Mon, 25 Sep 2023 03:37:38 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=6&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -4106,7 +4106,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:25 GMT
+      - Mon, 25 Sep 2023 03:37:39 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -4114,13 +4114,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"e70690d7f489cb6ddedff6f305a84987"
+      - W/"4a4f541809d658080ff54a7b162d2c6f"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - fb9484d7-7d04-4851-b0ee-5a3de0df5ba2
+      - c1ec03e9-4e44-4cce-bcf4-9efb0f18408a
       x-runtime:
-      - '0.037572'
+      - '0.042689'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -4141,7 +4141,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c0303eb98fc4d7-SEA
+      - 80c03ad1583fc555-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2013-11-01T13:18:22.000Z","title":"Ask HN:
@@ -4388,8 +4388,8 @@ http_interactions:
         or H1B if the corresponding sort of candidate is welcome. Feel free to post
         any job that may interest HN readers from executive assistant to machine learning
         expert to CTO.\u003cp\u003ePlease also see: \"Ask HN: Freelancer? Seeking
-        freelancer?\" (April 2012) http://news.ycombinator.com/item?id=3783658","matchLevel":"none","matchedWords":[]}}}],"nbHits":152,"page":6,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=6\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":6,"processingTimingsMS":{"_request":{"roundTrip":14},"afterFetch":{"total":2},"fetch":{"query":2,"total":3},"total":6},"serverTimeMS":6}'
-  recorded_at: Mon, 25 Sep 2023 03:30:25 GMT
+        freelancer?\" (April 2012) http://news.ycombinator.com/item?id=3783658","matchLevel":"none","matchedWords":[]}}}],"nbHits":152,"page":6,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=6\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":6,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"total":2},"fetch":{"query":3,"total":3},"total":6},"serverTimeMS":7}'
+  recorded_at: Mon, 25 Sep 2023 03:37:39 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=7&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -4405,7 +4405,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:26 GMT
+      - Mon, 25 Sep 2023 03:37:39 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -4413,13 +4413,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"2d37662fa8b558fa5fada0e5f06f6d56"
+      - W/"1eedc63d1014202c22141724688ed80e"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - db7f40b8-fb03-4cfe-9f8a-dc5a8381b28c
+      - 12acde31-1516-4785-8012-487f14ed3c82
       x-runtime:
-      - '0.032898'
+      - '0.035745'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -4440,7 +4440,7 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c0303fce93c571-SEA
+      - 80c03ad41da6eb83-SEA
     body:
       encoding: UTF-8
       string: '{"hits":[{"created_at":"2012-03-01T13:56:48.000Z","title":"Ask HN:
@@ -4596,8 +4596,8 @@ http_interactions:
         posts and run it on my server for the foreseeable future.\u003cp\u003eedit3:
         I will send the script as well as the password for the ''whoishiring'' account
         to several prominent HN users (tptacek, patio11, edw519 and pg/nickb) for
-        safekeeping.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":7,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=7\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":3,"processingTimingsMS":{"_request":{"roundTrip":14},"afterFetch":{"total":1},"fetch":{"query":1,"total":2},"total":3},"serverTimeMS":3}'
-  recorded_at: Mon, 25 Sep 2023 03:30:26 GMT
+        safekeeping.","matchLevel":"full","fullyHighlighted":false,"matchedWords":["hiring"]}}}],"nbHits":152,"page":7,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=7\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":5,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"total":1},"fetch":{"query":2,"total":3},"total":5},"serverTimeMS":5}'
+  recorded_at: Mon, 25 Sep 2023 03:37:39 GMT
 - request:
     method: get
     uri: https://hn.algolia.com/api/v1/search_by_date?page=8&query=hiring&tags=story%2C%28author__whoishiring%2C+author_whoishiring%29
@@ -4613,7 +4613,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Mon, 25 Sep 2023 03:30:36 GMT
+      - Mon, 25 Sep 2023 03:37:39 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -4621,13 +4621,13 @@ http_interactions:
       connection:
       - keep-alive
       etag:
-      - W/"81530f9b32d6c08b141a1a24f356cf2d"
+      - W/"a7dcbf8ec69fe5377c4d87f074a51547"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 895c2ba2-113e-4187-aa0d-4b9a760b72e6
+      - d0631fdb-04b4-4886-b555-14be23e3a779
       x-runtime:
-      - '0.030228'
+      - '0.031585'
       access-control-allow-origin:
       - "*"
       access-control-allow-methods:
@@ -4648,9 +4648,9 @@ http_interactions:
       server:
       - cloudflare
       cf-ray:
-      - 80c030419951c37d-SEA
+      - 80c03ad5191c27a8-SEA
     body:
       encoding: UTF-8
-      string: '{"hits":[],"nbHits":152,"page":8,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=8\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":4,"processingTimingsMS":{"_request":{"roundTrip":13},"fetch":{"query":2,"total":2},"total":4},"serverTimeMS":4}'
-  recorded_at: Mon, 25 Sep 2023 03:30:36 GMT
+      string: '{"hits":[],"nbHits":152,"page":8,"nbPages":8,"hitsPerPage":20,"exhaustiveNbHits":false,"exhaustiveTypo":false,"exhaustive":{"nbHits":false,"typo":false},"query":"hiring","params":"advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026page=8\u0026query=hiring\u0026tags=story%2C%28author__whoishiring%2C+author_whoishiring%29","processingTimeMS":4,"processingTimingsMS":{"_request":{"roundTrip":13},"afterFetch":{"total":1},"fetch":{"query":2,"total":2},"total":4},"serverTimeMS":4}'
+  recorded_at: Mon, 25 Sep 2023 03:37:39 GMT
 recorded_with: VCR 6.2.0
