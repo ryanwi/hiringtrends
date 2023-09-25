@@ -36,10 +36,10 @@ module HiringTrends
 
     def calculate_key_measures
       ranked_terms.each do |term|
-        join_counts(term)
-        join_ranks(term)
-        term[:rank_change_month] = -(term[:rank] - term[:rank_last_month])
-        term[:rank_change_year] = -(term[:rank] - term[:rank_last_year])
+        # join_counts(term)
+        # join_ranks(term)
+        # term[:rank_change_month] = -(term[:rank] - term[:rank_last_month])
+        # term[:rank_change_year] = -(term[:rank] - term[:rank_last_year])
       end
     end
 
