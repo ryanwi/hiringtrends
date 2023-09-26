@@ -3,8 +3,9 @@
 require "faraday"
 
 module HiringTrends
+  # Program coordinates the execution of the program
   class Program
-    attr_reader :dictionary, :item_collection, :item_id
+    attr_reader :dictionary, :item_collection, :item_id, :key_measure_calculator
 
     def initialize(dictionary_url:, item_id:)
       @dictionary_url = dictionary_url
