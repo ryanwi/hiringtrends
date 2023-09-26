@@ -24,18 +24,22 @@ module HiringTrends
         .to_h
     end
 
-    def top_gainers(limit)
       # Order by YOY rank gain, with a minimum of 5 mentions this year
-      # gainers = ranked_terms.sort_by { |te| -te[1]["rank_change_year"] }
-      # gainers.reject! { |te| te[1]["count"] < 5 }
-      [].first(limit)
+    def top_gainers(limit)
+      ranked_terms
+        .sort_by { |te| -te[1]["rank_change_year"] }
+        .reject { |te| te[1]["count"] < 5 }
+        .first(limit)
+        .to_h
     end
 
-    def top_losers(limit)
       # Order by YOY rank decline, with a minimum of 5 mentions last year
-      # losers = ranked_terms.sort_by { |te| te[1]["rank_change_year"] }
-      # losers.reject! { |te| te[1]["count_last_year"] < 5 }
-      [].first(limit)
+    def top_losers(limit)
+      ranked_terms
+        .sort_by { |te| te[1]["rank_change_year"] }
+        .reject { |te| te[1]["count"] < 5 }
+        .first(limit)
+        .to_h
     end
 
     private
