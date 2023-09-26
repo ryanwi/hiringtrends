@@ -4,6 +4,7 @@ require "liquid"
 require "debug"
 
 module HiringTrends
+  # This class is responsible for publishing the data
   class Publisher
     attr_reader :item_collection, :key_measure_calculator, :dictionary
 

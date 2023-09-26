@@ -25,10 +25,16 @@ module HiringTrends
     end
 
     def top_gainers(limit)
+      # Order by YOY rank gain, with a minimum of 5 mentions this year
+      # gainers = ranked_terms.sort_by { |te| -te[1]["rank_change_year"] }
+      # gainers.reject! { |te| te[1]["count"] < 5 }
       [].first(limit)
     end
 
     def top_losers(limit)
+      # Order by YOY rank decline, with a minimum of 5 mentions last year
+      # losers = ranked_terms.sort_by { |te| te[1]["rank_change_year"] }
+      # losers.reject! { |te| te[1]["count_last_year"] < 5 }
       [].first(limit)
     end
 
@@ -52,13 +58,5 @@ module HiringTrends
       term_data["rank_last_month"] = item_collection.last_month_terms_data[term]["rank"]
       term_data["rank_last_year"] = item_collection.last_year_terms_data[term]["rank"]
     end
-
-    # Order by YOY rank gain, with a minimum of 5 mentions this year
-    # gainers = ranked_terms.sort_by { |te| -te[1]["rank_change_year"] }
-    # gainers.reject! { |te| te[1]["count"] < 5 }
-
-    # Order by YOY rank decline, with a minimum of 5 mentions last year
-    # losers = ranked_terms.sort_by { |te| te[1]["rank_change_year"] }
-    # losers.reject! { |te| te[1]["count_last_year"] < 5 }
   end
 end
