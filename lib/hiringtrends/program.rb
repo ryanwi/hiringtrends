@@ -29,7 +29,7 @@ module HiringTrends
       item_ids.each do |id|
         items << Item.load(item_id: id)
       end
-      @item_collection = ItemCollection.new(items: items, target_item_id: item_id)
+      @item_collection = ItemCollection.new(items:, target_item_id: item_id)
     end
 
     # Process all submissions, counting comments counts for each term in the technology dictionary
