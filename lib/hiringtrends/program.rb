@@ -34,7 +34,7 @@ module HiringTrends
 
     # Process all submissions, counting comments counts for each term in the technology dictionary
     def analyze_submissions
-      item_collection.analyze
+      item_collection.analyze(dictionary)
       @key_measure_calculator = KeyMeasureCalculator.new(item_collection:)
     end
 

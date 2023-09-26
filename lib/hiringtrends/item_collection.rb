@@ -28,7 +28,7 @@ module HiringTrends
       target_item&.created_at
     end
 
-    def analyze
+    def analyze(dictionary)
       items.each do |item|
         item.analyze(dictionary)
       end
