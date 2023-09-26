@@ -62,7 +62,7 @@ describe HiringTrends::Item do
         "month" => "Apr11",
         "num_comments" => 1,
         "points" => 280,
-        "terms" => nil
+        "terms" => {}
       })
     end
   end

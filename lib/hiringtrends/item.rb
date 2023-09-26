@@ -13,6 +13,7 @@ module HiringTrends
 
     def initialize(values = {})
       @values = values
+      @terms_data = {}
     end
 
     def self.load(item_id:, force_api_source: false)
@@ -65,7 +66,9 @@ module HiringTrends
         "month" => month,
         "num_comments" => comments.count,
         "points" => points,
-        "terms" => terms_data
+        "terms" => terms_data.transform_values do |term_data|
+          term_data.slice("count", "percentage", "full_term", "rank")
+        end
       }
     end
 
