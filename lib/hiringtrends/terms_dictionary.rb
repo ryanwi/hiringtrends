@@ -10,11 +10,10 @@ module HiringTrends
       @term_counts_template = @raw_terms.each_with_object({}) do |term, result|
         term_without_modifiers = term.split("/").first
         result[term_without_modifiers] = {
-          count: 0,
-          percentage: 0,
-          mavg3: 0,
-          rank: 0,
-          full_term: term
+          "count" => 0,
+          "percentage" => 0,
+          "rank" => 0,
+          "full_term" => term
         }
       end
     end

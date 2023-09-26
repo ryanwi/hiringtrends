@@ -16,8 +16,8 @@ describe HiringTrends::KeyMeasureCalculator do
   end
   let(:terms_data) do
     {
-      "AI" => { count: 57, percentage: 18.27, full_term: "AI/alias[AI|Artificial Intelligence]", rank: 8 },
-      "React" => { count: 60, percentage: 19.23, full_term: "React/js[react]", rank: 7 }
+      "AI" => { "count" => 57, "percentage" => 18.27, "full_term" => "AI/alias[AI|Artificial Intelligence]", "rank" => 8 },
+      "React" => { "count" => 60, "percentage" => 19.23, "full_term" => "React/js[react]", "rank" => 7 }
     }
   end
 
@@ -29,8 +29,8 @@ describe HiringTrends::KeyMeasureCalculator do
   describe "#ranked_terms" do
     it "orders the month's results by ranking" do
       expected = {
-        "React" => { count: 60, full_term: "React/js[react]", percentage: 19.23, rank: 7, count_last_month: 60, count_last_year: 60, rank_last_year: 7, rank_last_month: 7, rank_change_month: 0, rank_change_year: 0 },
-        "AI" => { count: 57, full_term: "AI/alias[AI|Artificial Intelligence]", percentage: 18.27, rank: 8, count_last_month: 57, count_last_year: 57, rank_last_year: 8, rank_last_month: 8, rank_change_month: 0, rank_change_year: 0 }
+        "React" => { "count" => 60, "full_term" => "React/js[react]", "percentage" => 19.23, "rank" => 7, "count_last_month" => 60, "count_last_year" => 60, "rank_last_year" => 7, "rank_last_month" => 7, "rank_change_month" => 0, "rank_change_year" => 0 },
+        "AI" => { "count" => 57, "full_term" => "AI/alias[AI|Artificial Intelligence]", "percentage" => 18.27, "rank" => 8, "count_last_month" => 57, "count_last_year" => 57, "rank_last_year" => 8, "rank_last_month" => 8, "rank_change_month" => 0, "rank_change_year" => 0 }
       }
       expect(subject.ranked_terms).to eq(expected)
     end
@@ -42,16 +42,16 @@ describe HiringTrends::KeyMeasureCalculator do
 
       expected = {
         "React" => {
-          count: 60,
-          full_term: "React/js[react]",
-          percentage: 19.23,
-          rank: 7,
-          count_last_month: 60,
-          count_last_year: 60,
-          rank_last_month: 7,
-          rank_last_year: 7,
-          rank_change_month: 0,
-          rank_change_year: 0
+          "count" => 60,
+          "full_term" => "React/js[react]",
+          "percentage" => 19.23,
+          "rank" => 7,
+          "count_last_month" => 60,
+          "count_last_year" => 60,
+          "rank_last_month" => 7,
+          "rank_last_year" => 7,
+          "rank_change_month" => 0,
+          "rank_change_year" => 0
         }
       }
       expect(tt).to eq(expected)

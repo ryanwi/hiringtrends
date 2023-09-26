@@ -17,8 +17,8 @@ describe HiringTrends::Publisher do
     let(:key_measure_calculator) { HiringTrends::KeyMeasureCalculator.new(item_collection:) }
     let(:terms_data) do
       {
-        "AI" => { count: 57, percentage: 18.27, full_term: "AI/alias[AI|Artificial Intelligence]", rank: 8 },
-        "React" => { count: 60, percentage: 19.23, full_term: "React/js[react]", rank: 7 }
+        "AI" => { "count" => 57, "percentage" => 18.27, "full_term" => "AI/alias[AI|Artificial Intelligence]", "rank" => 8 },
+        "React" => { "count" => 60, "percentage" => 19.23, "full_term" => "React/js[react]", "rank" => 7 }
       }
     end
     let(:mock_file) { instance_double("File") }
@@ -29,10 +29,10 @@ describe HiringTrends::Publisher do
       allow(File).to receive(:open).and_yield(mock_file)
       allow(item).to receive(:to_record).and_return(
         {
-          month: "Sep23",
-          num_comments: 1,
-          points: 280,
-          terms: nil
+          "month" => "Sep23",
+          "num_comments" => 1,
+          "points" => 280,
+          "terms" => nil
         }
       )
       allow(item_collection).to receive(:last_month_terms_data).and_return(terms_data)

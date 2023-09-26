@@ -62,10 +62,10 @@ module HiringTrends
 
     def to_record
       {
-        month:,
-        num_comments: comments.count,
-        points:,
-        terms: terms_data
+        "month" => month,
+        "num_comments" => comments.count,
+        "points" => points,
+        "terms" => terms_data
       }
     end
 
@@ -81,20 +81,20 @@ module HiringTrends
         # identify if each term is in the comment/job description
         terms_data.each_key do |term|
           # increment count as its found
-          terms_data[term][:count] += 1 if posting.term?(terms_data[term][:full_term])
+          terms_data[term]["count"] += 1 if posting.term?(terms_data[term]["full_term"])
         end
       end
     end
 
     def calculate_percentage_for_terms
       terms_data.each_key do |term|
-        terms_data[term][:percentage] = ((terms_data[term][:count] / comments.count.to_f) * 100).round(2)
+        terms_data[term]["percentage"] = ((terms_data[term]["count"] / comments.count.to_f) * 100).round(2)
       end
     end
 
     def rank_terms_by_count
-      ranked_terms = terms_data.sort_by { |_k, v| -v[:count] }.to_a
-      ranked_terms.each_with_index { |item, index| terms_data[item[0]][:rank] = index + 1 }
+      ranked_terms = terms_data.sort_by { |_k, v| -v["count"] }.to_a
+      ranked_terms.each_with_index { |item, index| terms_data[item[0]]["rank"] = index + 1 }
     end
   end
 end

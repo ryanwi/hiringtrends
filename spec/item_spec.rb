@@ -59,10 +59,10 @@ describe HiringTrends::Item do
 
       item = described_class.new(api_item)
       expect(item.to_record).to eq({
-        month: "Apr11",
-        num_comments: 1,
-        points: 280,
-        terms: nil
+        "month" => "Apr11",
+        "num_comments" => 1,
+        "points" => 280,
+        "terms" => nil
       })
     end
   end
@@ -98,12 +98,12 @@ describe HiringTrends::Item do
     }
     let(:terms) {
       {
-        "Ruby" => { count: 0, percentage: 0, full_term: "Ruby" },
-        "Python" => { count: 0, percentage: 0, full_term: "Python" },
-        "JavaScript" => { count: 0, percentage: 0, full_term: "JavaScript" },
-        "AngularJS" => { count: 0, percentage: 0, full_term: "AngularJS/js[Angular]" },
-        "backbone" => { count: 0, percentage: 0, full_term: "backbone/js[backbone]" },
-        "node.js" => { count: 0, percentage: 0, full_term: "node.js/js[node]" }
+        "Ruby" => { "count" => 0, "percentage" => 0, "full_term" => "Ruby" },
+        "Python" => { "count" => 0, "percentage" => 0, "full_term" => "Python" },
+        "JavaScript" => { "count" => 0, "percentage" => 0, "full_term" => "JavaScript" },
+        "AngularJS" => { "count" => 0, "percentage" => 0, "full_term" => "AngularJS/js[Angular]" },
+        "backbone" => { "count" => 0, "percentage" => 0, "full_term" => "backbone/js[backbone]" },
+        "node.js" => { "count" => 0, "percentage" => 0, "full_term" => "node.js/js[node]" }
       }
     }
     let(:dictionary) { 
@@ -126,8 +126,8 @@ describe HiringTrends::Item do
       it "separates words" do
         subject.analyze(dictionary)
 
-        expect(subject.terms_data["Ruby"][:count]).to eq(2)
-        expect(subject.terms_data["JavaScript"][:count]).to eq(1)
+        expect(subject.terms_data["Ruby"]["count"]).to eq(2)
+        expect(subject.terms_data["JavaScript"]["count"]).to eq(1)
       end
     end
 
@@ -142,7 +142,7 @@ describe HiringTrends::Item do
       it "separates words" do
         subject.analyze(dictionary)
 
-        expect(subject.terms_data["Ruby"][:count]).to eq(2)
+        expect(subject.terms_data["Ruby"]["count"]).to eq(2)
       end
     end
 
@@ -157,8 +157,8 @@ describe HiringTrends::Item do
       it "separates words with periods at end of sentence" do
         subject.analyze(dictionary)
 
-        expect(subject.terms_data["Ruby"][:count]).to eq(2)
-        expect(subject.terms_data["JavaScript"][:count]).to eq(1)
+        expect(subject.terms_data["Ruby"]["count"]).to eq(2)
+        expect(subject.terms_data["JavaScript"]["count"]).to eq(1)
       end
     end
 
@@ -173,8 +173,8 @@ describe HiringTrends::Item do
       it "is case insensitive" do
         subject.analyze(dictionary)
 
-        expect(subject.terms_data["Ruby"][:count]).to eq(2)
-        expect(subject.terms_data["JavaScript"][:count]).to eq(1)
+        expect(subject.terms_data["Ruby"]["count"]).to eq(2)
+        expect(subject.terms_data["JavaScript"]["count"]).to eq(1)
       end
     end
 
@@ -187,16 +187,16 @@ describe HiringTrends::Item do
       }
       let(:terms) {
         {
-          "JavaScript" => { count: 0, percentage: 0, full_term: "JavaScript" },
-          "Objective-C" => { count: 0, percentage: 0, full_term: "Objective-C/alias[Objective-C|ObjectiveC|Objective C]" },
-          "PHP" => { count: 0, percentage: 0, full_term: "PHP" },
-          "Python" => { count: 0, percentage: 0, full_term: "Python" }
+          "JavaScript" => { "count" => 0, "percentage" => 0, "full_term" => "JavaScript" },
+          "Objective-C" => { "count" => 0, "percentage" => 0, "full_term" => "Objective-C/alias[Objective-C|ObjectiveC|Objective C]" },
+          "PHP" => { "count" => 0, "percentage" => 0, "full_term" => "PHP" },
+          "Python" => { "count" => 0, "percentage" => 0, "full_term" => "Python" }
         }
       }
 
       it "counts it" do
         subject.analyze(dictionary)
-        expect(subject.terms_data["Objective-C"][:count]).to eq(1)
+        expect(subject.terms_data["Objective-C"]["count"]).to eq(1)
       end
     end
 
@@ -210,7 +210,7 @@ describe HiringTrends::Item do
 
       it "ignore quotes" do
         subject.analyze(dictionary)
-        expect(subject.terms_data["AngularJS"][:count]).to eq(1)
+        expect(subject.terms_data["AngularJS"]["count"]).to eq(1)
       end
     end
 
@@ -223,15 +223,15 @@ describe HiringTrends::Item do
       }
       let(:terms) {
         {
-          "Visual Basic" => { count: 0, percentage: 0, full_term: "Visual Basic" },
-          "Web services" => { count: 0, percentage: 0, full_term: "Web services" },
-          "node.js" => { count: 0, percentage: 0, full_term: "node.js/js[node]" }
+          "Visual Basic" => { "count" => 0, "percentage" => 0, "full_term" => "Visual Basic" },
+          "Web services" => { "count" => 0, "percentage" => 0, "full_term" => "Web services" },
+          "node.js" => { "count" => 0, "percentage" => 0, "full_term" => "node.js/js[node]" }
         }
       }
 
       it "counts multi-word terms" do
         subject.analyze(dictionary)
-        expect(subject.terms_data["Visual Basic"][:count]).to eq(1)
+        expect(subject.terms_data["Visual Basic"]["count"]).to eq(1)
       end
     end
 
@@ -244,13 +244,13 @@ describe HiringTrends::Item do
       }
       let(:terms) {
         {
-          ".NET" => { count: 0, percentage: 0, full_term: ".NET" }
+          ".NET" => { "count" => 0, "percentage" => 0, "full_term" => ".NET" }
         }
       }
 
       it "counts .net" do
         subject.analyze(dictionary)
-        expect(subject.terms_data[".NET"][:count]).to eq(1)
+        expect(subject.terms_data[".NET"]["count"]).to eq(1)
       end
     end
 
@@ -264,13 +264,13 @@ describe HiringTrends::Item do
       }
       let(:terms) {
         {
-          "RabbitMQ" => { count: 0, percentage: 0, full_term: "RabbitMQ" }
+          "RabbitMQ" => { "count" => 0, "percentage" => 0, "full_term" => "RabbitMQ" }
         }
       }
 
       it "counts it" do
         subject.analyze(dictionary)
-        expect(subject.terms_data["RabbitMQ"][:count]).to eq(3)
+        expect(subject.terms_data["RabbitMQ"]["count"]).to eq(3)
       end
     end
   end
