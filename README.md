@@ -1,3 +1,6 @@
+[![Ruby](https://github.com/ryanwi/hiringtrends/actions/workflows/ruby.yml/badge.svg)](https://github.com/ryanwi/hiringtrends/actions/workflows/ruby.yml)
+[![codecov](https://codecov.io/github/ryanwi/hiringtrends/graph/badge.svg?token=NrwAqEaIwm)](https://codecov.io/github/ryanwi/hiringtrends)
+
 # Hacker News (HN) Hiring Trends
 
 A Ruby program for analyzing software technology trends from Hacker News whoishiring posts.
