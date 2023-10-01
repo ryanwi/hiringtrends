@@ -12,9 +12,9 @@ gem "rake"
 gem "rspec"
 gem "rubocop"
 gem "rubocop-rspec"
+gem "rubycritic", require: false
 gem "typhoeus"
+gem "simplecov"
+gem "simplecov-cobertura"
 gem "vcr"
 gem "webmock"
-
-gem "rubycritic", require: false
-gem "simplecov", require: false
