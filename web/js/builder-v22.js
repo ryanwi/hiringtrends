@@ -93,7 +93,7 @@ const chartBuilder = (function () {
         type: 'line'
       },
       title: {
-        text: 'September 2023 Hacker News Hiring Trends'
+        text: window.chartTitle || 'Hacker News Hiring Trends'
       },
       // subtitle: {
       //   text: 'September 2023 Hacker News Hiring Trends'
@@ -202,7 +202,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       text: 'Ask HN: Who is hiring? Total Job Postings'
     },
     subtitle: {
-      text: 'September 2023'
+      text: window.chartMonth
     },
   yAxis: {
       title: {
