@@ -5,7 +5,7 @@ require "bundler/setup"
 require "debug"
 require_relative "../lib/hiringtrends"
 
-item_id = 37739028
+item_id = 38099086
 dictionary_url = "https://gist.githubusercontent.com/ryanwi/6135845/raw/32a6c413c1b45a39a54432c60c1c0ef67d63b3d1/software-terms.dic"
 
 hn = HiringTrends::Program.new(dictionary_url:, item_id:)
