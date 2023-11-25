@@ -39,11 +39,11 @@ module HiringTrends
     end
 
     def last_year
-      items[1]
+      items[12]
     end
 
     def last_month
-      items[12]
+      items[1]
     end
 
     def last_year_terms_data

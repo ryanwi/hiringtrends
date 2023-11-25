@@ -26,10 +26,7 @@ module HiringTrends
 
     def load_items(item_ids)
       HiringTrends.logger.info "== loading items =="
-      items = []
-      item_ids.each do |id|
-        items << Item.load(item_id: id)
-      end
+      items = item_ids.map { |id| Item.load(item_id: id) }
       @item_collection = ItemCollection.new(items:, target_item_id: item_id)
     end
 
