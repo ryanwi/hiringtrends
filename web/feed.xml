@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Oct 2023 06:09:00 +0000</pubDate>
-    <lastBuildDate>Mon, 30 Oct 2023 06:09:00 +0000</lastBuildDate>
+    <pubDate>Sun, 26 Nov 2023 05:45:00 +0000</pubDate>
+    <lastBuildDate>Sun, 26 Nov 2023 05:45:00 +0000</lastBuildDate>
+    <item>
+      <title>Number of job postings climbing: up 20% in last two months</title>
+      <description>
+&lt;p&gt;November's Ask HN: Who is hiring? thread showed continued growth with 375 postings, up 20% from the near all-time low in September, and up 10% over October's thread. This is a positive sign after months of declines. However, on a year-over-year basis, we're still way off of the 2022 numbers (down 30%) and the 2021 numbers dwarf where we are today (down 61% since November, 2021).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2023/november.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full November rankings.&lt;/p&gt;
+      </description>
+      <enclosure url="https://www.hntrends.com/images/202311-ask-hn-who-is-hiring-tot.png" length="71375" type="image/png" />
+      <pubDate>Sun, 26 Nov 2023 05:45:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2023/november.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2023/november.html
+      </guid>
+    </item>
     <item>
       <title>AI Rising: Now the most-cited technology</title>
       <description>
