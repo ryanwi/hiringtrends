@@ -96,7 +96,7 @@ const chartBuilder = (function () {
         text: window.chartTitle || 'Hacker News Hiring Trends'
       },
       // subtitle: {
-      //   text: 'September 2023 Hacker News Hiring Trends'
+      //   text: 'December 2023 Hacker News Hiring Trends'
       // },
       xAxis: {
         type: 'datetime',
