@@ -4,8 +4,23 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Nov 2023 05:45:00 +0000</pubDate>
-    <lastBuildDate>Sun, 26 Nov 2023 05:45:00 +0000</lastBuildDate>
+    <pubDate>Wed, 27 Dec 2023 18:55:00 +0000</pubDate>
+    <lastBuildDate>Wed, 27 Dec 2023 18:55:00 +0000</lastBuildDate>
+    <item>
+      <title>Tough year for tech hiring comes to a close</title>
+      <description>
+&lt;p&gt;I wasn't expecting big things from December's Ask HN: Who is hiring? thread. December is typically a slow month anyway in the hiring cycle. But, with November's thread showing a little upwards momentum</a>, December's results would be an interesting sign if that growth could be sustained after a year of steady declines.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2023/december.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full December rankings.&lt;/p&gt;
+      </description>
+      <enclosure url="https://www.hntrends.com/images/202312-ask-hn-who-is-hiring-tot.png" length="" type="image/png" />
+      <pubDate>Wed, 27 Dec 2023 18:55:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2023/december.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2023/december.html
+      </guid>
+    </item>
     <item>
       <title>Number of job postings climbing: up 20% in last two months</title>
       <description>
