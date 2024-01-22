@@ -17,7 +17,8 @@ describe HiringTrends::Publisher do
     let(:key_measure_calculator) { HiringTrends::KeyMeasureCalculator.new(item_collection:) }
     let(:terms_data) do
       {
-        "AI" => { "count" => 57, "percentage" => 18.27, "full_term" => "AI/alias[AI|Artificial Intelligence]", "rank" => 8 },
+        "AI" => { "count" => 57, "percentage" => 18.27, "full_term" => "AI/alias[AI|Artificial Intelligence]",
+                  "rank" => 8 },
         "React" => { "count" => 60, "percentage" => 19.23, "full_term" => "React/js[react]", "rank" => 7 }
       }
     end

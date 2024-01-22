@@ -54,16 +54,17 @@ describe HiringTrends::Item do
         "id" => 2396027,
         "title" => "Ask HN: Who is Hiring? (April 2011)",
         "points" => 280,
-        "children" => [{ "id" => 2404566, "created_at" => "2011-04-03T23:43:58.000Z", "text" => "this is the job descripton" }]
+        "children" => [{ "id" => 2404566, "created_at" => "2011-04-03T23:43:58.000Z",
+                         "text" => "this is the job descripton" }]
       }
 
       item = described_class.new(api_item)
       expect(item.to_record).to eq({
-        "month" => "Apr11",
-        "num_comments" => 1,
-        "points" => 280,
-        "terms" => {}
-      })
+                                     "month" => "Apr11",
+                                     "num_comments" => 1,
+                                     "points" => 280,
+                                     "terms" => {}
+                                   })
     end
   end
 
