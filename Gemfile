@@ -11,10 +11,10 @@ gem "liquid"
 gem "rake"
 gem "rspec"
 gem "rubocop"
-gem "rubocop-rspec"
+gem "rubocop-rspec", require: false
 gem "rubycritic", require: false
-gem "typhoeus"
 gem "simplecov"
 gem "simplecov-cobertura"
+gem "typhoeus"
 gem "vcr"
 gem "webmock"

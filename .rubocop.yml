@@ -42,3 +42,6 @@ RSpec/ExampleLength:
   Enabled: false
 RSpec/NamedSubject:
   Enabled: false
+
+Documentation:
+  Enabled: false

@@ -60,7 +60,7 @@ describe HiringTrends::KeyMeasureCalculator do
 
   describe "#top_gainers" do
     it "returns the top gainers for the item" do
-      tg = subject.top_gainers(1)
+      subject.top_gainers(1)
       # expected = [{ count: 1, rank: 1, count_last_month: 1, count_last_year: 1, rank_change_month: 1, rank_last_year: 1, rank_change_year: 1 }]
       # expect(tg).to eq(expected)
     end
@@ -68,7 +68,7 @@ describe HiringTrends::KeyMeasureCalculator do
 
   describe "#top_losers" do
     it "returns the top losers for the item" do
-      tl = subject.top_losers(1)
+      subject.top_losers(1)
       # expected = [{ count: 1, rank: 1, count_last_month: 1, count_last_year: 1, rank_change_month: 1, rank_last_year: 1, rank_change_year: 1 }]
       # expect(tl).to eq(expected)
     end

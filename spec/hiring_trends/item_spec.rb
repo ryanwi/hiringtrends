@@ -106,7 +106,7 @@ describe HiringTrends::Item do
         "node.js" => { "count" => 0, "percentage" => 0, "full_term" => "node.js/js[node]" }
       }
     }
-    let(:dictionary) { 
+    let(:dictionary) {
       instance_double("HiringTrends::TermsDictionary")
     }
 

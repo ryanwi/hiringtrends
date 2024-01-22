@@ -15,9 +15,9 @@ def run_program(item_id)
   hn
 end
 
-def reload!(print = true)
+def reload!(print: true)
   puts "Reloading ..." if print
-  root_dir = File.expand_path('..', __dir__)
+  root_dir = File.expand_path("..", __dir__)
   reload_dirs = %w[lib]
   reload_dirs.each do |dir|
     Dir.glob("#{root_dir}/#{dir}/**/*.rb").each { |f| load(f) }

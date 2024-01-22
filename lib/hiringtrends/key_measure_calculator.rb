@@ -24,7 +24,7 @@ module HiringTrends
         .to_h
     end
 
-      # Order by YOY rank gain, with a minimum of 5 mentions this year
+    # Order by YOY rank gain, with a minimum of 5 mentions this year
     def top_gainers(limit)
       ranked_terms
         .sort_by { |te| -te[1]["rank_change_year"] }
@@ -33,7 +33,7 @@ module HiringTrends
         .to_h
     end
 
-      # Order by YOY rank decline, with a minimum of 5 mentions last year
+    # Order by YOY rank decline, with a minimum of 5 mentions last year
     def top_losers(limit)
       ranked_terms
         .sort_by { |te| te[1]["rank_change_year"] }

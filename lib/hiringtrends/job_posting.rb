@@ -18,6 +18,7 @@ module HiringTrends
       search_term = term.downcase
       return true if term_in_text?(search_term)
       return true if term_special_cases?(search_term)
+
       false
     end
 
