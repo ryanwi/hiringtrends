@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 ruby "3.3.0"
 
+gem "base64"
 gem "debug"
 gem "faraday"
 gem "faraday-typhoeus"
