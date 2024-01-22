@@ -2,8 +2,8 @@
 
 describe HiringTrends::Item do
   describe ".load" do
-    it "loads the items from the API", vcr: true do
-      mock_file = instance_double("File")
+    it "loads the items from the API", :vcr do
+      mock_file = instance_double(File)
       allow(mock_file).to receive(:write)
       allow(File).to receive(:open).and_yield(mock_file)
       # allow(File).to receive(:exist?).with("data/item_2396027.json").and_return(false)
@@ -70,7 +70,7 @@ describe HiringTrends::Item do
 
   describe "#save" do
     it "saves the item to disk" do
-      mock_file = instance_double("File")
+      mock_file = instance_double(File)
       allow(mock_file).to receive(:write)
       allow(File).to receive(:open).and_yield(mock_file)
       api_item = {
@@ -108,7 +108,7 @@ describe HiringTrends::Item do
       }
     }
     let(:dictionary) {
-      instance_double("HiringTrends::TermsDictionary")
+      instance_double(HiringTrends::TermsDictionary)
     }
 
     before do

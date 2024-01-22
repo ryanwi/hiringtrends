@@ -16,8 +16,8 @@ module HiringTrends
       items.count
     end
 
-    def each(&block)
-      items.each(&block)
+    def each(&)
+      items.each(&)
     end
 
     def target_item

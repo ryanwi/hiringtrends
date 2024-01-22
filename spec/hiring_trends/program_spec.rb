@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe HiringTrends::Program, vcr: true do
+describe HiringTrends::Program, :vcr do
   subject { described_class.new(dictionary_url: "https://gist.githubusercontent.com/ryanwi/6135845/raw/80d82437174965a54186b74ca5bc31ff2f9d4779/software-terms.dic", item_id: 2396027) }
 
   describe "#initialize" do

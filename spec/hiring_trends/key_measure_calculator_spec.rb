@@ -7,12 +7,12 @@ describe HiringTrends::KeyMeasureCalculator do
   let(:items) do
     today = DateTime.now
     previous_items = Array.new(12) do |i|
-      instance_double("HiringTrends::Item", id: 100 - i, created_at: (today << (i + 1)), terms_data: {})
+      instance_double(HiringTrends::Item, id: 100 - i, created_at: (today << (i + 1)), terms_data: {})
     end
     previous_items.unshift(item)
   end
   let(:item) do
-    instance_double("HiringTrends::Item", id: 37351667, created_at: "2023-09-01T15:00:25.000Z", terms_data:)
+    instance_double(HiringTrends::Item, id: 37351667, created_at: "2023-09-01T15:00:25.000Z", terms_data:)
   end
   let(:terms_data) do
     {
@@ -23,8 +23,7 @@ describe HiringTrends::KeyMeasureCalculator do
   end
 
   before do
-    allow(item_collection).to receive(:last_month_terms_data).and_return(terms_data)
-    allow(item_collection).to receive(:last_year_terms_data).and_return(terms_data)
+    allow(item_collection).to receive_messages(last_month_terms_data: terms_data, last_year_terms_data: terms_data)
   end
 
   describe "#ranked_terms" do

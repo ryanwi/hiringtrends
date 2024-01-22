@@ -2,7 +2,7 @@
 
 describe HiringTrends::ItemSearch do
   describe "#execute" do
-    it "returns the correct result", vcr: true do
+    it "returns the correct result", :vcr do
       results = described_class.new.execute
       expect(results).to be_a Array
     end

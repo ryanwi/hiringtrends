@@ -11,6 +11,7 @@ gem "liquid"
 gem "rake"
 gem "rspec"
 gem "rubocop"
+gem "rubocop-rake", require: false
 gem "rubocop-rspec", require: false
 gem "rubycritic", require: false
 gem "simplecov"

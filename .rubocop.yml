@@ -1,6 +1,7 @@
 require:
+  - rubocop-rake
   - rubocop-rspec
-  
+
 # The behavior of RuboCop can be controlled via the .rubocop.yml
 # configuration file. It makes it possible to enable/disable
 # certain cops (checks) and to alter their behavior if they accept
@@ -14,6 +15,7 @@ require:
 
 AllCops:
   TargetRubyVersion: 3.3.0
+  NewCops: enable
 
 Bundler:
   Enabled: true
