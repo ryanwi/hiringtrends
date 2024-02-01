@@ -4,15 +4,19 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate></pubDate>
-    <lastBuildDate></lastBuildDate>
+    <pubDate>Thu, 01 Feb 2024 01:30:00 +0000</pubDate>
+    <lastBuildDate>Thu, 01 Feb 2024 01:30:00 +0000</lastBuildDate>
     <item>
-      <title></title>
+      <title>Who is Hiring? Job Postings fall to nine-year low</title>
       <description>
+&lt;p&gt;When I started this project ten years ago, I was mainly interested in studying and sharing the trends of techonologies used in the Software Development field. Now, after this decade of trend watching, it's interesting to reflect on the some of the other interesting aspects, non-technological, of the Software job market.&lt;/p&gt;
+&lt;p&gt;We can witness the impact of Covid on the job market in two big ways, both on the big cuts at the beginning of the Pandemic, as well as the move to majority remote work.&lt;/p&gt;
+&lt;p&gt;We can see the standardization of job levels across the industry, with the now ubiquitous Senior Software Engineer role.&lt;/p&gt;
+&lt;p&gt;We can see the rise and fall of job posting counts reveal booms and busts in the Startup and Venture Capital ecosystem. This is the one happening again right now, as January's thread, with 285 postings (top-level threads), had the lowest number of job postings in over 9 years. We have to go all the way back to 2015 and before to find levels this low.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2024/january.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full December rankings.&lt;/p&gt;
       </description>
       <enclosure url="https://www.hntrends.com/images/202401-ask-hn-who-is-hiring-tot.png" length="89827" type="image/png" />
-      <pubDate></pubDate>
+      <pubDate>Thu, 01 Feb 2024 01:30:00 +0000</pubDate>
       <link>
         https://www.hntrends.com/2024/january.html
       </link>
