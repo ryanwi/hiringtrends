@@ -14,7 +14,7 @@ require:
 # See https://docs.rubocop.org/rubocop/configuration
 
 AllCops:
-  TargetRubyVersion: 3.3.0
+  TargetRubyVersion: 3.3.2
   NewCops: enable
 
 Bundler:
