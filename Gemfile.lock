@@ -54,9 +54,10 @@ GEM
     erubi (1.12.0)
     ethon (0.16.0)
       ffi (>= 1.15.0)
-    faraday (2.9.0)
-      faraday-net_http (>= 2.0, < 3.2)
-    faraday-net_http (3.1.0)
+    faraday (2.11.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      logger
+    faraday-net_http (3.3.0)
       net-http
     faraday-typhoeus (1.1.0)
       faraday (~> 2.0)
@@ -83,6 +84,7 @@ GEM
       addressable (~> 2.8)
       childprocess (~> 5.0)
     liquid (5.5.0)
+    logger (1.6.0)
     net-http (0.4.1)
       uri
     parallel (1.24.0)
