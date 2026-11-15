@@ -13,7 +13,7 @@ module HiringTrends
     def term?(term)
       modifier = TermsDictionary.parse_modifier(term)
 
-      return term_with_modifier?(modifier) if modifier
+      return term?(term.split("/").first) || term_with_modifier?(modifier) if modifier
 
       search_term = term.downcase
       return true if term_in_text?(search_term)
