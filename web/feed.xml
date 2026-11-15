@@ -4,8 +4,24 @@
     <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Jun 2024 04:50:00 +0000</pubDate>
-    <lastBuildDate>Mon, 03 Jun 2024 04:50:00 +0000</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2026 04:51:00 +0000</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2026 04:51:00 +0000</lastBuildDate>
+    <item>
+      <title>&quot;Who is Hiring?&quot; postings near 12-year lows as AI reaches half of all jobs</title>
+      <description>
+&lt;p&gt;As of November 14, November's &quot;Ask HN: Who is Hiring?&quot; thread has 244 job postings, down from 391 a year ago. Every thread since July has landed between 224 and 255 postings, and August's 224 was the fewest since January 2014.&lt;/p&gt;
+&lt;p&gt;At the same time, AI is now mentioned in more than half of all postings (51.6%), up from 30% two years ago. AI agents, LLMs and MCP are all climbing, and Rust has passed Go for the #3 spot among programming languages.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.hntrends.com/2026/november.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full November rankings.&lt;/p&gt;
+      </description>
+      <enclosure url="https://www.hntrends.com/images/202611-ask-hn-who-is-hiring-tot.png" length="101708" type="image/png" />
+      <pubDate>Sun, 15 Nov 2026 04:51:00 +0000</pubDate>
+      <link>
+        https://www.hntrends.com/2026/november.html
+      </link>
+      <guid isPermaLink="true">
+        https://www.hntrends.com/2026/november.html
+      </guid>
+    </item>
     <item>
       <title>&quot;Ask HN: Who is Hiring?&quot; postings bounce back to twelve month high</title>
       <description>
