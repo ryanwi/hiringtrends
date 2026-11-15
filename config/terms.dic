@@ -1,212 +1,261 @@
 .NET
-ActionScript
-ActiveMQ
-Ada
+.NET Core
 Agile
-Akka
+AI/alias[AI|Artificial Intelligence]
+Airflow
 Android
 Ansible
+Angular 2/alias[Angular2|Angular 2]
 AngularJS/js[Angular]
-Apache
-api
+API
 Apollo
 App Engine/alias[App Engine|AppEngine|GAE]
-AppleScript
-Arc
-Arduino
+AR/alias[AR|Augmented Reality]
 Assembly
 Asp
 ASP.NET
 ASP.NET MVC
-Avro
-Awk
+Aurora
 AWS
-Back End
+Azure
+Back End/alias[Backend|Back-end]
 Backbone/js[Backbone]
 Bash
 Big Data/alias[BigData|Big Data]
-Boo
-Bootstrap
+BigQuery
+Bitcoin
+Blazor
+Blockchain
 C
 C++
 C#
+CakePHP
 Cassandra
 Celery
+ChatGPT
 Chef
+ClickHouse
 Clojure
 ClojureScript
+Cloud
+Cloudflare
+CloudFormation
 CloudFront
-Closure
 COBOL
+CockroachDB
+CodeIgniter
 CoffeeScript
-ColdFuison
 Common Lisp
 Compass
 Computer Vision
-CouchBase
 CouchDB
+CQRS
+Crystal
 CSS
-Cucumber
 D3.js/js[D3]
 Dart
 Data Mining
 Data Science
+dbt
+Deep Learning
 Delphi
 DevOps
 Distributed Systems
 Django
 Docker
 Drupal
+DynamoDB
 EC2
 Eclipse
+ECS
 EDI
-Eiffel
 Elasticache
 Elasticsearch/alias[Elasticsearch|Elastic Search]
+Electron
+Elixir
 Elm
 Emacs
 Embedded Systems
 Ember/js[Ember]
 Erlang
+Ethereum
+ETL
 Express/js[Express]
 F#
-Factor
-Forth
-Fortran
-Front End
-Full Stack
-Gearman
-giraph
+Fargate
+FastAPI
+Fastify
+Fintech
+Firebase
+Firecracker
+Flask
+Flutter
+Flux
+Front End/alias[Front-end|Frontend]
+Full Stack/alias[Full-Stack|Fullstack|Full Stack]
+Gatsby
+GCP
 Git
+GitHub
+GitLab
 golang
+GPT
+GPT-3
+GPT-4
+Grafana
 Graphite
+GraphQL
 Groovy
-Grunt/js[Grunt]
-Gulp
+gRPC
 Hadoop
 haproxy
 Haskell
 HaXe
 Heroku
-Hive
-HTML5
-Hudson
+Hotwire
+Hybrid
+InfluxDB
 iOS
-JBoss
 Java
 JavaScript
 jenkins
 jQuery
 JSON API
 JSP
+Julia
+Junior
 JUnit
+Jupyter
 Kafka
-Kestrel
+Keras
 Kinesis
 Knockout/js[Knockout]
+Kotlin
+Kubernetes
+Lambda
 LAMP
-less
+Laravel
 linux
 Lisp
-Logos
 Lua
 Lucene
 Mahout
-Machine Learning
+Machine Learning/alias[Machine Learning|ML]
 MapReduce
+MariaDB
 MATLAB
 Maven
 memcached/alias[memcached|memcache]
-Mercurial
+Mesos
+Metabase
 Meteor
 Microservices/alias[Microservices|Microservices|Micro Services]
 Mongodb/alias[mongo|mongodb]
-MSMQ
 MySQL
-nagios
 neo4j
+NestJS/alias[Nest.JS]
+Next.js/alias[NextJS]
 nginx
 NLP
 node.js/js[node]
-NServiceBus
-NUnit
+Nomad
+NumPy
+Nuxt
 Objective-C/alias[Objective-C|ObjectiveC|Objective C]
-Objective-J
+Observability
 OCaml
-Octave
-Open Source
+Onsite/alias[Onsite|On-site]
+Open Source/alias[Open Source|open-source]
+OpenAI
 OpenCV
+OpenGL
 OpenStack
-passion
-passionate
-Pentaho
+Oracle
+Pandas
 Perl
 PhantomJS/js[phantom]
+Phoenix
 PHP
 Pig
 Postgresql/alias[postgres|postgresql]
-PowerBuilder
-PowerShell
+Principal
 Processing
 Prolog
+Prometheus
 Protocol Buffers/alias[Protocol Buffers|Protocol Buffer|protobuf]
+Pulumi
 Puppet
 Python
+PyTorch
 R
 RabbitMQ
 Rails
+RDS
 React/js[react]
+React Native
 Redis
-Resque
-Riak
+Redshift
+Redux
 Remote
 REST
+Riak
+Robotics
 Ruby
 Rust
-Samza
 Sass
 S3
 Scala
+Scheme
 Scrum
+Security
 Selenium
-SharePoint
+Senior
 Shell
 Sidekiq
-Sinatra
+Snowflake
 SNS
-SOAP
 Solr
 Spark
+Spinnaker
 Spring
 SQL
 SQL Server
 SQS
-SSIS
-SSRS
+Staff
 statistics
 Storm
 Struts
-Tableau
+Supabase
+Svelte
+SvelteKit
+Swift
+Symfony
+Tailwind
+TensorFlow
+Terraform
 TDD
-Thrift
-Tomcat
+TimescaleDB
+Transformers
+Turbo
 TypeScript
+Unreal Engine
 Vagrant
 Varnish
 Vi/alias[Vi|Vim]
 Visual Basic
-WCF
-Web Services
-WebForms
+Vue/js[vue]
+VR/alias[VR|Virtual Reality]
+web3
+WebAssembly/alias[WASM|Wasm]
+WebGL
+Webpack
+WebRTC
 WebSockets
-Windows Phone
-WinForms
-WinRT
 WordPress
 WPF
+Xamarin
 XML
-XML Schema
-Yeoman
-zabbix
+xR
 ZeroMQ/alias[ZeroMQ|0MQ]
+Zig
 zookeeper
