@@ -9,6 +9,7 @@ require_relative "hiringtrends/job_posting"
 require_relative "hiringtrends/key_measure_calculator"
 require_relative "hiringtrends/program"
 require_relative "hiringtrends/publisher"
+require_relative "hiringtrends/term_discovery"
 require_relative "hiringtrends/terms_dictionary"
 
 module HiringTrends

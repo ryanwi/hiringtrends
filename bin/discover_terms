@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "date"
+require "optparse"
+require_relative "../lib/hiringtrends"
+
+options = { months: 12, min: 5, top: 100 }
+OptionParser.new do |opts|
+  opts.banner = "Usage: bin/discover_terms [--months N] [--min N] [--top N]"
+  opts.on("--months N", Integer, "Size of each comparison window in months (default 12)") { |v| options[:months] = v }
+  opts.on("--min N", Integer, "Minimum postings in the recent window (default 5)") { |v| options[:min] = v }
+  opts.on("--top N", Integer, "Number of candidates to print (default 100)") { |v| options[:top] = v }
+end.parse!
+
+HiringTrends.logger.level = Logger::WARN
+months = options[:months]
+item_ids = HiringTrends::ItemSearch.new.execute.first((months * 2) + 2)
+items = item_ids.map { |id| HiringTrends::Item.load(item_id: id) }.sort_by(&:created_at).reverse
+
+month_index = ->(item) { (Date.parse(item.created_at).year * 12) + Date.parse(item.created_at).month }
+newest = month_index.call(items.first)
+recent_items = items.select { |item| month_index.call(item) > newest - months }
+prior_items = items.select { |item| month_index.call(item).between?(newest - (2 * months) + 1, newest - months) }
+
+dictionary = HiringTrends::TermsDictionary.new(File.expand_path("../config/terms.dic", __dir__))
+discovery = HiringTrends::TermDiscovery.new(recent_items:, prior_items:, raw_terms: dictionary.raw_terms)
+
+puts "Recent: #{recent_items.last.title[/\(.*\)/]} to #{recent_items.first.title[/\(.*\)/]}, " \
+     "#{recent_items.size} threads, #{discovery.recent_count} postings"
+puts "Prior:  #{prior_items.last.title[/\(.*\)/]} to #{prior_items.first.title[/\(.*\)/]}, " \
+     "#{prior_items.size} threads, #{discovery.prior_count} postings"
+puts "Excludes terms already in config/terms.dic and postings that look like résumés."
+puts "cos = distinct companies naming it in a stack line.\n\n"
+
+format_row = "%-26s %7s %6s %7s %6s %8s %7s\n"
+print_table = lambda do |title, rows|
+  puts title
+  printf(format_row, "candidate", "recent", "%", "prior", "%", "change", "cos")
+  rows.first(options[:top]).each do |c|
+    change = c.prior.zero? ? "new" : format("%+d%%", c.change)
+    printf(format_row, c.term, c.recent, c.recent_share, c.prior, c.prior_share, change, c.stack_companies)
+  end
+  puts
+end
+
+print_table.call("Named in stack lines (by recent postings)", discovery.from_stack_lines(min_postings: options[:min]))
+print_table.call("Rising capitalized terms (by growth)", discovery.rising(min_postings: [options[:min], 10].max))
