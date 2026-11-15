@@ -3,7 +3,8 @@
 describe HiringTrends::TermsDictionary do
   describe "#initalize" do
     it "initializes correctly", :vcr do
-      described_class.new("https://gist.githubusercontent.com/ryanwi/6135845/raw/80d82437174965a54186b74ca5bc31ff2f9d4779/software-terms.dic")
+      dictionary = described_class.new("https://gist.githubusercontent.com/ryanwi/6135845/raw/80d82437174965a54186b74ca5bc31ff2f9d4779/software-terms.dic")
+      expect(dictionary.raw_terms).not_to be_empty
     end
   end
 

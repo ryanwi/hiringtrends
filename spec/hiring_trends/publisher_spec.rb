@@ -3,7 +3,8 @@
 describe HiringTrends::Publisher do
   describe "#initalize" do
     it "initializes correctly" do
-      described_class.new(item_collection: nil, key_measure_calculator: nil, dictionary: nil)
+      expect(described_class.new(item_collection: nil, key_measure_calculator: nil, dictionary: nil))
+        .to be_a(described_class)
     end
   end
 
@@ -26,8 +27,9 @@ describe HiringTrends::Publisher do
 
     before do
       allow(mock_file).to receive(:write)
-      allow(mock_file).to receive(:read)
       allow(File).to receive(:open).and_yield(mock_file)
+      allow(File).to receive(:binread).and_return("")
+      allow(File).to receive(:write)
       allow(item).to receive(:to_record).and_return(
         {
           "month" => "Sep23",
@@ -57,7 +59,7 @@ describe HiringTrends::Publisher do
       publisher.publish
 
       expected_filename = "web/2023/september.html"
-      expect(File).to have_received(:open).with(expected_filename, "w")
+      expect(File).to have_received(:write).with(expected_filename, anything)
     end
   end
 end

@@ -22,7 +22,6 @@ def reload!(print: true)
   reload_dirs.each do |dir|
     Dir.glob("#{root_dir}/#{dir}/**/*.rb").each { |f| load(f) }
   end
-  true
 end
 
 IRB.start

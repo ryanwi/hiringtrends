@@ -45,11 +45,11 @@ module HiringTrends
 
     def publish_post(item_published_at:, data_filename:)
       Liquid::Template.file_system = Liquid::LocalFileSystem.new("templates")
-      template = File.open("templates/post.liquid", "rb", &:read)
+      template = File.binread("templates/post.liquid")
       variables = post_template_variables(data_filename)
       content = Liquid::Template.parse(template).render(variables)
       post_filename = "web/#{item_published_at.year}/#{item_published_at.strftime('%B').downcase}.html"
-      File.open(post_filename, "w") { |file| file.write(content) }
+      File.write(post_filename, content)
     end
 
     private

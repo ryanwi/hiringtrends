@@ -19,7 +19,7 @@ describe HiringTrends::Program, :vcr do
   end
 
   describe "#fetch_all_submissions" do
-    xit "succeeds" do
+    it "succeeds", skip: "hardcoded thread count goes stale as new threads are posted" do
       subject.fetch_all_submissions
       expect(subject.item_collection.count).to eq(149)
     end
@@ -27,7 +27,8 @@ describe HiringTrends::Program, :vcr do
 
   describe "#fetch_submission" do
     it "succeeds" do
-      subject.fetch_submission
+      allow(File).to receive(:binwrite)
+      expect(subject.fetch_submission.id).to eq(2396027)
     end
   end
 end

@@ -46,9 +46,7 @@ module HiringTrends
     end
 
     def save
-      File.open("data/item_#{id}.json", "wb") do |f|
-        f.write(values.to_json)
-      end
+      File.binwrite("data/item_#{id}.json", values.to_json)
     end
 
     def analyze(terms_dictionary)

@@ -60,19 +60,20 @@ describe HiringTrends::KeyMeasureCalculator do
     end
   end
 
-  describe "#top_gainers" do
-    it "returns the top gainers for the item" do
-      subject.top_gainers(1)
-      # expected = [{ count: 1, rank: 1, count_last_month: 1, count_last_year: 1, rank_change_month: 1, rank_last_year: 1, rank_change_year: 1 }]
-      # expect(tg).to eq(expected)
+  context "when ranks changed since last year" do
+    before do
+      allow(item_collection).to receive(:last_year_terms_data).and_return(
+        "AI" => { "count" => 10, "rank" => 20 },
+        "React" => { "count" => 50, "rank" => 5 }
+      )
     end
-  end
 
-  describe "#top_losers" do
-    it "returns the top losers for the item" do
-      subject.top_losers(1)
-      # expected = [{ count: 1, rank: 1, count_last_month: 1, count_last_year: 1, rank_change_month: 1, rank_last_year: 1, rank_change_year: 1 }]
-      # expect(tl).to eq(expected)
+    it "returns the biggest rank gainer as the top gainer" do
+      expect(subject.top_gainers(1).keys).to eq(["AI"])
+    end
+
+    it "returns the biggest rank loser as the top loser" do
+      expect(subject.top_losers(1).keys).to eq(["React"])
     end
   end
 end
