@@ -2,11 +2,13 @@
 .NET Core
 Agile
 AI/alias[AI|Artificial Intelligence]
+AI Agents/alias[AI agent|AI agents|agentic]
 Airflow
 Android
 Ansible
 Angular 2/alias[Angular2|Angular 2]
 AngularJS/js[Angular]
+Anthropic
 API
 Apollo
 App Engine/alias[App Engine|AppEngine|GAE]
@@ -26,6 +28,7 @@ BigQuery
 Bitcoin
 Blazor
 Blockchain
+Bun
 C
 C++
 C#
@@ -59,6 +62,7 @@ Data Science
 dbt
 Deep Learning
 Delphi
+Deno
 DevOps
 Distributed Systems
 Django
@@ -134,9 +138,11 @@ Kotlin
 Kubernetes
 Lambda
 LAMP
+LangChain
 Laravel
 linux
 Lisp
+LLM/alias[LLMs|large language model|large language models]
 Lua
 Lucene
 Mahout
@@ -145,6 +151,7 @@ MapReduce
 MariaDB
 MATLAB
 Maven
+MCP
 memcached/alias[memcached|memcache]
 Mesos
 Metabase
@@ -173,6 +180,7 @@ OpenStack
 Oracle
 Pandas
 Perl
+pgvector
 PhantomJS/js[phantom]
 Phoenix
 PHP
@@ -189,6 +197,7 @@ Python
 PyTorch
 R
 RabbitMQ
+RAG
 Rails
 RDS
 React/js[react]
@@ -241,6 +250,7 @@ TypeScript
 Unreal Engine
 Vagrant
 Varnish
+Vector Database/alias[vector database|vector databases|vector db|vector dbs]
 Vi/alias[Vi|Vim]
 Visual Basic
 Vue/js[vue]
