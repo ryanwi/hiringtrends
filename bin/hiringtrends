@@ -6,7 +6,7 @@ require "debug"
 require_relative "../lib/hiringtrends"
 
 item_id = 40224213
-dictionary_url = "https://gist.githubusercontent.com/ryanwi/6135845/raw/47d22c66335741790e41f2356cf21100cba12b28/software-terms.dic"
+dictionary_url = File.expand_path("../config/terms.dic", __dir__)
 
 hn = HiringTrends::Program.new(dictionary_url:, item_id:)
 hn.fetch_all_submissions

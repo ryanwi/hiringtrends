@@ -4,9 +4,9 @@ module HiringTrends
   class TermsDictionary
     attr_reader :raw_terms
 
-    def initialize(dictionary_url)
-      response = Faraday.get dictionary_url
-      @raw_terms = response.body.lines.map(&:chomp)
+    def initialize(source)
+      body = File.exist?(source) ? File.read(source) : Faraday.get(source).body
+      @raw_terms = body.lines.map(&:chomp).reject(&:empty?)
       @term_counts_template = @raw_terms.each_with_object({}) do |term, result|
         term_without_modifiers = term.split("/").first
         result[term_without_modifiers] = {
