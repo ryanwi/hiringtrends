@@ -1,19 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Hacker News Hiring Trends</title>
-    <description>Stay up to date with the most popular programming languanges, databases, web application and software development technologies on Hacker News whoishiring posts</description>
+    <description>Monthly trends in the most in-demand programming languages, frameworks and tools, from Hacker News &quot;Who is Hiring?&quot; job postings since 2011.</description>
     <link>https://www.hntrends.com/</link>
     <atom:link href="https://www.hntrends.com/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>Sun, 15 Nov 2026 04:51:00 +0000</pubDate>
     <lastBuildDate>Sun, 15 Nov 2026 04:51:00 +0000</lastBuildDate>
     <item>
-      <title>&quot;Who is Hiring?&quot; postings near 12-year lows as AI reaches half of all jobs</title>
+      <title>&quot;Who is Hiring?&quot; postings stuck near 12-year lows as AI reaches half of all jobs</title>
       <description>
-&lt;p&gt;As of November 14, November's &quot;Ask HN: Who is Hiring?&quot; thread has 244 job postings, down from 391 a year ago. Every thread since July has landed between 224 and 255 postings, and August's 224 was the fewest since January 2014.&lt;/p&gt;
+&lt;p&gt;It's been two and a half years since the last update. As of November 14, November's &quot;Ask HN: Who is Hiring?&quot; thread has 244 job postings, down 37% from 387 at the same point last year. Every thread since July has landed between 224 and 255 postings, and August's 224 was the fewest since January 2014.&lt;/p&gt;
 &lt;p&gt;At the same time, AI is now mentioned in more than half of all postings (51.6%), up from 30% two years ago. AI agents, LLMs and MCP are all climbing, and Rust has passed Go for the #3 spot among programming languages.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2026/november.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full November rankings.&lt;/p&gt;
       </description>
-      <enclosure url="https://www.hntrends.com/images/202611-ask-hn-who-is-hiring-tot.png" length="101708" type="image/png" />
+      <enclosure url="https://www.hntrends.com/images/202611-ask-hn-who-is-hiring-tot.png" length="103600" type="image/png" />
       <pubDate>Sun, 15 Nov 2026 04:51:00 +0000</pubDate>
       <link>
         https://www.hntrends.com/2026/november.html
@@ -25,7 +25,7 @@
     <item>
       <title>&quot;Ask HN: Who is Hiring?&quot; postings bounce back to twelve month high</title>
       <description>
-&lt;p&gt;After a few months away, it's time to check back in on the &quot;Ask HN: Who is Hiring?&quot; trends. In May's thread, there are signs of growth again, a 35% improvement over April in fact. May saw the first 400+ posting month since May 2023. Not all that surpisingly, the rise of AI appears to be driving the growh. AI is mentioned in nearly 25% of job postings now and is the top technology term.&lt;/p&gt;
+&lt;p&gt;After a few months away, it's time to check back in on the &quot;Ask HN: Who is Hiring?&quot; trends. In May's thread, there are signs of growth again, a 35% improvement over April in fact. May saw the first 400+ posting month since May 2023. Not all that surprisingly, the rise of AI appears to be driving the growth. AI is mentioned in nearly 25% of job postings now and is the top technology term.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2024/may.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full December rankings.&lt;/p&gt;
       </description>
       <enclosure url="https://www.hntrends.com/images/202405-ask-hn-who-is-hiring-tot.png" length="90079" type="image/png" />
@@ -40,7 +40,7 @@
     <item>
       <title>Who is Hiring? Job Postings fall to nine-year low</title>
       <description>
-&lt;p&gt;When I started this project ten years ago, I was mainly interested in studying and sharing the trends of techonologies used in the Software Development field. Now, after this decade of trend watching, it's interesting to reflect on the some of the other interesting aspects, non-technological, of the Software job market.&lt;/p&gt;
+&lt;p&gt;When I started this project ten years ago, I was mainly interested in studying and sharing the trends of technologies used in the Software Development field. Now, after this decade of trend watching, it's interesting to reflect on some of the other, non-technological aspects of the Software job market.&lt;/p&gt;
 &lt;p&gt;We can witness the impact of Covid on the job market in two big ways, both on the big cuts at the beginning of the Pandemic, as well as the move to majority remote work.&lt;/p&gt;
 &lt;p&gt;We can see the standardization of job levels across the industry, with the now ubiquitous Senior Software Engineer role.&lt;/p&gt;
 &lt;p&gt;We can see the rise and fall of job posting counts reveal booms and busts in the Startup and Venture Capital ecosystem. This is the one happening again right now, as January's thread, with 285 postings (top-level threads), had the lowest number of job postings in over 9 years. We have to go all the way back to 2015 and before to find levels this low.&lt;/p&gt;
@@ -73,7 +73,7 @@
     <item>
       <title>Number of job postings climbing: up 20% in last two months</title>
       <description>
-&lt;p&gt;November's Ask HN: Who is hiring? thread showed continued growth with 375 postings, up 20% from the near all-time low in September, and up 10% over October's thread. This is a positive sign after months of declines. However, on a year-over-year basis, we're still way off of the 2022 numbers (down 30%) and the 2021 numbers dwarf where we are today (down 61% since November, 2021).&lt;/p&gt;
+&lt;p&gt;November's Ask HN: Who is hiring? thread showed continued growth with 375 postings, up 20% from September's eight-year low, and up 10% over October's thread. This is a positive sign after months of declines. However, on a year-over-year basis, we're still way off of the 2022 numbers (down 30%) and the 2021 numbers dwarf where we are today (down 61% since November, 2021).&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2023/november.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full November rankings.&lt;/p&gt;
       </description>
       <enclosure url="https://www.hntrends.com/images/202311-ask-hn-who-is-hiring-tot.png" length="71375" type="image/png" />
@@ -88,7 +88,7 @@
     <item>
       <title>AI Rising: Now the most-cited technology</title>
       <description>
-&lt;p&gt;The term AI can mean many different things in the context of software development and programming. However, its significance in the current tech job market cannot be understated. The data reveals that for October's &quot;Ask HN: Who is hiring?&quot; thread, AI is the most mentioned technology term. AI was mentioned in nearly 20% of the postings. It has doubled, from 10% of postings in October, 2022, to the new peak. The only terms more popular than AI are location aspects (Remote vs onsite), experience level (Senior), and area of focus (full stack). For October, AI was more popular than any technology tracked in the history of the &quot;Ask HN: Who is hiring?&quot; thread. More popular than Python and React, the long-time dominant tech terms.&lt;/p&gt;
+&lt;p&gt;The term AI can mean many different things in the context of software development and programming. However, its significance in the current tech job market cannot be overstated. The data reveals that for October's &quot;Ask HN: Who is hiring?&quot; thread, AI is the most mentioned technology term. AI was mentioned in nearly 20% of the postings. It has doubled, from 10% of postings in October, 2022, to the new peak. The only terms more popular than AI are location aspects (Remote vs onsite), experience level (Senior), and area of focus (full stack). For October, AI was more popular than any technology tracked in the history of the &quot;Ask HN: Who is hiring?&quot; thread. More popular than Python and React, the long-time dominant tech terms.&lt;/p&gt;
 &lt;p&gt;Overall, the number of job postings in &lt;a href="https://news.ycombinator.com/item?id=37739028"&gt;October's &quot;Ask HN: Who is hiring?&quot;&lt;/a&gt; thread is up 10% over September's historic low. October's data shows that the 2023 is stabilizing a bit over the past few months from the larger drops between Spring and Summer. I continue to hear rumblings in various places software developers hang out about the current job market being very difficult, and this data does continue to back that up.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.hntrends.com/2023/october.html"&gt;Visit the site&lt;/a&gt; to compare trends and view the full October rankings.&lt;/p&gt;
       </description>
@@ -103,7 +103,7 @@
     <item>
       <title>&quot;Who is hiring?&quot; dips to another new low in September - Hacker News Hiring Trends</title>
       <description>
-&lt;p&gt;&lt;a href="https://news.ycombinator.com/item?id=37351667"&gt;September's "Ask HN: Who hiring?" thread&lt;/a&gt; hit an eight-year low, as job posts continued their downward trend. We have to go back to January 2015 to when the number of postings was this low. But, September is in thet past and a new thread goes up tomorrow (Monday) morning. With Summer now over, October's thread could be a chance for a nice Fall bump.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://news.ycombinator.com/item?id=37351667"&gt;September's "Ask HN: Who is hiring?" thread&lt;/a&gt; hit an eight-year low, as job posts continued their downward trend. We have to go back to January 2015 to when the number of postings was this low. But, September is in the past and a new thread goes up tomorrow (Monday) morning. With Summer now over, October's thread could be a chance for a nice Fall bump.&lt;/p&gt;
       </description>
       <pubDate>Mon, 02 Oct 2023 05:30:00 +0000</pubDate>
       <link>

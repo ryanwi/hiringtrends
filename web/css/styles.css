@@ -46,3 +46,11 @@ ol.breadcrumb {
   margin-top: 4px;
   margin-bottom: 4px;
 }
+
+@media (max-width: 575.98px) {
+  table.table-condensed {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

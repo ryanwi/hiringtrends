@@ -35,3 +35,129 @@ body {
 .masthead a {
   color: #f6f6ef;
 }
+
+@media (max-width: 575.98px) {
+  table.table-condensed {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.masthead .masthead-stats {
+  font-size: .95rem;
+  opacity: .85;
+  margin-bottom: 0;
+}
+
+.section-heading {
+  font-size: .85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #6b7280;
+  margin-bottom: .75rem;
+}
+
+.stat-tile {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #e3e3da;
+  border-radius: 8px;
+  color: #1f2328;
+  text-decoration: none;
+}
+
+.stat-tile:hover,
+.stat-tile:focus-visible {
+  border-color: #ff742b;
+  box-shadow: 0 0 0 3px rgba(255, 116, 43, .15);
+  color: #1f2328;
+}
+
+.stat-value {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  font-weight: 500;
+  margin-top: .15rem;
+}
+
+.stat-note {
+  font-size: .85rem;
+  color: #6b7280;
+  margin-top: .35rem;
+}
+
+.stat-caption {
+  font-size: .85rem;
+  color: #6b7280;
+  margin: .75rem 0 0;
+}
+
+.compare-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.compare-links a {
+  display: inline-block;
+  padding: .35rem .8rem;
+  background-color: #fff;
+  border: 1px solid #e3e3da;
+  border-radius: 999px;
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.compare-links a:hover,
+.compare-links a:focus-visible {
+  border-color: #ff742b;
+}
+
+.masthead .row {
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.masthead p {
+  max-width: 760px;
+}
+
+.post h3 a {
+  text-decoration: none;
+}
+
+.post h3 a:hover,
+.post h3 a:focus-visible {
+  text-decoration: underline;
+}
+
+.index #mc-embedded-subscribe {
+  background-color: #c2410c;
+  border-color: #c2410c;
+}
+
+.index #mc-embedded-subscribe:hover,
+.index #mc-embedded-subscribe:focus-visible {
+  background-color: #9a3412;
+  border-color: #9a3412;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .75rem;
+  font-size: .9rem;
+}
