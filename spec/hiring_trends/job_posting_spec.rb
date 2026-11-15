@@ -82,6 +82,11 @@ describe HiringTrends::JobPosting do
       expect(comment.term?("Mongodb/alias[mongo|mongodb]")).to be false
     end
 
+    it "counts the term's own name when it has an alias modifier that doesn't list it" do
+      comment = described_class.new(job_description: "We use Next.js and React")
+      expect(comment.term?("Next.js/alias[NextJS]")).to be true
+    end
+
     context "when term is golang" do
       it "counts capital G Go for golang with trailing comma" do
         comment = described_class.new(job_description: "Stack: Go, TypeScript, GraphQL, Docker + Kubernetes")
